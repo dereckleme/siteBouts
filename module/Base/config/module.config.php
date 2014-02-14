@@ -109,7 +109,7 @@ return array(
     
     				'orm_default' => array(
     						'drivers' => array(
-    								'Application\Entity' => 'application_entities'
+    								'Base\Entity' => 'application_entities'
     						)
     				))),
 );
