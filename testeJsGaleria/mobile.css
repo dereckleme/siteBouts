@@ -1,0 +1,10 @@
+img { max-width: 100%;}
+
+header { width: 320px; height: 300px; background: #CCC;}
+
+
+div { width: 320px; overflow-y: hidden;}
+ul { width: 2000px; float: left;}
+ul li { width: 310px; margin: 0 auto; padding: 0 5px; float: left;}
+
+footer { width: 320px; height: 300px; background: #CC0;}

@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html>
+ <head>
+ 	<title>Paulo</title>
+ 	<meta charset="utf-8">
+ 	<link href="style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="mobile.css" media="(max-width:1345px)">
+	<link href="reset.css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width">
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+		var width = $( "ul" ).width();
+		var total = $("ul li").size();
+		var cadaUm = Math.round(width/total);
+		var valorAnterior = null;
+		$( ".slider" ).on( "scrollstop", function( event ) {
+			var position = $( "ul" ).position();
+			var positionLeft = position.left;
+			
+			if(valorAnterior < Math.abs(positionLeft))
+				{
+			if(Math.abs(positionLeft) >= 10 && Math.abs(positionLeft) < 340)
+			{
+			    $(".slider").animate({scrollLeft: "320px"}, 100);
+			}
+			if(Math.abs(positionLeft) >= 340 && Math.abs(positionLeft) < 640)
+			{
+			    $(".slider").animate({scrollLeft: "640px"}, 100);
+			}
+			if(Math.abs(positionLeft) >= 660 && Math.abs(positionLeft) < 960)
+			{
+			    $(".slider").animate({scrollLeft: "960px"}, 100);
+			}	
+				valorAnterior=Math.abs(positionLeft);
+				}
+			
+			else
+				{
+				alert("voltando");
+				}
+				
+			/*
+			else if(Math.abs(positionLeft) >= 10 && Math.abs(positionLeft) <= 450)
+				{
+				
+				}
+			*/
+		})
+		
+	});
+	</script>
+ </head>
+ <body>
+
+ 	<header></header>
+
+	<div class="slider">
+		<ul>
+			<li><img src="galeria.jpg"></li>
+			<li><img src="galeria.jpg"></li>
+			<li><img src="galeria.jpg"></li>
+			<li><img src="galeria.jpg"></li>
+			<li><img src="galeria.jpg"></li>
+			<li><img src="galeria.jpg"></li>
+		</ul>
+	</div>
+
+	<footer></footer>
+
+ </body>
+ </html> 
