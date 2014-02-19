@@ -1,31 +1,29 @@
 <li class="sub-menu box-lista">
 
 					<a class="produtos" href="#">
-						produtos
+						<?=$this->data->getNome()?>
 					</a>
 
 					<ul>
+						<?php 
+							foreach($this->dataTenis AS $menuTenis)
+							{
+						?>
 						<li>
 							<a href="#">
-								<h6>Homem</h6>
-								<p>Calçados masculinos</p>
+								<h6><?=ucwords($menuTenis->getNome())?></h6>
+								<?php 
+									foreach($menuTenis->getSubcategorias() AS $subcategoria)
+									{
+								?>
+								<p><?=$subcategoria->getNome()?></p>
+								<?php 
+									}
+								?>
 							</a>
 						</li>
-
-						<li>
-							<a href="#">
-								<h6>Mulher</h6>
-								<p>Calçados femininos</p>
-							</a>
-						</li>
-
-						<li>
-							<a href="#">
-								<h6>Bout's Teen</h6>
-								<p>Masculino</p>
-								<p>Feminino</p>
-							</a>
-						</li>
-
+						<?php 
+							}
+						?>
 					</ul>
 				</li>

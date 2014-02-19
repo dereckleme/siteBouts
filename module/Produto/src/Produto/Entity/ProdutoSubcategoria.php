@@ -37,6 +37,48 @@ class ProdutoSubcategoria
      * })
      */
     private $categoria;
+	/**
+	 * @return the $idsubcategoria
+	 */
+	public function getIdsubcategoria() {
+		return $this->idsubcategoria;
+	}
+
+	/**
+	 * @return the $nome
+	 */
+	public function getNome() {
+		return $this->nome;
+	}
+
+	/**
+	 * @return the $categoria
+	 */
+	public function getCategoria() {
+		return $this->categoria;
+	}
+
+	/**
+	 * @param number $idsubcategoria
+	 */
+	public function setIdsubcategoria($idsubcategoria) {
+		$this->idsubcategoria = $idsubcategoria;
+	}
+
+	/**
+	 * @param string $nome
+	 */
+	public function setNome($nome) {
+		$this->nome = $nome;
+	}
+
+	/**
+	 * @param ProdutoCategoria $categoria
+	 */
+	public function setCategoria($categoria) {
+		$this->categoria = $categoria;
+	}
+
 
 
 }

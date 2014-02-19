@@ -25,11 +25,10 @@ class Module
     		$controller      = $e->getTarget();
     		$orm = $e->getApplication()->getServiceManager()->get('Doctrine\ORM\EntityManager');
     		//Definição to view tenis.
-    		/*
-    		$listaMenuTenis = $orm->getRepository("Produto\Entity\ProdutoTenis")->findAll();
+    	
+    		$listaMenuTenis = $orm->getRepository("Produto\Entity\ProdutoCategoria")->findAll();
     		$controller->layout()->menuListaTenis = $listaMenuTenis;
-    			//Aguardando verificação de entidade.
-    		*/
+    		
     	}, 100);
     }
 }

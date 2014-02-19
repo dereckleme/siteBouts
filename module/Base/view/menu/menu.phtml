@@ -8,7 +8,7 @@
     		}
     		else if($menu->getTipo()->getNome() == "tenis")
     		{
-    			print $this->partial('menu/tenis.phtml', array('data' => $menu));
+    			print $this->partial('menu/tenis.phtml', array('data' => $menu,'dataTenis' => $this->menuListaTenis));
     		}
     		else if($menu->getTipo()->getNome() == "tecnologia")
     		{
