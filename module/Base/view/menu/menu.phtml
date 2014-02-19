@@ -1,0 +1,21 @@
+ <?php 
+    	foreach($this->menu AS $menu)
+    	{
+    		if($menu->getTipo()->getNome() == "parceiros")
+    		{
+    			print $this->partial('menu/parceiros.phtml', array('data' => $menu));
+    		}
+    		else if($menu->getTipo()->getNome() == "tenis")
+    		{
+    			print $this->partial('menu/tenis.phtml', array('data' => $menu));
+    		}
+    		else if($menu->getTipo()->getNome() == "tecnologia")
+    		{
+    			print $this->partial('menu/tecnologia.phtml', array('data' => $menu));
+    		}
+    		else if($menu->getTipo()->getNome() == "midia")
+    		{
+    			print $this->partial('menu/midia.phtml', array('data' => $menu));
+    		}
+    	}
+    ?>

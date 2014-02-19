@@ -11,7 +11,8 @@ return array(
         'DoctrineModule',
         'DoctrineORMModule',
         'Base',
-        'Usuario'
+        'Usuario',
+        'Produto'
         ),
     'module_listener_options' => array(
         'module_paths' => array(
