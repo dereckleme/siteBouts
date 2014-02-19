@@ -54,8 +54,7 @@ return array(
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => array(
-            'layout/site'           => __DIR__ . '/../view/layout/layout.phtml',
-            'Base/index/index' => __DIR__ . '/../view/Base/index/index.phtml',
+            'base/layout/site'           => __DIR__ . '/../view/layout/layout.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
         ),

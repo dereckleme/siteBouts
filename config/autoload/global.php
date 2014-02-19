@@ -13,9 +13,9 @@
 
 return array(
     'module_layouts' => array(
-            'Base' => 'layout/site',
-    		'Usuario' => 'layout/site',
-    		'Produto' => 'layout/site',
+            'Base' => 'base/layout/site',
+    		'Usuario' => 'usuario/layout/site',
+    		'Produto' => 'produto/layout/site',
     ),
     'pagSeguroDereck' => array(
         'token' => 'EB9A55C4661F40F5A45B18043E4B4B52',

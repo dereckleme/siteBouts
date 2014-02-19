@@ -92,9 +92,7 @@ return array(
 				'not_found_template'       => 'error/404',
 				'exception_template'       => 'error/index',
 				'template_map' => array(
-						'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-						'layout/layout_logado'           => __DIR__ . '/../view/layout/layout.phtml',
-						'Usuario/index/index' => __DIR__ . '/../view/Usuario/index/index.phtml',
+						'usuario/layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
 						'error/404'               => __DIR__ . '/../view/error/404.phtml',
 						'error/index'             => __DIR__ . '/../view/error/index.phtml',
 				),

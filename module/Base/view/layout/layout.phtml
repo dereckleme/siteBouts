@@ -9,9 +9,13 @@
 
         <!-- Le styles -->
         <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
-                        ->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
+      
+       					 ->prependStylesheet($this->basePath() . '/css/reset.css')
+        
+                        //->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
                         ->prependStylesheet($this->basePath() . '/css/style.css')
-                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
+                        //->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
+       <link rel="stylesheet" href="<?=$this->basePath()?>/css/mobile.css" media="(max-width:1300px)">                 
 
         <!-- Scripts -->
         <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
@@ -21,7 +25,95 @@
     </head>
     <body>
     <?php 
+    /*
     print $this->partial('menu/menu.phtml', array('menu' => $this->menu, 'menuListaTenis' => $this->menuListaTenis));
-    print $this->content; ?>
+    print $this->content; 
+    */
+    ?>
+    <header class="h-container">
+
+ 		<section  class="h-topo">
+
+ 			<div class="redes-sociais">
+
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like" data-href="https://www.facebook.com/tenisbouts?fref=ts" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://twitter.com/BoutsOficial" data-via="BoutsOficial" data-related="BoutsOficial">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+ 			</div>
+
+ 			<div class="usuario">
+
+ 				<figure class="wall">
+ 					<a href="">
+ 					<figcaption>Wallpaper</figcaption>
+ 				    </a>
+ 				</figure>
+
+ 				<figure class="contato" >
+ 					<a href="">
+ 					<figcaption>fale conosco</figcaption>
+ 				    </a>
+ 				</figure>
+
+ 			</div>
+
+
+ 		</section>
+
+ 	</header>
+
+ 	<section class="menu">
+
+	 	<nav>
+	 		<h1><a href="" title="Home" alt="Bout's"><img src="img/logo-bouts.png"></a></h1>
+
+	 		 <button class="nav-button">Toggle Navigation</button>
+
+	 		<?php 
+	 		print $this->partial('menu/menu.phtml', array('menu' => $this->menu, 'menuListaTenis' => $this->menuListaTenis));
+	 		?>
+
+	 	</nav>
+
+ 	</section>
+
+ 	<section class="container">
+			<?=$this->content; ?>
+	</section>
+
+	<footer>
+
+		<header class="h-container">
+
+	 		<section class="h-news">
+
+	 			<div class="newsletter">
+
+		 			<h5>Newsletter Bout’s</h5>
+
+		 			<p>Cadastre-se para receber notícias,<br/>
+		            lançamento e ofertas.</p>
+
+		            <input type="text" name="email" placeholder="Escreva seu endereço de e-mail"/>
+
+		            <button class="vd" type="submit" name="enviar" title="Cadastrar">Cadastrar</button>
+
+	            </div>
+
+	 		</section>
+
+ 	    </header>
+
+	</footer>
+    
     </body>
 </html>
