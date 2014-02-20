@@ -1,4 +1,4 @@
-<li class="sub-menu box-lista">
+            <li class="sub-menu box-lista">
 
 					<a class="produtos" href="#">
 						<?=$this->data->getNome()?>
@@ -10,17 +10,15 @@
 							{
 						?>
 						<li>
-							<a href="#">
-								<h6><?=ucwords($menuTenis->getNome())?></h6>
+							<h6><?=ucwords($menuTenis->getNome())?></h6>
 								<?php 
 									foreach($menuTenis->getSubcategorias() AS $subcategoria)
 									{
 								?>
-								<p><?=$subcategoria->getNome()?></p>
+								<p><a href=""><?=$subcategoria->getNome()?></a></p>
 								<?php 
 									}
 								?>
-							</a>
 						</li>
 						<?php 
 							}

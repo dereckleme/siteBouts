@@ -19,9 +19,11 @@ body { font-family:'Conv_calibri', Sans-Serif; font-size: 10px!important;}
 .h-container { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left;} /* +/- 1300px */
 
 .h-topo { width: 1300px; height: 60px; position: relative; left: 50%; margin-left: -650px; float: left;} /* +/- 1300px */
+
 .redes-sociais { margin: 21px 0 0 65px; width: 230px;}
 .fb-like { float: left; margin-right: 15px;}
-.usuario { width: 280px; margin: 21px 0 0 0; position: absolute; right: 0; top: 0;}
+
+.usuario { width: 280px; float: right; margin: -21px 0 0 0; background: #ccc;}
 figure.wall { width: 120px; display: block; float: left; margin-right: 20px;}
 figure.wall a { width: 24px; height: 18px; display: block; background: url(../img/wallpaper.png) no-repeat; text-decoration: none;}
 figure.wall a:hover { background: url(../img/wallpaper-hover.png) no-repeat;}
@@ -34,8 +36,6 @@ figure.contato figcaption { width: 97px; font-size: 1.2em; margin-left: 40px; pa
 .h-news { width: 1300px; height: 110px; position: relative; left: 50%; margin-left: -650px; float: left;} /* +/- 1300px */
 
 .newsletter { width: 860px; float: right; margin: 15px 180px 0 0;}
-
-
 .newsletter input { width: 302px; height: 39px; margin-top: 17px; float: left; background: url(../img/bk-news.png) no-repeat #222222; background-position: 14px 11px;}
 .newsletter input { border: none; color: #666666; font-size: 1.4em; font-family:'Conv_calibri', Sans-Serif;}
 .newsletter input { padding-left: 5px; text-indent: 50px;}
@@ -44,10 +44,6 @@ figure.contato figcaption { width: 97px; font-size: 1.2em; margin-left: 40px; pa
 .newsletter button.vd { color: #FFF; text-transform: uppercase; font-size: 1.4em; font-weight: bold;}
 .newsletter h5 { font-size: 1.7em; color: #96bd05; float: left; font-weight: normal;}
 .newsletter h5 ~ p { float: left; color: #FFF; font-size: 1.3em; margin: 20px 15px 0 20px; line-height: 18px;}
-
-
-
-
 
 section.menu { width: 100%; height: 100px; float: left; border-bottom: solid 5px #222222;}
 section.menu { background: rgb(1,116,173); /* Old browsers */
@@ -96,20 +92,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#047aa0', end
 li.sub-menu ul:before { content: '▼'; color: #222222; position: absolute; top: -2px; left: 114px;}
 li.sub-menu ul li { width: 100%; padding-bottom: 10px; float: left; background: none; border-bottom: solid 1px #014b60; border-top: solid 1px #00ddff;}
 li.sub-menu ul li:hover { background: none;}
-li.sub-menu ul li a { color: #FFF;}
 li.sub-menu ul li:first-child { border-top: none;}
 li.sub-menu ul li:last-child { border-bottom: none; padding-bottom: 20px;}
-li.sub-menu ul li h6 { font-size: 1.1em; margin: -20px 0 0 -30px; text-transform: none; float: left;}
-li.sub-menu ul li h6 ~ p { font-size: 0.9em; margin: 5px 0 0 -17px; text-transform: none; font-weight: normal; padding-bottom: 3px;}
-li.sub-menu ul li h6 ~ p:hover { color: #222222;}
+li.sub-menu ul li h6 { width: 225px; margin: 20px 0 0 20px; font-size: 1.8em; float: left; color: #FFF;}
+li.sub-menu ul li p a { width: 271px; font-size: 1.5em; margin: 7px 0 5px 33px; float: left; padding: 0; text-transform: none; font-weight: normal; color: #FFF;}
+li.sub-menu ul li p a:hover { color: #222222;}
 ul.box-menu li.sub-menu:hover ul { display: block;}
 
 
+
+
+
+
+
 section.container { width: 100%; height: 500px; background: url(../img/bk-container.png) repeat; float: left;}
-
-
-
-
 section.container h2 { font-family:'Conv_MyriadPro-Bold',Sans-Serif; font-size: 8.0em; color: #222222; }
 section.container h2 span { color: #079ab1;}
 
