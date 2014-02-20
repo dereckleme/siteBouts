@@ -4,3 +4,5 @@
 /data/cache
 .project
 .buildpath
+/composer.lock
+/composer.phar
