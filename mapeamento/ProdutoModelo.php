@@ -28,5 +28,12 @@ class ProdutoModelo
      */
     private $nome;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="slug", type="string", length=45, nullable=true)
+     */
+    private $slug;
+
 
 }

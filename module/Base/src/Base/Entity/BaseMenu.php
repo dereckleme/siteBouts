@@ -45,6 +45,15 @@ class BaseMenu
      * @ORM\OneToMany(targetEntity="Base\Entity\BaseSubmenu", mappedBy="menu")
      */
 	private $submenus;
+	
+	
+	/**
+	 * @var string
+	 *
+	 * @ORM\Column(name="slug", type="string", length=45, nullable=true)
+	 */
+	private $slug;
+	
 	/**
 	 * @return the $idmenu
 	 */
