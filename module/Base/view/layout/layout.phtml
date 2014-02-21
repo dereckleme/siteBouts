@@ -22,6 +22,15 @@
                                       ->prependFile($this->basePath() . '/js/bootstrap.min.js')
                                       ->prependFile($this->basePath() . '/js/jquery.min.js') ?>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$(".nav-button").click(function () {
+			$(".nav-button,.box-menu").toggleClass("open");
+			});    
+		});
+		</script>
+
     </head>
     <body>
     <?php 
@@ -79,7 +88,7 @@
 	 	<nav>
 	 		<h1><a href="" title="Home" alt="Bout's"><img src="img/logo-bouts.png"></a></h1>
 
-	 		 <button class="nav-button">Toggle Navigation</button>
+	 		 <button class="nav-button">Menu</button>
 
 	 		<?php 
 	 		print $this->partial('menu/menu.phtml', array('menu' => $this->menu, 'menuListaTenis' => $this->menuListaTenis));
