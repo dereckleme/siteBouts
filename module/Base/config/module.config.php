@@ -8,7 +8,7 @@
  */
 
 return array(
-
+///[:subcategoria]/:[:subcategoria]
 	'controllers' => array(
 				'invokables' => array(
 						'Base\Controller\Index' => 'Base\Controller\IndexController'
@@ -29,10 +29,14 @@ return array(
         		'produto' => array(
         				'type' => 'Segment',
         				'options' => array(
-        						'route'    => '/produto[/:categoria][/:subcategoria]',
+        						'route'    => '/produto/[:categoria]/[:subcategoria]',
+        						'constraints' => array(
+        								'categoria' => '[a-zA-Z][a-zA-Z0-9_-]*',
+        								'subcategoria' => '[a-zA-Z][a-zA-Z0-9_-]*'
+        						),
         						'defaults' => array(
         								'controller' => 'Base\Controller\Index',
-        								'action'     => 'index'
+        								'action'     => 'produto'
         						),
         						
         				),
