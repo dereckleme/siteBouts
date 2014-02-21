@@ -15,7 +15,7 @@
 									foreach($menuTenis->getSubcategorias() AS $subcategoria)
 									{
 								?>
-								<p><a href=""><?=$subcategoria->getNome()?></a></p>
+								<p><a href="<?=$this->url("produto",array("categoria" => $menuTenis->getSlug(), "subcategoria" => $subcategoria->getSlug()));?>"><?=$subcategoria->getNome()?></a></p>
 								<?php 
 									}
 								?>

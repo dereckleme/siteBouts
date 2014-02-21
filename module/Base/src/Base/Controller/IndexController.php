@@ -23,8 +23,16 @@ class IndexController extends AbstractActionController
     {
     	if($this->params()->fromRoute("subcategoria"))
     	{
-    		print "foi";
+    		
     	}
+    	return new ViewModel();
+    }
+    public function tecnologiaAction()
+    {
+	    return new ViewModel();
+    }
+    public function midiaAction()
+    {
     	return new ViewModel();
     }
 }

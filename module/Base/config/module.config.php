@@ -41,6 +41,28 @@ return array(
         						
         				),
         		),
+        		'tecnologia' => array(
+        				'type' => 'Literal',
+        				'options' => array(
+        						'route'    => '/tecnologia',
+        						'defaults' => array(
+        								'controller' => 'Base\Controller\Index',
+        								'action'     => 'tecnologia'
+        						),
+        						
+        				),
+        		),
+        		'midia' => array(
+        				'type' => 'Literal',
+        				'options' => array(
+        						'route'    => '/midia',
+        						'defaults' => array(
+        								'controller' => 'Base\Controller\Index',
+        								'action'     => 'midia'
+        						),
+        		
+        				),
+        		),
         ),
     ),
     'service_manager' => array(
