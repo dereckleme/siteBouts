@@ -126,7 +126,23 @@ li.sub-menu-links ul li a { font-size: 1.2em; padding: 15px 0 15px 20px; color: 
 li.sub-menu-links ul li a:hover { color: #222222; padding: 15px 0 15px 25px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 ul.box-menu li.sub-menu-links:hover ul { display: block;}
 
-section.container { width: 100%; height: 500px; background: url(../img/bk-container.png) repeat; float: left;}
+.container { width: 100%; background: url(../img/bk-container.png) repeat; float: left;}
+section.galeria img { max-width: 99.9%;}
+
+
+.lancamentos { width: 1300px; background: #DE0; position: relative; left: 50%; margin-left: -650px; float: left;} /* +/- 1300px */
+.lancamentos div.g-produtos { width: 1300px; background: #DCC; overflow: hidden; position: relative; float: left; margin-top: 100px; margin-bottom: 100px;}
+.lancamentos div.g-produtos ul { width: 3000px; height: 470px; float: left; margin: 0; padding: 0; position: relative;}
+.lancamentos div.g-produtos ul li { width: 340px; height: 470px; background: #FFF; border: solid 1px #068daa; display: inline-block;}
+.lancamentos div.g-produtos ul li { margin: 0 0 0 33px;}
+
+.lancamentos div.g-produtos ul li.xxx { margin: 0 0 0 100px;}
+
+span a.s-esquerda { width: 72px; height: 72px; position: absolute; z-index: 100; top: 200px; left: 0; background: url(../img/s-esquerda.jpg) no-repeat;}
+span a.s-esquerda:hover { background: url(../img/s-esquerda-hover.jpg) no-repeat;}
+
+span a.s-direita { width: 72px; height: 72px; position: absolute; z-index: 100; top: 200px; right: 0; background: url(../img/s-direita.jpg) no-repeat;}
+span a.s-direita:hover { background: url(../img/s-direita-hover.jpg) no-repeat;}
 
 
 
@@ -134,15 +150,4 @@ section.container { width: 100%; height: 500px; background: url(../img/bk-contai
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-footer { width: 100%; height: 250px; float: left; background: #DDA;}
+footer { width: 100%; float: left; background: #DDA;}
