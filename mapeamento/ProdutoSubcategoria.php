@@ -29,6 +29,13 @@ class ProdutoSubcategoria
     private $nome;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="slug", type="string", length=45, nullable=true)
+     */
+    private $slug;
+
+    /**
      * @var \ProdutoCategoria
      *
      * @ORM\ManyToOne(targetEntity="ProdutoCategoria")

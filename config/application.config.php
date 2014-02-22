@@ -7,12 +7,12 @@
  */
 return array(
     'modules' => array(
-        //'ZendDeveloperTools',
+        'ZendDeveloperTools',
         'DoctrineModule',
         'DoctrineORMModule',
-        'Base',
         'Usuario',
-        'Produto'
+        'Produto',
+    	'Base',
         ),
     'module_listener_options' => array(
         'module_paths' => array(

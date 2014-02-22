@@ -15,12 +15,21 @@
                         //->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
                         ->prependStylesheet($this->basePath() . '/css/style.css')
                         //->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
-       <link rel="stylesheet" href="<?=$this->basePath()?>/css/mobile.css" media="(max-width:1300px)">                 
+       <link rel="stylesheet" href="<?=$this->basePath()?>/css/mobile.css" media="(max-width:1300px)">
 
         <!-- Scripts -->
         <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
                                       ->prependFile($this->basePath() . '/js/bootstrap.min.js')
                                       ->prependFile($this->basePath() . '/js/jquery.min.js') ?>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$(".nav-button").click(function () {
+			$(".nav-button,.box-menu").toggleClass("open");
+			});    
+		});
+		</script>
 
     </head>
     <body>
@@ -46,8 +55,11 @@
 				}(document, 'script', 'facebook-jssdk'));</script>
 				<div class="fb-like" data-href="https://www.facebook.com/tenisbouts?fref=ts" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 
-				<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://twitter.com/BoutsOficial" data-via="BoutsOficial" data-related="BoutsOficial">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				<div class="twitter">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://twitter.com/BoutsOficial" data-via="BoutsOficial" data-related="BoutsOficial">Tweet</a>
+	                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </div>
+
  			</div>
 
  			<div class="usuario">
@@ -76,7 +88,7 @@
 	 	<nav>
 	 		<h1><a href="" title="Home" alt="Bout's"><img src="img/logo-bouts.png"></a></h1>
 
-	 		 <button class="nav-button">Toggle Navigation</button>
+	 		 <button class="nav-button">Menu</button>
 
 	 		<?php 
 	 		print $this->partial('menu/menu.phtml', array('menu' => $this->menu, 'menuListaTenis' => $this->menuListaTenis));

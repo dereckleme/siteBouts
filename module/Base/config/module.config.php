@@ -26,6 +26,17 @@ return array(
         						),
         				),
         		),
+        		'produto' => array(
+        				'type' => 'Segment',
+        				'options' => array(
+        						'route'    => '/produto[/:categoria][/:subcategoria]',
+        						'defaults' => array(
+        								'controller' => 'Base\Controller\Index',
+        								'action'     => 'index'
+        						),
+        						
+        				),
+        		),
         ),
     ),
     'service_manager' => array(
