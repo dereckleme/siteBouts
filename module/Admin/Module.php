@@ -77,7 +77,6 @@ class Module
     		$adminRoute = explode("-",$matchedRoute);
     		if(!$auth->hasIdentity() and ($adminRoute[0] == "admin" || $adminRoute[0] == "Painel"))
     		{
-    			#die('aqui');
     			return $controller->redirect()->toRoute("admin/logar");
     		}
     		else if($auth->hasIdentity())

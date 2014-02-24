@@ -13,8 +13,9 @@
        					 ->prependStylesheet($this->basePath() . '/css/reset.css')
         
                         //->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
-                        ->prependStylesheet($this->basePath() . '/css/style.css')
-                        //->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
+                        //->prependStylesheet($this->basePath() . '/css/style.css')
+        				->prependStylesheet($this->basePath() . '/css/admin.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
        <link rel="stylesheet" href="<?=$this->basePath()?>/css/mobile.css" media="(max-width:1300px)">
 
         <!-- Scripts -->
@@ -33,14 +34,10 @@
 
     </head>
     <body>
-<<<<<<< HEAD
-    <?=$this->content; ?>
-=======
-   <div class="container"> 
-    <h1>Administrador Bout's</h1>
-    <h5>Nesta sessão você administra completamente o site Bouts.</h5>
-   		<?=$this->content?>
-  	</div>
->>>>>>> cee01da1d5b7adbf8ecf463966ed4b4ae5e6122f
+	   <div class="container"> 
+		    <h1>Administrador Bout's</h1>
+		    <h5>Nesta sessão você administra completamente o site Bouts.</h5>
+	   		<?=$this->content?>
+	  	</div>
     </body>
 </html>
