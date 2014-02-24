@@ -12,8 +12,7 @@ class LoginController extends AbstractActionController
 {
 
     public function indexAction()
-    {     
-    	 
+    {
         $request = $this->getRequest();
         
         if($request->isPost())
@@ -49,6 +48,7 @@ class LoginController extends AbstractActionController
         $viewModel->setTerminal(true);
         return $viewModel;
     }
+    
     public function logoutAction()
     {
         $auth = new AuthenticationService;
@@ -57,4 +57,5 @@ class LoginController extends AbstractActionController
         
         return $this->redirect()->toRoute('home');
     }
+    
 }

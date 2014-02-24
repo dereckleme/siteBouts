@@ -25,6 +25,18 @@ return array(
         								'action'     => 'index',
         						),
         				),
+        				'may_terminate' => true,
+        				'child_routes' => array(
+        						'logar' => array(
+        								'type'    => 'Zend\Mvc\Router\Http\Literal',
+        								'options' => array(
+        										'route'    => '/logar',
+        										'defaults' => array(
+        												'action'     => 'logar',
+        										),
+        								),
+        						),
+        				),
         		),
         ),
     ),
