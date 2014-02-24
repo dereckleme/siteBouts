@@ -4,12 +4,14 @@
   </a>
 
  	<ul>
- 		<li><a href="">Centauros</a></li>
- 		<li><a href="">Passarela</a></li>
-        <li><a href="">Humanitarian</a></li>
- 		<li><a href="">Lojas Silva</a></li>
- 		<li><a href="">Azul Calçados</a></li>
- 		<li><a href="">Kallan</a></li>
+ 	<?php 
+ 		foreach($this->data->getSubmenus() AS $data)
+ 		{
+ 	?>
+ 		<li><a href=""><?=$data->getNome()?></a></li>
+ 		<?php 
+ 		}
+ 		?>
  	</ul> 
 
 </li>

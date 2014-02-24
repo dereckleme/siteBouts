@@ -109,6 +109,20 @@ class BaseMenu
 	public function setSubmenus($submenus) {
 		$this->submenus = $submenus;
 	}
+	/**
+	 * @return the $slug
+	 */
+	public function getSlug() {
+		return $this->slug;
+	}
+
+	/**
+	 * @param string $slug
+	 */
+	public function setSlug($slug) {
+		$this->slug = $slug;
+	}
+
 
 	
 	

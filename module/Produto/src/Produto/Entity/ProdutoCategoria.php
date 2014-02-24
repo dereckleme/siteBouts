@@ -35,6 +35,12 @@ class ProdutoCategoria
      * @ORM\Column(name="nome", type="string", length=45, nullable=true)
      */
     private $nome;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="slug", type="string", length=45, nullable=true)
+     */
+    private $slug;
 	/**
 	 * @return the $idcategoria
 	 */
@@ -75,6 +81,20 @@ class ProdutoCategoria
 	public function setSubcategorias($subcategorias) {
 		$this->subcategorias = $subcategorias;
 	}
+	/**
+	 * @return the $slug
+	 */
+	public function getSlug() {
+		return $this->slug;
+	}
+
+	/**
+	 * @param string $slug
+	 */
+	public function setSlug($slug) {
+		$this->slug = $slug;
+	}
+
 
 
 

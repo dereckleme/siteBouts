@@ -19,5 +19,20 @@ class IndexController extends AbstractActionController
     {
         return new ViewModel();
     }
-    
+    public function produtoAction()
+    {
+    	if($this->params()->fromRoute("subcategoria"))
+    	{
+    		
+    	}
+    	return new ViewModel();
+    }
+    public function tecnologiaAction()
+    {
+	    return new ViewModel();
+    }
+    public function midiaAction()
+    {
+    	return new ViewModel();
+    }
 }
