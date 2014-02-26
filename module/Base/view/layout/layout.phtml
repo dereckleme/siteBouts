@@ -18,18 +18,26 @@
        <link rel="stylesheet" href="<?=$this->basePath()?>/css/mobile.css" media="(max-width:1300px)">
         <!-- Scripts -->
         <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
-                                      ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+                                      ->prependFile($this->basePath() . '/js/site.js') 
                                       ->prependFile($this->basePath() . '/js/idangerous.swiper-2.1.min.js')
-                                      ->prependFile($this->basePath() . '/js/jquery.min.js') ?>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script>
-		$(document).ready(function(){
-			$(".nav-button").click(function () {
-			$(".nav-button,.box-menu").toggleClass("open");
-			});    
-		});
-		</script>
+                                      ->prependFile($this->basePath() . '/js/bootstrap.min.js')                                      
+                                      ->prependFile($this->basePath() . '/js/jquery-1.10.1.min.js') ?>
+	<script>
+  var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+    loop:true,
+    grabCursor: true,
+    paginationClickable: true
+  })
+  $('.arrow-left').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipePrev()
+  })
+  $('.arrow-right').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipeNext()
+  })
+  </script>
 
     </head>
     <body>

@@ -127,22 +127,100 @@ li.sub-menu-links ul li a:hover { color: #222222; padding: 15px 0 15px 25px; -we
 ul.box-menu li.sub-menu-links:hover ul { display: block;}
 
 .container { width: 100%; background: url(../img/bk-container.png) repeat; float: left;}
+
 section.galeria img { max-width: 99.9%;}
 
 
-.lancamentos { width: 1300px; background: #DE0; position: relative; left: 50%; margin-left: -650px; float: left;} /* +/- 1300px */
-.lancamentos div.g-produtos { width: 1300px; background: #DCC; overflow: hidden; position: relative; float: left; margin-top: 100px; margin-bottom: 100px;}
-.lancamentos div.g-produtos ul { width: 3000px; height: 470px; float: left; margin: 0; padding: 0; position: relative;}
-.lancamentos div.g-produtos ul li { width: 340px; height: 470px; background: #FFF; border: solid 1px #068daa; display: inline-block;}
-.lancamentos div.g-produtos ul li { margin: 0 0 0 33px;}
 
-.lancamentos div.g-produtos ul li.xxx { margin: 0 0 0 100px;}
 
-span a.s-esquerda { width: 72px; height: 72px; position: absolute; z-index: 100; top: 200px; left: 0; background: url(../img/s-esquerda.jpg) no-repeat;}
+.lancamentos { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-top: 80px;} /* +/- 1300px */
+.lancamentos h2 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; text-align: center; font-size: 8.0em; color: #222222; margin: 0; padding: 0;}
+.lancamentos h2 span { color: #079ab1;}
+
+
+
+div.g-produtos, .swiper-container  { width: 1300px; overflow: hidden; position: relative; float: left; margin: 100px 0;}
+div.g-produtos ul { width: 3000px; float: left; margin: 0; padding: 0; position: relative;}
+div.g-produtos ul li a { width: 338px; height: 468px; display: inline; position: relative; float: left; border: solid 1px transparent;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+div.g-produtos ul li a:hover { border: solid 1px #047da2; background: #FFF; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+div.g-produtos ul li { margin: 0 0 0 40px; float: left;}
+div.g-produtos ul li:first-child { margin: 0 0 0 100px;}
+div.g-produtos ul li:nth-child(3) { margin: 0 70px 0 40px;}
+div.g-produtos ul li img { max-width: 100%; float: left;}
+div.g-produtos ul li a h4 { font-size: 2.0em; color: #333333; float: left; position: absolute; z-index: 100; left: 25px; bottom: 50px; display: none;}
+div.g-produtos ul li a h4 ~ p { font-size: 1.6em; color: #333333; float: left; position: absolute; z-index: 100; left: 25px; bottom: 20px; display: none;}
+div.g-produtos ul li a hr { width: 290px; height: 1px; font-weight: bold; position: absolute; z-index: 100; left: 25px; bottom: 60px; display: none;}
+div.g-produtos ul li a:hover h4 ~ p { display: block;}
+div.g-produtos ul li a:hover h4 { display: block;}
+div.g-produtos ul li a:hover hr { display: block;}
+div.g-produtos ul li a { -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+div.g-produtos ul li a:hover { -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+
+
+
+span a.s-esquerda { width: 72px; height: 72px; position: absolute; z-index: 100; top: 425px; left: 0; background: url(../img/s-esquerda.jpg) no-repeat;}
 span a.s-esquerda:hover { background: url(../img/s-esquerda-hover.jpg) no-repeat;}
-
-span a.s-direita { width: 72px; height: 72px; position: absolute; z-index: 100; top: 200px; right: 0; background: url(../img/s-direita.jpg) no-repeat;}
+span a.s-direita { width: 72px; height: 72px; position: absolute; z-index: 100; top: 425px; right: 0; background: url(../img/s-direita.jpg) no-repeat;}
 span a.s-direita:hover { background: url(../img/s-direita-hover.jpg) no-repeat;}
+
+
+
+
+span.linha-home { width: 100%; position: relative; display: block; float: left; border-top: solid 1px #01607d; border-bottom: solid 1px #079ab1; margin-bottom: 44px;}
+span.linha-home img { position: absolute; left: 50%; top: -1px;}
+
+.box-home { width: 1300px; height: 500px; position: relative; left: 50%; margin-left: -650px; float: left;}
+
+.tec-bouts { width: 1300px; height: 220px; float: left;}
+.tec-bouts h3 { width: 285px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
+.tec-bouts h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 50px;}
+.tec-bouts ul { width: 100%; float: left; margin-top: 10px; overflow: hidden; }
+.tec-bouts ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.tec-bouts ul li { width: 315px; height: 180px; margin-left: 10.6px; float: left; border: solid 1px #999999; cursor: pointer; position: relative;}
+.tec-bouts ul li:first-child { margin: 0 0 0 0px;}
+.tec-bouts ul li { background: url(../img/gel-ts.png) no-repeat #FFF;}
+
+.tec-bouts ul li a { padding: 0px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+.tec-bouts ul li:hover a { padding: 43.8px 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+.tec-bouts ul li:hover a p:nth-child(1) { margin: 10px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+.tec-bouts ul li:hover a p:nth-child(3) { margin: 30px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in; }
+.tec-bouts ul li:hover a span { top: 10px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+
+.tec-bouts ul li a p:nth-child(1) { 
+	font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
+	width: 313.5px;
+	float: left; 
+    font-size: 3.4em; 
+    font-weight: bold; 
+    color: #FFF; 
+    text-align:center;
+    margin: -40px 0 0 0;
+    -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;
+}
+
+.tec-bouts ul li a p:nth-child(3) { 
+	font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; 
+	width: 313.5px;
+	text-align: center;
+	float: left;
+	color: #FFF; 
+	margin: -50px 0 0 0;
+	font-size: 1.6em;
+	-webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;
+}
+
+.tec-bouts ul li a span { 
+	width: 150px; 
+	float: left;
+	border-top: solid 1px #000000; 
+	border-bottom: solid 1px #999999;
+	-webkit-transition: 0.7s ease-out; transition: 0.7s ease-out;
+	display: block;
+	position: relative;
+	top: -10px;
+	left: 25%
+}
+
 
 
 
