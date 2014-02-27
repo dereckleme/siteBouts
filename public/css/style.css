@@ -136,8 +136,8 @@ section.galeria img { max-width: 99.9%;}
 .lancamentos { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-top: 80px;} /* +/- 1300px */
 .lancamentos h2 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; text-align: center; font-size: 8.0em; color: #222222; margin: 0; padding: 0;}
 .lancamentos h2 span { color: #079ab1;}
-div.g-produtos { width: 1300px; overflow-y: hidden; position: relative; float: left; margin: 100px 0;}
-div.g-produtos ul { width: 6000px; float: left; margin: 0; padding: 0; position: relative;}
+div.g-produtos { width: 1300px; overflow: hidden; position: relative; float: left; margin: 100px 0;}
+div.g-produtos ul { width: 1700px; float: left; margin: 0; padding: 0; position: relative;}
 div.g-produtos ul li a { width: 338px; height: 468px; display: inline; position: relative; float: left; border: solid 1px transparent;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 div.g-produtos ul li:hover a { border: solid 1px #047da2; background: #FFF; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 div.g-produtos ul li:first-child { margin: 0 0 0 100px;}
@@ -228,17 +228,15 @@ section.menu-bottom { width: 900px; height: 360px; float: left; position: relati
 
 section.menu-bottom ul.mb-comprar { margin: 65px 0 0 65px; float: left;}
 section.menu-bottom ul li a.tt-menu-bottom { font-size: 1.5em; font-weight: bold; color: #333333; margin: 0 0 0 0;}
-section.menu-bottom ul li a { text-decoration: none; display: list-item;}
-section.menu-bottom ul li a { font-size: 1.3em; color: #333333; margin: 15px 0 0 5px;}
-section.menu-bottom ul li a:hover { color: #079ab1;}
+section.menu-bottom ul li a { text-decoration: none; display: list-item; margin: 15px 0 0 5px; font-size: 1.3em; color: #333333;}
+section.menu-bottom ul li a.txt-menu-bottom:hover { color: #079ab1;}
 
 section.menu-bottom ul.mb-produtos { margin: 65px 0 0 100px; float: left;}
-section.menu-bottom ul li a.mb-produtos:hover { color: #333333;}
 section.menu-bottom ul.mb-tecnoligia { margin: 65px 0 0 110px; float: left;}
 section.menu-bottom ul.info { margin: 65px 0 0 102px; float: left;}
 
 section.menu-bottom ul.mb-redes { margin: 50px 0 0 102px; float: left; background: #CCC;}
-section.menu-bottom ul.mb-redes li { display: inline-block; float: left;}
+section.menu-bottom ul.mb-redes li a.box-mb-redes { display: inline-block; float: left;}
 
 
 .social li a { /* tamanho da imagem */ height: 32px; width: 32px; /* image replacement */ display: block; text-indent: -9999px;}
