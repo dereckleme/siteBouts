@@ -12,32 +12,15 @@
       
        					 ->prependStylesheet($this->basePath() . '/css/reset.css')
                         //->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
-       					 ->prependStylesheet($this->basePath() . '/css/idangerous.swiper.css')
                         ->prependStylesheet($this->basePath() . '/css/style.css')
                         //->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
        <link rel="stylesheet" href="<?=$this->basePath()?>/css/mobile.css" media="(max-width:1300px)">
         <!-- Scripts -->
         <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
-                                      ->prependFile($this->basePath() . '/js/site.js') 
-                                      ->prependFile($this->basePath() . '/js/idangerous.swiper-2.1.min.js')
+                                      ->prependFile($this->basePath() . '/js/site.js')
                                       ->prependFile($this->basePath() . '/js/bootstrap.min.js')                                      
-                                      ->prependFile($this->basePath() . '/js/jquery-1.10.1.min.js') ?>
-	<script>
-  var mySwiper = new Swiper('.swiper-container',{
-    pagination: '.pagination',
-    loop:true,
-    grabCursor: true,
-    paginationClickable: true
-  })
-  $('.arrow-left').on('click', function(e){
-    e.preventDefault()
-    mySwiper.swipePrev()
-  })
-  $('.arrow-right').on('click', function(e){
-    e.preventDefault()
-    mySwiper.swipeNext()
-  })
-  </script>
+                                      ->prependFile($this->basePath() . '/js/jquery-1.10.2.js') ?>
+
 
     </head>
     <body>
@@ -47,7 +30,7 @@
     print $this->content; 
     */
     ?>
-    <header class="h-container">
+    <header class="h-container-top">
 
  		<section  class="h-topo">
 
@@ -112,11 +95,11 @@
 
 	<footer>
 
-		<header class="h-container">
+		<header class="h-container-bottom">
 
 	 		<section class="h-news">
 
-	 			<div class="newsletter">
+	 			<div class="newsletter newsletter-bottom">
 
 		 			<h5>Newsletter Bout’s</h5>
 
@@ -125,13 +108,126 @@
 
 		            <input type="text" name="email" placeholder="Escreva seu endereço de e-mail"/>
 
-		            <button class="vd" type="submit" name="enviar" title="Cadastrar">Cadastrar</button>
+		            <button class="az" type="submit" name="enviar" title="Cadastrar">Cadastrar</button>
 
 	            </div>
 
 	 		</section>
 
  	    </header>
+
+ 	    <section class="menu-bottom">
+
+ 	    	<ul class="mb-comprar">
+ 	    		<li>
+ 	    			<a class="tt-menu-bottom" href="">Comprar agora</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Centauro</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Passarela</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Humanitarian</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Lojas Silva</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Azul Calçados</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Kallan</a>
+ 	    		</li>
+
+ 	    	</ul>
+
+ 	    	<ul class="mb-produtos">
+ 	    		<li>
+ 	    			<a class="tt-menu-bottom" href="">Produtos</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="" class="mb-produtos"><strong>Homem</strong></a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Calçados masculinos</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="" class="mb-produtos"><strong>Mulher</strong></a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Calçados femininos</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="" class="mb-produtos"><strong>Bout’s Teen</strong></a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Masculino</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Feminino</a>
+ 	    		</li>
+ 	    	</ul>
+
+ 	    	<ul class="mb-tecnoligia">
+ 	    		<li>
+ 	    			<a class="tt-menu-bottom" href="">Tecnologia</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Fly TS</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Gel TS</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Spirtal TS</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Tower TS</a>
+ 	    		</li>
+ 	    	</ul>
+
+ 	    	<ul class="info">
+ 	    		<li>
+ 	    			<a class="tt-menu-bottom" href="">Outras informações</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Mídia</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Fale conosco</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Wallpapers</a>
+ 	    		</li>
+ 	    	</ul>
+
+ 	    	<ul class="mb-redes">
+ 	    		<li>
+ 	    			<a class="tt-menu-bottom" href="">Bout’s nas redes sociais</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Facebook</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Twitter</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">You Tube</a>
+ 	    		</li>
+ 	    		<li>
+ 	    			<a href="">Instagram</a>
+ 	    		</li>
+ 	    		
+ 	    	</ul>
+
+
+
+
+
+
+ 	    </section>
 
 	</footer>
     

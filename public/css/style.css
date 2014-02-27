@@ -16,10 +16,9 @@
 
 body { font-family:'Conv_calibri', Sans-Serif; font-size: 10px!important;}
 
-.h-container { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left;} /* +/- 1300px */
-
+.h-container-top { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left;} /* +/- 1300px */
+.h-container-bottom { width: 100%; min-width: 1300px; border-top: solid 8px #222222; border-bottom: solid 8px #222222; background: url(../img/bk-header.png) repeat; float: left;} /* +/- 1300px */
 .h-topo { width: 1300px; height: 60px; position: relative; left: 50%; margin-left: -650px; float: left;} /* +/- 1300px */
-
 .redes-sociais { margin: 21px 0 0 65px; width: 230px;}
 .twitter { float: left;}
 .fb-like { float: left; margin-right: 15px;}
@@ -35,7 +34,6 @@ figure.contato a:hover { background: url(../img/contato-hover.png) no-repeat;}
 figure.contato figcaption { width: 97px; font-size: 1.2em; margin-left: 40px; padding-top: 3px; font-weight: bold; text-transform: uppercase; color: #dddddd;}
 
 .h-news { width: 1300px; height: 110px; position: relative; left: 50%; margin-left: -650px; float: left;} /* +/- 1300px */
-
 .newsletter { width: 860px; float: right; margin: 15px 180px 0 0;}
 .newsletter input { width: 302px; height: 39px; margin-top: 17px; float: left; background: url(../img/bk-news.png) no-repeat #222222; background-position: 14px 11px;}
 .newsletter input { border: none; color: #666666; font-size: 1.4em; font-family:'Conv_calibri', Sans-Serif;}
@@ -45,6 +43,11 @@ figure.contato figcaption { width: 97px; font-size: 1.2em; margin-left: 40px; pa
 .newsletter button.vd { color: #FFF; text-transform: uppercase; font-size: 1.4em; font-weight: bold;}
 .newsletter h5 { font-size: 1.7em; color: #96bd05; float: left; font-weight: normal;}
 .newsletter h5 ~ p { float: left; color: #FFF; font-size: 1.3em; margin: 20px 15px 0 20px; line-height: 18px;}
+
+.newsletter-bottom button.az { width: 169px; height: 41px; margin-top: 17px; float:left; border: none; background: url(../img/bt-news.png) no-repeat; cursor: pointer;}
+.newsletter-bottom button.az:hover { background: url(../img/bt-news-bottom.png) no-repeat;}
+.newsletter-bottom button.az { color: #FFF; text-transform: uppercase; font-size: 1.4em; font-weight: bold;}
+.newsletter-bottom h5 { font-size: 1.7em; color: #079ab1; float: left; font-weight: normal;}
 
 section.menu { width: 100%; height: 100px; min-width: 1300px; float: left; border-bottom: solid 5px #222222;}
 section.menu { background: rgb(1,116,173); /* Old browsers */
@@ -130,21 +133,15 @@ ul.box-menu li.sub-menu-links:hover ul { display: block;}
 
 section.galeria img { max-width: 99.9%;}
 
-
-
-
 .lancamentos { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-top: 80px;} /* +/- 1300px */
 .lancamentos h2 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; text-align: center; font-size: 8.0em; color: #222222; margin: 0; padding: 0;}
 .lancamentos h2 span { color: #079ab1;}
-
-
-
-div.g-produtos, .swiper-container  { width: 1300px; overflow: hidden; position: relative; float: left; margin: 100px 0;}
-div.g-produtos ul { width: 3000px; float: left; margin: 0; padding: 0; position: relative;}
+div.g-produtos { width: 1300px; overflow-y: hidden; position: relative; float: left; margin: 100px 0;}
+div.g-produtos ul { width: 6000px; float: left; margin: 0; padding: 0; position: relative;}
 div.g-produtos ul li a { width: 338px; height: 468px; display: inline; position: relative; float: left; border: solid 1px transparent;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-div.g-produtos ul li a:hover { border: solid 1px #047da2; background: #FFF; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-div.g-produtos ul li { margin: 0 0 0 40px; float: left;}
+div.g-produtos ul li:hover a { border: solid 1px #047da2; background: #FFF; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 div.g-produtos ul li:first-child { margin: 0 0 0 100px;}
+div.g-produtos ul li { margin: 0 0 0 40px; float: left;}
 div.g-produtos ul li:nth-child(3) { margin: 0 70px 0 40px;}
 div.g-produtos ul li img { max-width: 100%; float: left;}
 div.g-produtos ul li a h4 { font-size: 2.0em; color: #333333; float: left; position: absolute; z-index: 100; left: 25px; bottom: 50px; display: none;}
@@ -155,21 +152,15 @@ div.g-produtos ul li a:hover h4 { display: block;}
 div.g-produtos ul li a:hover hr { display: block;}
 div.g-produtos ul li a { -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 div.g-produtos ul li a:hover { -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-
-
-
 span a.s-esquerda { width: 72px; height: 72px; position: absolute; z-index: 100; top: 425px; left: 0; background: url(../img/s-esquerda.jpg) no-repeat;}
 span a.s-esquerda:hover { background: url(../img/s-esquerda-hover.jpg) no-repeat;}
 span a.s-direita { width: 72px; height: 72px; position: absolute; z-index: 100; top: 425px; right: 0; background: url(../img/s-direita.jpg) no-repeat;}
 span a.s-direita:hover { background: url(../img/s-direita-hover.jpg) no-repeat;}
 
-
-
-
 span.linha-home { width: 100%; position: relative; display: block; float: left; border-top: solid 1px #01607d; border-bottom: solid 1px #079ab1; margin-bottom: 44px;}
 span.linha-home img { position: absolute; left: 50%; top: -1px;}
 
-.box-home { width: 1300px; height: 500px; position: relative; left: 50%; margin-left: -650px; float: left;}
+.box-home { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 
 .tec-bouts { width: 1300px; height: 220px; float: left;}
 .tec-bouts h3 { width: 285px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
@@ -221,11 +212,36 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 	left: 25%
 }
 
+.tendencias { width: 1300px; float: left; margin: 100px 0 90px 0}
+.tendencias h3 { width: 285px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
+.tendencias h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 50px;}
+div.video { width: 640px; height: 437px; border: solid 1px #222222; float: left; margin-top: 10px;}
+div.campanha { width: 640px; height: 437px; border: solid 1px #222222; float: right; margin-top: 10px;}
 
 
 
 
 
 
+footer { width: 100%; height: 1000px; float: left; background: #eeeeee;}
+section.menu-bottom { width: 900px; height: 360px; float: left; position: relative; left: 50%; margin-left: -450px;}
 
-footer { width: 100%; float: left; background: #DDA;}
+section.menu-bottom ul.mb-comprar { margin: 65px 0 0 65px; float: left;}
+section.menu-bottom ul li a.tt-menu-bottom { font-size: 1.5em; font-weight: bold; color: #333333; margin: 0 0 0 0;}
+section.menu-bottom ul li a { text-decoration: none; display: list-item;}
+section.menu-bottom ul li a { font-size: 1.3em; color: #333333; margin: 15px 0 0 5px;}
+section.menu-bottom ul li a:hover { color: #079ab1;}
+
+section.menu-bottom ul.mb-produtos { margin: 65px 0 0 100px; float: left;}
+section.menu-bottom ul li a.mb-produtos:hover { color: #333333;}
+section.menu-bottom ul.mb-tecnoligia { margin: 65px 0 0 110px; float: left;}
+section.menu-bottom ul.info { margin: 65px 0 0 102px; float: left;}
+
+section.menu-bottom ul.mb-redes { margin: 50px 0 0 102px; float: left; background: #CCC;}
+section.menu-bottom ul.mb-redes li { display: inline-block; float: left;}
+
+
+.social li a { /* tamanho da imagem */ height: 32px; width: 32px; /* image replacement */ display: block; text-indent: -9999px;}
+.social a[href*="facebook.com"] { background-image: url(../img/facebook.png);}
+.social a[href*="twitter.com"] { background-image: url(../img/twitter.png); }
+.social a[href*="plus.google.com"] { background-image: url(../img/googleplus.png);} 
