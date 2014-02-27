@@ -18,7 +18,8 @@
         <!-- Scripts -->
         <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
                                       ->prependFile($this->basePath() . '/js/site.js')
-                                      ->prependFile($this->basePath() . '/js/bootstrap.min.js')                                      
+                                      ->prependFile($this->basePath() . '/js/bootstrap.min.js') 
+                                      ->prependFile($this->basePath() . '/js/html5shiv.js')                                     
                                       ->prependFile($this->basePath() . '/js/jquery-1.10.2.js') ?>
 
 
@@ -93,7 +94,7 @@
 			<?=$this->content; ?>
 	</section>
 
-	<footer>
+	<!--<footer>
 
 		<header class="h-container-bottom">
 
@@ -208,28 +209,42 @@
  	    			<a class="tt-menu-bottom" href="">Bout’s nas redes sociais</a>
  	    		</li>
  	    		<li>
- 	    			<a class="box-mb-redes" href="">Facebook</a>
+ 	    			<a class="box-mb-redes" href="https://pt-br.facebook.com/tenisbouts" target="_blank">Facebook</a>
  	    		</li>
  	    		<li>
- 	    			<a class="box-mb-redes" href="">Twitter</a>
+ 	    			<a class="box-mb-redes" href="https://twitter.com/boutsoficial" target="_blank">Twitter</a>
  	    		</li>
  	    		<li>
- 	    			<a class="box-mb-redes" href="">You Tube</a>
+ 	    			<a class="box-mb-redes" href="http://www.youtube.com/user/boutstiptoe?feature=mhee" target="_blank">You Tube</a>
  	    		</li>
  	    		<li>
- 	    			<a class="box-mb-redes" href="">Instagram</a>
+ 	    			<a class="box-mb-redes" href="http://instagram.com/tenisbouts" target="_blank">Instagram</a>
  	    		</li>
  	    		
  	    	</ul>
-
-
-
-
-
-
  	    </section>
 
-	</footer>
+ 	    <header class="h-container-top">
+
+ 	    	<div class="copyright">
+ 	    		<figure class="bouts-copyright">
+ 	    			<img src="img/logo-bouts-footer.png">
+ 	    			<figcaption>Copyright © BOUT'S 2014  -  SUA VIDA EM MOVIMENTO</figcaption>
+ 	    		</figure>
+
+ 	    		<figure class="spicy">
+ 	    			<figcaption>Desenvolvido por</figcaption>
+ 	    			<a href="" target="_blank" title="Spicy.comm" alt="Spicy.comm"><img src="img/logo-spicy.png"></a>
+ 	    		</figure>
+ 	    	</div>
+			
+        </header>
+
+        <section class="bee-happy">
+        	<p>Visite também o site da <a href="" target="_blank" title="Bee-Happy">Bee-Happy</a></p>
+        </section>
+
+	</footer>-->
     
     </body>
 </html>

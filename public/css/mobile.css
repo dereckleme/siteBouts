@@ -1,7 +1,11 @@
 @media only screen and (min-width: 0px) and (max-width: 800px) {
 
-	.h-container {
+	.h-container-top {
 		min-width: 320px;
+	}
+
+	.h-container-bottom {
+		display: none;
 	}
 
 	.h-topo { 
@@ -261,7 +265,7 @@
 	}
 
 	div.g-produtos ul { 
-		width: 6000px;
+		width: 1700px;
 		float: left; 
 		margin: 0; 
 		padding: 0; 
