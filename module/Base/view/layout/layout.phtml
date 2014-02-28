@@ -1,6 +1,6 @@
 <?php echo $this->doctype(); ?>
 
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <meta charset="utf-8">
         <?php echo $this->headTitle('NEW Bouts')?>
@@ -13,13 +13,14 @@
        					 ->prependStylesheet($this->basePath() . '/css/reset.css')
                         //->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
                         ->prependStylesheet($this->basePath() . '/css/style.css')
+                        ->prependStylesheet($this->basePath() . '/galery/engine1/style.css')
                         //->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
        <link rel="stylesheet" href="<?=$this->basePath()?>/css/mobile.css" media="(max-width:1300px)">
         <!-- Scripts -->
         <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
                                       ->prependFile($this->basePath() . '/js/site.js')
                                       ->prependFile($this->basePath() . '/js/bootstrap.min.js') 
-                                      ->prependFile($this->basePath() . '/js/html5shiv.js')                                     
+                                      ->prependFile($this->basePath() . '/js/html5shiv.js')                                   
                                       ->prependFile($this->basePath() . '/js/jquery-1.10.2.js') ?>
 
 
@@ -236,8 +237,10 @@
  	    			<figcaption>Desenvolvido por</figcaption>
  	    			<a href="" target="_blank" title="Spicy.comm" alt="Spicy.comm"><img src="img/logo-spicy.png"></a>
  	    		</figure>
+
+ 	    		<span><a class="vt-topo" title="Voltar topo" alt="Voltar topo" href="">Voltar topo</a></span>
+
  	    	</div>
-			
         </header>
 
         <section class="bee-happy">

@@ -131,7 +131,13 @@ ul.box-menu li.sub-menu-links:hover ul { display: block;}
 
 .container { width: 100%; background: url(../img/bk-container.png) repeat; float: left;}
 
-section.galeria img { max-width: 99.9%;}
+section.galeria { width: 100%; float: left;}
+
+
+
+
+
+
 
 .lancamentos { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-top: 80px;} /* +/- 1300px */
 .lancamentos h2 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; text-align: center; font-size: 8.0em; color: #222222; margin: 0; padding: 0;}
@@ -239,14 +245,13 @@ section.menu-bottom ul.mb-redes li a[href*="youtube.com"] { background-image: ur
 section.menu-bottom ul.mb-redes li a:hover[href*="youtube.com"] { background-image: url(../img/ico-youtube-hover.png);}
 section.menu-bottom ul.mb-redes li a[href*="instagram.com"] { background-image: url(../img/ico-instagram.png);}
 section.menu-bottom ul.mb-redes li a:hover[href*="instagram.com"] { background-image: url(../img/ico-instagram-hover.png);}
-
-div.copyright { width: 450px; height: 245px; position: relative; left: 50%; margin-left: -225px; float: left;}
+div.copyright { width: 1300px; height: 245px; position: relative; left: 50%; margin-left: -650px; float: left;}
 div.copyright figure.bouts-copyright { text-align: center; margin-top: 65px;}
 div.copyright figure.bouts-copyright figcaption { margin-top: 30px; font-size: 1.4em; color: #cccccc;}
-
 div.copyright figure.spicy { width: 200px; float: left; margin-top: 20px; position: relative; left: 50%; margin-left: -100px;}
 div.copyright figure.spicy img { margin-top: -5px;}
 div.copyright figure.spicy figcaption { font-size: 1.3em; margin-right: 10px; color: #cccccc; float: left; margin-left: 30px;}
-
+span a.vt-topo { width: 88px; height: 95px; background: url(../img/topo.png) no-repeat; position: absolute; z-index: 200; top: -68px; right: 0; text-indent: -9999px;}
+span a.vt-topo:hover { background: url(../img/topo-hover.png) no-repeat;}
 section.bee-happy { width: 100%; height: 50px; text-align: center; float: left; color: #333333; font-size: 1.3em;}
 section.bee-happy p a { text-decoration: none; color: #96bd05; font-weight: bold;}
