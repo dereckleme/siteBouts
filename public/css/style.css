@@ -19,11 +19,11 @@ body { font-family:'Conv_calibri', Sans-Serif; font-size: 10px!important;}
 .h-container-top { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left;} /* +/- 1300px */
 .h-container-bottom { width: 100%; min-width: 1300px; border-top: solid 8px #222222; border-bottom: solid 8px #222222; background: url(../img/bk-header.png) repeat; float: left;} /* +/- 1300px */
 .h-topo { width: 1300px; height: 60px; position: relative; left: 50%; margin-left: -650px; float: left;} /* +/- 1300px */
-.redes-sociais { margin: 21px 0 0 65px; width: 230px;}
-.twitter { float: left;}
-.fb-like { float: left; margin-right: 15px;}
+.redes-sociais { margin: 21px 0 0 65px; width: 240px; float: left;}
+#twitter { float: right; clear: both; display: block; margin-top: -20px;}
+.fb-like { float: left; margin-right: 20px; clear: both; display: block;}
 
-.usuario { width: 280px; float: right; margin: 0 0 0 0;}
+.usuario { width: 280px; float: right; margin: 20px 0 0 0;}
 figure.wall { width: 120px; display: block; float: left; margin-right: 20px;}
 figure.wall a { width: 24px; height: 18px; display: block; background: url(../img/wallpaper.png) no-repeat; text-decoration: none;}
 figure.wall a:hover { background: url(../img/wallpaper-hover.png) no-repeat;}
