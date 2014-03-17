@@ -22,8 +22,6 @@
                                       ->prependFile($this->basePath() . '/js/bootstrap.min.js') 
                                       ->prependFile($this->basePath() . '/js/html5shiv.js')                                   
                                       ->prependFile($this->basePath() . '/js/jquery-1.10.2.js') ?>
-
-
     </head>
     <body>
     <?php 
@@ -34,9 +32,11 @@
     ?>
     <header class="h-container-top">
 
- 		<section  class="h-topo">
+ 		<section class="h-topo">
 
- 			<div class="redes-sociais">
+ 			<h1><a href="" title="Página Inicial" alt="Página Inicial"><img src="img/logo-bouts.png"></a></h1>
+
+ 			<!--<div class="redes-sociais">
 
 				<div id="fb-root"></div>
 				<script>(function(d, s, id) {
@@ -55,8 +55,17 @@
 	                </div>
                 </div>
 
- 			</div>
-
+ 			</div>-->
+ 			
+			<div class="newsletter">
+	         <h5>Newsletter Bout’s</h5>
+			  <p>Cadastre-se para receber notícias,<br/>
+				lançamento e ofertas.</p>
+			 <input type="text" name="email" placeholder="Escreva seu endereço de e-mail"/>
+	         <button class="vd" type="submit" name="enviar" title="Cadastrar">Cadastrar</button>
+            </div>
+			
+			
  			<div class="usuario">
 
  				<figure class="wall">
@@ -73,7 +82,6 @@
 
  			</div>
 
-
  		</section>
 
  	</header>
@@ -81,9 +89,6 @@
  	<section class="menu">
 
 	 	<nav>
-	 		<h1><a href="" title="Home" alt="Bout's"><img src="img/logo-bouts.png"></a></h1>
-
-	 		 <button class="nav-button">Menu</button>
 
 	 		<?php 
 	 		print $this->partial('menu/menu.phtml', array('menu' => $this->menu, 'menuListaTenis' => $this->menuListaTenis));
@@ -92,6 +97,8 @@
 	 	</nav>
 
  	</section>
+
+ 	<!--  ***************************************************************************  -->
 
  	<section class="container">
 			<?=$this->content; ?>
@@ -227,7 +234,7 @@
  	    	</ul>
  	    </section>
 
- 	    <header class="h-container-top">
+ 	   <header class="h-container-top">
 
  	    	<div class="copyright">
  	    		<figure class="bouts-copyright">
@@ -239,9 +246,6 @@
  	    			<figcaption>Desenvolvido por</figcaption>
  	    			<a href="" target="_blank" title="Spicy.comm" alt="Spicy.comm"><img src="img/logo-spicy.png"></a>
  	    		</figure>
-
- 	    		<span><a class="vt-topo" title="Voltar topo" alt="Voltar topo" href="">Voltar topo</a></span>
-
  	    	</div>
         </header>
 
