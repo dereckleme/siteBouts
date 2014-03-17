@@ -24,9 +24,14 @@
                                       ->prependFile($this->basePath() . '/js/bootstrap.min.js')
                                       ->prependFile($this->basePath() . '/js/admin.js')
                                       ->prependFile($this->basePath() . '/js/jquery-ui-1.10.4.custom.min.js')
-                                      ->prependFile($this->basePath() . '/js/jquery.min.js') ?>
+                                      ->prependFile($this->basePath() . '/js/jquery.min.js') 
+                                      ->prependFile($this->basePath() . '/js/masonry.pkgd.min.js')
+                                     
+        ?>
 
-		
+		<script type="text/javascript">
+	var basePatch  = '<?=$this->basePath()?>';
+		</script>
 
     </head>
     <body>

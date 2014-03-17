@@ -11,7 +11,8 @@ return array(
 ///[:subcategoria]/:[:subcategoria]
 	'controllers' => array(
 				'invokables' => array(
-						'Admin\Controller\Index' => 'Admin\Controller\IndexController'
+						'Admin\Controller\Index' => 'Admin\Controller\IndexController',
+						'Admin\Controller\Crud' => 'Admin\Controller\CrudController'
 				),
 	),
     'router' => array(
@@ -33,6 +34,15 @@ return array(
         										'route'    => '/logar',
         										'defaults' => array(
         												'action'     => 'logar',
+        										),
+        								),
+        						),
+        						'crud' => array(
+        								'type'    => 'Segment',
+        								'options' => array(
+        										'route'    => '[/crud[/:action]]',
+        										'defaults' => array(
+        												'controller' => 'Admin\Controller\Crud'
         										),
         								),
         						),
