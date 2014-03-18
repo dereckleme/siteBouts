@@ -19,24 +19,20 @@ body { font-family:'Conv_calibri', Sans-Serif; font-size: 10px!important;}
 .h-container-top { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left; margin-top: 92px;} /* +/- 1300px */
 .h-container-bottom { width: 100%; min-width: 1300px; border-top: solid 8px #222222; border-bottom: solid 8px #222222; background: url(../img/bk-header.png) repeat; float: left;} /* +/- 1300px */
 .h-container-footer { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left;}
-
-/*.redes-sociais { margin: 11px 0 0 65px; width: 240px; float: left;}
-#twitter { float: right; clear: both; display: block; margin-top: -20px;}
-.fb-like { float: left; margin-right: 20px; clear: both; display: block;}*/
-
 .usuario { width: 280px; float: right; margin: 26px 15px 0 0;}
 figure.wall { width: 120px; display: block; float: left; margin-right: 20px;}
-figure.wall a { width: 24px; height: 18px; display: block; background: url(../img/wallpaper.png) no-repeat; text-decoration: none;}
-figure.wall a:hover { background: url(../img/wallpaper-hover.png) no-repeat;}
-figure.wall figcaption { font-size: 1.2em; margin-left: 40px; padding-top: 3px; font-weight: bold; text-transform: uppercase; color: #dddddd;}
+figure.wall a { width: 24px; height: 18px; display: block; background: url(../img/wallpaper.png) no-repeat; background-position: 0 0; text-decoration: none; -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
+figure.wall a:hover { background: url(../img/wallpaper.png) no-repeat; background-position: 0 -20px; -webkit-transition: 0.1s ease-in; transition: 0.1s ease-in;}
+figure.wall figcaption { font-size: 1.2em; margin-left: 40px; padding-top: 3px; font-weight: bold; text-transform: uppercase; color: #dddddd; -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
+figure.wall a:hover figcaption { color: #96bd05; -webkit-transition: 0.1s ease-in; transition: 0.1s ease-in;}
 figure.contato { width: 130px; display: block; float: left;}
-figure.contato a { width: 24px; height: 16px; margin-top: 2px; display: block; background: url(../img/contato.png) no-repeat; text-decoration: none;}
-figure.contato a:hover { background: url(../img/contato-hover.png) no-repeat;}
-figure.contato figcaption { width: 97px; font-size: 1.2em; margin-left: 40px; padding-top: 3px; font-weight: bold; text-transform: uppercase; color: #dddddd;}
+figure.contato a { width: 24px; height: 16px; margin-top: 2px; display: block; background: url(../img/contato.png) no-repeat; background-position: 0 0; text-decoration: none; -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
+figure.contato a:hover { background: url(../img/contato.png) no-repeat; background-position: 0 -17px; -webkit-transition: 0.1s ease-in; transition: 0.1s ease-in;}
+figure.contato figcaption { width: 97px; font-size: 1.2em; margin-left: 40px; padding-top: 3px; font-weight: bold; text-transform: uppercase; color: #dddddd; -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
+figure.contato a:hover figcaption { color: #96bd05; -webkit-transition: 0.1s ease-in; transition: 0.1s ease-in;}
 
 .h-news { width: 1300px; height: 50px; position: relative; left: 50%; margin-left: -650px; float: left;}
-
-.newsletter { width: 740px; margin: 0 auto; margin-top: 0.5%;}
+.newsletter { width: 750px; margin: 0 auto; margin-top: 0.5%;}
 .newsletter input { width: 234px; height: 29px; float: left; background: url(../img/bk-news.png) no-repeat #222222; background-position: 7px 9px;}
 .newsletter input { border: none; color: #666666; font-size: 1.3em; font-family:'Conv_calibri', Sans-Serif;}
 .newsletter input { padding-left: 5px; text-indent: 30px; margin: 3px 0 0 20px;}
@@ -60,7 +56,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0174ad', end
 
 .menu nav { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;} /* +/- 1300px */
 .menu nav h1 a img { max-width: 100%; position: relative; top: -2px; float: left; clear: both; margin-left: 15px;} 
-
 ul.box-menu { float: left; margin: -12px 0 0 50px; position: relative;}
 ul.box-menu li.box-lista { float: left; cursor: pointer; padding: 28px 0 26px 0; position: relative; z-index: 800;}
 ul.box-menu li.box-lista:hover { background: #FFFFFF;}
@@ -71,7 +66,6 @@ ul.box-menu li a.compre { padding: 10px 45px 10px 20px;}
 ul.box-menu li a.produtos { padding: 10px 45px 10px 20px;}
 ul.box-menu li a.tecnologia { padding: 10px 45px 10px 20px;}
 ul.box-menu li a.midia:last-child { padding: 10px 20px 10px 20px; border: none;}
-
 ul.box-menu li a.compre:before { content: '\2335'; position: absolute; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 ul.box-menu li.box-lista:hover > a.compre:before { color: #222222; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); top: 12px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 ul.box-menu li a.produtos:before { content: '\2335'; position: absolute; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
@@ -81,6 +75,7 @@ ul.box-menu li.box-lista:hover > a.tecnologia:before { color: #222222; -webkit-t
 
 li.sub-menu ul { width: 225px; display: none; padding-bottom: 8px; position: absolute; top: 87px; float: left; z-index: 100; background: #FFFFFF;}
 li.sub-menu ul li h6 { width: 183px; padding: 8px 0 8px 42px; text-transform: uppercase; font-size: 1.2em; float: left; color: #222222; margin: 5px 0 0 0;}
+li.sub-menu ul li:first-child h6 { margin-bottom: -7px;}
 li.sub-menu ul li h6:before { content: '\2335'; position: absolute; left: 23px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
 li.sub-menu ul li h6:hover { width: 177px; color: #FFFFFF; background: #96bd05; padding: 8px 0 8px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 li.sub-menu ul li p a { font-size: 1.1em; float: left; padding: 12px 0 0 40px; font-weight: normal; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out; clear: both; border: none;}
@@ -97,8 +92,6 @@ ul.box-menu li.sub-menu-links:hover ul { display: block;}
 .container { width: 100%; background: url(../img/bk-container.png) repeat; float: left;}
 
 section.galeria { width: 100%; float: left; overflow: hidden;}
-
-
 
 .lancamentos { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-top: 80px;} /* +/- 1300px */
 .lancamentos h2 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; text-align: center; font-size: 8.0em; color: #222222; margin: 0; padding: 0;}
@@ -117,18 +110,16 @@ div.g-produtos ul li a hr { width: 290px; height: 0px; font-weight: bold; positi
 div.g-produtos ul li a:hover h4 ~ p { display: block;}
 div.g-produtos ul li a:hover h4 { display: block;}
 div.g-produtos ul li a:hover hr { display: block;}
-div.g-produtos ul li a { -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-div.g-produtos ul li a:hover { -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+div.g-produtos ul li a { -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
+div.g-produtos ul li a:hover { -webkit-transition: 0.1s ease-in; transition: 0.1s ease-in;}
 span a.s-esquerda { width: 72px; height: 72px; position: absolute; z-index: 100; top: 425px; left: 0; background: url(../img/s-esquerda.jpg) no-repeat;}
 span a.s-esquerda:hover { background: url(../img/s-esquerda-hover.jpg) no-repeat;}
 span a.s-direita { width: 72px; height: 72px; position: absolute; z-index: 100; top: 425px; right: 0; background: url(../img/s-direita.jpg) no-repeat;}
 span a.s-direita:hover { background: url(../img/s-direita-hover.jpg) no-repeat;}
-
 span.linha-home { width: 100%; position: relative; display: block; float: left; border-top: solid 1px #01607d; border-bottom: solid 1px #079ab1; margin-bottom: 44px;}
 span.linha-home img { position: absolute; left: 50%; top: -1px;}
 
 .box-home { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
-
 .tec-bouts { width: 1300px; height: 220px; float: left;}
 .tec-bouts h3 { width: 285px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
 .tec-bouts h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 50px;}
@@ -186,13 +177,16 @@ div.video { width: 640px; height: 437px; border: solid 1px #222222; float: left;
 div.campanha { width: 640px; height: 437px; border: solid 1px #222222; float: right; margin-top: 10px;}
 
 /*Pagina Produtos*/
-.h-produtos { width: 1300px; height: 200px; position: relative; left: 50%; margin-left: -650px; float: left;} /* +/- 1300px */
+.h-produtos { width: 1300px; height: 200px; position: relative; left: 50%; margin-left: -650px; float: left;}
 .h-produtos h2 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-size: 6.0em; color: #e7ff43; margin: 20px 0 0 75px;}
-.h-produtos h3 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-size: 3.0em; color: #FFFFFF; margin: 20px 0 0 120px;}
 .h-produtos div { height: 20px; margin: 20px 0 0 79px;}
-.h-produtos span a { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; color: #FFFFFF; font-size: 1.8em; font-weight: normal; text-decoration: none; float: left; text-indent: 40px;}
-.h-produtos span a { height: 20px; background: url(../img/st-caminho.png) no-repeat;}
-.h-produtos p a { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; color: #FFFFFF; font-size: 1.8em; font-weight: normal; text-decoration: none; margin-left: 12px; float: left;}
+.h-produtos div ul li { display: inline;}
+.h-produtos div ul li a { margin-right:10px; text-decoration: none; font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-size: 1.8em; color: #FFFFFF;}
+.h-produtos div ul li a.dt-voltar { padding: 0 0 0 30px; background: url(../img/st-caminho.png) no-repeat; background-position: 0 3px;}
+.h-produtos div ul.box-produto { margin: 12px 0 0 30px;}
+.h-produtos div ul.box-produto li a.tt-produto { font-size: 3.0em; font-weight: bold; font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;}
+.h-produtos div ul.box-produto li a { font-size: 3.0em; font-weight: bold; font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;}
+
 section.pg-produtos { width: 1300px; position: relative; left: 50%; margin: 20px 0 95px -650px; float: left;}
 section.pg-produtos ul { width: 100%; float: left; overflow: hidden; margin: 25px 0 0 0;}
 section.pg-produtos ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
