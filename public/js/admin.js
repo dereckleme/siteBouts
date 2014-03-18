@@ -5,7 +5,7 @@ $(document).ready(function(){
 		var title = $(this).attr("title");
 		$("#adm-popup h4").html(title);
 		$.ajax({
-			url: basePatch+"/admin/crud/banner",
+			url: basePatch+"/admin/crud/"+action,
 			success: function(data) {
 						$(".conteudo").html(data);
 						$("#adm-popup").slideDown();
