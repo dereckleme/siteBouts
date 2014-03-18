@@ -30,12 +30,40 @@
     print $this->content; 
     */
     ?>
+
+    <section class="menu">
+
+	 	<nav>
+
+	 		<h1><a href="" title="Página Inicial" alt="Página Inicial"><img src="img/logo-bouts.png"></a></h1>
+
+	 		<?php 
+	 		print $this->partial('menu/menu.phtml', array('menu' => $this->menu, 'menuListaTenis' => $this->menuListaTenis));
+	 		?>
+
+	 		<div class="usuario">
+
+ 				<figure class="wall">
+ 					<a href="">
+ 					<figcaption>Wallpaper</figcaption>
+ 				    </a>
+ 				</figure>
+
+ 				<figure class="contato" >
+ 					<a href="">
+ 					<figcaption>fale conosco</figcaption>
+ 				    </a>
+ 				</figure>
+
+ 			</div>
+
+	 	</nav>
+
+ 	</section>
+
     <header class="h-container-top">
 
- 		<section class="h-topo">
-
- 			<h1><a href="" title="Página Inicial" alt="Página Inicial"><img src="img/logo-bouts.png"></a></h1>
-
+ 		<section class="h-news">
  			<!--<div class="redes-sociais">
 
 				<div id="fb-root"></div>
@@ -58,45 +86,20 @@
  			</div>-->
  			
 			<div class="newsletter">
+
 	         <h5>Newsletter Bout’s</h5>
+
 			  <p>Cadastre-se para receber notícias,<br/>
 				lançamento e ofertas.</p>
-			 <input type="text" name="email" placeholder="Escreva seu endereço de e-mail"/>
-	         <button class="vd" type="submit" name="enviar" title="Cadastrar">Cadastrar</button>
+
+			  <input type="text" name="email" placeholder="Escreva seu endereço de e-mail"/>
+
+	          <button class="vd" type="submit" name="enviar" title="Cadastrar">Cadastrar</button>
+
             </div>
-			
-			
- 			<div class="usuario">
-
- 				<figure class="wall">
- 					<a href="">
- 					<figcaption>Wallpaper</figcaption>
- 				    </a>
- 				</figure>
-
- 				<figure class="contato" >
- 					<a href="">
- 					<figcaption>fale conosco</figcaption>
- 				    </a>
- 				</figure>
-
- 			</div>
 
  		</section>
-
  	</header>
-
- 	<section class="menu">
-
-	 	<nav>
-
-	 		<?php 
-	 		print $this->partial('menu/menu.phtml', array('menu' => $this->menu, 'menuListaTenis' => $this->menuListaTenis));
-	 		?>
-
-	 	</nav>
-
- 	</section>
 
  	<!--  ***************************************************************************  -->
 
@@ -111,15 +114,15 @@
 	 		<section class="h-news">
 
 	 			<div class="newsletter newsletter-bottom">
+				
+		         <h5>Newsletter Bout’s</h5>
 
-		 			<h5>Newsletter Bout’s</h5>
+				  <p>Cadastre-se para receber notícias,<br/>
+					lançamento e ofertas.</p>
 
-		 			<p>Cadastre-se para receber notícias,<br/>
-		            lançamento e ofertas.</p>
+				  <input type="text" name="email" placeholder="Escreva seu endereço de e-mail"/>
 
-		            <input type="text" name="email" placeholder="Escreva seu endereço de e-mail"/>
-
-		            <button class="az" type="submit" name="enviar" title="Cadastrar">Cadastrar</button>
+		          <button class="az" type="submit" name="enviar" title="Cadastrar">Cadastrar</button>
 
 	            </div>
 
@@ -234,17 +237,12 @@
  	    	</ul>
  	    </section>
 
- 	   <header class="h-container-top">
+ 	   <header class="h-container-footer">
 
  	    	<div class="copyright">
  	    		<figure class="bouts-copyright">
  	    			<img src="img/logo-bouts-footer.png">
  	    			<figcaption>Copyright © BOUT'S 2014  -  SUA VIDA EM MOVIMENTO</figcaption>
- 	    		</figure>
-
- 	    		<figure class="spicy">
- 	    			<figcaption>Desenvolvido por</figcaption>
- 	    			<a href="" target="_blank" title="Spicy.comm" alt="Spicy.comm"><img src="img/logo-spicy.png"></a>
  	    		</figure>
  	    	</div>
         </header>
