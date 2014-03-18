@@ -40,6 +40,18 @@ return array(
         						),
         						
         				),
+        				'may_terminate' => true,
+        				'child_routes' => array(
+        						'publico-detalhe' => array(
+        								'type' => 'Segment',
+        								'options' => array(
+        										'route'    => '[/:produtoSlug]',
+        										'defaults' => array(
+        												'action'     => 'produtoDetalhe',
+        										),
+        								),
+        						),
+        				)
         		),
         		'tecnologia' => array(
         				'type' => 'Literal',

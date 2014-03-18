@@ -27,6 +27,10 @@ class IndexController extends AbstractActionController
     	}
     	return new ViewModel();
     }
+    public function produtoDetalheAction()
+    {
+    	return new ViewModel();
+    }
     public function tecnologiaAction()
     {
 	    return new ViewModel();

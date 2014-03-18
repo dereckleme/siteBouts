@@ -35,7 +35,7 @@
 
 	 	<nav>
 
-	 		<h1><a href="" title="Página Inicial" alt="Página Inicial"><img src="img/logo-bouts.png"></a></h1>
+	 		<h1><a href="" title="Página Inicial" alt="Página Inicial"><img src="<?=$this->basePath()?>/img/logo-bouts.png"></a></h1>
 
 	 		<?php 
 	 		print $this->partial('menu/menu.phtml', array('menu' => $this->menu, 'menuListaTenis' => $this->menuListaTenis));
@@ -203,7 +203,7 @@
 
  	    	<div class="copyright">
  	    		<figure class="bouts-copyright">
- 	    			<img src="img/logo-bouts-footer.png">
+ 	    			<img src="<?=$this->basePath()?>/img/logo-bouts-footer.png">
  	    			<figcaption>Copyright © BOUT'S 2014  -  SUA VIDA EM MOVIMENTO</figcaption>
  	    		</figure>
  	    	</div>

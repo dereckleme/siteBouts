@@ -14,8 +14,8 @@ $(document).ready(function(){
 		
 		return false;
 	});
-	$('#content').masonry({
-		  // other masonry options
-		  isFitWidth: true
-		});
+	$(".conteudo").on("click",".actionAdicionaBanner",function(){
+		
+		return false;
+	})
 })

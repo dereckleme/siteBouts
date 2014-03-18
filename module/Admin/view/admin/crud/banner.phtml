@@ -1,9 +1,9 @@
-<form>
-	<input type="text" placeholder="Digite o Título do banner"/><br/>
-	<input type="text" placeholder="http://www.exemplo.com.br"/><br/>
-	<input type="file"/><br/><br/>
-	<input type="submit" value="Adicionar"> <input type="submit" value="Gerenciar"><br/>
-	<div style="padding:5px;">
+<form class="formBanner">
+	<input type="text" class="titulo" placeholder="Digite o Título do banner"/><br/>
+	<input type="text" class="url" placeholder="http://www.exemplo.com.br"/><br/>
+	<input type="file" class="arquivo" /><br/><br/>
+	<input type="submit" value="Adicionar" class="actionAdicionaBanner"> <input type="submit" value="Gerenciar"><br/>
+	<div style="padding:5px;display:none">
 	<h4>Banners ativos:</h4>
 		 <a href="" class="openPopup"><img src="<?=$this->basepath("img/btn_midia.png")?>" class="img-polaroid" width="200"></a>
 	</div>
