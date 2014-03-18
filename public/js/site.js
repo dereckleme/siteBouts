@@ -15,9 +15,9 @@ $(document).ready(function(){
 	};
 	$( window ).scroll(function() {
 			var posicao = $(document).scrollTop();
-			if(posicao >= 58)
+			if(posicao >= 90)
 				{
-					$("#wowslider-container1").css("top",(posicao-58)+"px");
+					$("#wowslider-container1").css("top",(posicao-90)+"px");
 				}
 			else
 				{
