@@ -177,9 +177,9 @@ div.video { width: 640px; height: 437px; border: solid 1px #222222; float: left;
 div.campanha { width: 640px; height: 437px; border: solid 1px #222222; float: right; margin-top: 10px;}
 
 /*Pagina Produtos*/
-.h-produtos { width: 1300px; height: 200px; position: relative; left: 50%; margin-left: -650px; float: left;}
+.h-produtos { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 .h-produtos h2 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-size: 6.0em; color: #e7ff43; margin: 20px 0 0 75px;}
-.h-produtos div { height: 20px; margin: 20px 0 0 79px;}
+.h-produtos div { margin: 20px 0 20px 79px;}
 .h-produtos div ul li { display: inline;}
 .h-produtos div ul li a { margin-right:10px; text-decoration: none; font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-size: 1.8em; color: #FFFFFF;}
 .h-produtos div ul li a.dt-voltar { padding: 0 0 0 30px; background: url(../img/st-caminho.png) no-repeat; background-position: 0 3px;}
@@ -236,6 +236,121 @@ section.pg-produtos ul li a span {
 	top: -50px;
 	left: 25%
 }
+
+
+section.pg-midia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
+section.pg-midia div { width: 970px; float: left; position: relative; left: 50%; margin: 38px 0 0 -485px; padding-bottom: 90px;}
+section.pg-midia div h3 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; color: #222222; font-size: 3.0em; font-weight: bold; text-align: center;}
+section.pg-midia div ul { width: 970px;}
+section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin: 0 auto;}
+section.pg-midia div ul li.video-secundario { float: left; width: 317px; height: 180px; margin-right: 6px; margin-top: 60px;}
+section.pg-midia div ul li figcaption { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-weight: bold; color: #222222; font-size: 1.6em;}
+
+section.pg-dt-produto { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
+
+
+section.pg-tecnologia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
+
+.pg-tec { width: 1300px; height: 220px; float: left; background: #CCC; margin-top: 30px; margin-bottom: 30px;}
+.pg-tec h3 { width: 480px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
+.pg-tec h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 50px;}
+
+
+
+.pg-tec ul { width: 100%; float: left; margin-top: 10px; overflow: hidden; }
+.pg-tec ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+.pg-tec ul li { width: 315px; height: 180px; margin-left: 10.6px; float: left; border: solid 1px #999999; cursor: pointer; position: relative;}
+.pg-tec ul li:first-child { margin: 0 0 0 5px;}
+
+
+.pg-tec ul li.flyts-01 { background: url(../img/produtos/flyts-1.png) no-repeat #FFF;}
+.pg-tec ul li.flyts-02 { background: url(../img/produtos/flyts-2.png) no-repeat #FFF;}
+.pg-tec ul li.flyts-03 { background: url(../img/produtos/flyts-1.png) no-repeat #FFF;}
+.pg-tec ul li.flyts-04 { background: url(../img/produtos/flyts-1.png) no-repeat #FFF;}
+
+
+
+.pg-tec ul li a { padding: 0px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+.pg-tec ul li:hover a { padding: 43.8px 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+.pg-tec ul li:hover a p:nth-child(1) { margin: 10px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+.pg-tec ul li:hover a p:nth-child(3) { margin: 30px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in; }
+.pg-tec ul li:hover a span { top: 10px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+
+.pg-tec ul li a p:nth-child(1) { 
+	font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
+	width: 313.5px;
+	float: left; 
+    font-size: 3.4em; 
+    font-weight: bold; 
+    color: #FFF; 
+    text-align:center;
+    margin: -40px 0 0 0;
+    -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;
+}
+
+.pg-tec ul li a p:nth-child(3) { 
+	font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; 
+	width: 313.5px;
+	text-align: center;
+	float: left;
+	color: #FFF; 
+	margin: -50px 0 0 0;
+	font-size: 1.6em;
+	-webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;
+}
+
+.pg-tec ul li a span { 
+	width: 150px; 
+	float: left;
+	border-top: solid 1px #000000; 
+	border-bottom: solid 1px #999999;
+	-webkit-transition: 0.7s ease-out; transition: 0.7s ease-out;
+	display: block;
+	position: relative;
+	top: -10px;
+	left: 25%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.pg-wallpaper { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
+
+
+
+
+
+
 
 footer { width: 100%; float: left; background: #eeeeee;}
 section.menu-bottom { width: 900px; height: 333px; float: left; position: relative; left: 50%; margin-left: -450px;}
