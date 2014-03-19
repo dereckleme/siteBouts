@@ -190,7 +190,7 @@ div.campanha { width: 640px; height: 437px; border: solid 1px #222222; float: ri
 .h-produtos div ul.box-produto li a.tt-produto { font-size: 3.0em; font-weight: bold; font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;}
 .h-produtos div ul.box-produto li a { font-size: 3.0em; font-weight: bold; font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;}
 
-section.pg-produtos { width: 1300px; position: relative; left: 50%; margin: 20px 0 95px -650px; float: left; background: #787}
+section.pg-produtos { width: 1300px; position: relative; left: 50%; margin: 20px 0 95px -650px; float: left;}
 section.pg-produtos ul { width: 100%; float: left; overflow: hidden; margin: 25px 0 0 0;}
 section.pg-produtos ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 section.pg-produtos ul li { width: 400px; height: 250px; margin: 0 0 0 25px; float: left; border: solid 1px #999999; cursor: pointer; position: relative;}
@@ -251,78 +251,42 @@ section.pg-midia div ul li figcaption { font-family: 'Myriad Pro', Arial, Helvet
 
 section.pg-dt-produto { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 
-
-section.pg-tecnologia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
-
-.pg-tec { width: 1300px; height: 220px; float: left; background: #CCC; margin-top: 30px; margin-bottom: 30px;}
+section.pg-tecnologia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-bottom: 60px;}
+div.pg-galeria, div.pg-textos { width: 650px; height: 450px; float: left; position: relative; margin-top: 50px;}
+div.pg-textos img { margin-left: 50px;}
+div.pg-textos p { width: 490px; line-height: 25px; margin-left: 55px; font-size: 1.6em; color: #222222;}
+.pg-tec { width: 1300px; height: 220px; float: left; margin-top: 30px; margin-bottom: 30px; position: relative;}
 .pg-tec h3 { width: 480px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
 .pg-tec h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 50px;}
-
-
-
 .pg-tec ul { width: 100%; float: left; margin-top: 10px;}
 .pg-tec ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-
 .pg-tec ul li { width: 315px; height: 180px; margin-left: 10.6px; float: left; border: solid 1px #999999; cursor: pointer; position: relative;}
 .pg-tec ul li:first-child { margin: 0 0 0 5px;}
-
 .pg-tec ul li.flyts-01 { background: url(../img/produtos/flyts-1.png) no-repeat #FFF; overflow: hidden;}
 .pg-tec ul li.flyts-02 { background: url(../img/produtos/flyts-2.png) no-repeat #FFF; overflow: hidden;}
 .pg-tec ul li.flyts-03 { background: url(../img/produtos/flyts-3.png) no-repeat #FFF; overflow: hidden;}
 .pg-tec ul li.flyts-04 { background: url(../img/produtos/flyts-4.png) no-repeat #FFF; overflow: hidden;}
-
 .pg-tec ul li a.effect-top { padding: 0px 182px 0px 131.5px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .pg-tec ul li a.effect-top img { margin: -60px 0 0 0; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .pg-tec ul li:hover a.effect-top { padding: 63px 182px 115px 131.5px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 .pg-tec ul li:hover a.effect-top img { margin: 0px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-
 .pg-tec ul li a.effect-left { padding: 63px 0px 115px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .pg-tec ul li a.effect-left img { margin: 0 0 0 -170px; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .pg-tec ul li:hover a.effect-left { padding: 63px 182px 115px 131.5px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 .pg-tec ul li:hover a.effect-left img { margin: 0 0 0 0px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-
 .pg-tec ul li a.effect-bottom { padding: 63px 182px 115px 131.5px; margin: 179px 0 0 0; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .pg-tec ul li a.effect-bottom img { margin: 0 0 0 0; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-
 .pg-tec ul li:hover a.effect-bottom { padding: 63px 182px 115px 131.5px; margin: 0px 0 0 0; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 .pg-tec ul li:hover a.effect-bottom img { margin: 0 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.pg-tec ul li a.effect-right { padding: 63px 182px 115px 131.5px; margin:  0 0 0 315px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+.pg-tec ul li a.effect-right img { margin: 0 0 0 0; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+.pg-tec ul li:hover a.effect-right { padding: 63px 182px 115px 131.5px; margin:  0 0 0 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+.pg-tec ul li:hover a.effect-right img { margin: 0 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 
 section.pg-wallpaper { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 
-
+section.pg-contato { width: 100%; height: 100%; position: absolute; z-index: 9999; background: rgba(0,0,0,0.8);}
+section.pg-contato img { width: 522px; position: relative; top: 10%; left:50%; margin-left: -261px;}
 
 
 
