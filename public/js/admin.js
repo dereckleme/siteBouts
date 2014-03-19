@@ -31,7 +31,10 @@ $(document).ready(function(){
         	        contentType: 'multipart/form-data',
         	        success: function( data )  
                     {  
-        	        	alert(data);
+        	        	if(data == "")
+        	        		{
+        	        			alert("Banner Adicionado com sucesso");
+        	        		}
                     },
                     error:function(){alert("Formato de imagem inválido!");},
         	        data: formData,

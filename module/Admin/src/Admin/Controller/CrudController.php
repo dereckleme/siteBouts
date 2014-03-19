@@ -28,8 +28,11 @@ class CrudController extends AbstractActionController
     					"target" => $fname,
     					"randomize" => true
     			)), null, $file);
-    			 
-    			var_dump($requestPost->receive());
+    			if($requestPost->receive())
+    			{
+    				$service = $this->getServiceLocator()->get('Admin\Service\Banner');
+    				$service->insert(array("titulo" => $this->getRequest()->getPost("titulo"), "src" => $filtro->getFileInfo()['imagem']['name'], "url" => $this->getRequest()->getPost("url")));
+    			}
     			
     		}
     	}

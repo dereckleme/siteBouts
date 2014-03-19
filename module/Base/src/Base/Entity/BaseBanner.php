@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="base_banner")
  * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Base\Entity\BaseBannerRepository")
  */
 class BaseBanner
 {

@@ -2,7 +2,7 @@
 namespace Admin;
 use Zend\Authentication\AuthenticationService,
 	Zend\Authentication\Storage\Session as SessionStorage;
-
+use Base\Service\Banner;
 class Module
 {
     public function getConfig()
@@ -91,6 +91,16 @@ class Module
     		}    	    		
     	
     	}, 100);
+    }
+    public function getServiceConfig() {
+    	return array(
+    			'factories' => array(
+    					'Admin\Service\Banner' => function($service) {
+    					    $banner = new Banner($service->get('Doctrine\ORM\EntityManager'));
+    					    return $banner;
+    					},
+    			)
+    	);
     }
     
 }
