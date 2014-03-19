@@ -30,7 +30,7 @@ $(document).ready(function(){
         	        type: 'POST',
         	        contentType: 'multipart/form-data',
         	        success: function( data )  
-                    {  
+                    { 
         	        	if(data == "")
         	        		{
         	        			alert("Banner Adicionado com sucesso");

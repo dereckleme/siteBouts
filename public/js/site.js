@@ -23,5 +23,17 @@ $(document).ready(function(){
 				{
 					$("#wowslider-container1").css("top","0px");
 				}
+			if(posicao >= 0)
+			{
+				$(".h-produtos").css("top",(posicao-0)+"px");
+			}
+		else
+			{
+				$(".h-produtos").css("top","0px");
+			}
+			
 		});
+	
+	
+	
 });

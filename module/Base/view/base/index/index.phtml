@@ -24,10 +24,14 @@
 
 		<div class="ws_images">
 		  <ul>
-			<li><a href=""><img src="<?=$this->basePath()?>/galery/img/mgaleria1.jpg" alt="mgaleria1" title="" id="wows1_0"/></a></li>
-			<li><a href=""><img src="<?=$this->basePath()?>/galery/img/mgaleria2.jpg" alt="mgaleria2" title="" id="wows1_1"/></a></li>
-			<li><a href=""><img src="<?=$this->basePath()?>/galery/img/mgaleria3.jpg" alt="mgaleria3" title="" id="wows1_2"/></a></li>
-			<li><a href=""><img src="<?=$this->basePath()?>/galery/img/mgaleria4.jpg" alt="mgaleria4" title="" id="wows1_3"/></a></li>
+		  <?php 
+		  	foreach($this->bannersDestaque AS $banner)
+		  	{
+		  ?>
+			<li><a href="<?=$banner->getUrl()?>"><img src="<?=$this->basePath("img/banners/".$banner->getSrc())?>" alt="<?=$banner->getTitulo()?>" title="<?=$banner->getTitulo()?>" id="wows1_0"/></a></li>
+		 	<?php 
+		  	}
+		 	?>
 		  </ul>
 		</div>
 

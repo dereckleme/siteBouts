@@ -17,7 +17,11 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+    	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    	$repo = $doctrine->getRepository("Base\Entity\BaseBanner");
+        return new ViewModel(array(
+        	"bannersDestaque" => $repo->findAll() 
+        ));
     }
     public function produtoAction()
     {
