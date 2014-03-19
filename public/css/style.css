@@ -17,6 +17,9 @@
 body { font-family:'Conv_calibri', Sans-Serif; font-size: 10px!important;}
 
 .h-container-top { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left; margin-top: 92px;} /* +/- 1300px */
+
+.box-paralax { overflow: hidden;}
+
 .h-container-bottom { width: 100%; min-width: 1300px; border-top: solid 8px #222222; border-bottom: solid 8px #222222; background: url(../img/bk-header.png) repeat; float: left;} /* +/- 1300px */
 .h-container-footer { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left;}
 .usuario { width: 280px; float: right; margin: 26px 15px 0 0;}
@@ -187,7 +190,7 @@ div.campanha { width: 640px; height: 437px; border: solid 1px #222222; float: ri
 .h-produtos div ul.box-produto li a.tt-produto { font-size: 3.0em; font-weight: bold; font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;}
 .h-produtos div ul.box-produto li a { font-size: 3.0em; font-weight: bold; font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;}
 
-section.pg-produtos { width: 1300px; position: relative; left: 50%; margin: 20px 0 95px -650px; float: left;}
+section.pg-produtos { width: 1300px; position: relative; left: 50%; margin: 20px 0 95px -650px; float: left; background: #787}
 section.pg-produtos ul { width: 100%; float: left; overflow: hidden; margin: 25px 0 0 0;}
 section.pg-produtos ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 section.pg-produtos ul li { width: 400px; height: 250px; margin: 0 0 0 25px; float: left; border: solid 1px #999999; cursor: pointer; position: relative;}
@@ -257,60 +260,33 @@ section.pg-tecnologia { width: 1300px; position: relative; left: 50%; margin-lef
 
 
 
-.pg-tec ul { width: 100%; float: left; margin-top: 10px; overflow: hidden; }
+.pg-tec ul { width: 100%; float: left; margin-top: 10px;}
 .pg-tec ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 
 .pg-tec ul li { width: 315px; height: 180px; margin-left: 10.6px; float: left; border: solid 1px #999999; cursor: pointer; position: relative;}
 .pg-tec ul li:first-child { margin: 0 0 0 5px;}
 
+.pg-tec ul li.flyts-01 { background: url(../img/produtos/flyts-1.png) no-repeat #FFF; overflow: hidden;}
+.pg-tec ul li.flyts-02 { background: url(../img/produtos/flyts-2.png) no-repeat #FFF; overflow: hidden;}
+.pg-tec ul li.flyts-03 { background: url(../img/produtos/flyts-3.png) no-repeat #FFF; overflow: hidden;}
+.pg-tec ul li.flyts-04 { background: url(../img/produtos/flyts-4.png) no-repeat #FFF; overflow: hidden;}
 
-.pg-tec ul li.flyts-01 { background: url(../img/produtos/flyts-1.png) no-repeat #FFF;}
-.pg-tec ul li.flyts-02 { background: url(../img/produtos/flyts-2.png) no-repeat #FFF;}
-.pg-tec ul li.flyts-03 { background: url(../img/produtos/flyts-1.png) no-repeat #FFF;}
-.pg-tec ul li.flyts-04 { background: url(../img/produtos/flyts-1.png) no-repeat #FFF;}
+.pg-tec ul li a.effect-top { padding: 0px 182px 0px 131.5px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+.pg-tec ul li a.effect-top img { margin: -60px 0 0 0; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+.pg-tec ul li:hover a.effect-top { padding: 63px 182px 115px 131.5px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+.pg-tec ul li:hover a.effect-top img { margin: 0px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 
+.pg-tec ul li a.effect-left { padding: 63px 0px 115px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+.pg-tec ul li a.effect-left img { margin: 0 0 0 -170px; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+.pg-tec ul li:hover a.effect-left { padding: 63px 182px 115px 131.5px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+.pg-tec ul li:hover a.effect-left img { margin: 0 0 0 0px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 
+.pg-tec ul li a.effect-bottom { padding: 63px 182px 115px 131.5px; margin: 179px 0 0 0; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+.pg-tec ul li a.effect-bottom img { margin: 0 0 0 0; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 
-.pg-tec ul li a { padding: 0px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-.pg-tec ul li:hover a { padding: 43.8px 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-.pg-tec ul li:hover a p:nth-child(1) { margin: 10px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-.pg-tec ul li:hover a p:nth-child(3) { margin: 30px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in; }
-.pg-tec ul li:hover a span { top: 10px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+.pg-tec ul li:hover a.effect-bottom { padding: 63px 182px 115px 131.5px; margin: 0px 0 0 0; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+.pg-tec ul li:hover a.effect-bottom img { margin: 0 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 
-.pg-tec ul li a p:nth-child(1) { 
-	font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
-	width: 313.5px;
-	float: left; 
-    font-size: 3.4em; 
-    font-weight: bold; 
-    color: #FFF; 
-    text-align:center;
-    margin: -40px 0 0 0;
-    -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;
-}
-
-.pg-tec ul li a p:nth-child(3) { 
-	font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; 
-	width: 313.5px;
-	text-align: center;
-	float: left;
-	color: #FFF; 
-	margin: -50px 0 0 0;
-	font-size: 1.6em;
-	-webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;
-}
-
-.pg-tec ul li a span { 
-	width: 150px; 
-	float: left;
-	border-top: solid 1px #000000; 
-	border-bottom: solid 1px #999999;
-	-webkit-transition: 0.7s ease-out; transition: 0.7s ease-out;
-	display: block;
-	position: relative;
-	top: -10px;
-	left: 25%
-}
 
 
 
