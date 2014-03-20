@@ -2,7 +2,7 @@
 namespace Admin;
 use Zend\Authentication\AuthenticationService,
 	Zend\Authentication\Storage\Session as SessionStorage;
-use Base\Service\Banner;
+use Admin\Service\Banner;
 class Module
 {
     public function getConfig()

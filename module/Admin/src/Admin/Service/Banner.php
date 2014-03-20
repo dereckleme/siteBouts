@@ -1,8 +1,8 @@
 <?php
-namespace Base\Service;
+namespace Admin\Service;
 use Doctrine\ORM\EntityManager;
 use Zend\Stdlib\Hydrator;
-use Base\Service\AbstractService;
+use Admin\Service\AbstractService;
 
 
 class Banner extends AbstractService
