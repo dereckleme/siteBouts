@@ -43,7 +43,13 @@ body {
 	margin-bottom: 15px;
 	padding: 7px 9px;
 }
-input .arquivo {background: #222}
+
+/*gerenciar banner*/
 .style-adicionar, .style-gerenciar {font-family:'Arial', Helvetica, sans-serif; font-size: 13px}
 .style-adicionar {background: url(.././img/admin/icon-adicionar.png)  no-repeat left #30ab00; border: none; color:#fff; padding: 7px 15px; font-weight: bolder; text-indent:20px}
 .style-gerenciar {background: url(.././img/admin/icon-gerenciar.png)  no-repeat left #079ab1; border: none; color:#fff; padding: 7px 15px; font-weight: bolder; text-indent:20px}
+
+/*gerenciar produto*/
+input.style-tamanho {width: 95px; margin-top: 5px}
+input.style-cor {width: 70px; height: 30px}
+label.cor-predominante {margin-bottom: 5px;}

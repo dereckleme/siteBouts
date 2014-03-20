@@ -1,0 +1,27 @@
+<form class="formProduto">
+	<select  class="form-control categoria">
+         <option>Categoria do Tênis</option>
+	</select><br/>
+	<select  class="form-control subcategoria">
+         <option>Subcategoria do Tênis</option>
+	</select><br/>
+	<input type="text" class="modelo" placeholder="Digite o Modelo do Tênis"/><br/>
+	<input type="file" class="arquivo" /><br/><br/>
+	<label class="numeracao" for="" style="cursor:default; color:#222; font-size:14px;">Numeração do Tênis</label>
+	<input type="text" class="style-tamanho" placeholder="Minímo"/> 
+    <input type="text" class="style-tamanho" placeholder="Máximo"/>
+    <br/>
+    <label class="cor-predominante" for="" style="cursor:default; color:#222; font-size:14px;">Cor Predominante</label>
+    <label style="cursor:default; color:#222; font-size:14px; width:150px;">1ª Cor: <input type="color" class="style-cor"/></label>
+    <label style="cursor:default; color:#222; font-size:14px; width:150px;">2ª Cor: <input type="color" class="style-cor"/></label>
+    <label style="cursor:default; color:#222; font-size:14px; width:150px;">3ª Cor: <input type="color" class="style-cor"/></label>
+    
+	
+    <br/>
+	<input type="submit" value="Adicionar" class="actionAdicionaBanner style-adicionar" title="Adicionar Banner"> 
+	<input type="submit" value="Gerenciar" class="style-gerenciar" title="Gerenciar Banner"><br/>
+	<div style="padding:5px;display:none">
+	<h4>Banners ativos:</h4>
+		 <a href="" class="openPopup"><img src="<?=$this->basepath("img/btn_midia.png")?>" class="img-polaroid" width="200"></a>
+	</div>
+</form>
