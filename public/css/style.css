@@ -16,8 +16,7 @@
 
 body { font-family:'Conv_calibri', Sans-Serif; font-size: 10px!important;}
 
-.h-container-top { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left; margin-top: 92px;} /* +/- 1300px */
-
+.h-container-top { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left; margin-top: 92px; position: relative;} /* +/- 1300px */
 .box-paralax { overflow: hidden;}
 
 .h-container-bottom { width: 100%; min-width: 1300px; border-top: solid 8px #222222; border-bottom: solid 8px #222222; background: url(../img/bk-header.png) repeat; float: left;} /* +/- 1300px */
@@ -92,7 +91,7 @@ li.sub-menu-links ul li a:before { content: '\2335'; position: absolute; left: 2
 li.sub-menu-links ul li a:hover { color: #FFFFFF; background: #96bd05; padding: 8px 0 8px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 ul.box-menu li.sub-menu-links:hover ul { display: block;}
 
-.container { width: 100%; background: url(../img/bk-container.png) repeat; float: left;}
+.container { width: 100%; background: url(../img/bk-container.png) repeat; float: left; position: relative;}
 
 section.galeria { width: 100%; float: left; overflow: hidden;}
 
@@ -287,10 +286,6 @@ section.pg-wallpaper { width: 1300px; position: relative; left: 50%; margin-left
 
 section.pg-contato { width: 100%; height: 100%; position: absolute; z-index: 9999; background: rgba(0,0,0,0.8);}
 section.pg-contato img { width: 522px; position: relative; top: 10%; left:50%; margin-left: -261px;}
-
-
-
-
 
 footer { width: 100%; float: left; background: #eeeeee;}
 section.menu-bottom { width: 900px; height: 333px; float: left; position: relative; left: 50%; margin-left: -450px;}

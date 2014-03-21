@@ -13,11 +13,11 @@ $(document).ready(function(){
 				$(".g-produtos").css('overflow-x', 'auto');
 			}
 	};
-	$( window ).scroll(function() {
+	$(window).scroll(function() {
 			var posicao = $(document).scrollTop();
-			if(posicao >= 90)
+			if(posicao >= 88)
 				{
-					$("#wowslider-container1").css("top",(posicao-90)+"px");
+					$("#wowslider-container1").css("top",(posicao-88)+"px");
 				}
 			else
 				{
@@ -25,11 +25,11 @@ $(document).ready(function(){
 				}
 			if(posicao >= 0)
 			{
-				$(".h-produtos").css("top",(posicao-0)+"px");
+				$(".h-container-top").css("top",(posicao-0)+"px");
 			}
 		else
 			{
-				$(".h-produtos").css("top","0px");
+				$(".h-container-top").css("top","0px");
 			}
 			
 		});
