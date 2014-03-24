@@ -26,10 +26,15 @@ class IndexController extends AbstractActionController
     public function produtoAction()
     {
     	if($this->params()->fromRoute("subcategoria"))
-    	{
-    		
+    	{	
     	}
     	return new ViewModel();
+    }
+    public function produtoSubcategoriaAction()
+    {
+    	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    	$produtos = $doctrine->getRepository("Produto\Entity\ProdutoTenis")->localizaPelaSubcategoria($this->params()->fromRoute("categoria"),$this->params()->fromRoute("subcategoria"));
+    	return new ViewModel(array("produtos" => $produtos));
     }
     public function produtoDetalheAction()
     {

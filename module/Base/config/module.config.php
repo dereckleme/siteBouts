@@ -29,28 +29,26 @@ return array(
         		'produto' => array(
         				'type' => 'Segment',
         				'options' => array(
-        						'route'    => '/produto/[:categoria]/[:subcategoria]',
+        						'route'    => '[/produto/:categoria]',
         						'constraints' => array(
-        								'categoria' => '[a-zA-Z][a-zA-Z0-9_-]*',
-        								'subcategoria' => '[a-zA-Z][a-zA-Z0-9_-]*'
+        								'categoria' => '[a-zA-Z][a-zA-Z0-9_-]*'
         						),
         						'defaults' => array(
         								'controller' => 'Base\Controller\Index',
         								'action'     => 'produto'
         						),
-        						
         				),
         				'may_terminate' => true,
         				'child_routes' => array(
-        						'publico-detalhe' => array(
-        								'type' => 'Segment',
-        								'options' => array(
-        										'route'    => '[/:produtoSlug]',
-        										'defaults' => array(
-        												'action'     => 'produtoDetalhe',
-        										),
-        								),
-        						),
+	        				'produto-subcategoria' => array(
+	        						'type' => 'Segment',
+	        						'options' => array(
+	        								'route'    => '[/:subcategoria]',
+	        								'defaults' => array(
+	        										'action'     => 'produtoSubcategoria',
+	        								),
+	        						),
+	        				),
         				)
         		),
         		'tecnologia' => array(

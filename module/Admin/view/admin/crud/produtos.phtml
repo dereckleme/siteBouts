@@ -1,24 +1,39 @@
 <form class="formProduto">
-	<select  class="form-control categoria">
-         <option>Categoria do Tênis</option>
+	<select  class="form-control categoria" <?if(!$this->categorias) print 'disabled="disabled"'?>>
+         <option value="">Selecione uma Categoria</option>
+         <?php 
+         	foreach($this->categorias AS $categoria)
+         	{
+         		?>
+         		<option value="<?=$categoria->getIdcategoria()?>"><?=$categoria->getNome()?></option>
+         		<?php 
+         	}
+         ?>
 	</select><br/>
-	<select  class="form-control subcategoria">
-         <option>Subcategoria do Tênis</option>
+	<select  class="form-control subcategoria" disabled="disabled">
+         <option value="">Selecione uma Subcategoria</option>
 	</select><br/>
-	<input type="text" class="modelo" placeholder="Digite o Modelo do Tênis"/><br/>
+	<select  class="form-control modelo" <?if(!$this->modelos) print 'disabled="disabled"'?>>
+         <option value="">Selecione o modelo do tenis</option>
+         <?php 
+         	foreach($this->modelos AS $modelo)
+         	{
+         		?>
+         		<option value="<?=$modelo->getIdmodelo()?>"><?=$modelo->getNome()?></option>
+         		<?php 
+         	}
+         ?>
+	</select><br/>
 	<input type="file" class="arquivo" /><br/><br/>
 	<label class="numeracao" for="" style="cursor:default; color:#222; font-size:14px;">Numeração do Tênis</label>
-	<input type="text" class="style-tamanho" placeholder="Minímo"/> 
-    <input type="text" class="style-tamanho" placeholder="Máximo"/>
+	<input type="text" class="style-tamanho tamanhoMin" placeholder="Minímo"/> 
+    <input type="text" class="style-tamanho tamanhoMax" placeholder="Máximo"/>
     <br/>
     <label class="cor-predominante" for="" style="cursor:default; color:#222; font-size:14px;">Cor Predominante</label>
-    <label style="cursor:default; color:#222; font-size:14px; width:150px;">1ª Cor: <input type="color" class="style-cor"/></label>
-    <label style="cursor:default; color:#222; font-size:14px; width:150px;">2ª Cor: <input type="color" class="style-cor"/></label>
-    <label style="cursor:default; color:#222; font-size:14px; width:150px;">3ª Cor: <input type="color" class="style-cor"/></label>
-    
-	
+  	<span style="font-size:12px;color:red">#Hexadecimal</span> <input type="text" class="hexadecimal"/><br/>
+  	<input type="submit"  value="Adicionar novo hexadecimal" class="addHexadecimal"/><br/>
     <br/>
-	<input type="submit" value="Adicionar" class="actionAdicionaBanner style-adicionar" title="Adicionar Banner"> 
+	<input type="submit" value="Adicionar" class="actionAdicionaProduto style-adicionar" title="Adicionar Banner"> 
 	<input type="submit" value="Gerenciar" class="style-gerenciar" title="Gerenciar Banner"><br/>
 	<div style="padding:5px;display:none">
 	<h4>Banners ativos:</h4>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Produto\Entity;
+
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -27,34 +27,13 @@ class ProdutoModelo
      * @ORM\Column(name="nome", type="string", length=45, nullable=true)
      */
     private $nome;
-	/**
-	 * @return the $idmodelo
-	 */
-	public function getIdmodelo() {
-		return $this->idmodelo;
-	}
 
-	/**
-	 * @return the $nome
-	 */
-	public function getNome() {
-		return $this->nome;
-	}
-
-	/**
-	 * @param number $idmodelo
-	 */
-	public function setIdmodelo($idmodelo) {
-		$this->idmodelo = $idmodelo;
-	}
-
-	/**
-	 * @param string $nome
-	 */
-	public function setNome($nome) {
-		$this->nome = $nome;
-	}
-
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="slug", type="string", length=45, nullable=true)
+     */
+    private $slug;
 
 
 }

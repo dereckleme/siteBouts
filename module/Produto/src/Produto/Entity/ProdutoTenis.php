@@ -58,7 +58,7 @@ class ProdutoTenis
      *   @ORM\JoinColumn(name="modelo", referencedColumnName="idmodelo")
      * })
      */
-    private $modelo;
+    private $modeloTenis;
 
     /**
      * @var \ProdutoSubcategoria
@@ -68,7 +68,7 @@ class ProdutoTenis
      *   @ORM\JoinColumn(name="subcategoria", referencedColumnName="idsubcategoria")
      * })
      */
-    private $subcategoria;
+    private $subcategoriaTenis;
 	/**
 	 * @return the $idtenis
 	 */
@@ -102,20 +102,6 @@ class ProdutoTenis
 	 */
 	public function getNumeracaoFinal() {
 		return $this->numeracaoFinal;
-	}
-
-	/**
-	 * @return the $modelo
-	 */
-	public function getModelo() {
-		return $this->modelo;
-	}
-
-	/**
-	 * @return the $subcategoria
-	 */
-	public function getSubcategoria() {
-		return $this->subcategoria;
 	}
 
 	/**
@@ -154,19 +140,34 @@ class ProdutoTenis
 	}
 
 	/**
-	 * @param ProdutoModelo $modelo
+	 * @return the $modeloTenis
 	 */
-	public function setModelo($modelo) {
-		$this->modelo = $modelo;
+	public function getModeloTenis() {
+		return $this->modeloTenis;
 	}
 
 	/**
-	 * @param ProdutoSubcategoria $subcategoria
+	 * @param ProdutoModelo $modeloTenis
 	 */
-	public function setSubcategoria($subcategoria) {
-		$this->subcategoria = $subcategoria;
+	public function setModeloTenis($modeloTenis) {
+		$this->modeloTenis = $modeloTenis;
+	}
+	/**
+	 * @return the $subcategoriaTenis
+	 */
+	public function getSubcategoriaTenis() {
+		return $this->subcategoriaTenis;
+	}
+
+	/**
+	 * @param ProdutoSubcategoria $subcategoriaTenis
+	 */
+	public function setSubcategoriaTenis($subcategoriaTenis) {
+		$this->subcategoriaTenis = $subcategoriaTenis;
 	}
 
 
+
+	
 	
 }

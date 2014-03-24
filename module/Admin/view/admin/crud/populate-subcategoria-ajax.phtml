@@ -1,0 +1,8 @@
+<?php 
+		foreach($this->listaSubcategorias AS $subcategoria)
+		{
+			?>
+			<option value="<?=$subcategoria->getIdsubcategoria()?>"><?=$subcategoria->getNome()?></option>
+			<?php
+		}
+?>
