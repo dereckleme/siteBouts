@@ -43,6 +43,7 @@ class Module
     		$controllerClass = get_class($controller);
     		$moduleNamespace = substr($controllerClass, 0, strpos($controllerClass, '\\'));
     		$config          = $e->getApplication()->getServiceManager()->get('config');
+    		$matchedRoute = $controller->getEvent()->getRouteMatch()->getMatchedRouteName();
     		/*
     		 * Definição de Layout de todos modulos
     		*/
@@ -54,6 +55,11 @@ class Module
     		$orm = $e->getApplication()->getServiceManager()->get('Doctrine\ORM\EntityManager');
     		$listaMenu = $orm->getRepository("Base\Entity\BaseMenu")->findAll();
     		$controller->layout()->menu = $listaMenu;
+    		
+    		/*
+    		 * $matchedRoute
+    		*/
+    		$controller->layout()->matchedRoute = $matchedRoute;
     	}, 100);      
     }
 }

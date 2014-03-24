@@ -34,78 +34,24 @@
 <section class="pg-produtos">
 
 		<ul>
-			<li class="base">
-				<a href="#">
-					<p>Base</p>
+		<?php 
+			foreach($this->produtos AS $produto)
+			{
+		?>
+			<li>
+				<img src="<?=$this->basePath()?>/img/produtos/<?=$produto->getSrc()?>">
+				<a href="<?=$this->url("produto/produto-subcategoria/produto-detalhe",array(
+					"categoria" => $produto->getSubcategoriaTenis()->getCategoria()->getSlug(),
+					"subcategoria" => $produto->getSubcategoriaTenis()->getSlug(),
+					"idProduto" => $produto->getIdtenis()		
+				));?>" >
+					<p><?=$produto->getModeloTenis()->getNome()?></p>
 					<span></span>
 					<p>veja mais</p>
 			    </a>
 		    </li>
-		    <li class="step">
-				<a href="#">
-					<p>Base</p>
-					<span></span>
-					<p>veja mais</p>
-			    </a>
-		    </li>
-		    <li class="light">
-				<a href="#">
-					<p>Base</p>
-					<span></span>
-					<p>veja mais</p>
-			    </a>
-		    </li>
+		    <?php 
+			}
+		    ?>
 		</ul>
-		<ul>
-			<li class="base">
-				<a href="#">
-					<p>Base</p>
-					<span></span>
-					<p>veja mais</p>
-			    </a>
-		    </li>
-		    <li class="step">
-				<a href="#">
-					<p>Base</p>
-					<span></span>
-					<p>veja mais</p>
-			    </a>
-		    </li>
-		    <li class="light">
-				<a href="#">
-					<p>Base</p>
-					<span></span>
-					<p>veja mais</p>
-			    </a>
-		    </li>
-		</ul>
-		<ul>
-			<li class="base">
-				<a href="#">
-					<p>Base</p>
-					<span></span>
-					<p>veja mais</p>
-			    </a>
-		    </li>
-		    <li class="step">
-				<a href="#">
-					<p>Base</p>
-					<span></span>
-					<p>veja mais</p>
-			    </a>
-		    </li>
-		    <li class="light">
-				<a href="#">
-					<p>Base</p>
-					<span></span>
-					<p>veja mais</p>
-			    </a>
-		    </li>
-		</ul>
-
-
-		
-
-		
-
 </section>

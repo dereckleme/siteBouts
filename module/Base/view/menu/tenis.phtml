@@ -8,19 +8,25 @@
 						<?php 
 							foreach($this->dataTenis AS $menuTenis)
 							{
+								if(count($menuTenis->getSubcategorias()) >= 1)
+								{
 						?>
 						<li>
-							<h6><a href="#"><?=ucwords($menuTenis->getNome())?></a></h6>
+							<h6><a href="<?=$this->url("produto",array("categoria" => $menuTenis->getSlug()));?>"><?=ucwords($menuTenis->getNome())?></a></h6>
 								<?php 
 									foreach($menuTenis->getSubcategorias() AS $subcategoria)
 									{
+										if(count($subcategoria->getProdutos()) >= 1)
+										{
 								?>
 								<p><a href="<?=$this->url("produto/produto-subcategoria",array("categoria" => $menuTenis->getSlug(), "subcategoria" => $subcategoria->getSlug()));?>"><?=$subcategoria->getNome()?></a></p>
-								<?php 
+								<?php
+										} 
 									}
 								?>
 						</li>
 						<?php 
+								}
 							}
 						?>
 					</ul>

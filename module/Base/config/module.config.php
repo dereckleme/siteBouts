@@ -48,6 +48,18 @@ return array(
 	        										'action'     => 'produtoSubcategoria',
 	        								),
 	        						),
+	        						'may_terminate' => true,
+	        						'child_routes' => array(
+	        								'produto-detalhe' => array(
+	        										'type' => 'Segment',
+	        										'options' => array(
+	        												'route'    => '[/:idProduto]',
+	        												'defaults' => array(
+	        														'action'     => 'produtoDetalhe',
+	        												),
+	        										)
+	        								),
+	        						)
 	        				),
         				)
         		),

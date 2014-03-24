@@ -12,6 +12,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class ProdutoSubcategoria
 {
+	public function __construct() {
+		$this->produtos = new ArrayCollection();
+	}
+	/**
+	 * @ORM\OneToMany(targetEntity="Produto\Entity\ProdutoTenis", mappedBy="subcategoriaTenis")
+	 */
+	private $produtos;
     /**
      * @var integer
      *
@@ -97,6 +104,20 @@ class ProdutoSubcategoria
 	public function setSlug($slug) {
 		$this->slug = $slug;
 	}
+	/**
+	 * @return the $produtos
+	 */
+	public function getProdutos() {
+		return $this->produtos;
+	}
+
+	/**
+	 * @param \Produto\Entity\ArrayCollection $produtos
+	 */
+	public function setProdutos($produtos) {
+		$this->produtos = $produtos;
+	}
+
 
 
 

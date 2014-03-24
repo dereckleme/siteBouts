@@ -39,9 +39,13 @@
 			{
 		?>
 			<li>
-				<img src="<?=$this->basePath()?>/img/produtos/base.png">
-				<a href="#" >
-					<p>Base</p>
+				<img src="<?=$this->basePath()?>/img/produtos/<?=$produto->getSrc()?>">
+				<a href="<?=$this->url("produto/produto-subcategoria/produto-detalhe",array(
+					"categoria" => $produto->getSubcategoriaTenis()->getCategoria()->getSlug(),
+					"subcategoria" => $produto->getSubcategoriaTenis()->getSlug(),
+					"idProduto" => $produto->getIdtenis()		
+				));?>" >
+					<p><?=$produto->getModeloTenis()->getNome()?></p>
 					<span></span>
 					<p>veja mais</p>
 			    </a>
