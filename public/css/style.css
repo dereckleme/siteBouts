@@ -76,14 +76,14 @@ ul.box-menu li a.tecnologia:before { content: '\2335'; position: absolute; right
 ul.box-menu li.box-lista:hover > a.tecnologia:before { color: #222222; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); top: 12px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 
 li.sub-menu ul { width: 225px; display: none; padding-bottom: 8px; position: absolute; top: 87px; float: left; z-index: 100; background: #FFFFFF;}
-li.sub-menu ul li h6 { width: 183px; padding: 8px 0 8px 42px; text-transform: uppercase; font-size: 1.2em; float: left; color: #222222; margin: 5px 0 0 0;}
-li.sub-menu ul li:first-child h6 { margin-bottom: -7px;}
-li.sub-menu ul li h6:before { content: '\2335'; position: absolute; left: 23px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
-li.sub-menu ul li h6:hover { width: 177px; color: #FFFFFF; background: #96bd05; padding: 8px 0 8px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-li.sub-menu ul li p a { font-size: 1.1em; float: left; padding: 12px 0 0 40px; font-weight: normal; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out; clear: both; border: none;}
-li.sub-menu ul li p a:hover { color: #96bd05; padding: 12px 0 0 46px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+li.sub-menu ul li h6 a { width: 183px; padding: 8px 0 8px 42px; text-transform: uppercase; font-size: 1.8em; float: left; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+i.sub-menu ul li:first-child h6 a { margin-bottom: -7px;}
+li.sub-menu ul li h6 a:before { content: '\2335'; position: absolute; left: 23px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+li.sub-menu ul li h6 a:hover { width: 177px; color: #FFFFFF; background: #96bd05; padding: 8px 0 8px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+li.sub-menu ul li p:last-child a { margin-bottom: 2px;}
+li.sub-menu ul li p a { font-size: 1.1em; float: left; padding: 6px 0 6px 40px; font-weight: normal; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out; clear: both; border: none;}
+li.sub-menu ul li p a:hover { color: #96bd05; padding: 6px 0 6px 46px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 ul.box-menu li.sub-menu:hover ul { display: block;}
-
 li.sub-menu-links ul { width: 225px; display: none; padding-bottom: 8px; float: left; position: absolute; top: 87px; background: #FFFFFF;}
 li.sub-menu-links ul li a {  font-size: 1.2em; margin-top: 5px; padding: 8px 0 8px 42px; border: none; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 li.sub-menu-links ul li:first-child a { margin-top: 15px;}
@@ -243,39 +243,31 @@ section.pg-midia div ul { width: 970px;}
 section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin: 0 auto;}
 section.pg-midia div ul li.video-secundario { float: left; width: 317px; height: 180px; margin-right: 6px; margin-top: 60px;}
 section.pg-midia div ul li figcaption { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-weight: bold; color: #222222; font-size: 1.6em;}
-
 section.pg-dt-produto { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
-
 section.pg-tecnologia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-bottom: 60px;}
 div.pg-galeria, div.pg-textos { width: 650px; height: 450px; float: left; position: relative; margin-top: 50px;}
 div.pg-textos img { margin-left: 50px;}
 div.pg-textos p { width: 490px; line-height: 25px; margin-left: 55px; font-size: 1.6em; color: #222222;}
-
 .pg-tec { width: 1300px; float: left; margin-top: 30px; margin-bottom: 30px; position: relative;}
 .pg-tec h3 { width: 480px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
 .pg-tec h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 50px;}
-
 .pg-tec ul { width: 100%; float: left; margin: 10px 0 0 0;}
 .pg-tec ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 .pg-tec ul li { width: 315px; height: 180px; margin: 0 0 10px 10px;  float: left; border: solid 1px #999999; cursor: pointer; position: relative; overflow: hidden; background: #FFFFFF;}
 .pg-tec ul li img { position: absolute; z-index: 10;}
 .pg-tec ul li a { position: absolute; z-index: 20;}
-
 .pg-tec ul li a.effect-top { padding: 0px 182px 0px 131.5px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .pg-tec ul li a.effect-top img { margin: -60px 0 0 0; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .pg-tec ul li:hover a.effect-top { padding: 63px 182px 115px 131.5px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 .pg-tec ul li:hover a.effect-top img { margin: 0px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-
 .pg-tec ul li a.effect-left { padding: 63px 0px 115px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .pg-tec ul li a.effect-left img { margin: 0 0 0 -170px; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .pg-tec ul li:hover a.effect-left { padding: 63px 182px 115px 131.5px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 .pg-tec ul li:hover a.effect-left img { margin: 0 0 0 0px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-
 .pg-tec ul li a.effect-bottom { padding: 63px 182px 115px 131.5px; margin: 179px 0 0 0; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .pg-tec ul li a.effect-bottom img { margin: 0 0 0 0; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .pg-tec ul li:hover a.effect-bottom { padding: 63px 182px 115px 131.5px; margin: 0px 0 0 0; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 .pg-tec ul li:hover a.effect-bottom img { margin: 0 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-
 .pg-tec ul li a.effect-right { padding: 63px 182px 115px 131.5px; margin:  0 0 0 315px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .pg-tec ul li a.effect-right img { margin: 0 0 0 0; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .pg-tec ul li:hover a.effect-right { padding: 63px 182px 115px 131.5px; margin:  0 0 0 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
