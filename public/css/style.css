@@ -233,11 +233,13 @@ section.pg-produtos ul li a span {
 	left: 25%;
 }
 
-section.pg-midia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; background: #CCC;}
+section.pg-midia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 section.pg-midia div { width: 970px; float: left; position: relative; left: 50%; margin: 38px 0 0 -485px; padding-bottom: 90px;}
 section.pg-midia div h3 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; color: #222222; font-size: 3.0em; font-weight: bold; text-align: center;}
-section.pg-midia div ul { width: 970px; background: #763;}
+section.pg-midia div ul { width: 970px;}
 section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin: 0 auto;}
+
+section.pg-midia div ul li.video-principal iframe { -webkit-position: absolute; -webkit-z-index: -9999;}
 
 section.pg-midia div ul li.video-secundario { float: left; width: 317px; height: 180px; margin-right: 6px; margin-top: 60px;}
 section.pg-midia div ul li figcaption { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-weight: bold; color: #222222; font-size: 1.6em;}
