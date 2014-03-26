@@ -275,8 +275,15 @@ div.pg-textos p { width: 490px; line-height: 25px; margin-left: 55px; font-size:
 
 section.pg-wallpaper { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 
-section.pg-contato { width: 100%; height: 100%; position: absolute; z-index: 9999; background: rgba(0,0,0,0.8);}
-section.pg-contato img { width: 522px; position: relative; top: 10%; left:50%; margin-left: -261px;}
+section.pg-contato { width: 100%; height: 100%;}
+section.pg-contato img { width: 522px; position: fixed; top: 10%; left:50%; margin-left: -261px;}
+.loadAjax { width: 100%; height: 1000%; position: absolute; z-index: 9999999; background: rgba(0,0,0,0.8); display: none;}
+
+
+
+
+
+
 
 footer { width: 100%; float: left; background: #eeeeee; position: relative;}
 section.menu-bottom { width: 900px; height: 333px; float: left; position: relative; left: 50%; margin-left: -450px;}
