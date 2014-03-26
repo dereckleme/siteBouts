@@ -4,6 +4,10 @@ $(document).ready(function(){
 	        url: basePatch+"/contato",
 	        success: function( data )  
 	        { 
+	        	$('html, body').css({
+	        	    'overflow': 'hidden',
+	        	    'height': '100%'
+	        	})
 	        	$(".loadAjax").html(data);
 	        	$(".loadAjax").fadeIn();
 	        }
