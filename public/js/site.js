@@ -1,15 +1,26 @@
 $(document).ready(function(){
+	
+	$(".loadAjax").on("click","a",function(){
+		$(".loadAjax").fadeOut("fast",function(){
+			$('html, body').css({
+			    'overflow': 'auto',
+			    'height': 'auto'
+			});
+		});
+		return false;
+	});
 	$(".abrirContato").on("click",function(){
 		$.ajax({
 	        url: basePatch+"/contato",
 	        success: function( data )  
 	        { 
-	        	$('html, body').css({
-	        	    'overflow': 'hidden',
-	        	    'height': '100%'
-	        	})
 	        	$(".loadAjax").html(data);
-	        	$(".loadAjax").fadeIn();
+	        	$(".loadAjax").fadeIn("fast",function(){
+	        		$('html, body').css({
+		        	    'overflow': 'hidden',
+		        	    'height': '100%'
+		        	})
+	        	});
 	        }
 	    });
 		return false;
