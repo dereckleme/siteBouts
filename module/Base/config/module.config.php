@@ -85,6 +85,29 @@ return array(
         		
         				),
         		),
+        		
+        		'wallpaper' => array(
+        				'type' => 'Literal',
+        				'options' => array(
+        						'route'    => '/wallpaper',
+        						'defaults' => array(
+        								'controller' => 'Base\Controller\Index',
+        								'action'     => 'wallpaper'
+        						),
+        		
+        				),
+        		),
+        		'contato' => array(
+        				'type' => 'Literal',
+        				'options' => array(
+        						'route'    => '/contato',
+        						'defaults' => array(
+        								'controller' => 'Base\Controller\Index',
+        								'action'     => 'contato'
+        						),
+        		
+        				),
+        		),
         ),
     ),
     'service_manager' => array(

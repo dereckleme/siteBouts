@@ -47,4 +47,12 @@ class IndexController extends AbstractActionController
     {
     	return new ViewModel();
     }
+    public function wallpaperAction()
+    {
+    	return new ViewModel();
+    }
+    public function contatoAction()
+    {
+    	return new ViewModel();
+    }
 }
