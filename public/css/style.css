@@ -77,7 +77,6 @@ ul.box-menu li.box-lista:hover > a.tecnologia:before { color: #222222; -webkit-t
 
 li.sub-menu ul { width: 225px; display: none; padding-bottom: 8px; position: absolute; top: 87px; float: left; z-index: 100; background: #FFFFFF;}
 li.sub-menu ul li h6 a { width: 183px; padding: 8px 0 8px 42px; text-transform: uppercase; font-size: 1.8em; float: left; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-i.sub-menu ul li:first-child h6 a { margin-bottom: -7px;}
 li.sub-menu ul li h6 a:before { content: '\2335'; position: absolute; left: 23px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
 li.sub-menu ul li h6 a:hover { width: 177px; color: #FFFFFF; background: #96bd05; padding: 8px 0 8px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 li.sub-menu ul li p:last-child a { margin-bottom: 2px;}
@@ -125,13 +124,12 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 .tec-bouts { width: 1300px; height: 220px; float: left;}
 .tec-bouts h3 { width: 285px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
 .tec-bouts h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 50px;}
-.tec-bouts ul { width: 100%; float: left; margin-top: 10px; overflow: hidden; }
+.tec-bouts ul { width: 100%; float: left; margin-top: 10px;}
 .tec-bouts ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-.tec-bouts ul li { width: 315px; height: 180px; margin-left: 10.6px; float: left; border: solid 1px #999999; cursor: pointer; position: relative;}
+.tec-bouts ul li { width: 315px; height: 180px; overflow: hidden; margin-left: 10.6px; float: left; border: solid 1px #999999; cursor: pointer; position: relative; background: #FFFFFF;}
 .tec-bouts ul li:first-child { margin: 0 0 0 0px;}
-.tec-bouts ul li { background: url(../img/gel-ts.png) no-repeat #FFF;}
-
-.tec-bouts ul li a { padding: 0px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+.tec-bouts ul li img { position: absolute; z-index: 10;}
+.tec-bouts ul li a { position: absolute; z-index: 20; padding: 0px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 .tec-bouts ul li:hover a { padding: 43.8px 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 .tec-bouts ul li:hover a p:nth-child(1) { margin: 10px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 .tec-bouts ul li:hover a p:nth-child(3) { margin: 30px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in; }
@@ -169,7 +167,7 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 	display: block;
 	position: relative;
 	top: -10px;
-	left: 25%
+	left: 25%;
 }
 
 .tendencias { width: 1300px; float: left; margin: 100px 0 90px 0;}
@@ -232,15 +230,15 @@ section.pg-produtos ul li a span {
 	display: block;
 	position: relative;
 	top: -50px;
-	left: 25%
+	left: 25%;
 }
 
-
-section.pg-midia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
+section.pg-midia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; background: #CCC;}
 section.pg-midia div { width: 970px; float: left; position: relative; left: 50%; margin: 38px 0 0 -485px; padding-bottom: 90px;}
 section.pg-midia div h3 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; color: #222222; font-size: 3.0em; font-weight: bold; text-align: center;}
-section.pg-midia div ul { width: 970px;}
+section.pg-midia div ul { width: 970px; background: #763;}
 section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin: 0 auto;}
+
 section.pg-midia div ul li.video-secundario { float: left; width: 317px; height: 180px; margin-right: 6px; margin-top: 60px;}
 section.pg-midia div ul li figcaption { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-weight: bold; color: #222222; font-size: 1.6em;}
 section.pg-dt-produto { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
