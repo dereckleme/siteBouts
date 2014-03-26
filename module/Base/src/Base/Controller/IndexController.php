@@ -53,6 +53,8 @@ class IndexController extends AbstractActionController
     }
     public function contatoAction()
     {
-    	return new ViewModel();
+    	$layout = new ViewModel();
+    	$layout->setTerminal(1);
+    	return $layout;
     }
 }

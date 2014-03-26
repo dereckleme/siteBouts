@@ -22,8 +22,13 @@
                                       ->prependFile($this->basePath() . '/js/bootstrap.min.js') 
                                       ->prependFile($this->basePath() . '/js/html5shiv.js')                                   
                                       ->prependFile($this->basePath() . '/js/jquery-1.10.2.js') ?>
+                                      <script type="text/javascript">
+	var basePatch  = '<?=$this->basePath()?>';
+		</script>
     </head>
     <body>
+    <div class="loadAjax" style="display:none">
+    </div>
     <?php 
     /*
     print $this->partial('menu/menu.phtml', array('menu' => $this->menu, 'menuListaTenis' => $this->menuListaTenis));
@@ -50,7 +55,7 @@
  				</figure>
 
  				<figure class="contato">
- 					<a href="<?=$this->url("contato")?>">
+ 					<a href="" class="abrirContato">
  					<figcaption title="fale conosco">fale conosco</figcaption>
  				    </a>
  				</figure>

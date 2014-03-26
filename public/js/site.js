@@ -1,4 +1,16 @@
 $(document).ready(function(){
+	$(".abrirContato").on("click",function(){
+		$.ajax({
+	        url: basePatch+"/contato",
+	        success: function( data )  
+	        { 
+	        	$(".loadAjax").html(data);
+	        	$(".loadAjax").fadeIn();
+	        }
+	    });
+		return false;
+	})
+	
 	$(".nav-button").click(function () {
 		$(".nav-button,.box-menu").toggleClass("open");
 	});
