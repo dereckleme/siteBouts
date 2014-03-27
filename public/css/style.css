@@ -276,7 +276,7 @@ div.pg-textos p { width: 490px; line-height: 25px; margin-left: 55px; font-size:
 section.pg-wallpaper { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 
 section.pg-contato { width: 100%; height: 100%;}
-section.pg-contato img { width: 522px; position: fixed; top: 10%; left:50%; margin-left: -261px;}
+section.pg-contato img { width: 522px; position: fixed; top: 10%; left:50%; margin-left: -261px; z-index: 99999999;}
 .loadAjax { width: 100%; height: 1000%; position: absolute; z-index: 9999999; background: rgba(0,0,0,0.8); display: none;}
 
 
