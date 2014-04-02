@@ -1,20 +1,20 @@
-/*@font-face {
+@font-face {
 	font-family: 'Conv_calibri';
-	src: url('fonts/calibri.eot');
-	src: local('☺'), url('fonts/calibri.woff') format('woff'), url('fonts/calibri.ttf') format('truetype'), url('fonts/calibri.svg') format('svg');
+	src: url('../fonts/calibri.eot');
+	src: local('☺'), url('fonts/calibri.woff') format('woff'), url('fonts/calibri.ttf') format('truetype'), url('../fonts/calibri.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Conv_MyriadPro-Bold';
-	src: url('fonts/MyriadPro-Bold.eot');
-	src: local('☺'), url('fonts/MyriadPro-Bold.woff') format('woff'), url('fonts/MyriadPro-Bold.ttf') format('truetype'), url('fonts/MyriadPro-Bold.svg') format('svg');
+	src: url('../fonts/MyriadPro-Bold.eot');
+	src: local('☺'), url('../fonts/MyriadPro-Bold.woff') format('woff'), url('../fonts/MyriadPro-Bold.ttf') format('truetype'), url('../fonts/MyriadPro-Bold.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}*/
+}
 
-body { font-family:'Conv_calibri', Sans-Serif; font-size: 10px!important;}
+body { font-family: 'Conv_calibri', sans-serif; font-size: 10px!important;}
 
 .h-container-top { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left; margin-top: 92px; position: relative;} /* +/- 1300px */
 .box-paralax { overflow: hidden;}
@@ -113,10 +113,14 @@ div.g-produtos ul li a:hover h4 { display: block;}
 div.g-produtos ul li a:hover hr { display: block;}
 div.g-produtos ul li a { -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
 div.g-produtos ul li a:hover { -webkit-transition: 0.1s ease-in; transition: 0.1s ease-in;}
-span a.s-esquerda { width: 72px; height: 72px; position: absolute; z-index: 100; top: 425px; left: 0; background: url(../img/s-esquerda.jpg) no-repeat;}
-span a.s-esquerda:hover { background: url(../img/s-esquerda-hover.jpg) no-repeat;}
-span a.s-direita { width: 72px; height: 72px; position: absolute; z-index: 100; top: 425px; right: 0; background: url(../img/s-direita.jpg) no-repeat;}
-span a.s-direita:hover { background: url(../img/s-direita-hover.jpg) no-repeat;}
+
+span.s-esquerda { width: 72px; height: 72px; position: absolute; z-index: 100; top: 415px; left: 0; transition: all 0.2s ease-out 0s;}
+span.s-esquerda a { width: 100%; height: 100%; background: url(../img/s-esquerda.jpg) no-repeat scroll left center; display: block; transition: all 0.2s ease-out 0s;}
+span.s-esquerda:hover a { background-position: right center; -webkit-transform: rotate(90deg); transform: rotate(90deg);}
+span.s-direita { width: 72px; height: 72px; position: absolute; z-index: 100; top: 415px; right: 0; transition: all 0.2s ease-out 0s;}
+span.s-direita a { width: 100%; height: 100%; background: url(../img/s-direita.jpg) no-repeat scroll right center; display: block; transition: all 0.2s ease-out 0s;}
+span.s-direita:hover a { background-position: left center; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+
 span.linha-home { width: 100%; position: relative; display: block; float: left; border-top: solid 1px #01607d; border-bottom: solid 1px #079ab1; margin-bottom: 44px;}
 span.linha-home img { position: absolute; left: 50%; top: -1px;}
 
@@ -238,9 +242,6 @@ section.pg-midia div { width: 970px; float: left; position: relative; left: 50%;
 section.pg-midia div h3 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; color: #222222; font-size: 3.0em; font-weight: bold; text-align: center;}
 section.pg-midia div ul { width: 970px;}
 section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin: 0 auto;}
-
-section.pg-midia div ul li.video-principal iframe { -webkit-position: absolute; -webkit-z-index: -9999;}
-
 section.pg-midia div ul li.video-secundario { float: left; width: 317px; height: 180px; margin-right: 6px; margin-top: 60px;}
 section.pg-midia div ul li figcaption { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-weight: bold; color: #222222; font-size: 1.6em;}
 section.pg-dt-produto { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
@@ -273,18 +274,30 @@ div.pg-textos p { width: 490px; line-height: 25px; margin-left: 55px; font-size:
 .pg-tec ul li:hover a.effect-right { padding: 63px 182px 115px 131.5px; margin:  0 0 0 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 .pg-tec ul li:hover a.effect-right img { margin: 0 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 
-section.pg-wallpaper { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
+section.pg-wallpaper { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; background: yellow;}
+section.pg-wallpaper ul { width: 1200px; height: 600px; position: relative; float: left; background: #CCC;}
+
+section.pg-wallpaper ul li { width: 201px; background: #FFFFFF; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+section.pg-wallpaper ul li { margin: 0 50px 70px 0;}
+
+
+
+
+section.pg-wallpaper ul li img { border: solid 1px #999999;}
+section.pg-wallpaper ul li figcaption { font-size: 1.4em; color: #333333; font-weight: bold; margin-bottom: 7px;}
+section.pg-wallpaper ul li span { position: relative; float: left; cursor: pointer; background: #FFFFFF; transition: all 0.2s ease-out 0s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+section.pg-wallpaper ul li span { margin-top: 7px; border: solid 1px #085e04; width: 123px; display: block;}
+section.pg-wallpaper ul li span { font-size: 1.2em; color: #085e04; font-weight: bold; }
+section.pg-wallpaper ul li span a { width: 38px; height: 38px; margin-right: 11px; float: left; background: url(../img/dt-wallpaper-teste.jpg) no-repeat scroll left center; transition: all 0.2s ease-out 0s;}
+section.pg-wallpaper ul li span:hover a { background-position: right center;}
+
+
+
 
 section.pg-contato { width: 100%; height: 100%;}
 section.pg-contato img { width: 522px; position: fixed; top: 10%; left:50%; margin-left: -261px; z-index: 99999999;}
 .loadAjax { width: 100%; height: 1000%; position: absolute; z-index: 9999999; background: rgba(0,0,0,0.8); display: none;}
-
-
-
-
-
-
-
 footer { width: 100%; float: left; background: #eeeeee; position: relative;}
 section.menu-bottom { width: 900px; height: 333px; float: left; position: relative; left: 50%; margin-left: -450px;}
 section.menu-bottom ul.mb-comprar { margin: 65px 0 0 65px; float: left;}
