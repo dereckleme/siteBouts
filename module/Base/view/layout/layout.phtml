@@ -69,7 +69,7 @@
 <?php 
 	if($this->matchedRoute != "home")
 	{
-		print $this->partial('layout/caminho.phtml');
+		print $this->partial('layout/caminho.phtml',array("dadosMatchedRouter" => $this->matchedTitlesRouter));
 	}
     else{
         ?>

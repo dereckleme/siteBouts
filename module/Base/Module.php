@@ -3,7 +3,7 @@ namespace Base;
 use Zend\Authentication\AuthenticationService,
     Zend\Authentication\Storage\Session as SessionStorage;
 use Zend\Mvc\MvcEvent;
-use Base\Service\Caminho;
+use Base\Service\MatchedRotaCaminho;
 class Module
 {
     public function getConfig()
@@ -25,7 +25,7 @@ class Module
     	return array(
     			'factories' => array(
     					'Base\Service\Caminho' => function($service){
-    						$caminho = new Caminho($service);
+    						$caminho = new MatchedRotaCaminho($service->get('Doctrine\ORM\EntityManager'),$service->get('Application')->getMvcEvent()->getRouteMatch());
     						return $caminho;
     					},
     			));
@@ -60,6 +60,14 @@ class Module
     		 * $matchedRoute
     		*/
     		$controller->layout()->matchedRoute = $matchedRoute;
+    		/*
+    		 * Serviço de titulos, e caminhos site.
+    		 */
+    		$serviceCaminho = $e->getApplication()->getServiceManager()->get('Base\Service\Caminho');
+    		$controller->layout()->matchedTitlesRouter = array(
+    			"tituloCampanha" => "Pratique Bout’s",
+    			"matchedRouteCaminho" => $serviceCaminho->geraCaminhoSite()
+    		);
     	}, 100);      
     }
 }
