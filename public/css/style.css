@@ -244,7 +244,14 @@ section.pg-midia div ul { width: 970px;}
 section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin: 0 auto;}
 section.pg-midia div ul li.video-secundario { float: left; width: 317px; height: 180px; margin-right: 6px; margin-top: 60px;}
 section.pg-midia div ul li figcaption { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-weight: bold; color: #222222; font-size: 1.6em;}
-section.pg-dt-produto { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
+
+
+
+section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
+
+
+
+
 section.pg-tecnologia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-bottom: 60px;}
 div.pg-galeria, div.pg-textos { width: 650px; height: 450px; float: left; position: relative; margin-top: 50px;}
 div.pg-textos img { margin-left: 50px;}
@@ -274,30 +281,23 @@ div.pg-textos p { width: 490px; line-height: 25px; margin-left: 55px; font-size:
 .pg-tec ul li:hover a.effect-right { padding: 63px 182px 115px 131.5px; margin:  0 0 0 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 .pg-tec ul li:hover a.effect-right img { margin: 0 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 
-section.pg-wallpaper { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; background: yellow;}
-section.pg-wallpaper ul { width: 1200px; height: 600px; position: relative; float: left; background: #CCC;}
-
-section.pg-wallpaper ul li { width: 201px; background: #FFFFFF; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-
-section.pg-wallpaper ul li { margin: 0 50px 70px 0;}
-
-
-
-
+section.pg-wallpaper { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
+section.pg-wallpaper ul { width: 1200px; height: 600px; margin: 50px 0 0 30px; padding-left: 40px; position: relative; float: left;}
+section.pg-wallpaper ul li { width: 200px; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+section.pg-wallpaper ul li { margin: 0 40px 70px 0;}
 section.pg-wallpaper ul li img { border: solid 1px #999999;}
 section.pg-wallpaper ul li figcaption { font-size: 1.4em; color: #333333; font-weight: bold; margin-bottom: 7px;}
 section.pg-wallpaper ul li span { position: relative; float: left; cursor: pointer; background: #FFFFFF; transition: all 0.2s ease-out 0s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 section.pg-wallpaper ul li span { margin-top: 7px; border: solid 1px #085e04; width: 123px; display: block;}
 section.pg-wallpaper ul li span { font-size: 1.2em; color: #085e04; font-weight: bold; }
-section.pg-wallpaper ul li span a { width: 38px; height: 38px; margin-right: 11px; float: left; background: url(../img/dt-wallpaper-teste.jpg) no-repeat scroll left center; transition: all 0.2s ease-out 0s;}
-section.pg-wallpaper ul li span:hover a { background-position: right center;}
-
-
-
+section.pg-wallpaper ul li span:hover { color: #014b60; border: solid 1px #014b60;}
+section.pg-wallpaper ul li span a { width: 38px; height: 38px; margin-right: 11px; float: left; background: url(../img/download.jpg) no-repeat scroll bottom center; transition: all 0.2s ease-out 0s;}
+section.pg-wallpaper ul li span:hover a { background-position: top center;}
 
 section.pg-contato { width: 100%; height: 100%;}
 section.pg-contato img { width: 522px; position: fixed; top: 10%; left:50%; margin-left: -261px; z-index: 99999999;}
 .loadAjax { width: 100%; height: 1000%; position: absolute; z-index: 9999999; background: rgba(0,0,0,0.8); display: none;}
+
 footer { width: 100%; float: left; background: #eeeeee; position: relative;}
 section.menu-bottom { width: 900px; height: 333px; float: left; position: relative; left: 50%; margin-left: -450px;}
 section.menu-bottom ul.mb-comprar { margin: 65px 0 0 65px; float: left;}
