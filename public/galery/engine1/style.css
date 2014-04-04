@@ -91,11 +91,11 @@
 	border: solid 1px rgba(150,218,5,0.2);
 }
 
-#wowslider-container1  .wsl{
+#wowslider-container1  .wsl {
 	display:none;
 }
 #wowslider-container1 sound, 
-#wowslider-container1 object{
+#wowslider-container1 object {
 	position:absolute;
 }
 

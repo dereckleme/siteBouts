@@ -8,11 +8,11 @@
 		  	foreach($this->bannersDestaque AS $banner)
 		  	{
 		  ?>
-			<li><a href="<?=$banner->getUrl()?>"><img src="<?=$this->basePath("img/banners/".$banner->getSrc())?>" alt="<?=$banner->getTitulo()?>" title="<?=$banner->getTitulo()?>" id="wows1_0"/></a></li>
+			<li><a href="<?=$banner->getUrl()?>"><img src="<?=$this->basePath("img/banners/".$banner->getSrc())?>" alt="<?=$banner->getTitulo()?>" title="<?=$banner->getTitulo()?>"></a></li>
 		 	<?php 
 		  	}
 		 	?>
-		  </ul>
+		  </ul><!--id="wows1_0"-->
 		</div>
 
 		<div class="ws_bullets">
@@ -40,7 +40,7 @@
 		<ul class="testeSlice">
 			<li>
 				<a href="">
-					<img src="<?=$this->basePath()?>/img/tenis-teste.png">
+					<img title="Glam" alt="Glam" src="<?=$this->basePath()?>/img/tenis-teste.png">
 					<h4>Glam</h4>
 					<hr/>
 					<p>tecnologia de amortecimento: <strong>Fly TS 1 </strong></p>
@@ -49,66 +49,22 @@
 
 			<li>
 				<a href="">
-					<img src="<?=$this->basePath()?>/img/tenis-teste.png">
+					<img title="Glam" alt="Glam" src="<?=$this->basePath()?>/img/tenis-teste.png">
 					<h4>Glam</h4>
 					<hr/>
-				    <p>tecnologia de amortecimento: <strong>Fly TS 2</strong></p>
+					<p>tecnologia de amortecimento: <strong>Fly TS 1 </strong></p>
 				</a>
 			</li>
-
+			
 			<li>
-			  <a href="">
-				<img src="<?=$this->basePath()?>/img/tenis-teste.png">
-				<h4>Glam</h4>
-				<hr/>
-				<p>tecnologia de amortecimento: <strong>Fly TS 3</strong></p>
-			  </a>
-		    </li>
-
-		    <li>
-			  <a href="">
-				<img src="<?=$this->basePath()?>/img/tenis-teste.png">
-				<h4>Glam</h4>
-				<hr/>
-				<p>tecnologia de amortecimento: <strong>Fly TS 4</strong></p>
-			  </a>
-		    </li>
-
-		    <li>
 				<a href="">
-					<img src="<?=$this->basePath()?>/img/tenis-teste.png">
+					<img title="Glam" alt="Glam" src="<?=$this->basePath()?>/img/tenis-teste.png">
 					<h4>Glam</h4>
 					<hr/>
 					<p>tecnologia de amortecimento: <strong>Fly TS 1 </strong></p>
 				</a>
 			</li>
 
-			<li>
-				<a href="">
-					<img src="<?=$this->basePath()?>/img/tenis-teste.png">
-					<h4>Glam</h4>
-					<hr/>
-				    <p>tecnologia de amortecimento: <strong>Fly TS 2</strong></p>
-				</a>
-			</li>
-
-			<li>
-			  <a href="">
-				<img src="<?=$this->basePath()?>/img/tenis-teste.png">
-				<h4>Glam</h4>
-				<hr/>
-				<p>tecnologia de amortecimento: <strong>Fly TS 3</strong></p>
-			  </a>
-		    </li>
-
-		    <li>
-			  <a href="">
-				<img src="<?=$this->basePath()?>/img/tenis-teste.png">
-				<h4>Glam</h4>
-				<hr/>
-				<p>tecnologia de amortecimento: <strong>Fly TS 4</strong></p>
-			  </a>
-		    </li>
 		</ul>
 	</div>
 
@@ -117,7 +73,7 @@
 </section>
 
 <span class="linha-home">
-	<img src="<?=$this->basePath()?>/img/linha-home.jpg">
+	<img alt="Linha" src="<?=$this->basePath()?>/img/linha-home.jpg">
 </span>
 
 <section class="box-home">
@@ -128,7 +84,7 @@
 
 		<ul>
 			<li>
-				<img src="<?=$this->basePath()?>/img/produtos/gel-ts.png">
+				<img title="Fly TS" alt="Fly TS" src="<?=$this->basePath()?>/img/produtos/gel-ts.png">
 				<a href="">
 					<p>Fly TS</p>
 					<span></span>
@@ -137,32 +93,31 @@
 		    </li>
 
 		    <li>
-		    	<img src="<?=$this->basePath()?>/img/produtos/gel-ts.png">
+				<img title="Gel TS" alt="Gel TS" src="<?=$this->basePath()?>/img/produtos/gel-ts.png">
 				<a href="">
-					<p>Fly ts</p>
+					<p>Gel TS</p>
 					<span></span>
 					<p>saiba mais</p>
 			    </a>
 		    </li>
 
 		    <li>
-		    	<img src="<?=$this->basePath()?>/img/produtos/gel-ts.png">
+				<img title="Spiral TS" alt="Spiral TS" src="<?=$this->basePath()?>/img/produtos/gel-ts.png">
 				<a href="">
-					<p>Fly ts</p>
+					<p>Spiral TS</p>
 					<span></span>
 					<p>saiba mais</p>
 			    </a>
 		    </li>
 
 		    <li>
-		    	<img src="<?=$this->basePath()?>/img/produtos/gel-ts.png">
+				<img title="Tower TS" alt="Tower TS" src="<?=$this->basePath()?>/img/produtos/gel-ts.png">
 				<a href="">
-					<p>Paulo Alberto</p>
+					<p>Tower TS</p>
 					<span></span>
 					<p>saiba mais</p>
 			    </a>
 		    </li>
-
 		</ul>
 
 	</div>
@@ -172,11 +127,11 @@
 		<h3>Tendências</h3>
 
 		<div class="video">
-			<object width="100%" height="100%"><param name="movie" value="//www.youtube-nocookie.com/v/6J_YnUE3tJI?hl=pt_BR&amp;version=3&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube-nocookie.com/v/6J_YnUE3tJI?hl=pt_BR&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="100%" height="100%" allowscriptaccess="always" allowfullscreen="true" wmode="transparent"></embed></object>
+          <iframe width="640" height="437" src="//www.youtube.com/embed/6J_YnUE3tJI?wmode=opaque"></iframe>
 		</div>
 
 		<div class="campanha">
-			<a href="" alt="Linha casual Bout's" title="Linha casual Bout's" target="_blank"><img src="<?=$this->basePath()?>/img/campanha.jpg"></a>
+			<a href="" target="_blank"><img alt="Linha casual Bout's" title="Linha casual Bout's" src="<?=$this->basePath()?>/img/campanha.jpg"></a>
 		</div>
 
 	</div>	
