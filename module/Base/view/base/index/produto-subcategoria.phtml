@@ -10,7 +10,7 @@
 				<a href="<?=$this->url("produto/produto-subcategoria/produto-detalhe",array(
 					"categoria" => $produto->getSubcategoriaTenis()->getCategoria()->getSlug(),
 					"subcategoria" => $produto->getSubcategoriaTenis()->getSlug(),
-					"idProduto" => $produto->getIdtenis()		
+					"slugProduto" => $produto->getSlug()	
 				));?>" >
 					<p><?=$produto->getModeloTenis()->getNome()?></p>
 					<span></span>

@@ -37,7 +37,9 @@ class IndexController extends AbstractActionController
     }
     public function produtoDetalheAction()
     {
-    	return new ViewModel();
+    	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    	$produto = $doctrine->getRepository("Produto\Entity\ProdutoTenis")->findOneByslug($this->params()->fromRoute("slugProduto"));
+    	return new ViewModel(array("produto" => $produto));
     }
     public function tecnologiaAction()
     {

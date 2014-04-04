@@ -1,4 +1,6 @@
 <form class="formProduto">
+
+	<input type="text" class="titulo" placeholder="Titulo do Produto"/> <br/>
 	<select  class="form-control categoria" <?if(!$this->categorias) print 'disabled="disabled"'?>>
          <option value="">Selecione uma Categoria</option>
          <?php 
@@ -28,10 +30,6 @@
 	<label class="numeracao" for="" style="cursor:default; color:#222; font-size:14px;">Numeração do Tênis</label>
 	<input type="text" class="style-tamanho tamanhoMin" placeholder="Minímo"/> 
     <input type="text" class="style-tamanho tamanhoMax" placeholder="Máximo"/>
-    <br/>
-    <label class="cor-predominante" for="" style="cursor:default; color:#222; font-size:14px;">Cor Predominante</label>
-  	<span style="font-size:12px;color:red">#Hexadecimal</span> <input type="text" class="hexadecimal"/><br/>
-  	<input type="submit"  value="Adicionar novo hexadecimal" class="addHexadecimal"/><br/>
     <br/>
 	<input type="submit" value="Adicionar" class="actionAdicionaProduto style-adicionar" title="Adicionar Banner"> 
 	<input type="submit" value="Gerenciar" class="style-gerenciar" title="Gerenciar Banner"><br/>

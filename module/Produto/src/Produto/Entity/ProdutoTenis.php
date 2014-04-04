@@ -1,7 +1,7 @@
 <?php
 
 namespace Produto\Entity;
-
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,6 +22,19 @@ class ProdutoTenis
      */
     private $idtenis;
 
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titulo", type="string", length=255, nullable=true)
+     */
+    private $titulo;
+    /**
+     * @var string
+     * @Gedmo\Slug(fields={"titulo"}, unique=true)
+     * @ORM\Column(name="slug", type="string", length=255, nullable=true)
+     */
+    private $slug;
     /**
      * @var string
      *
@@ -165,9 +178,26 @@ class ProdutoTenis
 	public function setSubcategoriaTenis($subcategoriaTenis) {
 		$this->subcategoriaTenis = $subcategoriaTenis;
 	}
+	/**
+	 * @return the $titulo
+	 */
+	public function getTitulo() {
+		return $this->titulo;
+	}
 
 
+	/**
+	 * @param string $titulo
+	 */
+	public function setTitulo($titulo) {
+		$this->titulo = $titulo;
+	}
+	/**
+	 * @return the $slug
+	 */
+	public function getSlug() {
+		return $this->slug;
+	}
 
-	
 	
 }

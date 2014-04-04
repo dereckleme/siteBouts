@@ -53,7 +53,7 @@ return array(
 	        								'produto-detalhe' => array(
 	        										'type' => 'Segment',
 	        										'options' => array(
-	        												'route'    => '[/:idProduto]',
+	        												'route'    => '[/:slugProduto]',
 	        												'defaults' => array(
 	        														'action'     => 'produtoDetalhe',
 	        												),

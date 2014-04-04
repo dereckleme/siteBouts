@@ -1,4 +1,5 @@
 <?php
+namespace Admin;
 /**
  * Zend Framework (http://framework.zend.com/)x
  *
@@ -92,16 +93,29 @@ return array(
         ),
     ),
     'doctrine' => array(
-    		'driver' => array(
-    				'application_entities' => array(
-    						'class' =>'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
-    						'cache' => 'array',
-    						'paths' => array(__DIR__ . '/../src/Admin/Entity')
-    				),
-    
-    				'orm_default' => array(
-    						'drivers' => array(
-    								'Admin\Entity' => 'application_entities'
-    						)
-    				))),
+        'eventmanager' => array(
+        		'orm_default' => array(
+        				'subscribers' => array(
+        						// pick any listeners you need
+        						'Gedmo\Tree\TreeListener',
+        						'Gedmo\Timestampable\TimestampableListener',
+        						'Gedmo\Sluggable\SluggableListener',
+        						'Gedmo\Loggable\LoggableListener',
+        						'Gedmo\Sortable\SortableListener'
+        				),
+        		),
+        ),
+        'driver' => array(
+            __NAMESPACE__ . '_driver' => array(
+                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
+                'cache' => 'array',
+                'paths' => array(__DIR__ . '/../src/' . __NAMESPACE__ . '/Entity')
+            ),
+            'orm_default' => array(
+                'drivers' => array(
+                    __NAMESPACE__ . '\Entity' => __NAMESPACE__ . '_driver'
+                ),
+            ),
+        ),
+    ),
 );

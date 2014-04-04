@@ -81,6 +81,7 @@ class CrudController extends AbstractActionController
     			{
     				$service = $this->getServiceLocator()->get('Admin\Service\Produtos');
     				$service->insert(array(
+    						"titulo" => $this->getRequest()->getPost("titulo"),
     						"src" => $filtro->getFileInfo()['imagem']['name'],
     						"subcategoria" => $this->getRequest()->getPost("subcategoria"),
     						"modelo" => $this->getRequest()->getPost("modelo"),
