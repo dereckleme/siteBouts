@@ -24,6 +24,18 @@ class MatchedRotaCaminho
    		{
    			return array("rota" => $this->match->getMatchedRouteName(), "nome" => "Mídia",  "subtitulo" => "Assista as ultimas ações produzidas pela Bout’s - Mídia");
    		}
+  		else if($this->match->getParams()['action'] == "produto")
+   		{
+   			return array("rota" => $this->match->getMatchedRouteName(), "nome" => "Mídia",  "subtitulo" => "Assista as ultimas ações produzidas pela Bout’s - Mídia");
+   		}
+   		else if($this->match->getParams()['action'] == "produtoSubcategoria")
+   		{
+   			return array("rota" => "home", "nome" => "Mídia",  "subtitulo" => "Assista as ultimas ações produzidas pela Bout’s - Mídia");
+   		}
+   		else if($this->match->getParams()['action'] == "produtoDetalhe")
+   		{
+   			return array("rota" => "home", "nome" => "Mídia",  "subtitulo" => "Assista as ultimas ações produzidas pela Bout’s - Mídia");
+   		}
    }
 }
 
