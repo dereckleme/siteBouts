@@ -21,17 +21,15 @@ body { font-family: 'Conv_calibri', sans-serif; font-size: 10px!important;}
 
 .h-container-bottom { width: 100%; min-width: 1300px; border-top: solid 8px #222222; border-bottom: solid 8px #222222; background: url(../img/bk-header.png) repeat; float: left;} /* +/- 1300px */
 .h-container-footer { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left;}
+
 .usuario { width: 280px; float: right; margin: 26px 15px 0 0;}
-figure.wall { width: 120px; display: block; float: left; margin-right: 20px;}
-figure.wall a { width: 24px; height: 18px; display: block; background: url(../img/wallpaper.png) no-repeat; background-position: 0 0; text-decoration: none; -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
-figure.wall a:hover { background: url(../img/wallpaper.png) no-repeat; background-position: 0 -20px; -webkit-transition: 0.1s ease-in; transition: 0.1s ease-in;}
-figure.wall figcaption { font-size: 1.2em; margin-left: 40px; padding-top: 3px; font-weight: bold; text-transform: uppercase; color: #dddddd; -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
-figure.wall a:hover figcaption { color: #96bd05; -webkit-transition: 0.1s ease-in; transition: 0.1s ease-in;}
-figure.contato { width: 130px; display: block; float: left;}
-figure.contato a { width: 24px; height: 16px; margin-top: 2px; display: block; background: url(../img/contato.png) no-repeat; background-position: 0 0; text-decoration: none; -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
-figure.contato a:hover { background: url(../img/contato.png) no-repeat; background-position: 0 -17px; -webkit-transition: 0.1s ease-in; transition: 0.1s ease-in;}
-figure.contato figcaption { width: 97px; font-size: 1.2em; margin-left: 40px; padding-top: 3px; font-weight: bold; text-transform: uppercase; color: #dddddd; -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
-figure.contato a:hover figcaption { color: #96bd05; -webkit-transition: 0.1s ease-in; transition: 0.1s ease-in;}
+
+figure.wall { width: 120px; display: block; float: left; margin-right: 10px;}
+figure.contato { width: 135px; display: block; float: left;}
+figure.wall a { height: 14px; background: url(../img/wallpaper.png) no-repeat scroll top center;}
+figure.contato a { height: 13px; background: url(../img/contato.png) no-repeat scroll top center;}
+figure.wall a:hover, figure.contato a:hover { background-position: bottom center; color: #96bd05; -webkit-transition: 0.1s ease-in; transition: 0.1s ease-in;}
+figure.wall a, figure.contato a { width: 24px; display: block; text-indent: 40px; font-size: 1.2em; padding-top: 3px; font-weight: bold; text-transform: uppercase; color: #dddddd; text-decoration: none; -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
 
 .h-news { width: 1300px; height: 50px; position: relative; left: 50%; margin-left: -650px; float: left;}
 .newsletter { width: 750px; margin: 0 auto; margin-top: 0.5%;}
@@ -68,6 +66,7 @@ ul.box-menu li a.compre { padding: 10px 45px 10px 20px;}
 ul.box-menu li a.produtos { padding: 10px 45px 10px 20px;}
 ul.box-menu li a.tecnologia { padding: 10px 45px 10px 20px;}
 ul.box-menu li a.midia:last-child { padding: 10px 20px 10px 20px; border: none;}
+
 ul.box-menu li a.compre:before { content: '\2335'; position: absolute; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 ul.box-menu li.box-lista:hover > a.compre:before { color: #222222; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); top: 12px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 ul.box-menu li a.produtos:before { content: '\2335'; position: absolute; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
@@ -243,14 +242,37 @@ section.pg-midia div h3 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, s
 section.pg-midia div ul { width: 970px;}
 section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin: 0 auto;}
 section.pg-midia div ul li.video-secundario { float: left; width: 317px; height: 180px; margin-right: 6px; margin-top: 60px;}
-section.pg-midia div ul li figcaption { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-weight: bold; color: #222222; font-size: 1.6em;}
+section.pg-midia div ul li p { font-weight: bold; color: #222222; font-size: 1.5em;}
 
+section.produto-detalhe { width: 1300px; height: 800px; position: relative; left: 50%; margin-left: -650px; float: left;}
+#box-produtos { width: 650px; float: left; margin-top: 70px;}
+.viewport-imagem { width: 650px; height: 400px; position: relative; float: left;}
+.viewport { width: 580px; margin: 40px 0 0 30px; position: relative; float: left;}
+.viewport a { text-decoration: none;}
+.viewport a.previous:before { content: '\2335'; font-size: 2em; color: #595959; display: block; position: absolute; left: 0; top: 30px; -webkit-transform: rotate(90deg); transform: rotate(90deg);} 
+.viewport a.next:before { content: '\2335'; font-size: 2em; color: #595959; display: block; position: absolute; right: 0; top: 30px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+.viewport a.previous:hover:before, .viewport a.next:hover:before { color: #0e9db3;}
+.viewport div { width: 535px; margin-left: 25px; overflow: hidden; float: left; position: relative;}
+.viewport div ul { width: 1200px; float: left;}
+.viewport div ul li { width: 120px; height: 80px; margin-right: 15px; background: #FFFFFF; display: block; float: left; border: solid 1px #a3a5a5; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.viewport div ul li img { -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+.viewport div ul li:hover img { -webkit-transform: scale(1.0); transform: scale(1.0);}
+.viewport div ul li:hover { border: solid 1px #0e9db3;}
 
-
-section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
-
-
-
+#info-produtos { width: 650px; float: right; margin-top: 70px;}
+#info-produtos h2 { width: 100%; font-size: 2.8em; margin: 0 0 0 0; color: #222222; font-weight: bold; float: left;}
+#info-produtos span { color: #0d9cb3;}
+#info-produtos span.dt-tec { text-transform: uppercase;}
+#info-produtos p.txt-info { width: 410px; margin: 25px 0 0 0; line-height: 20px; font-size: 1.6em; color: #222222; float: left;}
+#info-produtos p.txt-model { width: 410px; margin: 25px 0 0 5px; float: left; font-size: 2.0em; font-weight: bold;}
+#info-produtos p.txt-tec { width: 410px; margin: 15px 0 0 5px; float: left; font-size: 1.6em; font-weight: bold;}
+#info-produtos p.txt-number { width: 410px; margin: 15px 0 0 5px; float: left; font-size: 1.4em; font-weight: bold;}
+#info-produtos ul { width: 550px; float: left; margin: 20px 0 0 5px;}
+#info-produtos ul li { width: 120px; height: 80px; margin: 0 15px 15px 0; background: #FFFFFF; display: block; float: left; border: solid 1px #a3a5a5; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+#info-produtos ul li img { -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+#info-produtos ul li:hover img { -webkit-transform: scale(1.0); transform: scale(1.0);}
+#info-produtos ul li:hover { border: solid 1px #0e9db3;}
+#info-produtos a.share-face { float: left; margin: 20px 0 0 5px;}
 
 section.pg-tecnologia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-bottom: 60px;}
 div.pg-galeria, div.pg-textos { width: 650px; height: 450px; float: left; position: relative; margin-top: 50px;}
@@ -282,20 +304,45 @@ div.pg-textos p { width: 490px; line-height: 25px; margin-left: 55px; font-size:
 .pg-tec ul li:hover a.effect-right img { margin: 0 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 
 section.pg-wallpaper { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
-section.pg-wallpaper ul { width: 1200px; height: 600px; margin: 50px 0 0 30px; padding-left: 40px; position: relative; float: left;}
-section.pg-wallpaper ul li { width: 200px; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-section.pg-wallpaper ul li { margin: 0 40px 70px 0;}
+section.pg-wallpaper ul { width: 1200px; margin: 50px 0 0 30px; padding-left: 40px; position: relative; float: left;}
+section.pg-wallpaper ul li { width: 200px; margin: 0 40px 70px 0; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 section.pg-wallpaper ul li img { border: solid 1px #999999;}
-section.pg-wallpaper ul li figcaption { font-size: 1.4em; color: #333333; font-weight: bold; margin-bottom: 7px;}
-section.pg-wallpaper ul li span { position: relative; float: left; cursor: pointer; background: #FFFFFF; transition: all 0.2s ease-out 0s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-section.pg-wallpaper ul li span { margin-top: 7px; border: solid 1px #085e04; width: 123px; display: block;}
-section.pg-wallpaper ul li span { font-size: 1.2em; color: #085e04; font-weight: bold; }
+section.pg-wallpaper ul li p { font-size: 1.4em; color: #333333; font-weight: bold; margin-bottom: 7px;}
+section.pg-wallpaper ul li span { font-size: 1.2em; color: #085e04; font-weight: bold; margin-top: 7px; border: solid 1px #085e04; width: 123px; display: block; position: relative; float: left; cursor: pointer; background: #FFFFFF; transition: all 0.2s ease-out 0s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 section.pg-wallpaper ul li span:hover { color: #014b60; border: solid 1px #014b60;}
 section.pg-wallpaper ul li span a { width: 38px; height: 38px; margin-right: 11px; float: left; background: url(../img/download.jpg) no-repeat scroll bottom center; transition: all 0.2s ease-out 0s;}
 section.pg-wallpaper ul li span:hover a { background-position: top center;}
 
 section.pg-contato { width: 100%; height: 100%;}
-section.pg-contato img { width: 522px; position: fixed; top: 10%; left:50%; margin-left: -261px; z-index: 99999999;}
+div#form { width: 522px; padding-bottom: 15px; border: solid 15px #222222; background: #FFFFFF; position: fixed; top: 10%; left:50%; margin-left: -261px; z-index: 99999999; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+div#form a { width: 36px; height: 36px; background: url(../img/fechar.jpg) no-repeat scroll left center; display: block; position: absolute;  right: 2px; top: 2px; transition: all 0.2s ease-out 0s;}
+div#form a:hover { background-position: right center; -webkit-transform: rotate(90deg); transform: rotate(90deg);}
+div#form h2 { margin-left: 13px; width: 475px; height: 28px; float: left; padding-top: 4px; text-indent: 40px; font-size: 2.0em; color: #222222; font-weight: bold; background: url(../img/dt-box-home.jpg) no-repeat;}
+div#form p { margin: -5px 0 0 13px; font-size: 1.6em; color: #222222; float: left; line-height: 20px;}
+div#form form { font-family: 'Conv_calibri', sans-serif; margin: 30px 0 0 13px; float: left;}
+div#form form p { margin: -15px 0 0 0px;}
+div#form form input, div#form form select, div#form form textarea { float: left; font-family: 'Conv_calibri', sans-serif;}
+div#form form label { float: left; font-size: 1.3em; color: #222222;}
+div#form span.check { width: 100%; display: block; float: left;}
+div#form span.check label { padding-left: 5px; margin-top: 3px;}
+div#form span.check input { border: solid 1px #cccccc;}
+div#form span.check input.marketing { margin-left: 10px;}
+div#form span.check-col { width: 238px; display: block; float: left;}
+div#form span.check-col input, div#form span.check-col select { border: solid 1px #cccccc; padding: 10px 0 10px 3px;}
+div#form span.check-col label { margin: 15px 0 10px -3px;}
+div#form span.check-col input.statusNome, 
+div#form span.check-col label.statusTelefone, 
+div#form span.check-col input.statusModelo,
+div#form span.check-col input.statusEmail { width: 220px;}
+div#form span.check-col input.statusTelefone2,
+div#form span.check-col label.statusCidade { width: 140px;}
+div#form span.check-col input.statusTelefone1 { width: 60px; margin-right: 12px;}
+div#form span.check-col select.statusCidade { width: 140px; margin-right: 24px;}
+div#form span.check-col select.statusUf { width: 60px;}
+div#form span.check-col label.statusUf { width: 60px; margin: -23px 0 10px -3px;}
+div#form textarea.statusMensagem { width: 455px; max-width: 455px; height: 80px; border: solid 1px #cccccc; padding-left: 5px; float: left;}
+div#form label.statusMensagem { width: 455px; float: left; margin: 15px 0 10px -3px;}
+div#form button { width: 124px; height: 41px; background: url(../img/enviarHover.jpg) no-repeat; text-transform: uppercase; font-size: 1.5em; letter-spacing: 1px; cursor: pointer; position: relative; float: left; margin-top: 15px; border: none; font-weight: bold; color: #FFFFFF;}
 .loadAjax { width: 100%; height: 1000%; position: absolute; z-index: 9999999; background: rgba(0,0,0,0.8); display: none;}
 
 footer { width: 100%; float: left; background: #eeeeee; position: relative;}

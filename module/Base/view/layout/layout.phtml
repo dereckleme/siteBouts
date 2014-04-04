@@ -3,6 +3,9 @@
 <html lang="pt-BR">
     <head>
         <meta charset="utf-8">
+
+
+        
         <?php echo $this->headTitle('NEW Bouts')?>
 
         <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
@@ -41,7 +44,7 @@
 
 	 	<nav>
 
-	 		<h1><a href="<?=$this->url("home")?>" title="Página Inicial" alt="Página Inicial"><img src="<?=$this->basePath()?>/img/logo-bouts.png"></a></h1>
+	 		<h1><a href="<?=$this->url("home")?>" title="Página Inicial"><img alt="Página Inicial" src="<?=$this->basePath()?>/img/logo-bouts.png"></a></h1>
 
 	 		<?php 
 	 		print $this->partial('menu/menu.phtml', array('menu' => $this->menu, 'menuListaTenis' => $this->menuListaTenis));
@@ -50,15 +53,11 @@
 	 		<div class="usuario">
 
  				<figure class="wall">
- 					<a href="<?=$this->url("wallpaper")?>">
- 					<figcaption title="Wallpaper">Wallpaper</figcaption>
- 				    </a>
+ 					<a href="<?=$this->url("wallpaper")?>" title="Wallpaper">Wallpaper</a>
  				</figure>
 
  				<figure class="contato">
- 					<a href="" class="abrirContato">
- 					<figcaption title="fale conosco">fale conosco</figcaption>
- 				    </a>
+ 					<a href="" class="abrirContato" title="fale conosco">fale&nbsp;conosco</a>
  				</figure>
 
  			</div>
