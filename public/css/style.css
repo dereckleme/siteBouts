@@ -16,9 +16,9 @@
 
 body { font-family: 'Conv_calibri', sans-serif; font-size: 10px!important; background-color: transparent;}
 
-.h-container-top { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left; margin-top: 92px; position: relative;} /* +/- 1300px */
+.h-container-top { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left; margin-top: 92px; position: relative;}
 .box-paralax { overflow: hidden;}
-.h-container-bottom { width: 100%; min-width: 1300px; border-top: solid 8px #222222; border-bottom: solid 8px #222222; background: url(../img/bk-header.png) repeat; float: left;} /* +/- 1300px */
+.h-container-bottom { width: 100%; min-width: 1300px; border-top: solid 8px #222222; border-bottom: solid 8px #222222; background: url(../img/bk-header.png) repeat; float: left;}
 .h-container-footer { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left;}
 
 .usuario { width: 280px; float: right; margin: 26px 60px 0 0;}
@@ -45,13 +45,14 @@ figure.wall a, figure.contato a { width: 24px; display: block; text-indent: 40px
 section.menu { width: 100%; min-width: 1300px; float: left; border-bottom: solid 5px #96bd05; position: fixed; z-index: 9999; background: #014b60;}
 section.menu { background: rgb(1,116,173); /* Old browsers */
 background: -moz-linear-gradient(left,  rgba(1,116,173,1) 0%, rgba(1,79,103,1) 24%, rgba(1,75,96,1) 50%, rgba(1,79,103,1) 79%, rgba(1,116,173,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(1,116,173,1)), color-stop(24%,rgba(1,79,103,1)), color-stop(50%,rgba(1,75,96,1)), color-stop(79%,rgba(1,79,103,1)), color-stop(100%,rgba(1,116,173,1))); /* Chrome,Safari4+ */background: -webkit-linear-gradient(left,  rgba(1,116,173,1) 0%,rgba(1,79,103,1) 24%,rgba(1,75,96,1) 50%,rgba(1,79,103,1) 79%,rgba(1,116,173,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(left,  rgba(1,116,173,1) 0%,rgba(1,79,103,1) 24%,rgba(1,75,96,1) 50%,rgba(1,79,103,1) 79%,rgba(1,116,173,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(left,  rgba(1,116,173,1) 0%,rgba(1,79,103,1) 24%,rgba(1,75,96,1) 50%,rgba(1,79,103,1) 79%,rgba(1,116,173,1) 100%); /* IE10+ */
-background: linear-gradient(to right,  rgba(1,116,173,1) 0%,rgba(1,79,103,1) 24%,rgba(1,75,96,1) 50%,rgba(1,79,103,1) 79%,rgba(1,116,173,1) 100%); /* W3C */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(1,116,173,1)), color-stop(24%,rgba(1,79,103,1)), color-stop(50%,rgba(1,75,96,1)), color-stop(79%,rgba(1,79,103,1)), color-stop(100%,rgba(1,116,173,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(1,116,173,1) 0%,rgba(1,79,103,1) 24%,rgba(1,75,96,1) 50%,rgba(1,79,103,1) 79%,rgba(1,116,173,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,rgba(1,116,173,1) 0%,rgba(1,79,103,1) 24%,rgba(1,75,96,1) 50%,rgba(1,79,103,1) 79%,rgba(1,116,173,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,rgba(1,116,173,1) 0%,rgba(1,79,103,1) 24%,rgba(1,75,96,1) 50%,rgba(1,79,103,1) 79%,rgba(1,116,173,1) 100%); /* IE10+ */
+background: linear-gradient(to right,rgba(1,116,173,1) 0%,rgba(1,79,103,1) 24%,rgba(1,75,96,1) 50%,rgba(1,79,103,1) 79%,rgba(1,116,173,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0174ad', endColorstr='#0174ad',GradientType=1 ); /* IE6-9 */}
 
-.menu nav { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;} /* +/- 1300px */
+.menu nav { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 .menu nav h1 a img { max-width: 100%; position: relative; top: -2px; float: left; clear: both; margin-left: 15px;} 
 ul.box-menu { float: left; margin: -12px 0 0 50px; position: relative;}
 ul.box-menu li.box-lista { float: left; cursor: pointer; padding: 28px 0 26px 0; position: relative; z-index: 800;}
@@ -86,7 +87,7 @@ li.sub-menu-links ul li a:hover { color: #FFFFFF; background: #96bd05; padding: 
 ul.box-menu li.sub-menu-links:hover ul { display: block;}
 .container { width: 100%; background: url(../img/bk-container.png) repeat; float: left; position: relative;}
 section.galeria { width: 100%; float: left; overflow: hidden;}
-.lancamentos { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-top: 80px;} /* +/- 1300px */
+.lancamentos { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-top: 80px;}
 .lancamentos h2 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; text-align: center; font-size: 8.0em; color: #222222; margin: 0; padding: 0;}
 .lancamentos h2 span { color: #079ab1;}
 div.g-produtos { width: 1156px; margin: 60px 0 60px 72px; overflow: hidden; position: relative; float: left;}
@@ -117,15 +118,18 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 .tec-bouts h3 { width: 285px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
 .tec-bouts h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 50px;}
 .tec-bouts ul { width: 100%; float: left; margin-top: 10px;}
+
 .tec-bouts ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 .tec-bouts ul li { width: 315px; height: 180px; overflow: hidden; margin-left: 10.6px; float: left; border: solid 1px #999999; cursor: pointer; position: relative; background: #FFFFFF;}
 .tec-bouts ul li:first-child { margin: 0 0 0 0px;}
 .tec-bouts ul li img { position: absolute; z-index: 10;}
-.tec-bouts ul li a { position: absolute; z-index: 20; padding: 0px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-.tec-bouts ul li:hover a { padding: 43.8px 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-.tec-bouts ul li:hover a p:nth-child(1) { margin: 10px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-.tec-bouts ul li:hover a p:nth-child(3) { margin: 30px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in; }
-.tec-bouts ul li:hover a span { top: 10px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+
+.tec-bouts ul li a { position: absolute; z-index: 20; padding: 0px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+
+.tec-bouts ul li:hover a { padding: 43.8px 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+.tec-bouts ul li:hover a p:nth-child(1) { margin: 10px 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+.tec-bouts ul li:hover a p:nth-child(3) { margin: 30px 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+.tec-bouts ul li:hover a span { top: 10px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 
 .tec-bouts ul li a p:nth-child(1) { 
 	font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
@@ -136,7 +140,7 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
     color: #FFF; 
     text-align:center;
     margin: -40px 0 0 0;
-    -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;
+    -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;
 }
 
 .tec-bouts ul li a p:nth-child(3) { 
@@ -147,7 +151,7 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 	color: #FFF; 
 	margin: -50px 0 0 0;
 	font-size: 1.6em;
-	-webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;
+	-webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;
 }
 
 .tec-bouts ul li a span { 
@@ -155,7 +159,7 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 	float: left;
 	border-top: solid 1px #000000; 
 	border-bottom: solid 1px #999999;
-	-webkit-transition: 0.7s ease-out; transition: 0.7s ease-out;
+	-webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;
 	display: block;
 	position: relative;
 	top: -10px;
@@ -184,11 +188,11 @@ section.pg-produtos ul { width: 100%; float: left; margin: 25px 0 0 0;}
 section.pg-produtos ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 section.pg-produtos ul li { width: 400px; height: 250px; margin: 0 0 25px 25px; float: left; border: solid 1px #999999; cursor: pointer; position: relative; background: #FFFFFF; overflow: hidden;}
 section.pg-produtos ul li img { position: absolute; z-index: 10;}
-section.pg-produtos ul li a { position: absolute; z-index: 20; padding: 0px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-section.pg-produtos ul li:hover a { padding: 65.8px 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-section.pg-produtos ul li:hover a p:nth-child(1) { margin: 18px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-section.pg-produtos ul li:hover a p:nth-child(3) { margin: 40px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-section.pg-produtos ul li:hover a span { top: 20px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+section.pg-produtos ul li a { position: absolute; z-index: 20; padding: 0px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+section.pg-produtos ul li:hover a { padding: 65.8px 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+section.pg-produtos ul li:hover a p:nth-child(1) { margin: 18px 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+section.pg-produtos ul li:hover a p:nth-child(3) { margin: 40px 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+section.pg-produtos ul li:hover a span { top: 20px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 
 section.pg-produtos ul li a p:nth-child(1) { 
 	font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
@@ -199,7 +203,7 @@ section.pg-produtos ul li a p:nth-child(1) {
     color: #FFF; 
     text-align:center;
     margin: -50px 0 0 0;
-    -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;
+    -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;
 }
 
 section.pg-produtos ul li a p:nth-child(3) { 
@@ -210,7 +214,7 @@ section.pg-produtos ul li a p:nth-child(3) {
 	color: #FFF; 
 	margin: -40px 0 0 0;
 	font-size: 1.8em;
-	-webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;
+	-webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;
 }
 
 section.pg-produtos ul li a span { 
@@ -218,7 +222,7 @@ section.pg-produtos ul li a span {
 	float: left;
 	border-top: solid 1px #000000; 
 	border-bottom: solid 1px #999999;
-	-webkit-transition: 0.7s ease-out; transition: 0.7s ease-out;
+	-webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;
 	display: block;
 	position: relative;
 	top: -50px;
@@ -275,22 +279,22 @@ div.pg-textos p { width: 490px; line-height: 25px; margin-left: 55px; font-size:
 .pg-tec ul li { width: 315px; height: 180px; margin: 0 0 10px 10px;  float: left; border: solid 1px #999999; cursor: pointer; position: relative; overflow: hidden; background: #FFFFFF;}
 .pg-tec ul li img { position: absolute; z-index: 10;}
 .pg-tec ul li a { position: absolute; z-index: 20;}
-.pg-tec ul li a.effect-top { padding: 0px 182px 0px 131.5px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-.pg-tec ul li a.effect-top img { margin: -60px 0 0 0; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-.pg-tec ul li:hover a.effect-top { padding: 63px 182px 115px 131.5px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-.pg-tec ul li:hover a.effect-top img { margin: 0px 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-.pg-tec ul li a.effect-left { padding: 63px 0px 115px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-.pg-tec ul li a.effect-left img { margin: 0 0 0 -170px; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-.pg-tec ul li:hover a.effect-left { padding: 63px 182px 115px 131.5px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-.pg-tec ul li:hover a.effect-left img { margin: 0 0 0 0px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-.pg-tec ul li a.effect-bottom { padding: 63px 182px 115px 131.5px; margin: 179px 0 0 0; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-.pg-tec ul li a.effect-bottom img { margin: 0 0 0 0; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-.pg-tec ul li:hover a.effect-bottom { padding: 63px 182px 115px 131.5px; margin: 0px 0 0 0; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-.pg-tec ul li:hover a.effect-bottom img { margin: 0 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-.pg-tec ul li a.effect-right { padding: 63px 182px 115px 131.5px; margin:  0 0 0 315px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-.pg-tec ul li a.effect-right img { margin: 0 0 0 0; position: absolute; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-.pg-tec ul li:hover a.effect-right { padding: 63px 182px 115px 131.5px; margin:  0 0 0 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-.pg-tec ul li:hover a.effect-right img { margin: 0 0 0 0; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+.pg-tec ul li a.effect-top { padding: 0px 182px 0px 131.5px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+.pg-tec ul li a.effect-top img { margin: -60px 0 0 0; position: absolute; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+.pg-tec ul li:hover a.effect-top { padding: 63px 182px 115px 131.5px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+.pg-tec ul li:hover a.effect-top img { margin: 0px 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+.pg-tec ul li a.effect-left { padding: 63px 0px 115px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+.pg-tec ul li a.effect-left img { margin: 0 0 0 -170px; position: absolute; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+.pg-tec ul li:hover a.effect-left { padding: 63px 182px 115px 131.5px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+.pg-tec ul li:hover a.effect-left img { margin: 0 0 0 0px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+.pg-tec ul li a.effect-bottom { padding: 63px 182px 115px 131.5px; margin: 179px 0 0 0; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+.pg-tec ul li a.effect-bottom img { margin: 0 0 0 0; position: absolute; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+.pg-tec ul li:hover a.effect-bottom { padding: 63px 182px 115px 131.5px; margin: 0px 0 0 0; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+.pg-tec ul li:hover a.effect-bottom img { margin: 0 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+.pg-tec ul li a.effect-right { padding: 63px 182px 115px 131.5px; margin:  0 0 0 315px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+.pg-tec ul li a.effect-right img { margin: 0 0 0 0; position: absolute; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+.pg-tec ul li:hover a.effect-right { padding: 63px 182px 115px 131.5px; margin:  0 0 0 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+.pg-tec ul li:hover a.effect-right img { margin: 0 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 
 section.pg-wallpaper { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 section.pg-wallpaper ul { width: 1200px; margin: 50px 0 0 30px; padding-left: 40px; position: relative; float: left;}
@@ -303,7 +307,7 @@ section.pg-wallpaper ul li span a { width: 38px; height: 38px; margin-right: 11p
 section.pg-wallpaper ul li span:hover a { background-position: top center;}
 
 section.pg-contato { width: 100%; height: 100%;}
-div#form { width: 522px; padding-bottom: 15px; border: solid 15px #222222; background: #FFFFFF; position: fixed; top: 10%; left:50%; margin-left: -261px; z-index: 99999999; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+div#form { width: 522px; padding-bottom: 15px; border: solid 15px #222222; background: #FFFFFF; position: fixed; top: 5%; left:50%; margin-left: -261px; z-index: 99999999; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 div#form a { width: 36px; height: 36px; background: url(../img/fechar.jpg) no-repeat scroll left center; display: block; position: absolute;  right: 2px; top: 2px; transition: all 0.2s ease-out 0s;}
 div#form a:hover { background-position: right center; -webkit-transform: rotate(90deg); transform: rotate(90deg);}
 div#form h2 { margin-left: 13px; width: 475px; height: 28px; float: left; padding-top: 4px; text-indent: 40px; font-size: 2.0em; color: #222222; font-weight: bold; background: url(../img/dt-box-home.jpg) no-repeat;}

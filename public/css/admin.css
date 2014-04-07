@@ -6,18 +6,17 @@ body {
 	color:#222;
 }
 
-#adm-popup{
+#adm-popup {
 		display:none;
 		background-color:cinze;
 		border:1px solid rgba(0,0,0,0.2);
 		margin: 5px 0px 5px 0px;
 		padding:5px;
 	}
-#adm-popup h4{
-		color:#079ab1
+
+#adm-popup h4 {
+		color:#079ab1;
 	}
-
-
 
 .form-signin {
 	max-width: 300px;
@@ -44,12 +43,17 @@ body {
 	padding: 7px 9px;
 }
 
+
 /*gerenciar banner*/
-.style-adicionar, .style-gerenciar {font-family:'Arial', Helvetica, sans-serif; font-size: 13px}
-.style-adicionar {background: url(.././img/admin/icon-adicionar.png)  no-repeat left #30ab00; border: none; color:#fff; padding: 7px 15px; font-weight: bolder; text-indent:20px}
-.style-gerenciar {background: url(.././img/admin/icon-gerenciar.png)  no-repeat left #079ab1; border: none; color:#fff; padding: 7px 15px; font-weight: bolder; text-indent:20px}
+.style-adicionar, .style-gerenciar { font-family:'Arial', Helvetica, sans-serif; font-size: 13px}
+.style-adicionar { background: url(.././img/admin/icon-adicionar.png)  no-repeat left #30ab00; border: none; color:#fff; padding: 7px 15px; font-weight: bolder; text-indent:20px;}
+.style-gerenciar { background: url(.././img/admin/icon-gerenciar.png)  no-repeat left #079ab1; border: none; color:#fff; padding: 7px 15px; font-weight: bolder; text-indent:20px;}
 
 /*gerenciar produto*/
-input.style-tamanho {width: 95px; margin-top: 5px}
-input.style-cor {width: 70px; height: 30px}
-label.cor-predominante {margin-bottom: 5px;}
+input.style-tamanho { width: 95px; margin-top: 5px}
+input.style-cor { width: 70px; height: 30px}
+label.cor-predominante { margin-bottom: 5px;}
+
+/*gerenciar tecnologia*/
+.formTecnologia textarea { width: 300px;}
+.formTecnologia label { font-family:'Arial', Helvetica, sans-serif; font-size: 15px; color: #959797;}
