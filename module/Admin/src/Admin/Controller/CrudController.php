@@ -6,7 +6,8 @@ use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Zend\File\Transfer\Adapter\Http AS httpUploadFile;
 use Zend\Filter\File\Rename;
-
+use Zend\Validator\File\MimeType;
+use Zend\Validator\File\ImageSize;
 class CrudController extends AbstractActionController
 {
     public function bannerAction()
@@ -72,13 +73,35 @@ class CrudController extends AbstractActionController
     		$requestPost->setDestination('./public/img/produtos');
     		foreach($requestPost->getFileInfo() as $file => $info)
     		{
+    			
+    			$erros = false;
     			$fname = $info['name'];
+    			$ext = pathinfo($fname, PATHINFO_EXTENSION);
+    			
     			$filtro = $requestPost->addFilter(new Rename(array(
-    					"target" => $fname,
+    					"target" => "load.".$ext,
     					"randomize" => true
     			)), null, $file);
-    			if($requestPost->receive())
+    			$tamanho = new ImageSize(array(
+    					'minWidth' => 640, 'minHeight' => 480,
+    			));
+    			$mime = new MimeType(array(
+    					'image/gif', 'image/jpg','image/png','image/jpeg',
+    					'enableHeaderCheck' => true
+    			));
+    			if(!$tamanho->isValid($info)) $erros = "- É necessário uma imagem com tamanho minimo 640px\n";
+    			if(!$mime->isValid($info)) $erros = "- O tipo de arquivo suportado é gif, jpg, png\n";
+    			if($requestPost->receive() && $erros == false)
     			{
+    				
+    				$im = new \Imagick();
+    				$im->readImage($filtro->getFileName());
+    				$im->flattenImages();
+    				$im->setImageFormat('png');
+    				$im->thumbnailImage(650,400);
+    				$im->writeImage($filtro->getFileName()."big.png");
+    				$im->thumbnailImage(400,250);
+    				$im->writeImage($filtro->getFileName()."medio.png");
     				$service = $this->getServiceLocator()->get('Admin\Service\Produtos');
     				$service->insert(array(
     						"titulo" => $this->getRequest()->getPost("titulo"),
@@ -89,7 +112,10 @@ class CrudController extends AbstractActionController
     						"numeracaoFinal" => $this->getRequest()->getPost("tamanhoMax")
     				));
     			}
-    			 
+    			else
+    			{
+    				print $erros;
+    			}
     		}
     	}
     	$layout = new ViewModel();

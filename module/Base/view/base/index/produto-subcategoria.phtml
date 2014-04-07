@@ -6,7 +6,7 @@
 			{
 		?>
 			<li>
-				<img src="<?=$this->basePath()?>/img/produtos/<?=$produto->getSrc()?>">
+				<img src="<?=$this->basePath()?>/img/produtos/<?=$produto->getSrc()?>medio.png">
 				<a href="<?=$this->url("produto/produto-subcategoria/produto-detalhe",array(
 					"categoria" => $produto->getSubcategoriaTenis()->getCategoria()->getSlug(),
 					"subcategoria" => $produto->getSubcategoriaTenis()->getSlug(),
