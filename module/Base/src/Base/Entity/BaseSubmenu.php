@@ -13,12 +13,12 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class BaseSubmenu
 {
-    /**
+      /**
      * @var integer
      *
      * @ORM\Column(name="idbase_submenu", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $idbaseSubmenu;
 
@@ -30,24 +30,21 @@ class BaseSubmenu
     private $nome;
 
     /**
-     * @var \BaseMenu
-     *
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
-     * @ORM\OneToOne(targetEntity="BaseMenu")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="menu", referencedColumnName="idmenu")
-     * })
-     */
-    private $menu;
-    
-    /**
      * @var string
      *
      * @ORM\Column(name="slug", type="string", length=45, nullable=true)
      */
     private $slug;
-    
+
+    /**
+     * @var \BaseMenu
+     *
+     * @ORM\ManyToOne(targetEntity="BaseMenu")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="menu", referencedColumnName="idmenu")
+     * })
+     */
+    private $Basemenu;
 	/**
 	 * @return the $idbaseSubmenu
 	 */
@@ -63,11 +60,12 @@ class BaseSubmenu
 	}
 
 	/**
-	 * @return the $menu
+	 * @return the $slug
 	 */
-	public function getMenu() {
-		return $this->menu;
+	public function getSlug() {
+		return $this->slug;
 	}
+
 
 	/**
 	 * @param number $idbaseSubmenu
@@ -84,26 +82,25 @@ class BaseSubmenu
 	}
 
 	/**
-	 * @param BaseMenu $menu
-	 */
-	public function setMenu($menu) {
-		$this->menu = $menu;
-	}
-	/**
-	 * @return the $slug
-	 */
-	public function getSlug() {
-		return $this->slug;
-	}
-
-	/**
 	 * @param string $slug
 	 */
 	public function setSlug($slug) {
 		$this->slug = $slug;
 	}
+	/**
+	 * @return the $Basemenu
+	 */
+	public function getBasemenu() {
+		return $this->Basemenu;
+	}
+
+	/**
+	 * @param BaseMenu $Basemenu
+	 */
+	public function setBasemenu($Basemenu) {
+		$this->Basemenu = $Basemenu;
+	}
 
 
 
-	
 }

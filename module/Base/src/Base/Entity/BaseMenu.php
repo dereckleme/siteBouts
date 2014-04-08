@@ -16,7 +16,11 @@ class BaseMenu
 	public function __construct() {
 		$this->submenus = new ArrayCollection();
 	}
-    /**
+	/**
+	 * @ORM\OneToMany(targetEntity="BaseSubmenu", mappedBy="Basemenu")
+	 */
+	private $submenus;
+	/**
      * @var integer
      *
      * @ORM\Column(name="idmenu", type="integer", nullable=false)
@@ -33,6 +37,13 @@ class BaseMenu
     private $nome;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="slug", type="string", length=45, nullable=true)
+     */
+    private $slug;
+
+    /**
      * @var \BaseTipo
      *
      * @ORM\ManyToOne(targetEntity="BaseTipo")
@@ -41,19 +52,6 @@ class BaseMenu
      * })
      */
     private $tipo;
-    /**
-     * @ORM\OneToMany(targetEntity="Base\Entity\BaseSubmenu", mappedBy="menu")
-     */
-	private $submenus;
-	
-	
-	/**
-	 * @var string
-	 *
-	 * @ORM\Column(name="slug", type="string", length=45, nullable=true)
-	 */
-	private $slug;
-	
 	/**
 	 * @return the $idmenu
 	 */
@@ -69,17 +67,17 @@ class BaseMenu
 	}
 
 	/**
+	 * @return the $slug
+	 */
+	public function getSlug() {
+		return $this->slug;
+	}
+
+	/**
 	 * @return the $tipo
 	 */
 	public function getTipo() {
 		return $this->tipo;
-	}
-
-	/**
-	 * @return the $submenus
-	 */
-	public function getSubmenus() {
-		return $this->submenus;
 	}
 
 	/**
@@ -97,10 +95,23 @@ class BaseMenu
 	}
 
 	/**
+	 * @param string $slug
+	 */
+	public function setSlug($slug) {
+		$this->slug = $slug;
+	}
+
+	/**
 	 * @param BaseTipo $tipo
 	 */
 	public function setTipo($tipo) {
 		$this->tipo = $tipo;
+	}
+	/**
+	 * @return the $submenus
+	 */
+	public function getSubmenus() {
+		return $this->submenus;
 	}
 
 	/**
@@ -109,21 +120,9 @@ class BaseMenu
 	public function setSubmenus($submenus) {
 		$this->submenus = $submenus;
 	}
-	/**
-	 * @return the $slug
-	 */
-	public function getSlug() {
-		return $this->slug;
-	}
-
-	/**
-	 * @param string $slug
-	 */
-	public function setSlug($slug) {
-		$this->slug = $slug;
-	}
 
 
-	
+    
+    
 	
 }

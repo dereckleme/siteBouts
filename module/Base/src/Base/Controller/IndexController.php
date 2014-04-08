@@ -43,7 +43,10 @@ class IndexController extends AbstractActionController
     }
     public function tecnologiaAction()
     {
-	    return new ViewModel();
+    	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    	$conteudo = $doctrine->getRepository("Base\Entity\BaseConteudo")->localizaPelaSubcategoria($this->params()->fromRoute("slug"));
+    	
+	    return new ViewModel(array("conteudo" => $conteudo));
     }
     public function midiaAction()
     {

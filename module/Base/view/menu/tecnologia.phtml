@@ -3,9 +3,12 @@
 		<?=$this->data->getNome();?>
 	</a>
 	<ul>
-		<li><a href="">Fly TS</a></li>
-		<li><a href="">Gel TS</a></li>
-		<li><a href="">Spiral TS</a></li>
-		<li><a href="">Tower TS</a></li>
+	<?php 
+		foreach($this->data->getSubmenus() AS $sub)
+		{
+	?>
+		<li><a href="<?=$this->url("tecnologia/tecnologia-detalhe",array("slug" => $sub->getSlug()))?>"><?=$sub->getNome()?></a></li><?php 
+		}
+		?>
 	</ul>
 </li>

@@ -60,7 +60,30 @@ $(document).ready(function(){
 			}
 			
 		});
-	
-	
-	
+	var cont = 1;
+	$(".listaImagensTecnologia li").each(function( key, value ) {
+		switch (cont)
+		{
+		case 1:
+		  $("a",this).addClass("effect-top");
+		  break;
+		case 2:
+			$("a",this).addClass("effect-left");
+		  break;
+		case 3:
+			$("a",this).addClass("effect-bottom");
+		  break;
+		case 4:
+			$("a",this).addClass("effect-right");
+		  break;
+		}
+			if(cont == 4)
+				{
+				cont = 1;
+				}
+			else
+				{
+				cont++;
+				}
+		});
 });

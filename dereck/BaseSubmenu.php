@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * BaseSubmenu
  *
- * @ORM\Table(name="base_submenu", indexes={@ORM\Index(name="fk_base_submenu_base_menu1", columns={"menu"})})
+ * @ORM\Table(name="base_submenu", indexes={@ORM\Index(name="fk_base_submenu_base_menu1_idx", columns={"menu"})})
  * @ORM\Entity
  */
 class BaseSubmenu
@@ -17,7 +17,7 @@ class BaseSubmenu
      *
      * @ORM\Column(name="idbase_submenu", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $idbaseSubmenu;
 
@@ -38,9 +38,7 @@ class BaseSubmenu
     /**
      * @var \BaseMenu
      *
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
-     * @ORM\OneToOne(targetEntity="BaseMenu")
+     * @ORM\ManyToOne(targetEntity="BaseMenu")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="menu", referencedColumnName="idmenu")
      * })

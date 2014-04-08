@@ -71,8 +71,19 @@ return array(
         								'controller' => 'Base\Controller\Index',
         								'action'     => 'tecnologia'
         						),
-        						
         				),
+        				'may_terminate' => true,
+        				'child_routes' => array(
+        						'tecnologia-detalhe' => array(
+        								'type' => 'Segment',
+        								'options' => array(
+        										'route'    => '[/:slug]',
+        										'defaults' => array(
+        												'action'     => 'tecnologia',
+        										),
+        								)
+        						),
+        				)
         		),
         		'midia' => array(
         				'type' => 'Literal',

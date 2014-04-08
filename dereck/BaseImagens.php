@@ -29,6 +29,13 @@ class BaseImagens
     private $tituloImagem;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="src", type="string", length=255, nullable=true)
+     */
+    private $src;
+
+    /**
      * @var \BaseConteudo
      *
      * @ORM\ManyToOne(targetEntity="BaseConteudo")

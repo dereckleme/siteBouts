@@ -24,6 +24,20 @@ class ProdutoTenis
     /**
      * @var string
      *
+     * @ORM\Column(name="titulo", type="string", length=255, nullable=false)
+     */
+    private $titulo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="slug", type="string", length=255, nullable=true)
+     */
+    private $slug;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="src", type="string", length=45, nullable=true)
      */
     private $src;

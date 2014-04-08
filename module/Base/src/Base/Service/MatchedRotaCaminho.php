@@ -53,6 +53,11 @@ class MatchedRotaCaminho
    			
    			);
    		}
+   		else if($this->match->getParams()['action'] == "tecnologia")
+   		{
+   			$conteudo = $this->em->getRepository("Base\Entity\BaseConteudo")->localizaPelaSubcategoria($this->match->getParam("slug"));
+   			return array("rota" => array("MatchedRouteName" => "tecnologia/tecnologia-detalhe", array("slug" => $this->match->getParam("slug"))), "nome" => $conteudo->getSubmenu()->getNome(), "subtitulo" => "Tecnologia - ".$conteudo->getSubmenu()->getNome());
+   		}
    }
 }
 
