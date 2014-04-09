@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * ProdutoTenis
  *
- * @ORM\Table(name="produto_tenis", indexes={@ORM\Index(name="fk_produto_tenis_produto_modelo1", columns={"modelo"}), @ORM\Index(name="fk_produto_tenis_produto_subcategoria1", columns={"subcategoria"})})
+ * @ORM\Table(name="produto_tenis", indexes={@ORM\Index(name="fk_produto_tenis_produto_modelo1", columns={"modelo"}), @ORM\Index(name="fk_produto_tenis_produto_subcategoria1", columns={"subcategoria"}), @ORM\Index(name="fk_produto_tenis_base_submenu1_idx", columns={"base_tecnologia"})})
  * @ORM\Entity
  */
 class ProdutoTenis
@@ -62,6 +62,16 @@ class ProdutoTenis
      * @ORM\Column(name="numeracao_final", type="string", length=45, nullable=true)
      */
     private $numeracaoFinal;
+
+    /**
+     * @var \BaseSubmenu
+     *
+     * @ORM\ManyToOne(targetEntity="BaseSubmenu")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="base_tecnologia", referencedColumnName="idbase_submenu")
+     * })
+     */
+    private $baseTecnologia;
 
     /**
      * @var \ProdutoModelo

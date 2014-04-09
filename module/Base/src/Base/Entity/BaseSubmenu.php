@@ -13,6 +13,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class BaseSubmenu
 {
+	public function __construct() {
+		$this->conteudo = new ArrayCollection();
+	}
+	/**
+	 * @ORM\OneToOne(targetEntity="BaseConteudo", mappedBy="submenu")
+	 */
+	private $conteudo;
       /**
      * @var integer
      *
@@ -100,7 +107,21 @@ class BaseSubmenu
 	public function setBasemenu($Basemenu) {
 		$this->Basemenu = $Basemenu;
 	}
+	/**
+	 * @return the $conteudo
+	 */
+	public function getConteudo() {
+		return $this->conteudo;
+	}
 
+	/**
+	 * @param field_type $conteudo
+	 */
+	public function setConteudo($conteudo) {
+		$this->conteudo = $conteudo;
+	}
 
+	
 
+	
 }

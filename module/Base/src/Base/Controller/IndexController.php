@@ -19,8 +19,12 @@ class IndexController extends AbstractActionController
     {
     	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
     	$repo = $doctrine->getRepository("Base\Entity\BaseBanner");
+    	$vitrine = $doctrine->getRepository("Produto\Entity\ProdutoVitrine")->findAll();
+    	$tecnologias = $doctrine->getRepository("Base\Entity\BaseMenu")->findOneByidmenu(3);
         return new ViewModel(array(
-        	"bannersDestaque" => $repo->findAll() 
+        	"bannersDestaque" => $repo->findAll(),
+        	"vitrine" => $vitrine,
+        	"tecnologias" => $tecnologias		 
         ));
     }
     public function produtoAction()
@@ -50,11 +54,15 @@ class IndexController extends AbstractActionController
     }
     public function midiaAction()
     {
-    	return new ViewModel();
+    	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    	$midia = $doctrine->getRepository("Base\Entity\BaseVideos")->findBy(array(), array('idVideos' => 'DESC'));
+    	return new ViewModel(array("midias" => $midia));
     }
     public function wallpaperAction()
     {
-    	return new ViewModel();
+    	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    	$wallpaper = $doctrine->getRepository("Base\Entity\BaseConteudo")->findOneBymenu(5);
+    	return new ViewModel(array("wallpaper" => $wallpaper));
     }
     public function contatoAction()
     {

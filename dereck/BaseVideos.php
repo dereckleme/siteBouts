@@ -29,6 +29,13 @@ class BaseVideos
     private $urlYoutube;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="titulo", type="string", length=255, nullable=true)
+     */
+    private $titulo;
+
+    /**
      * @var \BaseConteudo
      *
      * @ORM\ManyToOne(targetEntity="BaseConteudo")

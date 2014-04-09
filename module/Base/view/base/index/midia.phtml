@@ -1,30 +1,35 @@
 <section class="pg-midia">
 
 	<div>
-		<h3>Bout´s Training Pratique Bout´s</h3>
+		<h3><?=$this->midias[0]->getTitulo()?></h3>
 
 		<ul><!--No final das URL do Youtube colocar a tag wmode=opaque para que o video não fique por cima das divs no Opera e Safari -->
+			
+			<?php 
+			$teste = 1;
+				foreach($this->midias AS $midia)
+				{
+					if($teste == 1)
+					{
+					?>
+				
 			<li class="video-principal">
-				<iframe width="640" height="360" src="//www.youtube.com/embed/Qg_XOZvlMQU?wmode=opaque"></iframe>
+				<iframe width="640" height="360" src="<?=$midia->getUrlYoutube()?>"></iframe>
 			</li>
-
+				<?php 
+					}
+					else{
+				?>
 			<li class="video-secundario">
-				<iframe width="317" height="180" src="//www.youtube.com/embed/OBMBSH1gs6k?wmode=opaque"></iframe>
-				 <p>2007 - Bout's Spiral<br/>
-				 Comercial - Marcio Garcia</p>
+				<iframe width="317" height="180" src="<?=$midia->getUrlYoutube()?>"></iframe>
+				 <p><?=$midia->getTitulo()?></p>
 			</li>
-
-			<li class="video-secundario">
-				<iframe width="317" height="180" src="//www.youtube.com/embed/3dpy_p0JwSA?wmode=opaque"></iframe>
-				<p>2008 - Tenis Bout's<br/>
-				Comercial - Paparazzi</p>
-			</li>
-
-			<li class="video-secundario">
-				<iframe width="317" height="180" src="//www.youtube.com/embed/o8yboyCZI_k?wmode=opaque"></iframe>
-				<p>2009 - Bouts Spiral X<br/>
-				Versão Extendida</p>
-			</li>
+			<?php
+					}
+					$teste++;
+}
+			?>
+			
 
 		</ul>
 

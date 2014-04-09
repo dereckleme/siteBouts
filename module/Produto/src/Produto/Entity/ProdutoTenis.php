@@ -82,6 +82,17 @@ class ProdutoTenis
      * })
      */
     private $subcategoriaTenis;
+    
+    
+    /**
+     * @var \BaseSubmenu
+     *
+     * @ORM\ManyToOne(targetEntity="base\Entity\BaseSubmenu")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="base_tecnologia", referencedColumnName="idbase_submenu")
+     * })
+     */
+    private $baseTecnologia;
 	/**
 	 * @return the $idtenis
 	 */
@@ -198,6 +209,27 @@ class ProdutoTenis
 	public function getSlug() {
 		return $this->slug;
 	}
+	/**
+	 * @return the $baseTecnologia
+	 */
+	public function getBaseTecnologia() {
+		return $this->baseTecnologia;
+	}
+
+	/**
+	 * @param string $slug
+	 */
+	public function setSlug($slug) {
+		$this->slug = $slug;
+	}
+
+	/**
+	 * @param BaseSubmenu $baseTecnologia
+	 */
+	public function setBaseTecnologia($baseTecnologia) {
+		$this->baseTecnologia = $baseTecnologia;
+	}
+
 
 	
 }

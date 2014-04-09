@@ -1,15 +1,22 @@
 <section class="pg-wallpaper">
 	<ul>
+	<?php 
+		foreach($this->wallpaper->getFotos() AS $wallpaper)
+		{
+	?>
 		<li>
 			<figure>
-				<p>Wallpaper</p>
-				<img src="<?=$this->basePath()?>/img/wallpaper1.jpg" title="Wallpaper" alt="Wallpaper">
+				<p><?=$wallpaper->getTituloImagem()?></p>
+				<img width="200" src="<?=$this->basePath("img/wallpapers/".$wallpaper->getSrc())?>" title="Wallpaper" alt="Wallpaper">
 			</figure>
 			<span title="Download">
 				<a href="" title="Download"></a><br/>
 				Download
 			</span>
 		</li>
+		<?php 
+		}
+		?>
 	</ul>
 </section>
 

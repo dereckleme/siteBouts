@@ -29,7 +29,10 @@
 	</div>
 
 </section>
-
+<?php 
+	if(count($this->vitrine))
+	{
+?>
 <section class="lancamentos">
 
 	 <h2>lançamentos <span>Bout’s</span></h2>
@@ -38,40 +41,34 @@
 
 	<div class="g-produtos">
 		<ul class="testeSlice">
+		<?php 
+			foreach($this->vitrine AS $vitrine)
+			{
+		?>
 			<li>
-				<a href="">
-					<img title="Glam" alt="Glam" src="<?=$this->basePath()?>/img/tenis-teste.png">
-					<h4>Glam</h4>
+				<a href="<?=$this->url("produto/produto-subcategoria/produto-detalhe",array(
+					"categoria" => $vitrine->getTenis()->getSubcategoriaTenis()->getCategoria()->getSlug(),
+					"subcategoria" => $vitrine->getTenis()->getSubcategoriaTenis()->getSlug(),
+					"slugProduto" => $vitrine->getTenis()->getSlug()
+				))?>">
+					<img title="Glam" alt="Glam" src="<?=$this->basePath("img/vitrine/".$vitrine->getSrc())?>">
+					<h4><?=$vitrine->getTenis()->getTitulo()?></h4>
 					<hr/>
-					<p>tecnologia de amortecimento: <strong>Fly TS 1 </strong></p>
+					<p>Amortecimento: <strong><?=$vitrine->getTenis()->getBaseTecnologia()->getNome()?></strong></p>
 				</a>
 			</li>
-
-			<li>
-				<a href="">
-					<img title="Glam" alt="Glam" src="<?=$this->basePath()?>/img/tenis-teste.png">
-					<h4>Glam</h4>
-					<hr/>
-					<p>tecnologia de amortecimento: <strong>Fly TS 1 </strong></p>
-				</a>
-			</li>
-			
-			<li>
-				<a href="">
-					<img title="Glam" alt="Glam" src="<?=$this->basePath()?>/img/tenis-teste.png">
-					<h4>Glam</h4>
-					<hr/>
-					<p>tecnologia de amortecimento: <strong>Fly TS 1 </strong></p>
-				</a>
-			</li>
-
+<?php 
+			}
+?>
 		</ul>
 	</div>
 
 	<span class="s-direita"><a title="próximo" href=""></a></span>
     
 </section>
-
+<?php 
+	}
+?>
 <span class="linha-home">
 	<img alt="Linha" src="<?=$this->basePath()?>/img/linha-home.jpg">
 </span>
@@ -83,41 +80,21 @@
 		<h3>Tecnologia Bout’s</h3>
 
 		<ul>
+		<?php 
+			foreach($this->tecnologias->getSubmenus() AS $tecnologia)
+			{
+		?>
 			<li>
-				<img title="Fly TS" alt="Fly TS" src="<?=$this->basePath()?>/img/produtos/gel-ts.png">
-				<a href="">
-					<p>Fly TS</p>
+				<img width="300" title="Fly TS" alt="Fly TS" src="<?=$this->basePath("img/tecnologia/".$tecnologia->getConteudo()->getSrc())?>">
+				<a href="<?=$this->url("tecnologia/tecnologia-detalhe",array("slug" => $tecnologia->getSlug()))?>">
+					<p><?=$tecnologia->getNome()?></p>
 					<span></span>
 					<p>saiba mais</p>
 			    </a>
 		    </li>
-
-		    <li>
-				<img title="Gel TS" alt="Gel TS" src="<?=$this->basePath()?>/img/produtos/gel-ts.png">
-				<a href="">
-					<p>Gel TS</p>
-					<span></span>
-					<p>saiba mais</p>
-			    </a>
-		    </li>
-
-		    <li>
-				<img title="Spiral TS" alt="Spiral TS" src="<?=$this->basePath()?>/img/produtos/gel-ts.png">
-				<a href="">
-					<p>Spiral TS</p>
-					<span></span>
-					<p>saiba mais</p>
-			    </a>
-		    </li>
-
-		    <li>
-				<img title="Tower TS" alt="Tower TS" src="<?=$this->basePath()?>/img/produtos/gel-ts.png">
-				<a href="">
-					<p>Tower TS</p>
-					<span></span>
-					<p>saiba mais</p>
-			    </a>
-		    </li>
+		   <?php 
+			}
+		   ?> 
 		</ul>
 
 	</div>

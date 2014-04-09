@@ -58,9 +58,11 @@ class CrudController extends AbstractActionController
     	$doctrine = $this->getServiceLocator()->get("Doctrine\ORM\EntityManager");
     		$repositoryCategoria = $doctrine->getRepository("Produto\Entity\ProdutoCategoria")->findAll();
     		$repositoryModelos = $doctrine->getRepository("Produto\Entity\ProdutoModelo")->findAll();
+    		$repositoryTecnologias = $doctrine->getRepository("Base\Entity\BaseMenu")->findOneByidmenu(3);
     	$layout = new ViewModel(array(
     		"categorias" => $repositoryCategoria,
-    		"modelos" => 	$repositoryModelos
+    		"modelos" => 	$repositoryModelos,
+    		"tecnologia" => $repositoryTecnologias 
     	));
     	$layout->setTerminal(1);
     	return $layout;
@@ -109,7 +111,8 @@ class CrudController extends AbstractActionController
     						"subcategoria" => $this->getRequest()->getPost("subcategoria"),
     						"modelo" => $this->getRequest()->getPost("modelo"),
     						"numeracaoInicial" => $this->getRequest()->getPost("tamanhoMin"),
-    						"numeracaoFinal" => $this->getRequest()->getPost("tamanhoMax")
+    						"numeracaoFinal" => $this->getRequest()->getPost("tamanhoMax"),
+    						"tecnologia" => $this->getRequest()->getPost("tecnologia")
     				));
     			}
     			else

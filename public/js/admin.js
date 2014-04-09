@@ -81,6 +81,7 @@ $(document).ready(function(){
 		if($('.formProduto .titulo').val() == "") erros = erros+"- Qual o titulo do produto?\n";
 		if($('.formProduto input[type=file]')[0].files[0] == null) erros = erros+"- Insira uma imagem do tenis\n";
 		if($('.formProduto .categoria').val() == "") erros = erros+"- Selecione uma categoria\n";
+		if($('.formProduto .tecnologia').val() == "") erros = erros+"- Selecione a tecnologia de amortecimento\n";
 		if($('.formProduto .subcategoria').val() == "") erros = erros+"- Selecione uma sub-categoria\n";
 		if($('.formProduto .modelo').val() == "") erros = erros+"- Selecione um modelo\n";
 		if($('.formProduto .tamanhoMin').val() == "") erros = erros+"- Digite um tamanho minimo\n";
@@ -94,6 +95,7 @@ $(document).ready(function(){
 			formData.append('categoria', $(".formProduto .categoria").val());
 			formData.append('subcategoria', $(".formProduto .subcategoria").val());
 			formData.append('modelo', $(".formProduto .modelo").val());
+			formData.append('tecnologia', $(".formProduto .tecnologia").val());
 			formData.append('titulo', $(".formProduto .titulo").val());
 			formData.append('tamanhoMin', $(".formProduto .tamanhoMin").val());
 			formData.append('tamanhoMax', $(".formProduto .tamanhoMax").val());

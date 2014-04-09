@@ -14,6 +14,9 @@ class Produtos extends AbstractService
     public function insert(array $data)
     {
     		$this->setTargetEntity(array(
+    				array("setTargetEntity" => "Base\Entity\BaseSubmenu",
+    						"setCampo" => "setBaseTecnologia",
+    						"setActionReference" => $data['tecnologia']),
     				array("setTargetEntity" => "Produto\Entity\ProdutoModelo",
     						"setCampo" => "setModeloTenis",
     						"setActionReference" => $data['modelo']),

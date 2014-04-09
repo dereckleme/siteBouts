@@ -1,6 +1,17 @@
 <form class="formProduto">
 
 	<input type="text" class="titulo" placeholder="Titulo do Produto"/> <br/>
+	<select  class="form-control tecnologia" style="width:300px;" <?if(!$this->tecnologia) print 'disabled="disabled"'?>>
+         <option value="">Selecione tecnologia de amortecimento</option>
+         <?php 
+         	foreach($this->tecnologia->getSubmenus() AS $tecnologia)
+         	{
+         		?>
+         		<option value="<?=$tecnologia->getIdbaseSubmenu()?>"><?=$tecnologia->getNome()?></option>
+         		<?php 
+         	}
+         ?>
+	</select><br/>
 	<select  class="form-control categoria" <?if(!$this->categorias) print 'disabled="disabled"'?>>
          <option value="">Selecione uma Categoria</option>
          <?php 
