@@ -70,9 +70,8 @@ ul.box-menu li a.produtos:before { content: '\2335'; position: absolute; right: 
 ul.box-menu li.box-lista:hover > a.produtos:before { color: #222222; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); top: 12px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 ul.box-menu li a.tecnologia:before { content: '\2335'; position: absolute; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;} 
 ul.box-menu li.box-lista:hover > a.tecnologia:before { color: #222222; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); top: 12px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
-
 li.sub-menu ul { width: 225px; display: none; padding-bottom: 8px; position: absolute; top: 87px; float: left; z-index: 100; background: #FFFFFF;}
-li.sub-menu ul li h6 a { width: 183px; padding: 8px 0 8px 42px; text-transform: uppercase; font-size: 1.8em; float: left; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+li.sub-menu ul li h6 a { border: none; width: 183px; padding: 8px 0 8px 42px; text-transform: uppercase; font-size: 1.8em; float: left; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 li.sub-menu ul li h6 a:before { content: '\2335'; position: absolute; left: 23px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
 li.sub-menu ul li h6 a:hover { width: 177px; color: #FFFFFF; background: #96bd05; padding: 8px 0 8px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 li.sub-menu ul li p:last-child a { margin-bottom: 2px;}
@@ -363,3 +362,6 @@ div.copyright figure.bouts-copyright { text-align: center; margin-top: 33px;}
 div.copyright figure.bouts-copyright figcaption { margin-top: 30px; font-size: 1.4em; color: #cccccc;}
 section.bee-happy { width: 100%; height: 40px; text-align: center; float: left; color: #333333; font-size: 1.3em;}
 section.bee-happy p a { text-decoration: none; color: #96bd05; font-weight: bold;}
+
+/*Pagina de Erro*/
+section.error { width: 1024px; height: 600px; position: relative; left: 50%; margin-left: -512px; float: left;}
