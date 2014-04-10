@@ -85,13 +85,13 @@ class CrudController extends AbstractActionController
     					"randomize" => true
     			)), null, $file);
     			$tamanho = new ImageSize(array(
-    					'minWidth' => 640, 'minHeight' => 480,
+    					'minWidth' => 650, 'minHeight' => 400,
     			));
     			$mime = new MimeType(array(
     					'image/gif', 'image/jpg','image/png','image/jpeg',
     					'enableHeaderCheck' => true
     			));
-    			if(!$tamanho->isValid($info)) $erros = "- É necessário uma imagem com tamanho minimo 640px\n";
+    			if(!$tamanho->isValid($info)) $erros = "- É necessário uma imagem com tamanho minimo de 650x400\n";
     			if(!$mime->isValid($info)) $erros = "- O tipo de arquivo suportado é gif, jpg, png\n";
     			if($requestPost->receive() && $erros == false)
     			{
