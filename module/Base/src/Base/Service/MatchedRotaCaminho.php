@@ -27,17 +27,32 @@ class MatchedRotaCaminho
   		else if($this->match->getParams()['action'] == "produto")
    		{
    			$categoria = $this->em->getRepository("Produto\Entity\ProdutoCategoria")->findOneByslug($this->match->getParam("categoria"));	
+   			if($categoria)
+   			{
    			return array("rota" => array("MatchedRouteName" => $this->match->getMatchedRouteName(), array("categoria" => $categoria->getSlug())), "nome" => $categoria->getNome(),  "subtitulo" => strtoupper($categoria->getNome()));
+   			}
+   			else
+   			{
+   			return false;
+   			}
    		}
    		else if($this->match->getParams()['action'] == "produtoSubcategoria")
    		{
    			$subcategoria = $this->em->getRepository("Produto\Entity\ProdutoSubcategoria")->findOneByslug($this->match->getParam("subcategoria"));	
-   			
+   			if($subcategoria)
+   			{
    			return array("rota" => array("MatchedRouteName" => "produto", array("categoria" => $subcategoria->getCategoria()->getSlug())), "nome" => $subcategoria->getCategoria()->getNome(),  "subtitulo" =>  strtoupper($subcategoria->getNome()));
+   			}
+   			else
+   			{
+   				return false;
+   			}
    		}
    		else if($this->match->getParams()['action'] == "produtoDetalhe")
    		{
    			$produto = $this->em->getRepository("Produto\Entity\ProdutoTenis")->findOneByslug($this->match->getParam("slugProduto"));
+   			if($produto)
+   			{
    			return array(
    					"subtitulo" => ucwords($produto->getSubcategoriaTenis()->getNome()." - ".$produto->getModeloTenis()->getNome()),
    					"lista" => array(
@@ -52,6 +67,11 @@ class MatchedRotaCaminho
    					)
    			
    			);
+   			}
+   			else
+   			{
+   				return false;
+   			}
    		}
    		else if($this->match->getParams()['action'] == "tecnologia")
    		{
