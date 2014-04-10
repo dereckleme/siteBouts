@@ -32,7 +32,6 @@ class Module
     }					
     public function onBootstrap($e)
     {
-       
         $e->getApplication()->getEventManager()->getSharedManager()->attach('Zend\Mvc\Controller\AbstractActionController', 'dispatch', function($e) {
     		/*
     		 * Definições de sessoes
@@ -44,6 +43,9 @@ class Module
     		$moduleNamespace = substr($controllerClass, 0, strpos($controllerClass, '\\'));
     		$config          = $e->getApplication()->getServiceManager()->get('config');
     		$matchedRoute = $controller->getEvent()->getRouteMatch()->getMatchedRouteName();
+    		$e->getApplication()->getEventManager()->getSharedManager()->attach('Base\Service\MatchedRotaCaminho', 'geraCaminhoSite',function($e) use ($controller) {
+    			$controller->getResponse()->setStatusCode(404);
+    		}, 100);
     		/*
     		 * Definição de Layout de todos modulos
     		*/

@@ -1,7 +1,10 @@
 <?php
 namespace Base\Service;
 use Doctrine\ORM\EntityManager;
-class MatchedRotaCaminho
+use Zend\EventManager\EventManagerAwareInterface;
+use Zend\EventManager\EventManager;
+use Zend\EventManager\EventManagerInterface;
+class MatchedRotaCaminho implements EventManagerAwareInterface
 {
 	/**
 	 *
@@ -9,6 +12,10 @@ class MatchedRotaCaminho
 	 */
 	protected $em;
 	protected $match;
+	/**
+	 * @var EventManagerInterface
+	 */
+	protected $eventManager;
 	public function __construct(EntityManager $em, $RouteMatch)
 	{
 		$this->em = $em;
@@ -33,7 +40,7 @@ class MatchedRotaCaminho
    			}
    			else
    			{
-   			return false;
+   				$this->getEventManager()->trigger('geraCaminhoSite');
    			}
    		}
    		else if($this->match->getParams()['action'] == "produtoSubcategoria")
@@ -45,7 +52,7 @@ class MatchedRotaCaminho
    			}
    			else
    			{
-   				return false;
+   				$this->getEventManager()->trigger('geraCaminhoSite');
    			}
    		}
    		else if($this->match->getParams()['action'] == "produtoDetalhe")
@@ -70,7 +77,7 @@ class MatchedRotaCaminho
    			}
    			else
    			{
-   				return false;
+   				$this->getEventManager()->trigger('geraCaminhoSite');
    			}
    		}
    		else if($this->match->getParams()['action'] == "tecnologia")
@@ -78,6 +85,25 @@ class MatchedRotaCaminho
    			$conteudo = $this->em->getRepository("Base\Entity\BaseConteudo")->localizaPelaSubcategoria($this->match->getParam("slug"));
    			return array("rota" => array("MatchedRouteName" => "tecnologia/tecnologia-detalhe", array("slug" => $this->match->getParam("slug"))), "nome" => $conteudo->getSubmenu()->getNome(), "subtitulo" => "Tecnologia - ".$conteudo->getSubmenu()->getNome());
    		}
+   }
+   public function setEventManager(EventManagerInterface $eventManager)
+   {
+   	$eventManager->addIdentifiers(array(
+   			get_called_class()
+   	));
+   
+   	$this->eventManager = $eventManager;
+   }
+   /**
+    * @return EventManagerInterface
+    */
+   public function getEventManager()
+   {
+   	if (null === $this->eventManager) {
+   		$this->setEventManager(new EventManager());
+   	}
+   
+   	return $this->eventManager;
    }
 }
 
