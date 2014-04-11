@@ -1,21 +1,38 @@
+
 $(document).ready(function(){
+	jQuery.fn.reverse = function(fn) {
+
+		   var i = this.length;
+
+		   while(i) {
+		        i--;
+		        fn.call(this[i], i, this[i])
+		   }
+		};
 	//JqueRY carousel home. .testeSlice
 	var total = $(".testeSlice li").size();
+	
 	if(total > 3)
 		{
 			var ultimo = $(".testeSlice li:last").clone().prependTo(".testeSlice");
 			$(".testeSlice").css("left","-385px");
 			$(".s-direita").on("click",function(){
-				$(".testeSlice li").animate({
-				    left: "+=385px"
-				  }, {duration:800, queue:false} );
+				var sec = 0.1;
+				 $(".testeSlice li").each(function( index, element ) {
+					 $(this).css('transition-delay', sec+'s');
+					 sec = sec+0.1;
+				 })
+				$(".testeSlice li").css("left",'-=385px');
+				//$(".testeSlice li:first").appendTo(".testeSlice");
 				return false;
 			})
 			$(".s-esquerda").on("click",function(){
-				//$(".testeSlice li:last").prependTo(".testeSlice");
-				$(".testeSlice li").animate({
-				    left: "-=385px"
-				  }, {duration:800, queue:false} );
+				 var sec = 0.1;
+				 $(".testeSlice li").reverse(function(i, e) {
+					 $(this).css('transition-delay', sec+'s');
+					 sec = sec+0.1;
+				 })
+				$(".testeSlice li").css("left",'+=385px');
 				return false;
 			})
 		}

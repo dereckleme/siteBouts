@@ -98,7 +98,7 @@ div.g-produtos ul li a { width: 338px; height: 468px; display: inline; position:
 
 div.g-produtos ul li:hover a { border: solid 1px #047da2; background: #FFF; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 
-div.g-produtos ul li { float: left; margin: 23.5px 0 23.5px; position: relative;}
+div.g-produtos ul li { float: left; margin: 23.5px 0 23.5px; position: relative;  transition: 0.5s;left:0px;}
 
 div.g-produtos ul li img { max-width: 100%; float: left; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 
