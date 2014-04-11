@@ -6,12 +6,13 @@ $(document).ready(function(){
 			var ultimo = $(".testeSlice li:last").clone().prependTo(".testeSlice");
 			$(".testeSlice").css("left","-385px");
 			$(".s-direita").on("click",function(){
-				$(".testeSlice li:first").appendTo(".testeSlice");
+				$(".testeSlice").css("left","+=385px");
+				//$(".testeSlice li:first").appendTo(".testeSlice");
 				return false;
 			})
 			$(".s-esquerda").on("click",function(){
-				$(".testeSlice li:last").prependTo(".testeSlice");
-				$(".testeSlice").css("left","-385px");
+				//$(".testeSlice li:last").prependTo(".testeSlice");
+				$(".testeSlice").css("left","-=385px");
 				return false;
 			})
 		}
