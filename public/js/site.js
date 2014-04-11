@@ -3,9 +3,17 @@ $(document).ready(function(){
 	var total = $(".testeSlice li").size();
 	if(total > 3)
 		{
-			$(".testeSlice li:last").clone().prependTo(".testeSlice li");
-			
-			//$(".testeSlice li").css("left","=-338px")
+			var ultimo = $(".testeSlice li:last").clone().prependTo(".testeSlice");
+			$(".testeSlice").css("left","-385px");
+			$(".s-direita").on("click",function(){
+				$(".testeSlice li:first").appendTo(".testeSlice");
+				return false;
+			})
+			$(".s-esquerda").on("click",function(){
+				$(".testeSlice li:last").prependTo(".testeSlice");
+				$(".testeSlice").css("left","-385px");
+				return false;
+			})
 		}
 	//
 	$(".loadAjax").on("click","a",function(){
