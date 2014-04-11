@@ -1,5 +1,13 @@
 $(document).ready(function(){
-	
+	//JqueRY carousel home. .testeSlice
+	var total = $(".testeSlice li").size();
+	if(total > 3)
+		{
+			$(".testeSlice li:last").clone().prependTo(".testeSlice li");
+			
+			//$(".testeSlice li").css("left","=-338px")
+		}
+	//
 	$(".loadAjax").on("click","a",function(){
 		$(".loadAjax").fadeOut("fast",function(){
 			$('html, body').css({
