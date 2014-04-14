@@ -124,76 +124,90 @@
  	    </section>
 
  	    <section class="menu-bottom">
+			 <?php 
+		    	foreach($this->menu AS $menu)
+		    	{
+		    		if($menu->getTipo()->getNome() == "parceiros")
+		    		{
+		    			?>
+		    			
+					 	    	<ul class="mb-comprar">
+					 	    		<li>
+					 	    			<a class="tt-menu-bottom" href="">Comprar agora</a>
+					 	    		</li>
+					 	    		<?php 
+									 		foreach($menu->getSubmenus() AS $data)
+									 		{
+									 	?>
+					 	    		<li>
+					 	    			<a class="txt-menu-bottom" href="http://esportes.centauro.com.br/nav/marca/bouts/0" target="_blank"><?=$data->getNome()?></a>
+					 	    		</li>
+											<?php 
+									 		}
+											?>
+					 	    	</ul>
+		    			<?php
+		    		}
+		    		else if($menu->getTipo()->getNome() == "tenis")
+		    		{
+		    			?>
+		    			<ul class="mb-produtos">
+				 	    		<li>
+				 	    			<a class="tt-menu-bottom" href="">Produtos</a>
+				 	    		</li>
+				 	    		<?php 
+							foreach($this->menuListaTenis AS $menuTenis)
+							{
+								if(count($menuTenis->getSubcategorias()) >= 1)
+								{
+						?>
+				 	    		<li>
+				 	    			<a href="<?=$this->url("produto",array("categoria" => $menuTenis->getSlug()));?>"><strong><?=ucwords($menuTenis->getNome())?></strong></a>
+				 	    		</li>
+				 	    				<?php 
+									foreach($menuTenis->getSubcategorias() AS $subcategoria)
+									{
+										if(count($subcategoria->getProdutos()) >= 1)
+										{
+								?>
+				 	    		<li>
+				 	    			<a class="txt-menu-bottom" href="<?=$this->url("produto/produto-subcategoria",array("categoria" => $menuTenis->getSlug(), "subcategoria" => $subcategoria->getSlug()));?>"><?=$subcategoria->getNome()?></a>
+				 	    		</li>
+				 	    		<?php 
+										}
+									}	
+								}
+							}	
+				 	    		?>
+				 	    	</ul>
+		    			<?php
+		    		}
+		    		else if($menu->getTipo()->getNome() == "tecnologia")
+		    		{
+		    			?>
+		    			<ul class="mb-tecnoligia">
+				 	    		<li>
+				 	    			<a class="tt-menu-bottom" href="">Tecnologia</a>
+				 	    		</li>
+				 	    		<?php 
+		foreach($menu->getSubmenus() AS $sub)
+		{
+	?>
+				 	    		<li>
+				 	    			<a class="txt-menu-bottom" href="<?=$this->url("tecnologia/tecnologia-detalhe",array("slug" => $sub->getSlug()))?>"><?=$sub->getNome()?></a>
+				 	    		</li>
+				 	    		<?php
+				 	    		}
+		?>
+				 	    	</ul>
+		    			<?php
+		    		}
+		    	}
+		    ?>
 
- 	    	<ul class="mb-comprar">
- 	    		<li>
- 	    			<a class="tt-menu-bottom" href="">Comprar agora</a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="http://esportes.centauro.com.br/nav/marca/bouts/0" target="_blank">Centauro</a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="http://www.passarela.com.br/lojaespecial/bouts" target="_blank">Passarela</a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="" target="_blank">Humanitarian</a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="http://www.lojasilva.com.br/m/bout-s.html" target="_blank">Lojas Silva</a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="" target="_blank">Azul Calçados</a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="" target="_blank">Kallan</a>
- 	    		</li>
+ 	    	
 
- 	    	</ul>
-
- 	    	<ul class="mb-produtos">
- 	    		<li>
- 	    			<a class="tt-menu-bottom" href="">Produtos</a>
- 	    		</li>
- 	    		<li>
- 	    			<a href=""><strong>Homem</strong></a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="">Calçados masculinos</a>
- 	    		</li>
- 	    		<li>
- 	    			<a href="" ><strong>Mulher</strong></a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="">Calçados femininos</a>
- 	    		</li>
- 	    		<li>
- 	    			<a href=""><strong>Bout’s Teen</strong></a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="">Masculino</a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="">Feminino</a>
- 	    		</li>
- 	    	</ul>
-
- 	    	<ul class="mb-tecnoligia">
- 	    		<li>
- 	    			<a class="tt-menu-bottom" href="">Tecnologia</a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="">Fly TS</a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="">Gel TS</a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="">Spirtal TS</a>
- 	    		</li>
- 	    		<li>
- 	    			<a class="txt-menu-bottom" href="">Tower TS</a>
- 	    		</li>
- 	    	</ul>
+ 	    	
 
  	    	<ul class="info">
  	    		<li>
@@ -203,7 +217,7 @@
  	    			<a class="txt-menu-bottom" href="">Mídia</a>
  	    		</li>
  	    		<li>
- 	    			<a class="txt-menu-bottom" href="">Fale conosco</a>
+ 	    			<a class="txt-menu-bottom abrirContato" href="">Fale conosco</a>
  	    		</li>
  	    		<li>
  	    			<a class="txt-menu-bottom" href="">Wallpapers</a>

@@ -11,9 +11,10 @@ $(document).ready(function(){
 		};
 	//JqueRY carousel home. .testeSlice
 	var total = $(".testeSlice li").size();
-	
+	var block = false;
 	if(total > 3)
 		{
+		/*
 			var ultimo = $(".testeSlice li:last").clone().prependTo(".testeSlice");
 			$(".testeSlice").css("left","-385px");
 			$(".s-direita").on("click",function(){
@@ -21,8 +22,7 @@ $(document).ready(function(){
 				 $(".testeSlice li").each(function( index, element ) {
 					 $(this).css('transition-delay', sec+'s');
 					 sec = sec+0.1;
-				 })
-				$(".testeSlice li").css("left",'-=385px');
+				 }).css("left",'-=385px');
 				//$(".testeSlice li:first").appendTo(".testeSlice");
 				return false;
 			})
@@ -35,6 +35,7 @@ $(document).ready(function(){
 				$(".testeSlice li").css("left",'+=385px');
 				return false;
 			})
+			*/
 		}
 	//
 	$(".loadAjax").on("click","a",function(){
