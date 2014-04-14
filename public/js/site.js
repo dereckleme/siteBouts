@@ -14,7 +14,7 @@ $(document).ready(function(){
 	var block = false;
 	if(total > 3)
 		{
-		/*
+		
 			var ultimo = $(".testeSlice li:last").clone().prependTo(".testeSlice");
 			$(".testeSlice").css("left","-385px");
 			$(".s-direita").on("click",function(){
@@ -35,7 +35,7 @@ $(document).ready(function(){
 				$(".testeSlice li").css("left",'+=385px');
 				return false;
 			})
-			*/
+			
 		}
 	//
 	$(".loadAjax").on("click","a",function(){
