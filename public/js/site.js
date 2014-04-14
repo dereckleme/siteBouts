@@ -52,6 +52,15 @@ $(document).ready(function(){
 			})
 			
 		}
+	else
+		{
+			$(".s-direita").on("click",function(){
+				return false;
+			})
+			$(".s-esquerda").on("click",function(){
+				return false;
+			})
+		}
 	//
 	$(".loadAjax").on("click","a",function(){
 		$(".loadAjax").fadeOut("fast",function(){
