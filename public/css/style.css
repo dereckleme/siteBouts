@@ -90,7 +90,7 @@ section.galeria { width: 100%; float: left; overflow: hidden;}
 .lancamentos h2 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; text-align: center; font-size: 8.0em; color: #222222; margin: 0; padding: 0;}
 .lancamentos h2 span { color: #079ab1;}
 
-div.g-produtos { width: 1156px; margin: 60px 0 60px 72px; position: relative; float: left;}
+div.g-produtos { width: 1156px; margin: 60px 0 60px 72px; position: relative; float: left;overflow:hidden}
 
 div.g-produtos ul { width: 200000px; float: left; margin: 0; padding: 0; position: relative;}
 
@@ -98,7 +98,7 @@ div.g-produtos ul li a { width: 338px; height: 468px; display: inline; position:
 
 div.g-produtos ul li:hover a { border: solid 1px #047da2; background: #FFF; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 
-div.g-produtos ul li { float: left; margin: 0 23.5px 0 23.5px; position: relative;  transition: 0.5s;left:0px;}
+div.g-produtos ul li { float: left; margin: 0 23.5px 0 23.5px; position: relative;  transition: 0.5s;left:385px;}
 
 div.g-produtos ul li img { max-width: 100%; float: left; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 

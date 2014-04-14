@@ -12,27 +12,42 @@ $(document).ready(function(){
 	//JqueRY carousel home. .testeSlice
 	var total = $(".testeSlice li").size();
 	var block = false;
+	var slideAtual = 3;
+
+	$(".testeSlice").css("left","-385px");
 	if(total > 3)
 		{
-		
-			var ultimo = $(".testeSlice li:last").clone().prependTo(".testeSlice");
-			$(".testeSlice").css("left","-385px");
 			$(".s-direita").on("click",function(){
+				if(block == false && slideAtual < total)
+				{
+					slideAtual++;
+					block = true;
 				var sec = 0.1;
 				 $(".testeSlice li").each(function( index, element ) {
 					 $(this).css('transition-delay', sec+'s');
 					 sec = sec+0.1;
 				 }).css("left",'-=385px');
-				//$(".testeSlice li:first").appendTo(".testeSlice");
+				 setTimeout(function(){
+						 	block = false;
+					 },1000);
+				}
 				return false;
 			})
 			$(".s-esquerda").on("click",function(){
+				if(block == false && slideAtual > 3)
+					{
+						slideAtual--;
+						block = true;
 				 var sec = 0.1;
 				 $(".testeSlice li").reverse(function(i, e) {
 					 $(this).css('transition-delay', sec+'s');
 					 sec = sec+0.1;
 				 })
 				$(".testeSlice li").css("left",'+=385px');
+				 setTimeout(function(){
+					 	block = false;
+				 },1000);
+					}
 				return false;
 			})
 			
