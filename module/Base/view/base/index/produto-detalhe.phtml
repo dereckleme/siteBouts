@@ -13,9 +13,9 @@
 			<div>
 				<ul>
 					<li>
-						<a href="">
-							<img title="teste" alt="teste" width="115" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>medio.png">
-						</a>
+					 <a href="">
+					  <img title="teste" alt="teste" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>medio.png">
+					 </a>
 					</li>
 				</ul>
 			</div>
@@ -31,8 +31,9 @@
 		<p class="txt-info">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
 		e vem sendo utilizado desde o século XVI, quando um impressor esconhecido pegou uma bandeja de tipos.</p>
 		<p class="txt-model">Modelo: <span>7207-340</span></p>
-		<p class="txt-tec">Tecnologia de amortecimento <span class="dt-tec"><?=$this->produto->getBaseTecnologia()->getNome()?></span></p>
-		<p class="txt-number">Numeração : <span><?=$this->produto->getNumeracaoInicial()?> à <?=$this->produto->getNumeracaoFinal()?></span></p>
+		<p class="txt-tec">Tecnologia de amortecimento: <span class="dt-tec"><?=$this->produto->getBaseTecnologia()->getNome()?></span>
+		</p>
+		<p class="txt-number">Numeração: <span><?=$this->produto->getNumeracaoInicial()?> à <?=$this->produto->getNumeracaoFinal()?></span></p>
 
 			<ul>
 				<li>
@@ -66,6 +67,9 @@
 				</li>
 
 			</ul>
+
+            <button type="button" class="share-face" title="Compartilhe no Facebook">Compartilhe no Facebook</button>
+
 	</div>
 
 </section>

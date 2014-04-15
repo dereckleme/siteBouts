@@ -14,7 +14,7 @@
 	font-style: normal;
 }*/
 
-body { font-family: 'Conv_calibri', sans-serif; font-size: 10px!important; background-color: transparent;}
+body { font-family: 'Conv_calibri', sans-serif; font-size: 10px!important;}
 
 .h-container-top { width: 100%; min-width: 1300px; background: url(../img/bk-header.png) repeat; float: left; margin-top: 92px; position: relative;}
 .box-paralax { overflow: hidden;}
@@ -84,36 +84,27 @@ li.sub-menu-links ul li:first-child a { margin-top: 15px;}
 li.sub-menu-links ul li a:before { content: '\2335'; position: absolute; left: 23px; top: 8px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
 li.sub-menu-links ul li a:hover { color: #FFFFFF; background: #96bd05; padding: 8px 0 8px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 ul.box-menu li.sub-menu-links:hover ul { display: block;}
+
 .container { width: 100%; background: url(../img/bk-container.png) repeat; float: left; position: relative;}
+
 section.galeria { width: 100%; float: left; overflow: hidden;}
+
 .lancamentos { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-top: 80px;}
 .lancamentos h2 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; text-align: center; font-size: 8.0em; color: #222222; margin: 0; padding: 0;}
 .lancamentos h2 span { color: #079ab1;}
 
-div.g-produtos { width: 1156px; margin: 60px 0 60px 72px; position: relative; float: left;overflow:hidden}
-
+div.g-produtos { width: 1156px; margin: 60px 0 60px 72px; position: relative; float: left; overflow:hidden;}
 div.g-produtos ul { width: 200000px; float: left; margin: 0; padding: 0; position: relative;}
-
 div.g-produtos ul li a { width: 338px; height: 468px; display: inline; position: relative; float: left; border: solid 1px transparent; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-
 div.g-produtos ul li:hover a { border: solid 1px #047da2; background: #FFF; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-
-div.g-produtos ul li { float: left; margin: 0 23.5px 0 23.5px; position: relative;  transition: 0.5s;left:385px;}
-
+div.g-produtos ul li { float: left; margin: 0 23.5px 0 23.5px; position: relative; -webkit-transition: 0.5s; transition: 0.5s; left:385px;}
 div.g-produtos ul li img { max-width: 100%; float: left; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-
 div.g-produtos ul li:hover img { -webkit-transform: scale(1.0)rotate(-3deg); transform: scale(1.0)rotate(-3deg);}
-
-
-
 
 div.g-produtos ul li a h4 { font-size: 2.0em; color: #333333; float: left; position: absolute; z-index: 100; left: 25px; top: 350px; display: none;}
 div.g-produtos ul li a h4 ~ p { width: 310px; font-size: 1.6em; text-indent: 20px; color: #079ab1; float: left; position: absolute; z-index: 100; left: 25px; top: 400px; display: none; background: url(../img/icon-tecnologia.png) no-repeat; background-position: 0 1px;}
 div.g-produtos ul li a h4 ~ p span { font-weight: bold; color: #333333;}
 div.g-produtos ul li a hr { width: 290px; height: 0px; font-weight: bold; position: absolute; z-index: 100; left: 25px; top: 400px; color: #222222; display: none;}
-
-
-
 
 div.g-produtos ul li a:hover h4 ~ p { display: block;}
 div.g-produtos ul li a:hover h4 { display: block;}
@@ -121,21 +112,12 @@ div.g-produtos ul li a:hover hr { display: block;}
 div.g-produtos ul li a { -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
 div.g-produtos ul li a:hover { -webkit-transition: 0.1s ease-in; transition: 0.1s ease-in;}
 
-
-
-
-
-
 span.s-esquerda { width: 72px; height: 72px; position: absolute; z-index: 100; top: 415px; left: 0; transition: all 0.2s ease-out 0s;}
 span.s-esquerda a { width: 100%; height: 100%; background: url(../img/s-esquerda.jpg) no-repeat scroll left center; display: block; transition: all 0.2s ease-out 0s;}
 span.s-esquerda:hover a { background-position: right center; -webkit-transform: rotate(90deg); transform: rotate(90deg);}
 span.s-direita { width: 72px; height: 72px; position: absolute; z-index: 100; top: 415px; right: 0; transition: all 0.2s ease-out 0s;}
 span.s-direita a { width: 100%; height: 100%; background: url(../img/s-direita.jpg) no-repeat scroll right center; display: block; transition: all 0.2s ease-out 0s;}
 span.s-direita:hover a { background-position: left center; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
-
-
-
-
 
 span.linha-home { width: 100%; position: relative; display: block; float: left; border-top: solid 1px #01607d; border-bottom: solid 1px #079ab1; margin-bottom: 44px;}
 span.linha-home img { position: absolute; left: 50%; top: -1px;}
@@ -271,7 +253,7 @@ section.produto-detalhe { width: 1300px; height: 800px; position: relative; left
 .viewport div { width: 535px; margin-left: 25px; overflow: hidden; float: left; position: relative;}
 .viewport div ul { width: 1200px; float: left;}
 .viewport div ul li { width: 120px; height: 80px; margin-right: 15px; background: #FFFFFF; display: block; float: left; border: solid 1px #a3a5a5; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-.viewport div ul li img { -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+.viewport div ul li img { width: 120px; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 .viewport div ul li:hover img { -webkit-transform: scale(1.0); transform: scale(1.0);}
 .viewport div ul li:hover { border: solid 1px #0e9db3;}
 
@@ -285,10 +267,11 @@ section.produto-detalhe { width: 1300px; height: 800px; position: relative; left
 #info-produtos p.txt-number { width: 410px; margin: 15px 0 0 0; float: left; font-size: 1.4em; font-weight: bold;}
 #info-produtos ul { width: 410px; float: left; margin: 20px 0 0 0;}
 #info-produtos ul li { width: 120px; height: 80px; margin: 0 15px 15px 0; background: #FFFFFF; display: block; float: left; border: solid 1px #a3a5a5; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-#info-produtos ul li img { -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+#info-produtos ul li img { width: 120px; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 #info-produtos ul li:hover img { -webkit-transform: scale(1.0); transform: scale(1.0);}
 #info-produtos ul li:hover { border: solid 1px #0e9db3;}
-#info-produtos a.share-face { float: left; margin: 20px 0 0 5px;}
+#info-produtos button { width: 208px; height: 46px; text-indent: -9999px; border: none; float: left; margin: 20px 0 0 5px; background: url(../img/face.png) no-repeat; text-transform: uppercase; cursor: pointer;}
+#info-produtos button:hover { background: url(../img/face-hover.png) no-repeat;}
 
 section.pg-tecnologia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-bottom: 60px;}
 div.pg-galeria { width: 650px; height: 450px; float: left; position: relative; margin-top: 50px;}
@@ -371,7 +354,7 @@ section.menu-bottom ul li a.txt-menu-bottom:hover { color: #079ab1;}
 section.menu-bottom ul.mb-produtos { margin: 65px 0 0 100px; float: left;}
 section.menu-bottom ul.mb-tecnoligia { margin: 65px 0 0 110px; float: left;}
 section.menu-bottom ul.info { margin: 65px 0 0 102px; float: left;}
-section.menu-bottom ul.mb-redes { width: 200px; margin: 50px 0 0 102px; float: left;}
+section.menu-bottom ul.mb-redes { width: 200px; margin: 50px 75px 0 0; float: right;}
 section.menu-bottom ul.mb-redes li a.box-mb-redes { display: inline-block; float: left; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 section.menu-bottom ul.mb-redes li a.box-mb-redes:hover { -webkit-transform: scale(1.1); transform: scale(1.1); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 section.menu-bottom ul.mb-redes li a.box-mb-redes { width: 44px; height: 44px; display: block; text-indent: -9999px;}
