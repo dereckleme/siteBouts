@@ -1,9 +1,27 @@
 <form class="formProduto">
 
-	<input type="text" class="titulo" placeholder="Titulo do Produto"/> <br/>
-	<input type="text" class="modelo" placeholder="Digite o modelo"/> <br/>
+   <!--<div class="alert alert-info">
+     <strong>Importante seguir corretamente todos os passos para cadastrar um novo modelo de tênis!</strong>
+   </div>
+   <div class="alert alert-info">
+     O nome do tênis deve ser escrito desta forma, ex: Live ou Spine Teen ou Air Flow Teen. Sempre com a primeira letra em maiúscolo.<br/><br/> 
+     O sistema gera automaticamente o texto TÊNIS BOUT'S.
+   </div>
+   <div class="alert alert-info">
+     Descreva um pequeno texto sobre as informações do tênis.
+   </div>
+   <div class="alert alert-info">
+     Digite o modelo do tenis ex: 9036-701. Caso conter letras colocar sempre em letra maiúsculas.
+   </div>
+   <div class="alert alert-info">
+     A resolução ideal para as imagens dos tenis é 650 x 400 com fundo transparente na extenção png, sempre com o tênis centralizado.  
+   </div>-->
+
+	<input type="text" class="titulo" placeholder="Nome do Tênis"/> <br/>
+   <textarea name="mensagem" class="statusDescricaoTenis" placeholder="Uma breve descrição do tênis"></textarea><br/>
+	<input type="text" class="modelo" placeholder="Digite o modelo do tênis"/> <br/>
 	<select  class="form-control tecnologia" style="width:300px;" <?if(!$this->tecnologia) print 'disabled="disabled"'?>>
-         <option value="">Selecione tecnologia de amortecimento</option>
+         <option value="">Selecione Tecnologia de Amortecimento</option>
          <?php 
          	foreach($this->tecnologia->getSubmenus() AS $tecnologia)
          	{
@@ -39,3 +57,89 @@
 		 <a href="" class="openPopup"><img src="<?=$this->basepath("img/btn_midia.png")?>" class="img-polaroid" width="200"></a>
 	</div>
 </form>
+<br/><br/><br/><br/>
+<div class="accordion" id="accordion2">
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        Aventura
+      </a>
+    </div>
+
+    <div id="collapseOne" class="accordion-body collapse in">
+
+      <div class="accordion-inner">
+
+        <ul>
+         <li>
+            <img src="">
+            <p>Tênis: </p>
+            <p>Modelo:</p>
+            <button type="button" title="excluir item">Excluir</button>
+         </li>
+         <li>
+            <a href="">
+               <img src="">
+            </a>
+         </li>
+         <li>
+            <a href="">
+               <img src="">
+            </a>
+         </li>
+         <li>
+            <a href="">
+               <img src="">
+            </a>
+         </li>
+         <li>
+            <a href="">
+               <img src="">
+            </a>
+         </li>
+         <li>
+            <a href="">
+               <img src="">
+            </a>
+         </li>
+         <li>
+            <a href="">
+               <img src="">
+            </a>
+         </li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        Running
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Anim pariatur cliche...
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+        Masculino
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Anim pariatur cliche...
+      </div>
+    </div>
+  </div>
+
+
+</div

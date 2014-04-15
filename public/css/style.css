@@ -95,16 +95,20 @@ section.galeria { width: 100%; float: left; overflow: hidden;}
 
 div.g-produtos { width: 1156px; margin: 60px 0 60px 72px; position: relative; float: left; overflow:hidden;}
 div.g-produtos ul { width: 200000px; float: left; margin: 0; padding: 0; position: relative;}
-div.g-produtos ul li a { width: 338px; height: 468px; display: inline; position: relative; float: left; border: solid 1px transparent; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+div.g-produtos ul li a { width: 338px; height: 468px; text-decoration: none; display: inline; position: relative; float: left; border: solid 1px transparent; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 div.g-produtos ul li:hover a { border: solid 1px #047da2; background: #FFF; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 div.g-produtos ul li { float: left; margin: 0 23.5px 0 23.5px; position: relative; -webkit-transition: 0.5s; transition: 0.5s; left:385px;}
 div.g-produtos ul li img { max-width: 100%; float: left; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 div.g-produtos ul li:hover img { -webkit-transform: scale(1.0)rotate(-3deg); transform: scale(1.0)rotate(-3deg);}
 
+
+
 div.g-produtos ul li a h4 { font-size: 2.0em; color: #333333; float: left; position: absolute; z-index: 100; left: 25px; top: 350px; display: none;}
 div.g-produtos ul li a h4 ~ p { width: 310px; font-size: 1.6em; text-indent: 20px; color: #079ab1; float: left; position: absolute; z-index: 100; left: 25px; top: 400px; display: none; background: url(../img/icon-tecnologia.png) no-repeat; background-position: 0 1px;}
 div.g-produtos ul li a h4 ~ p span { font-weight: bold; color: #333333;}
 div.g-produtos ul li a hr { width: 290px; height: 0px; font-weight: bold; position: absolute; z-index: 100; left: 25px; top: 400px; color: #222222; display: none;}
+
+
 
 div.g-produtos ul li a:hover h4 ~ p { display: block;}
 div.g-produtos ul li a:hover h4 { display: block;}
@@ -112,11 +116,11 @@ div.g-produtos ul li a:hover hr { display: block;}
 div.g-produtos ul li a { -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
 div.g-produtos ul li a:hover { -webkit-transition: 0.1s ease-in; transition: 0.1s ease-in;}
 
-span.s-esquerda { width: 72px; height: 72px; position: absolute; z-index: 100; top: 415px; left: 0; transition: all 0.2s ease-out 0s;}
-span.s-esquerda a { width: 100%; height: 100%; background: url(../img/s-esquerda.jpg) no-repeat scroll left center; display: block; transition: all 0.2s ease-out 0s;}
+span.s-esquerda { width: 72px; height: 72px; position: absolute; z-index: 100; top: 415px; left: 0; transition: all 0.2s ease-out;}
+span.s-esquerda a { width: 100%; height: 100%; background: url(../img/s-esquerda.jpg) no-repeat scroll left center; display: block; transition: all 0.2s ease-out;}
 span.s-esquerda:hover a { background-position: right center; -webkit-transform: rotate(90deg); transform: rotate(90deg);}
-span.s-direita { width: 72px; height: 72px; position: absolute; z-index: 100; top: 415px; right: 0; transition: all 0.2s ease-out 0s;}
-span.s-direita a { width: 100%; height: 100%; background: url(../img/s-direita.jpg) no-repeat scroll right center; display: block; transition: all 0.2s ease-out 0s;}
+span.s-direita { width: 72px; height: 72px; position: absolute; z-index: 100; top: 415px; right: 0; transition: all 0.2s ease-out;}
+span.s-direita a { width: 100%; height: 100%; background: url(../img/s-direita.jpg) no-repeat scroll right center; display: block; transition: all 0.2s ease-out;}
 span.s-direita:hover a { background-position: left center; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
 
 span.linha-home { width: 100%; position: relative; display: block; float: left; border-top: solid 1px #01607d; border-bottom: solid 1px #079ab1; margin-bottom: 44px;}
@@ -246,10 +250,10 @@ section.produto-detalhe { width: 1300px; height: 800px; position: relative; left
 #box-produtos { width: 650px; float: left; margin-top: 70px;}
 .viewport-imagem { width: 650px; height: 400px; position: relative; float: left;}
 .viewport { width: 580px; margin: 40px 0 0 30px; position: relative; float: left;}
-.viewport a { text-decoration: none;}
-.viewport a.previous:before { content: '\2335'; font-size: 2em; color: #595959; display: block; position: absolute; left: 0; top: 30px; -webkit-transform: rotate(90deg); transform: rotate(90deg);} 
-.viewport a.next:before { content: '\2335'; font-size: 2em; color: #595959; display: block; position: absolute; right: 0; top: 30px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
-.viewport a.previous:hover:before, .viewport a.next:hover:before { color: #0e9db3;}
+.viewport a.previous { width: 20px; height: 20px; background: url(../img/previous.png) no-repeat scroll left center; display: block; position: absolute; left: 0; top: 30px; transition: all 0.2s ease-out;} 
+.viewport a.previous:hover { background-position: right center; -webkit-transform: rotate(90deg); transform: rotate(90deg);}
+.viewport a.next { width: 20px; height: 20px; background: url(../img/next.png) no-repeat scroll right center; display: block; position: absolute; right: 0; top: 30px; transition: all 0.2s ease-out;}
+.viewport a.next:hover { background-position: left; center; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
 .viewport div { width: 535px; margin-left: 25px; overflow: hidden; float: left; position: relative;}
 .viewport div ul { width: 1200px; float: left;}
 .viewport div ul li { width: 120px; height: 80px; margin-right: 15px; background: #FFFFFF; display: block; float: left; border: solid 1px #a3a5a5; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
@@ -315,7 +319,7 @@ section.pg-wallpaper ul li span:hover a { background-position: top center;}
 
 section.pg-contato { width: 100%; height: 100%;}
 div#form { width: 522px; padding-bottom: 15px; border: solid 15px #222222; background: #FFFFFF; position: fixed; top: 5%; left:50%; margin-left: -261px; z-index: 99999999; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-div#form a { width: 36px; height: 36px; background: url(../img/fechar.jpg) no-repeat scroll left center; display: block; position: absolute;  right: 2px; top: 2px; transition: all 0.2s ease-out 0s;}
+div#form a { width: 36px; height: 36px; background: url(../img/fechar.jpg) no-repeat scroll left center; display: block; position: absolute;  right: 2px; top: 2px; transition: all 0.2s ease-out;}
 div#form a:hover { background-position: right center; -webkit-transform: rotate(90deg); transform: rotate(90deg);}
 div#form h2 { margin: 5px 0 0 13px; width: 475px; height: 28px; float: left; padding-top: 4px; text-indent: 40px; font-size: 2.0em; color: #222222; font-weight: bold; background: url(../img/dt-box-home.jpg) no-repeat;}
 div#form p { margin: 0 0 0 13px; font-size: 1.6em; color: #222222; float: left; line-height: 20px;}

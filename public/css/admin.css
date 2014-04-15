@@ -55,3 +55,16 @@ label.cor-predominante { margin-bottom: 5px;}
 
 /*gerenciar tecnologia*/
 .formTecnologia textarea { width: 300px;}
+.formProduto textarea { width: 250px; height: 150px;}
+.formProduto input.modelo { width: 250px;}
+
+/*gerenciar produtos cadastrados*/
+div.accordion-group { border-color: #CCCCCC;}
+
+
+div.accordion-inner { float: left; position: relative; padding: 0; margin: 0;}
+div.accordion-inner ul { width: 900px; margin: 0; padding: 0 0 0 26px; float: left;}
+div.accordion-inner ul li { width: 200px; height: 300px; border: solid 1px #CCCCCC; float: left; margin: 12.5px 25px 12.5px 0; display: block; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+div.accordion-inner ul li img { width: 180px; height: 150px; margin: 10px 0 0 8px;}
+div.accordion-inner ul li p { font-size: 14px; color: #333333; margin: 5px 0 5px 10px;}
+div.accordion-inner ul li button { margin: 0 auto;}
