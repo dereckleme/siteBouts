@@ -64,16 +64,6 @@ class ProdutoTenis
     private $numeracaoFinal;
 
     /**
-     * @var \ProdutoModelo
-     *
-     * @ORM\ManyToOne(targetEntity="ProdutoModelo")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="modelo", referencedColumnName="idmodelo")
-     * })
-     */
-    private $modeloTenis;
-
-    /**
      * @var \ProdutoSubcategoria
      *
      * @ORM\ManyToOne(targetEntity="ProdutoSubcategoria")
@@ -163,19 +153,6 @@ class ProdutoTenis
 		$this->numeracaoFinal = $numeracaoFinal;
 	}
 
-	/**
-	 * @return the $modeloTenis
-	 */
-	public function getModeloTenis() {
-		return $this->modeloTenis;
-	}
-
-	/**
-	 * @param ProdutoModelo $modeloTenis
-	 */
-	public function setModeloTenis($modeloTenis) {
-		$this->modeloTenis = $modeloTenis;
-	}
 	/**
 	 * @return the $subcategoriaTenis
 	 */

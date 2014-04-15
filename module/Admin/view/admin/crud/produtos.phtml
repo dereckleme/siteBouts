@@ -1,6 +1,7 @@
 <form class="formProduto">
 
 	<input type="text" class="titulo" placeholder="Titulo do Produto"/> <br/>
+	<input type="text" class="modelo" placeholder="Digite o modelo"/> <br/>
 	<select  class="form-control tecnologia" style="width:300px;" <?if(!$this->tecnologia) print 'disabled="disabled"'?>>
          <option value="">Selecione tecnologia de amortecimento</option>
          <?php 
@@ -25,17 +26,6 @@
 	</select><br/>
 	<select  class="form-control subcategoria" disabled="disabled">
          <option value="">Selecione uma Subcategoria</option>
-	</select><br/>
-	<select  class="form-control modelo" <?if(!$this->modelos) print 'disabled="disabled"'?>>
-         <option value="">Selecione o modelo do tenis</option>
-         <?php 
-         	foreach($this->modelos AS $modelo)
-         	{
-         		?>
-         		<option value="<?=$modelo->getIdmodelo()?>"><?=$modelo->getNome()?></option>
-         		<?php 
-         	}
-         ?>
 	</select><br/>
 	<input type="file" class="arquivo" /><br/><br/>
 	<label class="numeracao" for="" style="cursor:default; color:#222; font-size:14px;">Numeração do Tênis</label>

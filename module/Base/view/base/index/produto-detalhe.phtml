@@ -30,7 +30,7 @@
 
 		<p class="txt-info">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
 		e vem sendo utilizado desde o século XVI, quando um impressor esconhecido pegou uma bandeja de tipos.</p>
-		<p class="txt-model">Modelo: <span>7207-340</span></p>
+		<p class="txt-model">Modelo: <span><?=$this->produto->getNossoNumero()?></span></p>
 		<p class="txt-tec">Tecnologia de amortecimento: <span class="dt-tec"><?=$this->produto->getBaseTecnologia()->getNome()?></span>
 		</p>
 		<p class="txt-number">Numeração: <span><?=$this->produto->getNumeracaoInicial()?> à <?=$this->produto->getNumeracaoFinal()?></span></p>

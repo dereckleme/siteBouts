@@ -61,7 +61,7 @@ class MatchedRotaCaminho implements EventManagerAwareInterface
    			if($produto)
    			{
    			return array(
-   					"subtitulo" => ucwords($produto->getSubcategoriaTenis()->getNome()." - ".$produto->getModeloTenis()->getNome()),
+   					"subtitulo" => ucwords($produto->getTitulo()),
    					"lista" => array(
    						array("rota" => array(
    								"MatchedRoute" => "produto",
