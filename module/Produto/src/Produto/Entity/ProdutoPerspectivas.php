@@ -1,5 +1,6 @@
 <?php
 
+namespace Produto\Entity;
 
 
 use Doctrine\ORM\Mapping as ORM;
@@ -37,6 +38,48 @@ class ProdutoPerspectivas
      * })
      */
     private $produtoTenis;
+	/**
+	 * @return the $idPerspectivas
+	 */
+	public function getIdPerspectivas() {
+		return $this->idPerspectivas;
+	}
+
+	/**
+	 * @return the $src
+	 */
+	public function getSrc() {
+		return $this->src;
+	}
+
+	/**
+	 * @return the $produtoTenis
+	 */
+	public function getProdutoTenis() {
+		return $this->produtoTenis;
+	}
+
+	/**
+	 * @param number $idPerspectivas
+	 */
+	public function setIdPerspectivas($idPerspectivas) {
+		$this->idPerspectivas = $idPerspectivas;
+	}
+
+	/**
+	 * @param string $src
+	 */
+	public function setSrc($src) {
+		$this->src = $src;
+	}
+
+	/**
+	 * @param ProdutoTenis $produtoTenis
+	 */
+	public function setProdutoTenis($produtoTenis) {
+		$this->produtoTenis = $produtoTenis;
+	}
 
 
+	
 }

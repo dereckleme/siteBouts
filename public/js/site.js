@@ -148,4 +148,65 @@ $(document).ready(function(){
 				cont++;
 				}
 		});
+	$(".sugestaoTenis .eventOpenSugestao").on("click",function(){
+		var nossoNumero = $(this).attr("rel");
+		var imagem = $(this).attr("rev");
+		$(".valModel").html(nossoNumero);
+		$(".viewport-imagem img").attr("src",imagem+'big.png');
+		$(".carouselPerspectiva li").remove();
+		$(".carouselPerspectiva").html('<li><a href=""><img title="teste" alt="teste" src="'+imagem+'"/></a></li>');
+		return false;
+	})
+	
+	//********************carousel detalhe produto
+	var total_detalhe = $(".carouselPerspectiva li").size();
+	var block_detalhe = false;
+	var slideAtual_detalhe = 4;
+	if(total_detalhe > 4)
+	{
+		$(".previous").on("click",function(){
+			
+			if(block_detalhe == false && slideAtual_detalhe < total_detalhe)
+			{
+				slideAtual_detalhe++;
+				block_detalhe = true;
+			var sec = 0.1;
+			 $(".carouselPerspectiva li").each(function( index, element ) {
+				 $(this).css('transition-delay', sec+'s');
+				 sec = sec+0.1;
+			 }).css("left",'-=135px');
+			 setTimeout(function(){
+				 block_detalhe = false;
+				 },1500);
+			}
+			return false;
+		})
+		$(".next").on("click",function(){
+			if(block_detalhe == false && slideAtual_detalhe > 4)
+				{
+				slideAtual_detalhe--;
+					block_detalhe = true;
+			 var sec = 0.1;
+			 $(".carouselPerspectiva li").reverse(function(i, e) {
+				 $(this).css('transition-delay', sec+'s');
+				 sec = sec+0.1;
+			 })
+			$(".carouselPerspectiva li").css("left",'+=135px');
+			 setTimeout(function(){
+				 block_detalhe = false;
+			 },1500);
+				}
+			return false;
+		})
+		
+	}
+	else
+		{
+			$(".previous").on("click",function(){
+				return false;
+			})
+			$(".next").on("click",function(){
+				return false;
+			})
+		}
 });

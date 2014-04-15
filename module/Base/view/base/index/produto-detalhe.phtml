@@ -4,19 +4,31 @@
 
 		<div class="viewport-imagem">
 
-		  <img title="teste" alt="teste" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>big.png">
+		  <img width="650" title="teste" alt="teste" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>big.png">
 
 		</div>
 
 		<div class="viewport">
 		 <a class="previous" title="anterior" href=""></a>
 			<div>
-				<ul>
+				<ul class="carouselPerspectiva">
 					<li>
-					 <a href="">
+					 <a href="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>">
 					  <img title="teste" alt="teste" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>medio.png">
 					 </a>
 					</li>
+					<?php 
+						foreach($this->produto->getPerspectiva() AS $perspectiva)
+						{
+					?>
+					<li>
+					 <a href="<?=$this->basePath()?>/img/produtos/<?=$perspectiva->getSrc()?>">
+					  <img title="teste" alt="teste" src="<?=$this->basePath()?>/img/produtos/<?=$perspectiva->getSrc()?>medio.png">
+					 </a>
+					</li>
+					<?php 
+						}
+					?>
 				</ul>
 			</div>
 		 <a class="next" title="próximo" href=""></a>
@@ -30,42 +42,34 @@
 
 		<p class="txt-info">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
 		e vem sendo utilizado desde o século XVI, quando um impressor esconhecido pegou uma bandeja de tipos.</p>
-		<p class="txt-model">Modelo: <span><?=$this->produto->getNossoNumero()?></span></p>
+		<p class="txt-model">Modelo: <span class="valModel"><?=$this->produto->getNossoNumero()?></span></p>
 		<p class="txt-tec">Tecnologia de amortecimento: <span class="dt-tec"><?=$this->produto->getBaseTecnologia()->getNome()?></span>
 		</p>
 		<p class="txt-number">Numeração: <span><?=$this->produto->getNumeracaoInicial()?> à <?=$this->produto->getNumeracaoFinal()?></span></p>
 
-			<ul>
+			<ul class="sugestaoTenis">
+				
+			<?php 
+				foreach($this->produto->getSugestaoCoresProdutos() AS $produtoSugestao)
+				{
+			?>
 				<li>
-					<a href="">
-					<img title="teste" alt="teste" src="<?=$this->basePath()?>/img/teste-viewport.png">
+					<a href="#" rev="<?=$this->basePath()?>/img/produtos/<?=$produtoSugestao->getSrc()?>" rel="<?=$produtoSugestao->getNossoNumero()?>" class="eventOpenSugestao">
+					<img rel="" title="teste" alt="teste" src="<?=$this->basePath()?>/img/produtos/<?=$produtoSugestao->getSrc()?>medio.png">
 					</a>
 				</li>
-
+<?php 
+				}
+			?>
 				<li>
-					<a href="">
-					<img title="teste" alt="teste" src="<?=$this->basePath()?>/img/teste-viewport.png">
+					<a href="<?=$this->url("produto/produto-subcategoria/produto-detalhe",array(
+						"categoria" =>  $this->produto->getSubcategoriaTenis()->getCategoria()->getSlug(),
+						"subcategoria" =>  $this->produto->getSubcategoriaTenis()->getSlug(),
+						"slugProduto" => $this->produto->getSlug()	
+					));?>" rel="<?=$this->produto->getNossoNumero()?>">
+					<img title="teste" alt="teste" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>medio.png">
 					</a>
 				</li>
-
-				<li>
-					<a href="">
-					<img title="teste" alt="teste" src="<?=$this->basePath()?>/img/teste-viewport.png">
-					</a>
-				</li>
-
-				<li>
-					<a href="">
-					<img title="teste" alt="teste" src="<?=$this->basePath()?>/img/teste-viewport.png">
-					</a>
-				</li>
-
-				<li>
-					<a href="">
-					<img title="teste" alt="teste" src="<?=$this->basePath()?>/img/teste-viewport.png">
-					</a>
-				</li>
-
 			</ul>
 
             <button type="button" class="share-face" title="Compartilhe no Facebook">Compartilhe no Facebook</button>

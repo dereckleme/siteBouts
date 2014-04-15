@@ -3,7 +3,7 @@
 namespace Produto\Entity;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
-
+use Doctrine\Common\Collections\ArrayCollection;
 /**
  * ProdutoTenis
  *
@@ -13,6 +13,18 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class ProdutoTenis
 {
+	public function __construct() {
+		$this->sugestaoCoresProdutos = new ArrayCollection();
+		$this->perspectiva = new ArrayCollection();
+	}
+	/**
+	 * @ORM\OneToMany(targetEntity="Produto\Entity\ProdutoSugestaoCores", mappedBy="tenis")
+	 */
+	private $sugestaoCoresProdutos;
+	/**
+	 * @ORM\OneToMany(targetEntity="Produto\Entity\ProdutoPerspectivas", mappedBy="produtoTenis")
+	 */
+	private $perspectiva;
     /**
      * @var integer
      *
@@ -83,6 +95,9 @@ class ProdutoTenis
      * })
      */
     private $baseTecnologia;
+    
+   
+    
 	/**
 	 * @return the $idtenis
 	 */
@@ -206,7 +221,35 @@ class ProdutoTenis
 	public function setBaseTecnologia($baseTecnologia) {
 		$this->baseTecnologia = $baseTecnologia;
 	}
+	/**
+	 * @return the $sugestaoCoresProdutos
+	 */
+	public function getSugestaoCoresProdutos() {
+		return $this->sugestaoCoresProdutos;
+	}
+
+	/**
+	 * @return the $perspectiva
+	 */
+	public function getPerspectiva() {
+		return $this->perspectiva;
+	}
+
+	/**
+	 * @param \Doctrine\Common\Collections\ArrayCollection $sugestaoCoresProdutos
+	 */
+	public function setSugestaoCoresProdutos($sugestaoCoresProdutos) {
+		$this->sugestaoCoresProdutos = $sugestaoCoresProdutos;
+	}
+
+	/**
+	 * @param \Doctrine\Common\Collections\ArrayCollection $perspectiva
+	 */
+	public function setPerspectiva($perspectiva) {
+		$this->perspectiva = $perspectiva;
+	}
 
 
+	
 	
 }

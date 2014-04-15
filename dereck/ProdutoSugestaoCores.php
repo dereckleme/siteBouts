@@ -5,21 +5,21 @@
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * ProdutoVitrine
+ * ProdutoSugestaoCores
  *
- * @ORM\Table(name="produto_vitrine", indexes={@ORM\Index(name="fk_produto_vitrine_produto_tenis1_idx", columns={"tenis"})})
+ * @ORM\Table(name="produto_sugestao_cores", indexes={@ORM\Index(name="fk_produto_sugestao_cores_produto_tenis1_idx", columns={"tenis"})})
  * @ORM\Entity
  */
-class ProdutoVitrine
+class ProdutoSugestaoCores
 {
     /**
      * @var integer
      *
-     * @ORM\Column(name="idvitrine", type="integer", nullable=false)
+     * @ORM\Column(name="id_sugestao_cores", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idvitrine;
+    private $idSugestaoCores;
 
     /**
      * @var string
@@ -27,6 +27,13 @@ class ProdutoVitrine
      * @ORM\Column(name="src", type="string", length=255, nullable=true)
      */
     private $src;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nosso_numero", type="string", length=255, nullable=true)
+     */
+    private $nossoNumero;
 
     /**
      * @var \ProdutoTenis

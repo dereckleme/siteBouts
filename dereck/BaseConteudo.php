@@ -43,16 +43,6 @@ class BaseConteudo
     private $src;
 
     /**
-     * @var \BaseSubmenu
-     *
-     * @ORM\ManyToOne(targetEntity="BaseSubmenu")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="submenu", referencedColumnName="idbase_submenu")
-     * })
-     */
-    private $submenu;
-
-    /**
      * @var \BaseMenu
      *
      * @ORM\ManyToOne(targetEntity="BaseMenu")
@@ -61,6 +51,16 @@ class BaseConteudo
      * })
      */
     private $menu;
+
+    /**
+     * @var \BaseSubmenu
+     *
+     * @ORM\ManyToOne(targetEntity="BaseSubmenu")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="submenu", referencedColumnName="idbase_submenu")
+     * })
+     */
+    private $submenu;
 
 
 }
