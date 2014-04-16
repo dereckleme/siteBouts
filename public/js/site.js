@@ -154,7 +154,8 @@ $(document).ready(function(){
 		$(".valModel").html(nossoNumero);
 		$(".viewport-imagem img").attr("src",imagem+'big.png');
 		$(".carouselPerspectiva li").remove();
-		$(".carouselPerspectiva").html('<li><a href=""><img title="teste" alt="teste" src="'+imagem+'"/></a></li>');
+		$(".carouselPerspectiva").html('<li><a href="'+imagem+'"><img title="teste" alt="teste" src="'+imagem+'medio.png"/></a></li>');
+		block_detalhe = true;
 		return false;
 	})
 	
@@ -209,4 +210,9 @@ $(document).ready(function(){
 				return false;
 			})
 		}
+	$(".carouselPerspectiva").on("click","a",function(){
+		var imagem = $(this).attr("href");
+		$(".viewport-imagem img").attr("src",imagem+'big.png');
+		return false;
+	})
 });

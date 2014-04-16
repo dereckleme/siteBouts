@@ -6,33 +6,16 @@
  * @copyright Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
-namespace Usuario;
 return array(
     'router' => array(
         'routes' => array(  
              'Usuario' => array(
                 'type'    => 'Literal',
                 'options' => array(
-                    'route'    => '/actionUser',
+                    'route'    => '/logarUsuario',
                     'defaults' => array(
-                        '__NAMESPACE__' => 'Usuario\Controller',
-                        'controller'    => 'Login',
+                        'controller'    => 'Usuario\Controller\Login',
                         'action'        => 'index',
-                    ),
-                ),
-                'may_terminate' => true,
-                'child_routes' => array(
-                    'UsuarioAction' => array(
-                        'type'    => 'Segment',
-                        'options' => array(
-                            'route'    => '/[:action]',
-                            'constraints' => array(
-                                'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                                'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
-                            ),
-                            'defaults' => array(
-                            ),
-                        ),
                     ),
                 ),
             ),
@@ -92,7 +75,7 @@ return array(
 				'not_found_template'       => 'error/404',
 				'exception_template'       => 'error/index',
 				'template_map' => array(
-						'usuario/layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
+						'usuario/layout/site'           => __DIR__ . '/../view/layout/layout.phtml',
 				),
 				'template_path_stack' => array(
 						__DIR__ . '/../view',

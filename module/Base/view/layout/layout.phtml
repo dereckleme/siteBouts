@@ -63,7 +63,7 @@
 
  	</section>
 <?php 
-	if($this->matchedRoute != "home")
+	if($this->matchedRoute != "home" && !isset($this->desableMenu))
 	{
 		print $this->partial('layout/caminho.phtml',array("dadosMatchedRouter" => $this->matchedTitlesRouter));
 	}

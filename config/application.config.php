@@ -10,10 +10,10 @@ return array(
         'ZendDeveloperTools',
         'DoctrineModule',
         'DoctrineORMModule',
-        'Usuario',
         'Produto',
         'Base',
-        'Admin' 
+        'Admin',
+    	'Usuario',
         ),
     'module_listener_options' => array(
         'module_paths' => array(

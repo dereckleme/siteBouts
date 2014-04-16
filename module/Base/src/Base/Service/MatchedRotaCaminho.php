@@ -46,7 +46,7 @@ class MatchedRotaCaminho implements EventManagerAwareInterface
    		else if($this->match->getParams()['action'] == "produtoSubcategoria")
    		{
    			$subcategoria = $this->em->getRepository("Produto\Entity\ProdutoSubcategoria")->findOneByslug($this->match->getParam("subcategoria"));	
-   			if($subcategoria)
+   			if($subcategoria && count($subcategoria->getCategoria()))
    			{
    			return array("rota" => array("MatchedRouteName" => "produto", array("categoria" => $subcategoria->getCategoria()->getSlug())), "nome" => $subcategoria->getCategoria()->getNome(),  "subtitulo" =>  strtoupper($subcategoria->getNome()));
    			}

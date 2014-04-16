@@ -76,20 +76,24 @@ class Module
     		 * Definições para bloqueio total de usuários no admin
     		*/
     		$adminRoute = explode("-",$matchedRoute);
-    		if(!$auth->hasIdentity() and ($adminRoute[0] == "admin" || $adminRoute[0] == "Painel"))
+    		if(!$auth->hasIdentity() && $adminRoute[0] == "admin")
     		{
-    			//return $controller->redirect()->toRoute("admin/logar");
+    			return $controller->redirect()->toRoute("admin/logar");
+    		}
+    		else if($matchedRoute == "admin/logar" && $auth->hasIdentity())
+    		{
+    			return $controller->redirect()->toRoute("admin");
+    		}
+    		/*
+    		if(!$auth->hasIdentity() && $adminRoute[0] == "admin")
+    		{
+    			return $controller->redirect()->toRoute("admin/logar");
     		}
     		else if($auth->hasIdentity())
     		{
-    			if($auth->getIdentity()->getNivelUsuario() != 1)
-    			{
-    				if($adminRoute[0] == "admin")
-    				{
-    					return $controller->redirect()->toRoute("home");
-    				}
-    			}
-    		}    	    		
+    				return $controller->redirect()->toRoute("admin");
+    		}    
+    		*/	    		
     	
     	}, 100);
     }
