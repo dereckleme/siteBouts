@@ -55,7 +55,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0174ad', end
 .menu nav { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 .menu nav h1 a img { max-width: 100%; position: relative; top: -2px; float: left; clear: both; margin-left: 15px;} 
 ul.box-menu { float: left; margin: -12px 0 0 50px; position: relative;}
-ul.box-menu li.box-lista { float: left; cursor: pointer; padding: 28px 0 26px 0; position: relative; z-index: 800;}
+ul.box-menu li.box-lista { float: left; cursor: pointer; padding: 28px 0 26px 0; position: relative;}
 ul.box-menu li.box-lista:hover { background: #FFFFFF;}
 ul.box-menu li.box-lista:hover > a { border-right: solid 1px #FFFFFF; color: #222222;}
 ul.box-menu li a { text-decoration: none; color: #dddddd; text-transform: uppercase; font-size: 1.3em; position: relative; font-weight: bold;}
@@ -64,19 +64,21 @@ ul.box-menu li a.compre { padding: 10px 45px 10px 20px;}
 ul.box-menu li a.produtos { padding: 10px 45px 10px 20px;}
 ul.box-menu li a.tecnologia { padding: 10px 45px 10px 20px;}
 ul.box-menu li a.midia:last-child { padding: 10px 20px 10px 20px; border: none;}
-ul.box-menu li a.compre:before { content: '\2335'; position: absolute; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+ul.box-menu li a.compre:before { content: '\2335'; position: absolute; z-index: 200; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 ul.box-menu li.box-lista:hover > a.compre:before { color: #222222; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); top: 12px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
-ul.box-menu li a.produtos:before { content: '\2335'; position: absolute; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+ul.box-menu li a.produtos:before { content: '\2335'; position: absolute; z-index: 200; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 ul.box-menu li.box-lista:hover > a.produtos:before { color: #222222; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); top: 12px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
-ul.box-menu li a.tecnologia:before { content: '\2335'; position: absolute; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;} 
+ul.box-menu li a.tecnologia:before { content: '\2335'; position: absolute; z-index: 200; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;} 
 ul.box-menu li.box-lista:hover > a.tecnologia:before { color: #222222; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); top: 12px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
-li.sub-menu ul { width: 225px; display: none; padding-bottom: 8px; position: absolute; top: 87px; float: left; z-index: 100; background: #FFFFFF;}
-li.sub-menu ul li h6 a { border: none; width: 183px; padding: 8px 0 8px 42px; text-transform: uppercase; font-size: 1.8em; float: left; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+li.sub-menu ul { width: 225px; display: none; padding: 16px 0 8px 0; position: absolute; top: 87px; float: left; z-index: 100; background: #FFFFFF;}
+li.sub-menu ul li { overflow: hidden;}
+li.sub-menu ul li h6 a { border: none; z-index: 15; width: 183px; background: #FFFFFF; margin-top: -16px; padding: 8px 0 8px 42px; text-transform: uppercase; font-size: 1.8em; float: left; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 li.sub-menu ul li h6 a:before { content: '\2335'; position: absolute; left: 23px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
 li.sub-menu ul li h6 a:hover { width: 177px; color: #FFFFFF; background: #96bd05; padding: 8px 0 8px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 li.sub-menu ul li p:last-child a { margin-bottom: 2px;}
-li.sub-menu ul li p a { font-size: 1.1em; float: left; padding: 6px 0 6px 40px; font-weight: normal; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out; clear: both; border: none;}
-li.sub-menu ul li p a:hover { color: #96bd05; padding: 6px 0 6px 46px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+li.sub-menu ul li p a { margin-top: 0px; z-index: 10; font-size: 1.1em; float: left; padding: 6px 0 6px 40px; font-weight: normal; color: #222222; -webkit-transition: 0.4s ease-out; transition: 0.4s ease-out; clear: both; border: none;}
+li.sub-menu ul li:hover > p a { margin-top: 0px; -webkit-transition: 0.4s ease-in; transition: 0.4s ease-in;}
+li.sub-menu ul li > p a:hover { color: #96bd05; padding: 6px 0 6px 46px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 ul.box-menu li.sub-menu:hover ul { display: block;}
 li.sub-menu-links ul { width: 225px; display: none; padding-bottom: 8px; float: left; position: absolute; top: 87px; background: #FFFFFF;}
 li.sub-menu-links ul li a {  font-size: 1.2em; margin-top: 5px; padding: 8px 0 8px 42px; border: none; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
@@ -86,9 +88,7 @@ li.sub-menu-links ul li a:hover { color: #FFFFFF; background: #96bd05; padding: 
 ul.box-menu li.sub-menu-links:hover ul { display: block;}
 
 .container { width: 100%; background: url(../img/bk-container.png) repeat; float: left; position: relative;}
-
 section.galeria { width: 100%; float: left; overflow: hidden;}
-
 .lancamentos { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-top: 80px;}
 .lancamentos h2 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; text-align: center; font-size: 8.0em; color: #222222; margin: 0; padding: 0;}
 .lancamentos h2 span { color: #079ab1;}
@@ -100,16 +100,10 @@ div.g-produtos ul li:hover a { border: solid 1px #047da2; background: #FFF; -web
 div.g-produtos ul li { float: left; margin: 0 23.5px 0 23.5px; position: relative; -webkit-transition: 0.5s; transition: 0.5s; left:385px;}
 div.g-produtos ul li img { max-width: 100%; float: left; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 div.g-produtos ul li:hover img { -webkit-transform: scale(1.0)rotate(-3deg); transform: scale(1.0)rotate(-3deg);}
-
-
-
 div.g-produtos ul li a h4 { font-size: 2.0em; color: #333333; float: left; position: absolute; z-index: 100; left: 25px; top: 350px; display: none;}
 div.g-produtos ul li a h4 ~ p { width: 310px; font-size: 1.6em; text-indent: 20px; color: #079ab1; float: left; position: absolute; z-index: 100; left: 25px; top: 400px; display: none; background: url(../img/icon-tecnologia.png) no-repeat; background-position: 0 1px;}
 div.g-produtos ul li a h4 ~ p span { font-weight: bold; color: #333333;}
 div.g-produtos ul li a hr { width: 290px; height: 0px; font-weight: bold; position: absolute; z-index: 100; left: 25px; top: 400px; color: #222222; display: none;}
-
-
-
 div.g-produtos ul li a:hover h4 ~ p { display: block;}
 div.g-produtos ul li a:hover h4 { display: block;}
 div.g-produtos ul li a:hover hr { display: block;}
@@ -183,7 +177,7 @@ div.campanha { width: 640px; height: 437px; border: solid 1px #222222; float: ri
 
 /*Pagina Produtos*/
 .h-produtos { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
-.h-produtos h2 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-size: 6.0em; color: #e7ff43; margin: 20px 0 0 75px;}
+.h-produtos h2 { width: 1050px; font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-size: 6.0em; color: #e7ff43; margin: 20px 0 0 75px;}
 .h-produtos div { margin: 20px 0 20px 79px;}
 .h-produtos div ul li { display: inline;}
 .h-produtos div ul li a { margin-right:10px; text-decoration: none; font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; font-size: 1.8em; color: #FFFFFF;}
@@ -246,40 +240,40 @@ section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin
 section.pg-midia div ul li.video-secundario { float: left; width: 317px; height: 180px; margin-right: 6px; margin-top: 60px;}
 section.pg-midia div ul li p { font-weight: bold; color: #222222; font-size: 1.5em;}
 
-section.produto-detalhe { width: 1300px; height: 800px; position: relative; left: 50%; margin-left: -650px; float: left;}
+section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 #box-produtos { width: 650px; float: left; margin-top: 70px;}
 .viewport-imagem { width: 650px; height: 400px; position: relative; float: left;}
 .viewport { width: 580px; margin: 40px 0 0 30px; position: relative; float: left;}
 .viewport a.previous { width: 20px; height: 20px; background: url(../img/previous.png) no-repeat scroll left center; display: block; position: absolute; left: 0; top: 30px; transition: all 0.2s ease-out;} 
 .viewport a.previous:hover { background-position: right center; -webkit-transform: rotate(90deg); transform: rotate(90deg);}
 .viewport a.next { width: 20px; height: 20px; background: url(../img/next.png) no-repeat scroll right center; display: block; position: absolute; right: 0; top: 30px; transition: all 0.2s ease-out;}
-.viewport a.next:hover { background-position: left; center; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+.viewport a.next:hover { background-position: left center; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
 .viewport div { width: 535px; margin-left: 25px; overflow: hidden; float: left; position: relative;}
-.viewport div ul { width: 111200px; float: left;}
-.viewport div ul li {position:relative; width: 120px; height: 80px; margin-right: 15px; background: #FFFFFF; display: block; float: left; border: solid 1px #a3a5a5; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: 0.5s; transition: 0.5s; left:0px;}
+.viewport div ul { width: 2000000px; float: left;}
+.viewport div ul li { width: 120px; height: 80px; position:relative; -webkit-transition: 0.5s; transition: 0.5s; left:0px; margin-right: 15px; background: #FFFFFF; display: block; float: left; border: solid 1px #a3a5a5; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 .viewport div ul li img { width: 120px; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 .viewport div ul li:hover img { -webkit-transform: scale(1.0); transform: scale(1.0);}
 .viewport div ul li:hover { border: solid 1px #0e9db3;}
 
-#info-produtos { width: 460px; margin-right: 75px; padding: 70px 0 0 50px; height: 100%; float: right; background: rgba(255,255,255,0.5);}
+#info-produtos { width: 460px; min-height: 570px; margin-right: 75px; padding: 70px 0 10px 50px; float: right; background: rgba(255,255,255,0.5);}
 #info-produtos h2 { width: 100%; font-size: 2.8em; margin: 0 0 0 0; color: #222222; font-weight: bold; float: left;}
 #info-produtos span { color: #0d9cb3;}
 #info-produtos span.dt-tec { text-transform: uppercase;}
-#info-produtos p.txt-info { width: 410px; margin: 25px 0 0 0; line-height: 20px; font-size: 1.6em; color: #222222; float: left;}
-#info-produtos p.txt-model { width: 410px; margin: 25px 0 0 0; float: left; font-size: 2.0em; font-weight: bold;}
-#info-produtos p.txt-tec { width: 410px; margin: 15px 0 0 0; float: left; font-size: 1.6em; font-weight: bold;}
-#info-produtos p.txt-number { width: 410px; margin: 15px 0 0 0; float: left; font-size: 1.4em; font-weight: bold;}
-#info-produtos ul { width: 410px; float: left; margin: 20px 0 0 0;}
+#info-produtos p.txt-info { width: 410px; margin: 10px 0 0 0; line-height: 20px; font-size: 1.6em; color: #222222; float: left;}
+#info-produtos p.txt-model { width: 410px; margin: 15px 0 0 0; float: left; font-size: 2.0em; font-weight: bold;}
+#info-produtos p.txt-tec { width: 410px; margin: 10px 0 0 -2px; float: left; font-size: 1.6em; font-weight: bold;}
+#info-produtos p.txt-number { width: 410px; margin: 10px 0 0 0; float: left; font-size: 1.4em; font-weight: bold;}
+#info-produtos ul { width: 410px; float: left; margin: 15px 0 0 0;}
 #info-produtos ul li { width: 120px; height: 80px; margin: 0 15px 15px 0; background: #FFFFFF; display: block; float: left; border: solid 1px #a3a5a5; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 #info-produtos ul li img { width: 120px; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 #info-produtos ul li:hover img { -webkit-transform: scale(1.0); transform: scale(1.0);}
 #info-produtos ul li:hover { border: solid 1px #0e9db3;}
-#info-produtos button { width: 208px; height: 46px; text-indent: -9999px; border: none; float: left; margin: 20px 0 0 5px; background: url(../img/face.png) no-repeat; text-transform: uppercase; cursor: pointer;}
+#info-produtos button { width: 208px; height: 46px; text-indent: -9999px; border: none; float: left; margin: 7px 0 0 0; background: url(../img/face.png) no-repeat; text-transform: uppercase; cursor: pointer;}
 #info-produtos button:hover { background: url(../img/face-hover.png) no-repeat;}
 
 section.pg-tecnologia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-bottom: 60px;}
 div.pg-galeria { width: 650px; height: 450px; float: left; position: relative; margin-top: 50px;}
-div.pg-textos { width: 590px; height: 100%; background: rgba(255,255,255,0.5); float: left; right: 35px; position: absolute; z-index: 10;}
+div.pg-textos { width: 590px; min-height: 550px; background: rgba(255,255,255,0.5); float: left; right: 35px; position: absolute; z-index: 10;}
 div.pg-textos img { margin: 50px 0 0 50px;}
 div.pg-textos p { width: 490px; line-height: 25px; margin-left: 55px; font-size: 1.6em; color: #222222;}
 .pg-tec { width: 1300px; float: left; margin: 30px 0; position: relative;}

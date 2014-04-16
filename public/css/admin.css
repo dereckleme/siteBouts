@@ -60,11 +60,10 @@ label.cor-predominante { margin-bottom: 5px;}
 
 /*gerenciar produtos cadastrados*/
 div.accordion-group { border-color: #CCCCCC;}
-
-
+div.accordion-group a { font-weight: bold;}
 div.accordion-inner { float: left; position: relative; padding: 0; margin: 0;}
 div.accordion-inner ul { width: 900px; margin: 0; padding: 0 0 0 26px; float: left;}
-div.accordion-inner ul li { width: 200px; height: 300px; border: solid 1px #CCCCCC; float: left; margin: 12.5px 25px 12.5px 0; display: block; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-div.accordion-inner ul li img { width: 180px; height: 150px; margin: 10px 0 0 8px;}
-div.accordion-inner ul li p { font-size: 14px; color: #333333; margin: 5px 0 5px 10px;}
-div.accordion-inner ul li button { margin: 0 auto;}
+div.accordion-inner ul li { width: 200px; height: 270px; border: solid 1px #CCCCCC; float: left; margin: 12.5px 25px 12.5px 0; padding-bottom: 10px; display: block; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+div.accordion-inner ul li img { width: 180px; height: 150px; margin: 10px 0 0 8px; border: solid 1px #DDDDDD;}
+div.accordion-inner ul li p { width: 185px; font-size: 14px; display: block; float: left; color: #333333; margin: 5px 0 5px 10px;}
+div.accordion-inner ul li button { width: 60px; border-radius: 5px; float: left; margin: 6px 0 0 65px;}
