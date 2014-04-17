@@ -165,7 +165,7 @@ $(document).ready(function(){
 	var slideAtual_detalhe = 4;
 	if(total_detalhe > 4)
 	{
-		$(".previous").on("click",function(){
+		$(".next").on("click",function(){
 			
 			if(block_detalhe == false && slideAtual_detalhe < total_detalhe)
 			{
@@ -182,7 +182,7 @@ $(document).ready(function(){
 			}
 			return false;
 		})
-		$(".next").on("click",function(){
+		$(".previous").on("click",function(){
 			if(block_detalhe == false && slideAtual_detalhe > 4)
 				{
 				slideAtual_detalhe--;
