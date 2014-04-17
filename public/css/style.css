@@ -30,7 +30,8 @@ figure.wall a:hover, figure.contato a:hover { background-position: bottom center
 figure.wall a, figure.contato a { width: 24px; display: block; text-indent: 40px; font-size: 1.2em; padding-top: 3px; font-weight: bold; text-transform: uppercase; color: #dddddd; text-decoration: none; -webkit-transition: 0.1s ease-out; transition: 0.1s ease-out;}
 
 .h-news { width: 1300px; height: 50px; position: relative; left: 50%; margin-left: -650px; float: left;}
-.newsletter { width: 750px; margin: 0 auto; margin-top: 0.5%;}
+.newsletter { width: 800px; margin: 0 auto; margin-top: 0.5%;}
+
 .newsletter input { width: 234px; height: 29px; float: left; background: url(../img/bk-news.png) no-repeat #222222; background-position: 7px 9px;}
 .newsletter input { border: none; color: #666666; font-size: 1.3em; font-family:'Conv_calibri', Sans-Serif;}
 .newsletter input { padding-left: 5px; text-indent: 30px; margin: 3px 0 0 20px;}
@@ -81,7 +82,7 @@ li.sub-menu ul li:hover > p a { margin-top: 0px; -webkit-transition: 0.4s ease-i
 li.sub-menu ul li > p a:hover { color: #96bd05; padding: 6px 0 6px 46px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 ul.box-menu li.sub-menu:hover ul { display: block;}
 li.sub-menu-links ul { width: 225px; display: none; padding-bottom: 8px; float: left; position: absolute; top: 87px; background: #FFFFFF;}
-li.sub-menu-links ul li a {  font-size: 1.2em; margin-top: 5px; padding: 8px 0 8px 42px; border: none; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+li.sub-menu-links ul li a { font-size: 1.2em; margin-top: 5px; padding: 8px 0 8px 42px; border: none; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 li.sub-menu-links ul li:first-child a { margin-top: 15px;}
 li.sub-menu-links ul li a:before { content: '\2335'; position: absolute; left: 23px; top: 8px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
 li.sub-menu-links ul li a:hover { color: #FFFFFF; background: #96bd05; padding: 8px 0 8px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
