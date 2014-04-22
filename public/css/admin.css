@@ -96,3 +96,4 @@ ul.accordion-wallpaper li button { margin: 6px 0 0 10px;}
 ul.accordion-midia li span { background: url(.././img/youtube-adm.png) no-repeat scroll 0 5px; padding: 5px 0 10px 0;}
 ul.accordion-comprar li span { background: url(.././img/comprar-adm.png) no-repeat scroll 0 5px; padding: 8px 0 10px 0;}
 ul.accordion-tec li span { background: url(.././img/tecnologia-adm.png) no-repeat scroll 0 1px; padding: 5px 0 10px 0;}
+.accordion{display:none}

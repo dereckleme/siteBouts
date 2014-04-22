@@ -25,21 +25,21 @@ class BaseBanner
     /**
      * @var string
      *
-     * @ORM\Column(name="titulo", type="string", length=45, nullable=true)
+     * @ORM\Column(name="titulo", type="string", length=255, nullable=true)
      */
     private $titulo;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="src", type="string", length=45, nullable=true)
+     * @ORM\Column(name="src", type="string", length=255, nullable=true)
      */
     private $src;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="url", type="string", length=45, nullable=true)
+     * @ORM\Column(name="url", type="string", length=255, nullable=true)
      */
     private $url;
 	/**

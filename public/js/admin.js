@@ -118,4 +118,8 @@ $(document).ready(function(){
 		}
 		return false;
 	})
+	$(".conteudo").on("click",".style-gerenciar",function(){
+		$(".accordion").slideToggle();
+		return false;
+	})
 })
