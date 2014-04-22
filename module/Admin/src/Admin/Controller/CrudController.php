@@ -12,7 +12,9 @@ class CrudController extends AbstractActionController
 {
     public function bannerAction()
     {
-    	$layout = new ViewModel();
+    	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    	$repo = $doctrine->getRepository("Base\Entity\BaseBanner");
+    	$layout = new ViewModel(array("bannersDestaque" => $repo->findAll()));
     	$layout->setTerminal(1);
         return $layout;
     }
@@ -43,13 +45,17 @@ class CrudController extends AbstractActionController
     }
     public function midiaAction()
     {
-    	$layout = new ViewModel();
+    	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    	$midia = $doctrine->getRepository("Base\Entity\BaseVideos")->findBy(array(), array('idVideos' => 'DESC'));
+    	$layout = new ViewModel(array("midias" => $midia));
     	$layout->setTerminal(1);
     	return $layout;
     }
     public function ondeComprarAction()
     {
-    	$layout = new ViewModel();
+    	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    	$repositoryOnde = $doctrine->getRepository("Base\Entity\BaseMenu")->findOneByidmenu(1);
+    	$layout = new ViewModel(array("ondeComprar" => $repositoryOnde));
     	$layout->setTerminal(1);
     	return $layout;
     }
@@ -131,7 +137,9 @@ class CrudController extends AbstractActionController
     }
     public function wallpaperAction()
     {
-    	$layout = new ViewModel();
+    	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    	$wallpaper = $doctrine->getRepository("Base\Entity\BaseConteudo")->findOneBymenu(5);
+    	$layout = new ViewModel(array("wallpaper" => $wallpaper));
     	$layout->setTerminal(1);
     	return $layout;
     }

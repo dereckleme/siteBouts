@@ -26,10 +26,14 @@
 
       <div class="accordion-inner">
         <ul class="accordion-midia">
-        <li><span>Pratique Bout's</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
-        <li><span>Pratique Bout's</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
-        <li><span>Pratique Bout's</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
-        <li><span>Pratique Bout's</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
+        <?php 
+				foreach($this->midias AS $midia)
+				{
+					?>
+        <li><span><?=$midia->getTitulo()?></span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
+      	<?php 
+				}
+      	?>
       </div>
     </div>
   </div>

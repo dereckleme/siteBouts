@@ -27,26 +27,18 @@
 
       <div class="accordion-inner">
         <ul class="accordion-banner">
+        <?php 
+		  	foreach($this->bannersDestaque AS $banner)
+		  	{
+		  ?>
          <li>
-            <img src="<?=$this->basepath("img/banners/mgaleria1.jpg")?>">
-            <p><strong>Título:</strong> Air Flow Teen</p>
+            <img src="<?=$this->basePath("img/banners/".$banner->getSrc())?>">
+            <p><strong>Título:</strong> <?=$banner->getTitulo()?></p>
             <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
-         <li>
-            <img src="<?=$this->basepath("img/banners/mgaleria2.jpg")?>">
-            <p><strong>Título:</strong> Air Flow Teen</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/banners/mgaleria3.jpg")?>">
-            <p><strong>Título:</strong> Air Flow Teen</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/banners/mgaleria4.jpg")?>">
-            <p><strong>Título:</strong> Air Flow Teen</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
+         <?php 
+		  	}
+		 	?>
         </ul>
       </div>
 

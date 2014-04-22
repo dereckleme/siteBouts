@@ -26,26 +26,18 @@
 
       <div class="accordion-inner">
         <ul class="accordion-wallpaper">
+        <?php 
+		foreach($this->wallpaper->getFotos() AS $wallpaper)
+		{
+	?>
          <li>
-            <img src="<?=$this->basepath("img/wallpapers/teste.jpg")?>">
-            <p><strong>Título:</strong> Air Flow Teen</p>
+            <img src="<?=$this->basePath("img/wallpapers/".$wallpaper->getSrc())?>">
+            <p><strong>Título:</strong> <?=$wallpaper->getTituloImagem()?></p>
             <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
-         <li>
-            <img src="<?=$this->basepath("img/wallpapers/teste.jpg")?>">
-            <p><strong>Título:</strong> Air Flow Teen</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/wallpapers/teste.jpg")?>">
-            <p><strong>Título:</strong> Air Flow Teen</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/wallpapers/teste.jpg")?>">
-            <p><strong>Título:</strong> Air Flow Teen</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
+         <?php 
+		}
+		?>
         </ul>
       </div>
     </div>

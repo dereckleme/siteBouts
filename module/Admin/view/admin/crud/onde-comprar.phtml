@@ -26,10 +26,14 @@
 
       <div class="accordion-inner">
         <ul class="accordion-comprar">
-        <li><span>Pratique Bout's</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
-        <li><span>Pratique Bout's</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
-        <li><span>Pratique Bout's</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
-        <li><span>Pratique Bout's</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
+        <?php 
+        	foreach($this->ondeComprar->getSubmenus() AS $onde)
+        	{
+        ?>
+        <li><span><?=$onde->getNome()?></span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
+      	<?php 
+        	}
+      	?>
       </div>
     </div>
   </div>

@@ -52,126 +52,47 @@
 
 </form>
 
-<br/><br/><br/><br/>
-
+<br/><br/>
 
 
 
 <div class="accordion" id="accordion2">
-
+<?php 
+         	foreach($this->categorias AS $categoria)
+         	{
+         		?>
   <div class="accordion-group">
     <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-        Gerenciar Categoria: Aventura
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<?=$categoria->getIdcategoria()?>">
+     	<?=strtoupper($categoria->getNome())?>
       </a>
     </div>
 
-    <div id="collapseOne" class="accordion-body collapse in">
+    <div id="collapse<?=$categoria->getIdcategoria()?>" class="accordion-body collapse">
 
       <div class="accordion-inner">
         <ul class="accordion-produto">
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
+		        <?php 
+		        	foreach($categoria->getSubcategorias() AS $sub)
+		        	{
+		        		foreach($sub->getProdutos() AS $produto)
+		        		{
+		        ?>
+		         <li>
+		            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
+		            <p><strong>Tênis:</strong> <?=$produto->getTitulo()?></p>
+		            <p><strong>Modelo:</strong> <?=$produto->getNossoNumero()?></p>
+		            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
+		         </li>
+		         <?php 
+		        		}
+		        	}
+		         ?>
         </ul>
       </div>
     </div>
   </div>
-
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-        Gerenciar Categoria: Running
-      </a>
-    </div>
-    <div id="collapseTwo" class="accordion-body collapse">
-      <div class="accordion-inner">
-        <ul class="accordion-produto">
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-        Gerenciar Categoria: Masculino
-      </a>
-    </div>
-    <div id="collapseThree" class="accordion-body collapse">
-      <div class="accordion-inner">
-        <ul class="accordion-produto">
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
-         </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<?php 	
+         	}	
+?>
 </div>
