@@ -62,6 +62,7 @@ input[type="radio"] { margin: -4px 0 0;}
 
 /*gerenciar produtos cadastrados*/
 div.accordion { margin-top: 20px;}
+div.accordion p { font-size: 18px; color: #14c6e2; font-weight: bold;}
 div.accordion-group { border-color: #14c6e2;}
 div.accordion-heading { background: #079AB1;}
 div.accordion-group a { font-weight: bold; color: #FFFFFF;}
