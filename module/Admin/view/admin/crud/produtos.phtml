@@ -1,26 +1,16 @@
 <form class="formProduto">
+    <input type="text" class="titulo" placeholder="Nome do Tênis"/><br/>
 
-   <!--<div class="alert alert-info">
-     <strong>Importante seguir corretamente todos os passos para cadastrar um novo modelo de tênis!</strong>
-   </div>
-   <div class="alert alert-info">
-     O nome do tênis deve ser escrito desta forma, ex: Live ou Spine Teen ou Air Flow Teen. Sempre com a primeira letra em maiúscolo.<br/><br/> 
-     O sistema gera automaticamente o texto TÊNIS BOUT'S.
-   </div>
-   <div class="alert alert-info">
-     Descreva um pequeno texto sobre as informações do tênis.
-   </div>
-   <div class="alert alert-info">
-     Digite o modelo do tenis ex: 9036-701. Caso conter letras colocar sempre em letra maiúsculas.
-   </div>
-   <div class="alert alert-info">
-     A resolução ideal para as imagens dos tenis é 650 x 400 com fundo transparente na extenção png, sempre com o tênis centralizado.  
-   </div>-->
+    <textarea name="mensagem" class="statusDescricaoTenis" placeholder="Uma breve descrição do tênis"></textarea><br/>
 
-	<input type="text" class="titulo" placeholder="Nome do Tênis"/> <br/>
-   <textarea name="mensagem" class="statusDescricaoTenis" placeholder="Uma breve descrição do tênis"></textarea><br/>
-	<input type="text" class="modelo" placeholder="Digite o modelo do tênis"/> <br/>
-	<select  class="form-control tecnologia" style="width:300px;" <?if(!$this->tecnologia) print 'disabled="disabled"'?>>
+    <input type="text" class="modelo" placeholder="Digite o modelo do tênis"/><br/>
+
+    <label class="numeracao" for="" style="cursor:default; color:#222; font-size:14px;"><strong>Numeração do Tênis</strong></label>
+    <input type="text" class="style-tamanho tamanhoMin" placeholder="Minímo"/> 
+    <input type="text" class="style-tamanho tamanhoMax" placeholder="Máximo"/>
+    <br/>
+
+    <select  class="form-control tecnologia" style="width:300px;" <?if(!$this->tecnologia) print 'disabled="disabled"'?>>
          <option value="">Selecione Tecnologia de Amortecimento</option>
          <?php 
          	foreach($this->tecnologia->getSubmenus() AS $tecnologia)
@@ -31,6 +21,7 @@
          	}
          ?>
 	</select><br/>
+
 	<select  class="form-control categoria" <?if(!$this->categorias) print 'disabled="disabled"'?>>
          <option value="">Selecione uma Categoria</option>
          <?php 
@@ -42,22 +33,24 @@
          	}
          ?>
 	</select><br/>
+
 	<select  class="form-control subcategoria" disabled="disabled">
-         <option value="">Selecione uma Subcategoria</option>
+      <option value="">Selecione uma Subcategoria</option>
 	</select><br/>
 	<input type="file" class="arquivo" /><br/><br/>
-	<label class="numeracao" for="" style="cursor:default; color:#222; font-size:14px;">Numeração do Tênis</label>
-	<input type="text" class="style-tamanho tamanhoMin" placeholder="Minímo"/> 
-    <input type="text" class="style-tamanho tamanhoMax" placeholder="Máximo"/>
-    <br/>
+	
+    <label class="add-vitrine" for="" style="cursor:default; color:#222; font-size:14px;"><strong>Adicionar produto na Vitrine</strong></label>
+    <input type="radio" name="gender" value="Sim"> Sim
+    <input type="radio" name="gender" value="Nao" checked="checked"> Não
+    <br/><br/>
+
+
+
 	<input type="submit" value="Adicionar" class="actionAdicionaProduto style-adicionar" title="Adicionar Banner"> 
 	<input type="submit" value="Gerenciar" class="style-gerenciar" title="Gerenciar Banner"><br/>
-	<div style="padding:5px;display:none">
-	<h4>Banners ativos:</h4>
-		 <a href="" class="openPopup"><img src="<?=$this->basepath("img/btn_midia.png")?>" class="img-polaroid" width="200"></a>
-	</div>
-</form>
 
+
+</form>
 
 <br/><br/><br/><br/>
 
@@ -69,55 +62,37 @@
   <div class="accordion-group">
     <div class="accordion-heading">
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-        Aventura
+        Gerenciar Categoria: Aventura
       </a>
     </div>
 
     <div id="collapseOne" class="accordion-body collapse in">
 
       <div class="accordion-inner">
-        <ul>
+        <ul class="accordion-produto">
          <li>
             <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
             <p><strong>Tênis:</strong> Air Flow Teen</p>
             <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
          <li>
             <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
             <p><strong>Tênis:</strong> Air Flow Teen</p>
             <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
          <li>
             <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
             <p><strong>Tênis:</strong> Air Flow Teen</p>
             <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
          <li>
             <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
             <p><strong>Tênis:</strong> Air Flow Teen</p>
             <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
         </ul>
       </div>
@@ -127,53 +102,35 @@
   <div class="accordion-group">
     <div class="accordion-heading">
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-        Running
+        Gerenciar Categoria: Running
       </a>
     </div>
     <div id="collapseTwo" class="accordion-body collapse">
       <div class="accordion-inner">
-        <ul>
+        <ul class="accordion-produto">
          <li>
             <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
             <p><strong>Tênis:</strong> Air Flow Teen</p>
             <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
          <li>
             <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
             <p><strong>Tênis:</strong> Air Flow Teen</p>
             <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
          <li>
             <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
             <p><strong>Tênis:</strong> Air Flow Teen</p>
             <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
          <li>
             <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
             <p><strong>Tênis:</strong> Air Flow Teen</p>
             <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
         </ul>
       </div>
@@ -183,52 +140,38 @@
   <div class="accordion-group">
     <div class="accordion-heading">
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-        Masculino
+        Gerenciar Categoria: Masculino
       </a>
     </div>
     <div id="collapseThree" class="accordion-body collapse">
       <div class="accordion-inner">
-        <ul>
+        <ul class="accordion-produto">
          <li>
             <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
             <p><strong>Tênis:</strong> Air Flow Teen</p>
             <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
          <li>
             <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
             <p><strong>Tênis:</strong> Air Flow Teen</p>
             <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
          <li>
             <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
             <p><strong>Tênis:</strong> Air Flow Teen</p>
             <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
          <li>
             <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
             <p><strong>Tênis:</strong> Air Flow Teen</p>
             <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
-         </li>
-         <li>
-            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
-            <p><strong>Tênis:</strong> Air Flow Teen</p>
-            <p><strong>Modelo:</strong> 8974-785</p>
-            <button type="button" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
          </li>
         </ul>
       </div>
     </div>
   </div>
-
-
 </div>
