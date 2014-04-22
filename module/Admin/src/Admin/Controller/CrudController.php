@@ -129,7 +129,7 @@ class CrudController extends AbstractActionController
     	$layout->setTerminal(1);
     	return $layout;
     }
-    public function tecnologiaAction()
+    public function tecnologiaAdmAction()
     {
     	$layout = new ViewModel();
     	$layout->setTerminal(1);
