@@ -61,8 +61,10 @@ input[type="radio"] { margin: -4px 0 0;}
 
 
 /*gerenciar produtos cadastrados*/
+div.container { width: 970px;}
 div.accordion { margin-top: 20px;}
 div.accordion p { font-size: 18px; color: #14c6e2; font-weight: bold;}
+div.accordion button { width: 66px; border-radius: 5px; float: left;}
 div.accordion-group { border-color: #14c6e2;}
 div.accordion-heading { background: #079AB1;}
 div.accordion-group a { font-weight: bold; color: #FFFFFF;}
@@ -71,7 +73,6 @@ div.accordion-inner { float: left; position: relative; padding: 0; margin: 0;}
 ul.accordion-produto, ul.accordion-wallpaper { width: 900px; margin: 0; padding: 0 0 0 26px; float: left;}
 ul.accordion-midia, ul.accordion-comprar, ul.accordion-tec { width: 900px; margin: 0; padding: 0; float: left;}
 ul.accordion-produto li, ul.accordion-banner li, ul.accordion-wallpaper li { float: left; display: block; margin: 12.5px 25px 12.5px 0; border: solid 1px #14c6e2; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-ul.accordion-produto li button, ul.accordion-tec li button, ul.accordion-comprar li button, ul.accordion-banner li button, ul.accordion-wallpaper li button, ul.accordion-midia li button { width: 60px; border-radius: 5px; float: left;}
 ul.accordion-produto li p, ul.accordion-wallpaper li p { font-size: 14px; display: block; float: left; color: #333333;}
 ul.accordion-tec li span, ul.accordion-comprar li span, ul.accordion-midia li span { text-indent: 40px; float: left; color: #333333; margin-left: 15px; font-weight: bold;}
 ul.accordion-midia li:last-child, ul.accordion-comprar li:last-child, ul.accordion-tec li:last-child { border-bottom: none;}
@@ -96,4 +97,5 @@ ul.accordion-wallpaper li button { margin: 6px 0 0 10px;}
 ul.accordion-midia li span { background: url(.././img/youtube-adm.png) no-repeat scroll 0 5px; padding: 5px 0 10px 0;}
 ul.accordion-comprar li span { background: url(.././img/comprar-adm.png) no-repeat scroll 0 5px; padding: 8px 0 10px 0;}
 ul.accordion-tec li span { background: url(.././img/tecnologia-adm.png) no-repeat scroll 0 1px; padding: 5px 0 10px 0;}
-.accordion{display:none}
+.accordion { display:none;}
+
