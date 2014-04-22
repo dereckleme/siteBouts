@@ -8,8 +8,27 @@
 
 	<input type="submit" value="Adicionar" class="actionAdicionaProduto style-adicionar" title="Adicionar Banner"> 
 	<input type="submit" value="Gerenciar" class="style-gerenciar" title="Gerenciar Banner"><br/>
-	<div style="padding:5px;display:none">
-	<h4>Banners ativos:</h4>
-		 <a href="" class="openPopup"><img src="<?=$this->basepath("img/btn_midia.png")?>" class="img-polaroid" width="200"></a>
-	</div>
 </form>
+
+<div class="accordion" id="accordion2">
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        Gerenciar Tecnologia
+      </a>
+    </div>
+
+    <div id="collapseOne" class="accordion-body collapse in">
+
+      <div class="accordion-inner">
+        <ul class="accordion-tec">
+		 <li><span>Fly TS</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
+		 <li><span>Fly TS</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
+		 <li><span>Fly TS</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
+		 <li><span>Fly TS</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
+	    </ul>
+      </div>
+    </div>
+  </div>
+</div>
