@@ -59,9 +59,7 @@ label.cor-predominante { margin-bottom: 5px;}
 .formProduto input.modelo { width: 250px;}
 input[type="radio"] { margin: -4px 0 0;}
 
-
 /*gerenciar produtos cadastrados*/
-div.container { width: 970px;}
 div.accordion { margin-top: 20px;}
 div.accordion p { font-size: 18px; color: #14c6e2; font-weight: bold;}
 div.accordion button { width: 66px; border-radius: 5px; float: left;}
@@ -99,3 +97,11 @@ ul.accordion-comprar li span { background: url(.././img/comprar-adm.png) no-repe
 ul.accordion-tec li span { background: url(.././img/tecnologia-adm.png) no-repeat scroll 0 1px; padding: 5px 0 10px 0;}
 .accordion { display:none;}
 
+/* Hack ie10 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+
+   div.container { 
+   	width: 970px !important;
+   }
+
+}
