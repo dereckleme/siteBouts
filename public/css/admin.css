@@ -54,7 +54,10 @@ input.style-cor { width: 70px; height: 30px}
 label.cor-predominante { margin-bottom: 5px;}
 
 /*gerenciar tecnologia*/
+.formTecnologia { position: relative; padding-bottom: 40px;}
 .formTecnologia textarea { width: 300px;}
+.formTecnologia span { width: 460px; position: absolute; right: 0; top: -30px;}
+.formTecnologia span label, .formTecnologia span input { margin-left: 10px;}
 .formProduto textarea { width: 250px; height: 150px;}
 .formProduto input.modelo { width: 250px;}
 input[type="radio"] { margin: -4px 0 0;}

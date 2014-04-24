@@ -75,7 +75,6 @@
     background: -ms-linear-gradient(top,  rgba(4,122,160,1) 0%,rgba(6,143,171,1) 40%,rgba(8,162,181,1) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(4,122,160,1) 0%,rgba(6,143,171,1) 40%,rgba(8,162,181,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#047aa0', endColorstr='#08a2b5',GradientType=0 ); /* IE6-9 */ 
-    
 	}
 
     li.sub-menu ul:before { display: none;}
@@ -146,7 +145,7 @@
 
 	div.campanha { display: none;}
 
-	footer { width: 100%;float: left;}
+	footer { width: 100%; float: left;}
 
 	.h-container-bottom { width: 100%; min-width: 320px; border-top: solid 8px #222222; border-bottom: solid 8px #222222; background: url(../img/bk-header.png) repeat; float: left;}
 

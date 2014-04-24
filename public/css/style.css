@@ -71,21 +71,22 @@ ul.box-menu li a.produtos:before { content: '\2335'; position: absolute; z-index
 ul.box-menu li.box-lista:hover > a.produtos:before { color: #222222; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); top: 12px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 ul.box-menu li a.tecnologia:before { content: '\2335'; position: absolute; z-index: 200; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;} 
 ul.box-menu li.box-lista:hover > a.tecnologia:before { color: #222222; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); top: 12px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
-li.sub-menu ul { width: 225px; display: none; padding: 16px 0 8px 0; position: absolute; top: 87px; float: left; z-index: 100; background: #FFFFFF;}
-li.sub-menu ul li { overflow: hidden;}
-li.sub-menu ul li h6 a { border: none; z-index: 15; width: 183px; background: #FFFFFF; margin-top: -16px; padding: 8px 0 8px 42px; text-transform: uppercase; font-size: 1.8em; float: left; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-li.sub-menu ul li h6 a:before { content: '\2335'; position: absolute; left: 23px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
-li.sub-menu ul li h6 a:hover { width: 177px; color: #FFFFFF; background: #96bd05; padding: 8px 0 8px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-li.sub-menu ul li p:last-child a { margin-bottom: 2px;}
-li.sub-menu ul li p a { margin-top: 0px; z-index: 10; font-size: 1.1em; float: left; padding: 6px 0 6px 40px; font-weight: normal; color: #222222; -webkit-transition: 0.4s ease-out; transition: 0.4s ease-out; clear: both; border: none;}
-li.sub-menu ul li:hover > p a { margin-top: 0px; -webkit-transition: 0.4s ease-in; transition: 0.4s ease-in;}
-li.sub-menu ul li > p a:hover { color: #96bd05; padding: 6px 0 6px 46px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+
+li.sub-menu ul { width: 225px; display: none; padding: 19px 0 8px 0; position: absolute; top: 87px; float: left; z-index: 100; background: #FFFFFF;}
+li.sub-menu ul li { overflow: hidden; float: left;}
+li.sub-menu ul li h6 a { margin-top: -15px; border: none; z-index: 15; width: 183px; background: #FFFFFF; padding: 3px 0 3px 42px; text-transform: uppercase; font-size: 1.8em; float: left; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+li.sub-menu ul li h6 a:before { content: '\2335'; top: 4px; position: absolute; left: 23px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+li.sub-menu ul li h6 a:hover { width: 177px; color: #FFFFFF; background: #96bd05; padding: 3px 0 3px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+li.sub-menu ul li p a { margin-top: 0px; z-index: 10; font-size: 1.1em; float: left; padding: 2px 0 2px 45px; font-weight: normal; color: #222222; clear: both; border: none; -webkit-transition: 0.4s ease-out; transition: 0.4s ease-out;}
+li.sub-menu ul li:hover > p a { -webkit-transition: 0.4s ease-in; transition: 0.4s ease-in;}
+li.sub-menu ul li > p a:hover { color: #96bd05; padding: 2px 0 2px 51px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 ul.box-menu li.sub-menu:hover ul { display: block;}
+
 li.sub-menu-links ul { width: 225px; display: none; padding-bottom: 8px; float: left; position: absolute; top: 87px; background: #FFFFFF;}
-li.sub-menu-links ul li a { font-size: 1.2em; margin-top: 5px; padding: 8px 0 8px 42px; border: none; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
+li.sub-menu-links ul li a { font-size: 1.2em; padding: 5px 0 5px 42px; border: none; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 li.sub-menu-links ul li:first-child a { margin-top: 15px;}
-li.sub-menu-links ul li a:before { content: '\2335'; position: absolute; left: 23px; top: 8px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
-li.sub-menu-links ul li a:hover { color: #FFFFFF; background: #96bd05; padding: 8px 0 8px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+li.sub-menu-links ul li a:before { content: '\2335'; position: absolute; left: 23px; top: 5px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+li.sub-menu-links ul li a:hover { color: #FFFFFF; background: #96bd05; padding: 5px 0 5px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 ul.box-menu li.sub-menu-links:hover ul { display: block;}
 
 .container { width: 100%; background: url(../img/bk-container.png) repeat; float: left; position: relative;}
@@ -130,45 +131,16 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 .tec-bouts ul li:first-child { margin: 0 0 0 0px;}
 .tec-bouts ul li img { width: 100%; position: absolute; z-index: 10;}
 .tec-bouts ul li a { position: absolute; z-index: 20; padding: 0px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+
 .tec-bouts ul li:hover a { padding: 43.8px 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 .tec-bouts ul li:hover a p:nth-child(1) { margin: 10px 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 .tec-bouts ul li:hover a p:nth-child(3) { margin: 30px 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 .tec-bouts ul li:hover a span { top: 10px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 
-.tec-bouts ul li a p:nth-child(1) { 
-	font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
-	width: 313.5px;
-	float: left; 
-    font-size: 3.4em; 
-    font-weight: bold; 
-    color: #FFF; 
-    text-align:center;
-    margin: -40px 0 0 0;
-    -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;
-}
-
-.tec-bouts ul li a p:nth-child(3) { 
-	font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; 
-	width: 313.5px;
-	text-align: center;
-	float: left;
-	color: #FFF; 
-	margin: -50px 0 0 0;
-	font-size: 1.6em;
-	-webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;
-}
-
-.tec-bouts ul li a span { 
-	width: 150px; 
-	float: left;
-	border-top: solid 1px #000000; 
-	border-bottom: solid 1px #999999;
-	-webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;
-	display: block;
-	position: relative;
-	top: -10px;
-	left: 25%;
-}
+.tec-bouts ul li a p { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; width: 313.5px; float: left; font-weight: bold; color: #FFF; text-align:center; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+.tec-bouts ul li a p:nth-child(1) { font-size: 3.4em; margin: -40px 0 0 0;}
+.tec-bouts ul li a p:nth-child(3) { font-size: 1.6em; margin: -50px 0 0 0;}
+.tec-bouts ul li a span { width: 150px; float: left; border-top: solid 1px #000000; border-bottom: solid 1px #999999; display: block; position: relative; top: -10px; left: 25%; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 
 .tendencias { width: 1300px; float: left; margin: 100px 0 90px 0;}
 .tendencias h3 { width: 285px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
@@ -198,47 +170,17 @@ section.pg-produtos ul li:hover a p:nth-child(1) { margin: 18px 0 0 0; -webkit-t
 section.pg-produtos ul li:hover a p:nth-child(3) { margin: 40px 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 section.pg-produtos ul li:hover a span { top: 20px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 
-section.pg-produtos ul li a p:nth-child(1) { 
-	font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
-	width: 398px;
-	float: left; 
-    font-size: 3.8em; 
-    font-weight: bold; 
-    color: #FFF; 
-    text-align:center;
-    margin: -50px 0 0 0;
-    -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;
-}
-
-section.pg-produtos ul li a p:nth-child(3) { 
-	font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; 
-	width: 398px;
-	text-align: center;
-	float: left;
-	color: #FFF; 
-	margin: -40px 0 0 0;
-	font-size: 1.8em;
-	-webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;
-}
-
-section.pg-produtos ul li a span { 
-	width: 200px; 
-	float: left;
-	border-top: solid 1px #000000; 
-	border-bottom: solid 1px #999999;
-	-webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;
-	display: block;
-	position: relative;
-	top: -50px;
-	left: 25%;
-}
+section.pg-produtos ul li a p { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; width: 398px; float: left; font-weight: bold; color: #FFF; text-align:center; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+section.pg-produtos ul li a p:nth-child(1) { font-size: 3.8em; margin: -50px 0 0 0;}
+section.pg-produtos ul li a p:nth-child(3) { font-size: 1.8em; margin: -40px 0 0 0;}
+section.pg-produtos ul li a span { width: 200px; float: left; border-top: solid 1px #000000; border-bottom: solid 1px #999999; display: block; position: relative; top: -50px; left: 25%; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 
 section.pg-midia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 section.pg-midia div { width: 970px; float: left; position: relative; left: 50%; margin: 38px 0 0 -485px; padding-bottom: 90px;}
 section.pg-midia div h3 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; color: #222222; font-size: 3.0em; font-weight: bold; text-align: center;}
 section.pg-midia div ul { width: 970px;}
 section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin: 0 auto;}
-section.pg-midia div ul li.video-secundario { float: left; width: 317px; height: 180px; margin-right: 6px; margin-top: 60px;}
+section.pg-midia div ul li.video-secundario { width: 317px; height: 180px; float: left; margin-right: 6px; margin-top: 60px;}
 section.pg-midia div ul li p { font-weight: bold; color: #222222; font-size: 1.5em;}
 
 section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
@@ -282,7 +224,7 @@ div.pg-textos p { width: 490px; line-height: 25px; margin-left: 55px; font-size:
 .pg-tec h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 30px;}
 .pg-tec ul { width: 100%; float: left; margin: 10px 0 0 0;}
 .pg-tec ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-.pg-tec ul li { width: 315px; height: 180px; margin: 0 10px 10px 0;  float: left; border: solid 1px #999999; cursor: pointer; position: relative; overflow: hidden; background: #FFFFFF;}
+.pg-tec ul li { width: 315px; height: 180px; margin: 0 10px 10px 0; float: left; border: solid 1px #999999; cursor: pointer; position: relative; overflow: hidden; background: #FFFFFF;}
 .pg-tec ul li img { position: absolute; z-index: 10;}
 .pg-tec ul li a { position: absolute; z-index: 20;}
 .pg-tec ul li a.effect-top { padding: 0px 182px 0px 131.5px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
@@ -297,7 +239,7 @@ div.pg-textos p { width: 490px; line-height: 25px; margin-left: 55px; font-size:
 .pg-tec ul li a.effect-bottom img { margin: 0 0 0 0; position: absolute; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 .pg-tec ul li:hover a.effect-bottom { padding: 63px 182px 115px 131.5px; margin: 0px 0 0 0; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 .pg-tec ul li:hover a.effect-bottom img { margin: 0 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
-.pg-tec ul li a.effect-right { padding: 63px 182px 115px 131.5px; margin:  0 0 0 315px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
+.pg-tec ul li a.effect-right { padding: 63px 182px 115px 131.5px; margin: 0 0 0 315px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 .pg-tec ul li a.effect-right img { margin: 0 0 0 0; position: absolute; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 .pg-tec ul li:hover a.effect-right { padding: 63px 182px 115px 131.5px; margin:  0 0 0 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 .pg-tec ul li:hover a.effect-right img { margin: 0 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
@@ -345,12 +287,15 @@ div#form button { width: 124px; height: 41px; background: url(../img/enviarHover
 .loadAjax { width: 100%; height: 1000%; position: absolute; z-index: 9999999; background: rgba(0,0,0,0.8); display: none;}
 
 footer { width: 100%; float: left; background: #eeeeee; position: relative;}
-section.menu-bottom { width: 900px; height: 333px; float: left; position: relative; left: 50%; margin-left: -450px;}
+section.menu-bottom { width: 900px; padding-bottom: 30px; float: left; position: relative; left: 50%; margin-left: -450px;}
 section.menu-bottom ul.mb-comprar { margin: 65px 0 0 65px; float: left;}
 section.menu-bottom ul li a.tt-menu-bottom { font-size: 1.5em; font-weight: bold; color: #333333; margin: 0 0 0 0;}
+section.menu-bottom ul li a.dt-tt { padding-bottom: 10px;}
 section.menu-bottom ul li a { text-decoration: none; display: list-item; margin: 15px 0 0 5px; font-size: 1.3em; color: #333333;}
+section.menu-bottom ul li a.sub-produto { margin: 5px 0 0 5px;}
+section.menu-bottom ul li a.txt-produto { margin: 2px 0 0 10px;}
 section.menu-bottom ul li a.txt-menu-bottom:hover { color: #079ab1;}
-section.menu-bottom ul.mb-produtos { margin: 65px 0 0 100px; float: left;}
+section.menu-bottom ul.mb-produtos { margin: 65px 0 15px 100px; float: left;}
 section.menu-bottom ul.mb-tecnoligia { margin: 65px 0 0 110px; float: left;}
 section.menu-bottom ul.info { margin: 65px 0 0 102px; float: left;}
 section.menu-bottom ul.mb-redes { width: 200px; margin: 50px 75px 0 0; float: right;}
@@ -365,6 +310,7 @@ section.menu-bottom ul.mb-redes li a[href*="youtube.com"] { background-image: ur
 section.menu-bottom ul.mb-redes li a:hover[href*="youtube.com"] { background-image: url(../img/ico-youtube-hover.png);}
 section.menu-bottom ul.mb-redes li a[href*="instagram.com"] { background-image: url(../img/ico-instagram.png);}
 section.menu-bottom ul.mb-redes li a:hover[href*="instagram.com"] { background-image: url(../img/ico-instagram-hover.png);}
+
 div.copyright { width: 1300px; height: 163px; position: relative; left: 50%; margin-left: -650px; float: left;}
 div.copyright figure.bouts-copyright { text-align: center; margin-top: 33px;}
 div.copyright figure.bouts-copyright figcaption { margin-top: 30px; font-size: 1.4em; color: #cccccc;}
@@ -373,3 +319,34 @@ section.bee-happy p a { text-decoration: none; color: #96bd05; font-weight: bold
 
 /*Pagina de Erro*/
 section.error { width: 1024px; height: 600px; position: relative; left: 50%; margin-left: -512px; float: left;}
+
+
+/* Hack Chorme */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+	li.sub-menu ul li h6 a:before { 
+	  top: 2px;
+	}
+
+	li.sub-menu-links ul li a:before { 
+		top: 4px;
+	}
+
+}
+
+/* Hack ie10 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+
+    li.sub-menu ul li h6 a:before { 
+	  top: 2.5px;
+	}
+
+	li.sub-menu ul li h6 a { 
+		padding: 3px 0 2px 42px;
+	}
+
+	li.sub-menu ul li h6 a:hover { 
+		padding: 3px 0 2px 48px;
+	}
+
+}

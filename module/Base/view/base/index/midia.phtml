@@ -3,8 +3,7 @@
 	<div>
 		<h3><?=$this->midias[0]->getTitulo()?></h3>
 
-		<ul><!--No final das URL do Youtube colocar a tag wmode=opaque para que o video não fique por cima das divs no Opera e Safari -->
-			
+		<ul>
 			<?php 
 			$teste = 1;
 				foreach($this->midias AS $midia)
@@ -12,7 +11,7 @@
 					if($teste == 1)
 					{
 					?>
-				
+	<!--No final das URL do Youtube colocar a tag wmode=opaque para que o video não fique por cima das divs no Opera e Safari-->
 			<li class="video-principal">
 				<iframe width="640" height="360" src="<?=$midia->getUrlYoutube()?>"></iframe>
 			</li>
@@ -30,7 +29,6 @@
 }
 			?>
 			
-
 		</ul>
 
 	</div>
