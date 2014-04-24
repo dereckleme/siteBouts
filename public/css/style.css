@@ -245,9 +245,9 @@ div.pg-textos p { width: 490px; line-height: 25px; margin-left: 55px; font-size:
 .pg-tec ul li:hover a.effect-right img { margin: 0 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 
 section.pg-wallpaper { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
-section.pg-wallpaper ul { width: 1200px; margin: 50px 0 0 30px; padding-left: 40px; position: relative; float: left;}
-section.pg-wallpaper ul li { width: 200px; margin: 0 40px 70px 0; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-section.pg-wallpaper ul li img { border: solid 1px #999999;}
+section.pg-wallpaper ul { width: 1200px; margin: 10px 0 10px 30px; padding-left: 40px; position: relative; float: left;}
+section.pg-wallpaper ul li { width: 200px; margin: 0 40px 10px 0; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+section.pg-wallpaper ul li img { width: 200px; height: 150px; border: solid 1px #999999;}
 section.pg-wallpaper ul li p { font-size: 1.4em; color: #333333; font-weight: bold; margin-bottom: 7px;}
 section.pg-wallpaper ul li span { font-size: 1.2em; color: #085e04; font-weight: bold; margin-top: 7px; border: solid 1px #085e04; width: 123px; display: block; position: relative; float: left; cursor: pointer; background: #FFFFFF; transition: all 0.2s ease-out 0s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 section.pg-wallpaper ul li span:hover { color: #014b60; border: solid 1px #014b60;}
