@@ -96,7 +96,12 @@ class ProdutoTenis
      */
     private $baseTecnologia;
     
-   
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descricao", type="text", nullable=true)
+     */
+    private $descricao;
     
 	/**
 	 * @return the $idtenis
@@ -248,6 +253,20 @@ class ProdutoTenis
 	public function setPerspectiva($perspectiva) {
 		$this->perspectiva = $perspectiva;
 	}
+	/**
+	 * @return the $descricao
+	 */
+	public function getDescricao() {
+		return $this->descricao;
+	}
+
+	/**
+	 * @param string $descricao
+	 */
+	public function setDescricao($descricao) {
+		$this->descricao = $descricao;
+	}
+
 
 
 	

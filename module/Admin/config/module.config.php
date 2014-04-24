@@ -13,7 +13,13 @@ return array(
 	'controllers' => array(
 				'invokables' => array(
 						'Admin\Controller\Index' => 'Admin\Controller\IndexController',
-						'Admin\Controller\Crud' => 'Admin\Controller\CrudController'
+						'Admin\Controller\Crud' => 'Admin\Controller\CrudController',
+						'Admin\Controller\Banner' => 'Admin\Controller\BannerController',
+						'Admin\Controller\Midia' => 'Admin\Controller\MidiaController',
+						'Admin\Controller\OndeComprar' => 'Admin\Controller\OndeComprarController',
+						'Admin\Controller\Produtos' => 'Admin\Controller\ProdutosController',
+						'Admin\Controller\TecnologiaAdm' => 'Admin\Controller\TecnologiaAdmController',
+						'Admin\Controller\Wallpaper' => 'Admin\Controller\WallpaperController',
 				),
 	),
     'router' => array(
@@ -23,7 +29,8 @@ return array(
         				'options' => array(
         						'route'    => '/admin',
         						'defaults' => array(
-        								'controller' => 'Admin\Controller\Index',
+        								'__NAMESPACE__' => 'Admin\Controller',
+        								'controller' => 'Index',
         								'action'     => 'index',
         						),
         				),
@@ -41,10 +48,7 @@ return array(
         						'crud' => array(
         								'type'    => 'Segment',
         								'options' => array(
-        										'route'    => '[/crud[/:action]]',
-        										'defaults' => array(
-        												'controller' => 'Admin\Controller\Crud'
-        										),
+        										'route'    => '[/crud[/:controller[/:action]]]',
         								),
         						),
         				),

@@ -3,6 +3,9 @@ namespace Admin;
 use Zend\Authentication\AuthenticationService,
 	Zend\Authentication\Storage\Session as SessionStorage;
 use Admin\Service\Banner,
+	Admin\Service\OndeComprar,
+	Admin\Service\Vitrine,
+	Admin\Service\Midia,
 	Admin\Service\Produtos;
 class Module
 {
@@ -100,6 +103,18 @@ class Module
     public function getServiceConfig() {
     	return array(
     			'factories' => array(
+    					'Admin\Service\Vitrine' => function($service) {
+    						$Vitrine = new Vitrine($service->get('Doctrine\ORM\EntityManager'));
+    						return $Vitrine;
+    					},
+    					'Admin\Service\OndeComprar' => function($service) {
+    						$OndeComprar = new OndeComprar($service->get('Doctrine\ORM\EntityManager'));
+    						return $OndeComprar;
+    					},
+    					'Admin\Service\Midia' => function($service) {
+    						$midia = new Midia($service->get('Doctrine\ORM\EntityManager'));
+    						return $midia;
+    					},
     					'Admin\Service\Banner' => function($service) {
     					    $banner = new Banner($service->get('Doctrine\ORM\EntityManager'));
     					    return $banner;

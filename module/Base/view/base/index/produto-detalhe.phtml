@@ -40,8 +40,7 @@
 	<div id="info-produtos">
 		<h2>Tênis Bout’s <?=$this->produto->getTitulo()?></h2>
 
-		<p class="txt-info">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
-		e vem sendo utilizado desde o século XVI, quando um impressor esconhecido pegou uma bandeja de tipos.</p>
+		<p class="txt-info"><?=$this->produto->getDescricao()?></p>
 		<p class="txt-model">Modelo: <span class="valModel"><?=$this->produto->getNossoNumero()?></span></p>
 		<p class="txt-tec">Tecnologia de amortecimento: <span class="dt-tec"><?=$this->produto->getBaseTecnologia()->getNome()?></span>
 		</p>

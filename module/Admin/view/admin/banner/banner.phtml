@@ -29,7 +29,7 @@
          <li>
             <img src="<?=$this->basePath("img/banners/".$banner->getSrc())?>">
             <p><strong>Título:</strong> <?=$banner->getTitulo()?></p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger deletarAction" rev="banner" rel="<?=$banner->getIdBanner()?>" title="excluir item">Excluir</button>
          </li>
          <?php 
 		  	}

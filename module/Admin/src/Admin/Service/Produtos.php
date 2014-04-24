@@ -21,7 +21,7 @@ class Produtos extends AbstractService
     						"setCampo" => "setSubcategoriaTenis",
     						"setActionReference" => $data['subcategoria']),
     		));
-    	parent::insert($data);
+    	return parent::insert($data);
     }
 }
 

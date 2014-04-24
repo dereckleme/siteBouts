@@ -43,7 +43,7 @@ class BaseVideos
      *   @ORM\JoinColumn(name="base_conteudo", referencedColumnName="idconteudo")
      * })
      */
-    private $baseConteudo;
+    private $conteudoOriginal;
 	/**
 	 * @return the $idVideos
 	 */
@@ -58,12 +58,7 @@ class BaseVideos
 		return $this->urlYoutube;
 	}
 
-	/**
-	 * @return the $baseConteudo
-	 */
-	public function getBaseConteudo() {
-		return $this->baseConteudo;
-	}
+	
 
 	/**
 	 * @param number $idVideos
@@ -80,12 +75,6 @@ class BaseVideos
 	}
 
 	/**
-	 * @param BaseConteudo $baseConteudo
-	 */
-	public function setBaseConteudo($baseConteudo) {
-		$this->baseConteudo = $baseConteudo;
-	}
-	/**
 	 * @return the $titulo
 	 */
 	public function getTitulo() {
@@ -98,8 +87,22 @@ class BaseVideos
 	public function setTitulo($titulo) {
 		$this->titulo = $titulo;
 	}
+	/**
+	 * @return the $conteudoOriginal
+	 */
+	public function getConteudoOriginal() {
+		return $this->conteudoOriginal;
+	}
+
+	/**
+	 * @param BaseConteudo $conteudoOriginal
+	 */
+	public function setConteudoOriginal($conteudoOriginal) {
+		$this->conteudoOriginal = $conteudoOriginal;
+	}
 
 
 
+	
 	
 }

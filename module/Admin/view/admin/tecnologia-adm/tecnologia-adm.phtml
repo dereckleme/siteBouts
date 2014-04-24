@@ -21,11 +21,15 @@
 
       <div class="accordion-inner">
         <ul class="accordion-tec">
-    		 <li><span>Fly TS</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
-    		 <li><span>Fly TS</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
-    		 <li><span>Fly TS</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
-    		 <li><span>Fly TS</span><button type="button" class="btn btn-danger" title="excluir item">Excluir</button></li>
-	    </ul>
+         <?php 
+        	foreach($this->tecnologia AS $tec)
+        	{
+        ?>
+    		 <li><span><?=$tec->getSubmenu()->getNome()?></span><button type="button" class="btn btn-danger deletarAction" title="excluir item" rev="tecnologiaAdm" rel="<?=$tec->getSubmenu()->getIdbaseSubmenu()?>">Excluir</button></li>
+	   	<?php 
+        	}
+	   	?>
+	   	 </ul>
       </div>
     </div>
   </div>

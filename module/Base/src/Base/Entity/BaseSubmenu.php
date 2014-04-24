@@ -3,6 +3,7 @@ namespace Base\Entity;
 
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * BaseSubmenu
@@ -13,9 +14,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class BaseSubmenu
 {
-	public function __construct() {
-		$this->conteudo = new ArrayCollection();
-	}
 	/**
 	 * @ORM\OneToOne(targetEntity="BaseConteudo", mappedBy="submenu")
 	 */

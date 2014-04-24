@@ -40,8 +40,11 @@
 	<input type="file" class="arquivo" /><br/><br/>
 	
     <label class="add-vitrine" for="" style="cursor:default; color:#222; font-size:14px;"><strong>Adicionar produto na Vitrine</strong></label>
-    <input type="radio" name="gender" value="Sim"> Sim
-    <input type="radio" name="gender" value="Nao" checked="checked"> Não
+    <input class="vitrine" type="radio" name="gender" value="sim"> Sim
+    <input class="vitrine" type="radio" name="gender" value="nao" checked="checked"> Não<br/>
+    <Div style="display:none" class="fotoAdicionalVitrine">
+    <input type="file" class="fotoVitrine" />
+    </Div>
     <br/><br/>
 
 
@@ -80,7 +83,7 @@
 		            <img src="<?=$this->basepath("img/viewport-imagem.png")?>">
 		            <p><strong>Tênis:</strong> <?=$produto->getTitulo()?></p>
 		            <p><strong>Modelo:</strong> <?=$produto->getNossoNumero()?></p>
-		            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
+		            <button type="button" class="btn btn-danger deletarAction" title="excluir item " rev="produtos" rel="<?=$produto->getIdtenis()?>">Excluir</button>
 		         </li>
 		         <?php 
 		        		}

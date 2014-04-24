@@ -28,7 +28,7 @@
          <li>
             <img src="<?=$this->basePath("img/wallpapers/".$wallpaper->getSrc())?>">
             <p><strong>Título:</strong> <?=$wallpaper->getTituloImagem()?></p>
-            <button type="button" class="btn btn-danger" title="excluir item">Excluir</button>
+            <button type="button" class="btn btn-danger deletarAction" title="excluir item" rev="wallpaper" rel="<?=$wallpaper->getIdbaseImagens()?>">Excluir</button>
          </li>
          <?php 
 		}
