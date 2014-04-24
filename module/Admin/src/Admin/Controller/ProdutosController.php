@@ -102,5 +102,23 @@ class ProdutosController extends AbstractActionController
     	$layout->setTerminal(1);
     	return $layout;
     }
+    public function deleteAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    		$vitrine = $doctrine->getRepository("Produto\Entity\ProdutoVitrine")->findOneBytenis($this->getRequest()->getPost("idAction"));
+    		if($vitrine)
+    		{
+    			$service = $this->getServiceLocator()->get("Admin\Service\Vitrine");
+    			$service->delete($vitrine->getIdvitrine());
+    		}
+    		$service = $this->getServiceLocator()->get("Admin\Service\Produtos");
+    		$service->delete($this->getRequest()->getPost("idAction"));
+    	}
+    	$layout = new ViewModel(array("msg" => "Produto removido com sucesso!"));
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
 }
 

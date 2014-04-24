@@ -4,6 +4,7 @@ use Zend\Authentication\AuthenticationService,
 	Zend\Authentication\Storage\Session as SessionStorage;
 use Admin\Service\Banner,
 	Admin\Service\OndeComprar,
+	Admin\Service\Wallpaper,
 	Admin\Service\Vitrine,
 	Admin\Service\Midia,
 	Admin\Service\Produtos;
@@ -103,6 +104,10 @@ class Module
     public function getServiceConfig() {
     	return array(
     			'factories' => array(
+    					'Admin\Service\Wallpaper' => function($service) {
+    						$Wallpaper = new Wallpaper($service->get('Doctrine\ORM\EntityManager'));
+    						return $Wallpaper;
+    					},
     					'Admin\Service\Vitrine' => function($service) {
     						$Vitrine = new Vitrine($service->get('Doctrine\ORM\EntityManager'));
     						return $Vitrine;

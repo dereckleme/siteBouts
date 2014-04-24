@@ -1,4 +1,38 @@
 $(document).ready(function(){
+	$(".conteudo").on("click",".actionAdicionaWallpaper",function(){
+		var erros = "";
+		if($(".formWallpaper .titulo").val() == "") erros = erros+"- Qual o título do wallpaper?\n";
+    	if($('.formWallpaper input[type=file]')[0].files[0] == null) erros = erros+"- Insira uma imagem do wallpaper\n";
+    	if(erros == "")
+    		{
+    			var formData = new FormData();
+    			formData.append('imagem', $('.formWallpaper input[type=file]')[0].files[0]);
+    			formData.append('titulo', $(".formWallpaper .titulo").val());
+    			$.ajax({
+        	        url: basePatch+"/admin/crud/wallpaper/wallpaperCrud",
+        	        type: 'POST',
+        	        contentType: 'multipart/form-data',
+        	        success: function( data )  
+                    { 
+        	        	if(data == "")
+        	        		{
+        	        			alert("Wallpaper Adicionado com sucesso");
+        	        			location.reload();
+        	        		}
+                    },
+                    error:function(){alert("Formato de imagem inválido!");},
+        	        data: formData,
+        	        cache: false,
+        	        contentType: false,
+        	        processData: false
+        	    });
+    		}
+    	else
+		{
+			alert("Existe alguns erros abaixo:\n\n"+erros);
+		}
+		return false;
+	})
 	$(".openPopup").on("click",function(){
 		$("#adm-popup").slideUp();
 		var action = $(this).attr("rel");
