@@ -266,4 +266,56 @@ $(document).ready(function(){
 		    $(".fotoAdicionalVitrine").slideUp();
 		  }
 	});
+	
+	
+	$(".conteudo").on("click",".actionAdicionaTecnologia",function(){
+		var erros = "";
+		if($(".formTecnologia .titulo").val() == "") erros = erros+"- Digite o título da Tecnologia.\n";
+		if($(".formTecnologia .statusMensagem").val() == "") erros = erros+"- Digite a descrição da Tecnologia.\n";
+		if($('.formTecnologia input[type=file]')[0].files[0] == null) erros = erros+"- Insira uma imagem do logo\n";
+		if($('.formTecnologia input[type=file]')[1].files[0] == null) erros = erros+"- Insira uma imagem de destaque\n";
+		if($('.formTecnologia input[type=file]')[2].files[0] == null) erros = erros+"- Insira a 1° Imagem de perspectiva\n";
+		if($('.formTecnologia input[type=file]')[3].files[0] == null) erros = erros+"- Insira a 2° Imagem de perspectiva\n";
+		if($('.formTecnologia input[type=file]')[4].files[0] == null) erros = erros+"- Insira a 3° Imagem de perspectiva\n";
+		if($('.formTecnologia input[type=file]')[5].files[0] == null) erros = erros+"- Insira a 4° Imagem de perspectiva\n";
+    	if(erros == "")
+    		{
+		    		var formData = new FormData();
+		    		formData.append('titulo', $(".formTecnologia .titulo").val());
+		    		formData.append('descricao', $(".formTecnologia .statusMensagem").val());
+					formData.append('logo', $('.formTecnologia input[type=file]')[0].files[0]);
+					formData.append('imagem_destaque', $('.formTecnologia input[type=file]')[1].files[0]);
+					formData.append('imagem_perspectiva_primeira', $('.formTecnologia input[type=file]')[2].files[0]);
+					formData.append('imagem_perspectiva_segunda', $('.formTecnologia input[type=file]')[3].files[0]);
+					formData.append('imagem_perspectiva_terceira', $('.formTecnologia input[type=file]')[4].files[0]);
+					formData.append('imagem_perspectiva_quarta', $('.formTecnologia input[type=file]')[5].files[0]);
+					
+					$.ajax({
+		    	        url: basePatch+"/admin/crud/TecnologiaAdm/tecnologiaAdmCrud",
+		    	        type: 'POST',
+		    	        contentType: 'multipart/form-data',
+		    	        success: function( data )  
+		                { 
+		    	        	if(data == "")
+		    	        		{
+		    	        		alert("Tecnologia adicionada com sucesso!");
+		    	        		location.reload();
+		    	        		}
+		    	        	else
+		    	        		{
+		    	        		alert(data);
+		    	        		}
+		                },
+		    	        data: formData,
+		    	        cache: false,
+		    	        contentType: false,
+		    	        processData: false
+		    	    });
+    		}
+    	else
+		{
+			alert("Existe alguns erros abaixo:\n\n"+erros);
+		}
+		return false;
+	})
 })

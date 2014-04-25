@@ -1,7 +1,7 @@
 <?php
 namespace Base\Entity;
 
-
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -30,14 +30,14 @@ class BaseSubmenu
     /**
      * @var string
      *
-     * @ORM\Column(name="nome", type="string", length=45, nullable=true)
+     * @ORM\Column(name="nome", type="string", length=255, nullable=true)
      */
     private $nome;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="slug", type="string", length=45, nullable=true)
+     * @Gedmo\Slug(fields={"nome"}, unique=true)
+     * @ORM\Column(name="slug", type="string", length=255, nullable=true)
      */
     private $slug;
 

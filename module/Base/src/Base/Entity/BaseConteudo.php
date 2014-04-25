@@ -14,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
 class BaseConteudo
 {
 	public function __construct() {
-		$this->fotos = new ArrayCollection();
+		//$this->fotos = new ArrayCollection();
 	}
 	/**
 	 * @ORM\OneToMany(targetEntity="BaseImagens", mappedBy="conteudo")
