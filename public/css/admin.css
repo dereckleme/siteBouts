@@ -42,6 +42,8 @@ body {
 	margin-bottom: 15px;
 	padding: 7px 9px;
 }
+
+#adm-popup { width: 926px; float: left;}
  
 /*gerenciar banner*/
 .style-adicionar, .style-gerenciar { font-family:'Arial', Helvetica, sans-serif; font-size: 13px}
@@ -58,12 +60,24 @@ label.cor-predominante { margin-bottom: 5px;}
 .formTecnologia textarea { width: 300px;}
 .formTecnologia span { width: 460px; position: absolute; right: 0; top: -30px;}
 .formTecnologia span label, .formTecnologia span input { margin-left: 10px;}
-.formProduto textarea { width: 250px; height: 150px;}
-.formProduto input.modelo { width: 250px;}
 input[type="radio"] { margin: -4px 0 0;}
 
+/*gerenciar tecnologia*/
+.formProduto { position: relative; float: left;}
+span.g-categorias { width: 460px; max-height: 620px; overflow-x: hidden; display: block; float: right; margin-top: -40px;} 
+span.g-categorias h5 { color: #079AB1; font-weight: bold; font-size: 20px;}
+span.g-categorias ul.box-produto { margin-left: 15px;}
+span.g-categorias ul.box-produto li.tt-produto { color: #079AB1;}
+span.g-categorias ul.box-produto li.tt-produto a { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #D72523; margin-left: 40px;}
+span.g-categorias ul.box-produto ul { border-left: solid 1px #14c6e2;; margin: 10px 0 10px 10px;}
+span.g-categorias ul.box-produto ul li { font-size: 13px; color: #333333; margin: 4px 0 4px 0;}
+span.g-categorias ul.box-produto ul li:before { content: '\2212'; color: #14c6e2;}
+span.g-categorias ul.box-produto ul li a { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #D72523; margin-left: 40px;}
+.formProduto textarea { width: 250px; height: 150px;}
+.formProduto input.modelo { width: 250px;}
+
 /*gerenciar produtos cadastrados*/
-div.accordion { margin-top: 20px;}
+div.accordion { margin-top: 20px; float: left;}
 div.accordion p { font-size: 18px; color: #14c6e2; font-weight: bold;}
 div.accordion button { width: 66px; border-radius: 5px; float: left;}
 div.accordion-group { border-color: #14c6e2;}
@@ -72,7 +86,7 @@ div.accordion-group a { font-weight: bold; color: #FFFFFF;}
 div.accordion-inner { float: left; position: relative; padding: 0; margin: 0;}
 
 ul.accordion-produto, ul.accordion-wallpaper { width: 900px; margin: 0; padding: 0 0 0 26px; float: left;}
-ul.accordion-midia, ul.accordion-comprar, ul.accordion-tec { width: 900px; margin: 0; padding: 0; float: left;}
+ul.accordion-midia, ul.accordion-comprar, ul.accordion-tec { width: 925px; margin: 0; padding: 0; float: left;}
 ul.accordion-produto li, ul.accordion-banner li, ul.accordion-wallpaper li { float: left; display: block; margin: 12.5px 25px 12.5px 0; border: solid 1px #14c6e2; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 ul.accordion-produto li p, ul.accordion-wallpaper li p { font-size: 14px; display: block; float: left; color: #333333;}
 ul.accordion-tec li span, ul.accordion-comprar li span, ul.accordion-midia li span { text-indent: 40px; float: left; color: #333333; margin-left: 15px; font-weight: bold;}
@@ -85,7 +99,7 @@ ul.accordion-produto li { width: 200px; height: 270px; padding-bottom: 10px;}
 ul.accordion-produto li img { width: 180px; height: 150px; margin: 10px 0 0 8px; border: solid 1px #DDDDDD;}
 ul.accordion-produto li button { margin: 6px 0 0 10px;}
 
-ul.accordion-banner { width: 900px; margin: 0; padding: 0 0 0 50px; float: left;}
+ul.accordion-banner { width: 875px; margin: 0; padding: 0 0 0 50px; float: left;}
 ul.accordion-banner li { width: 400px; height: 310px;}
 ul.accordion-banner li img { width: 350px; height: 200px; margin: 23px 0 0 23px;}
 ul.accordion-banner li p { width: 350px; margin: 5px 0 5px 23px;}
@@ -105,6 +119,10 @@ ul.accordion-tec li span { background: url(.././img/tecnologia-adm.png) no-repea
 
    div.container { 
    	width: 970px !important;
+   }
+
+   #adm-popup { 
+   	width: 956px; float: left;
    }
 
 }

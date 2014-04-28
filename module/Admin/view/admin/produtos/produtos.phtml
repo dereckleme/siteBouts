@@ -1,15 +1,11 @@
 <form class="formProduto">
     <input type="text" class="titulo" placeholder="Nome do Tênis"/><br/>
-
     <textarea name="mensagem" class="statusDescricaoTenis" placeholder="Uma breve descrição do tênis"></textarea><br/>
-
     <input type="text" class="modelo" placeholder="Digite o modelo do tênis"/><br/>
-
     <label class="numeracao" for="" style="cursor:default; color:#222; font-size:14px;"><strong>Numeração do Tênis</strong></label>
     <input type="text" class="style-tamanho tamanhoMin" placeholder="Minímo"/> 
     <input type="text" class="style-tamanho tamanhoMax" placeholder="Máximo"/>
     <br/>
-
     <select  class="form-control tecnologia" style="width:300px;" <?if(!$this->tecnologia) print 'disabled="disabled"'?>>
          <option value="">Selecione Tecnologia de Amortecimento</option>
          <?php 
@@ -21,7 +17,6 @@
          	}
          ?>
 	</select><br/>
-
 	<select  class="form-control categoria" <?if(!$this->categorias) print 'disabled="disabled"'?>>
          <option value="">Selecione uma Categoria</option>
          <?php 
@@ -33,28 +28,36 @@
          	}
          ?>
 	</select><br/>
-
 	<select  class="form-control subcategoria" disabled="disabled">
       <option value="">Selecione uma Subcategoria</option>
 	</select><br/>
 	<input type="file" class="arquivo" /><br/><br/>
-	
     <label class="add-vitrine" for="" style="cursor:default; color:#222; font-size:14px;"><strong>Adicionar produto na Vitrine</strong></label>
     <input class="vitrine" type="radio" name="gender" value="sim"> Sim
     <input class="vitrine" type="radio" name="gender" value="nao" checked="checked"> Não<br/>
     <Div style="display:none" class="fotoAdicionalVitrine">
     <input type="file" class="fotoVitrine" />
-    </Div>
+    </div>
     <br/><br/>
-
-
-
-	<input type="submit" value="Adicionar" class="actionAdicionaProduto style-adicionar" title="Adicionar Banner"> 
-	<input type="submit" value="Gerenciar" class="style-gerenciar" title="Gerenciar Banner"><br/>
-
-
+	<input type="submit" value="Adicionar" class="actionAdicionaProduto style-adicionar" title="Adicionar Produto"> 
+	<input type="submit" value="Gerenciar" class="style-gerenciar" title="Gerenciar Produto"><br/>
 </form>
 
+    <span class="g-categorias">
+        <h5>Gerenciar Categorias:</h5>
+        <ul class="box-produto">
+            <li class="tt-produto"><strong>Categoria</strong><a href="" title="excluir">Excluir</a>
+                <ul>
+                    <li> Sub-Categoria <a href="" title="excluir">Excluir</a></li>
+                    <li> Sub-Categoria <a href="" title="excluir">Excluir</a></li>
+                    <li> Sub-Categoria <a href="" title="excluir">Excluir</a></li>
+                    <li> Sub-Categoria <a href="" title="excluir">Excluir</a></li>
+                    <li> Sub-Categoria <a href="" title="excluir">Excluir</a></li>
+                    <li> Sub-Categoria <a href="" title="excluir">Excluir</a></li>
+                </ul>
+            </li>
+        </ul>
+    </span>
 
 <div class="accordion" id="accordion2">
     <p>Gerenciar Categorias</p>
