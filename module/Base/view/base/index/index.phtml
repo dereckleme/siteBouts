@@ -85,7 +85,7 @@
 			{
 		?>
 			<li>
-				<img title="Fly TS" alt="Fly TS" src="<?=$this->basePath("img/tecnologia/".$tecnologia->getConteudo()->getSrc())?>">
+				<img src="<?=$this->basePath("img/tecnologia/".$tecnologia->getConteudo()->getSrc())?>">
 				<a href="<?=$this->url("tecnologia/tecnologia-detalhe",array("slug" => $tecnologia->getSlug()))?>">
 					<p><?=$tecnologia->getNome()?></p>
 					<span></span>
@@ -104,11 +104,12 @@
 		<h3>Tendências</h3>
 
 		<div class="video">
-          <iframe width="640" height="437" src="//www.youtube.com/embed/6J_YnUE3tJI?wmode=opaque"></iframe>
+			<iframe src="//www.youtube.com/embed/3dpy_p0JwSA"></iframe>
 		</div>
 
 		<div class="campanha">
-			<a href="http://oueleouele.wordpress.com/" target="_blank"><img alt="Linha casual Bout's" title="clique e confira"
+			<a href="http://oueleouele.wordpress.com/" target="_blank">
+			<img alt="Linha casual Bout's" title="clique e confira"
 			 src="<?=$this->basePath()?>/img/campanha.jpg"></a>
 		</div>
 

@@ -126,10 +126,11 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 .tec-bouts h3 { width: 285px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
 .tec-bouts h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 30px;}
 .tec-bouts ul { width: 100%; float: left; margin-top: 10px;}
+
 .tec-bouts ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 .tec-bouts ul li { width: 315px; height: 180px; overflow: hidden; margin-left: 10.6px; float: left; border: solid 1px #999999; cursor: pointer; position: relative; background: #FFFFFF;}
 .tec-bouts ul li:first-child { margin: 0 0 0 0px;}
-.tec-bouts ul li img { width: 100%; position: absolute; z-index: 10;}
+.tec-bouts ul li img { width: 100%; height: 100%; position: absolute; z-index: 10;}
 .tec-bouts ul li a { position: absolute; z-index: 20; padding: 0px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 
 .tec-bouts ul li:hover a { padding: 43.8px 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
@@ -145,7 +146,10 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 .tendencias { width: 1300px; float: left; margin: 100px 0 90px 0;}
 .tendencias h3 { width: 285px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
 .tendencias h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 30px;}
-div.video { width: 640px; height: 437px; border: solid 1px #222222; float: left; margin-top: 10px;}
+
+div.video iframe { width: 640px; height: 437px; border: solid 1px #222222; float: left; margin-top: 10px;}
+
+
 div.campanha { width: 640px; height: 437px; border: solid 1px #222222; float: right; margin-top: 10px;}
 
 /*Pagina Produtos*/
@@ -180,7 +184,13 @@ section.pg-midia div { width: 970px; float: left; position: relative; left: 50%;
 section.pg-midia div h3 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; color: #222222; font-size: 3.0em; font-weight: bold; text-align: center;}
 section.pg-midia div ul { width: 970px;}
 section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin: 0 auto;}
+section.pg-midia div ul li.video-principal iframe { width: 640px; height: 360px;}
+
 section.pg-midia div ul li.video-secundario { width: 317px; height: 180px; float: left; margin-right: 6px; margin-top: 60px;}
+section.pg-midia div ul li.video-secundario iframe { width: 317px; height: 180px;}
+
+
+
 section.pg-midia div ul li p { font-weight: bold; color: #222222; font-size: 1.5em;}
 
 section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
@@ -225,7 +235,7 @@ div.pg-textos p { width: 490px; line-height: 25px; margin-left: 55px; font-size:
 .pg-tec ul { width: 100%; float: left; margin: 10px 0 0 0;}
 .pg-tec ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 .pg-tec ul li { width: 315px; height: 180px; margin: 0 10px 10px 0; float: left; border: solid 1px #999999; cursor: pointer; position: relative; overflow: hidden; background: #FFFFFF;}
-.pg-tec ul li img { position: absolute; z-index: 10;}
+.pg-tec ul li img.tec-viewport { width: 100%; height: 100%; position: absolute; z-index: 10;}
 .pg-tec ul li a { position: absolute; z-index: 20;}
 .pg-tec ul li a.effect-top { padding: 0px 182px 0px 131.5px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 .pg-tec ul li a.effect-top img { margin: -60px 0 0 0; position: absolute; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
@@ -249,10 +259,10 @@ section.pg-wallpaper ul { width: 1200px; margin: 20px 0 20px 30px; padding-left:
 section.pg-wallpaper ul li { width: 200px; margin: 0 40px 10px 0; overflow: hidden; float: left; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 section.pg-wallpaper ul li img { width: 200px; height: 150px; border: solid 1px #999999;}
 section.pg-wallpaper ul li p { font-size: 1.4em; color: #333333; font-weight: bold;}
-section.pg-wallpaper ul li span { font-size: 1.2em; color: #085e04; font-weight: bold; margin-top: 7px; border: solid 1px #085e04; width: 123px; display: block; position: relative; float: left; cursor: pointer; background: #FFFFFF; transition: all 0.2s ease-out 0s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-section.pg-wallpaper ul li span:hover { color: #014b60; border: solid 1px #014b60;}
-section.pg-wallpaper ul li span a { width: 38px; height: 38px; margin-right: 11px; float: left; background: url(../img/download.jpg) no-repeat scroll bottom center; transition: all 0.2s ease-out 0s;}
-section.pg-wallpaper ul li span:hover a { background-position: top center;}
+section.pg-wallpaper ul li span { margin-top: 7px; border: solid 1px #085e04; display: block; position: relative; float: left; cursor: pointer; background: #FFFFFF; transition: all 0.2s ease-out 0s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+section.pg-wallpaper ul li span:hover { border: solid 1px #014b60;}
+section.pg-wallpaper ul li span a { width: 123px; padding: 13px 0 13px 0; text-indent: 52px; color: #085e04; font-weight: bold; text-decoration: none; font-size: 1.2em; float: left; background: url(../img/download.jpg) no-repeat scroll bottom left; transition: all 0.2s ease-out 0s;}
+section.pg-wallpaper ul li span:hover a { background-position: top left; color: #014b60;}
 
 section.pg-contato { width: 100%; height: 100%;}
 div#form { width: 522px; padding-bottom: 15px; border: solid 15px #222222; background: #FFFFFF; position: fixed; top: 5%; left:50%; margin-left: -261px; z-index: 99999999; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
