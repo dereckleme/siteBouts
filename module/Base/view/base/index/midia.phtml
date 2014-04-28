@@ -13,14 +13,14 @@
 					?>
 	<!--No final das URL do Youtube colocar a tag wmode=opaque para que o video não fique por cima das divs no Opera e Safari-->
 			<li class="video-principal">
-				<iframe width="640" height="360" src="<?=$midia->getUrlYoutube()?>"></iframe>
+				<iframe src="<?=$midia->getUrlYoutube()?>" frameborder="0" allowfullscreen></iframe>
 			</li>
 				<?php 
 					}
 					else{
 				?>
 			<li class="video-secundario">
-				<iframe width="317" height="180" src="<?=$midia->getUrlYoutube()?>"></iframe>
+				<iframe src="<?=$midia->getUrlYoutube()?>" frameborder="0" allowfullscreen></iframe>
 				 <p><?=$midia->getTitulo()?></p>
 			</li>
 			<?php
