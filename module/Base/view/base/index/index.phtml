@@ -103,10 +103,15 @@
 
 		<h3>Tendências</h3>
 
+		<?php 
+		if($this->midia){
+		?>
 		<div class="video">
-			<iframe src="//www.youtube.com/embed/3dpy_p0JwSA"></iframe>
+			<iframe src="<?=$this->midia->getUrlYoutube()?>"></iframe>
 		</div>
-
+<?php 
+		}
+?>
 		<div class="campanha">
 			<a href="http://oueleouele.wordpress.com/" target="_blank">
 			<img alt="Linha casual Bout's" title="clique e confira"

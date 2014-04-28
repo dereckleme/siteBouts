@@ -21,10 +21,12 @@ class IndexController extends AbstractActionController
     	$repo = $doctrine->getRepository("Base\Entity\BaseBanner");
     	$vitrine = $doctrine->getRepository("Produto\Entity\ProdutoVitrine")->findAll();
     	$tecnologias = $doctrine->getRepository("Base\Entity\BaseMenu")->findOneByidmenu(3);
+    	$midia = $doctrine->getRepository("Base\Entity\BaseVideos")->findOneBy(array(), array('idVideos' => 'DESC'));
         return new ViewModel(array(
         	"bannersDestaque" => $repo->findAll(),
         	"vitrine" => $vitrine,
-        	"tecnologias" => $tecnologias		 
+        	"tecnologias" => $tecnologias,
+        	"midia" => $midia		 
         ));
     }
     public function produtoAction()
@@ -56,13 +58,26 @@ class IndexController extends AbstractActionController
     {
     	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
     	$midia = $doctrine->getRepository("Base\Entity\BaseVideos")->findBy(array(), array('idVideos' => 'DESC'));
-    	return new ViewModel(array("midias" => $midia));
+    	if(!$midia)
+    	{
+    		return $this->redirect()->toRoute("home");
+    	}
+    	else
+    	{
+    		return new ViewModel(array("midias" => $midia));
+    	}
     }
     public function wallpaperAction()
     {
     	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
     	$wallpaper = $doctrine->getRepository("Base\Entity\BaseConteudo")->findOneBymenu(5);
-    	return new ViewModel(array("wallpaper" => $wallpaper));
+    	if(count($wallpaper->getFotos()) == 0)
+    	{
+    		return $this->redirect()->toRoute("home");
+    	}
+    	else {
+    		return new ViewModel(array("wallpaper" => $wallpaper));
+    	}
     }
     public function contatoAction()
     {
