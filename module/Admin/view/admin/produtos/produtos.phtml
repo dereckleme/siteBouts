@@ -46,16 +46,25 @@
     <span class="g-categorias">
         <h5>Gerenciar Categorias:</h5>
         <ul class="box-produto">
-            <li class="tt-produto"><strong>Categoria</strong><a href="" title="excluir">Excluir</a>
+        <?php 
+         	foreach($this->categorias AS $categoria)
+         	{
+         		?>
+            <li class="tt-produto"><strong><?=$categoria->getNome()?></strong><a href="" title="excluir">Excluir</a>
                 <ul>
-                    <li> Sub-Categoria <a href="" title="excluir">Excluir</a></li>
-                    <li> Sub-Categoria <a href="" title="excluir">Excluir</a></li>
-                    <li> Sub-Categoria <a href="" title="excluir">Excluir</a></li>
-                    <li> Sub-Categoria <a href="" title="excluir">Excluir</a></li>
-                    <li> Sub-Categoria <a href="" title="excluir">Excluir</a></li>
-                    <li> Sub-Categoria <a href="" title="excluir">Excluir</a></li>
+                <?php 
+                	foreach($categoria->getSubcategorias() AS $subcategoria)
+                	{
+                ?>
+                    <li><?=$subcategoria->getNome()?><a href="" title="excluir">Excluir</a></li>
+                    <?php 
+                	}
+                    ?>
                 </ul>
             </li>
+            <?php 
+         	}
+            ?>
         </ul>
     </span>
 
