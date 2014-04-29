@@ -29,7 +29,7 @@ class ProdutosController extends AbstractActionController
     	if($this->getRequest()->isPost())
     	{
     		$requestPost = new httpUploadFile();
-    		$requestPost->setDestination('./public/img/produtos');
+    		$requestPost->setDestination('./www/img/produtos');
     		$produtoLast = null;
     		foreach($requestPost->getFileInfo() as $file => $info)
     		{
@@ -50,8 +50,8 @@ class ProdutosController extends AbstractActionController
 	    					'image/gif', 'image/jpg','image/png','image/jpeg',
 	    					'enableHeaderCheck' => true
 	    			));
-	    			if(!$tamanho->isValid($info)) $erros = "- É necessário uma imagem com tamanho minimo de 650x400\n";
-	    			if(!$mime->isValid($info)) $erros = "- O tipo de arquivo suportado é gif, jpg, png\n";
+	    			//if(!$tamanho->isValid($info)) $erros = "- É necessário uma imagem com tamanho minimo de 650x400\n";
+	    			//if(!$mime->isValid($info)) $erros = "- O tipo de arquivo suportado é gif, jpg, png\n";
 	    			
 	    			if($requestPost->receive() && $erros == false)
 	    			{

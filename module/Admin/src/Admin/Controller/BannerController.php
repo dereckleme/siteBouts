@@ -24,7 +24,7 @@ class BannerController extends AbstractActionController
     	if($this->getRequest()->isPost())
     	{
     		$requestPost = new httpUploadFile();
-    		$requestPost->setDestination('./public/img/banners');
+    		$requestPost->setDestination('./www/img/banners');
     		foreach($requestPost->getFileInfo() as $file => $info)
     		{
     			$fname = $info['name'];
@@ -50,9 +50,9 @@ class BannerController extends AbstractActionController
     	{
     		$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
     		$repo = $doctrine->getRepository("Base\Entity\BaseBanner")->findOneByidBanner($this->getRequest()->getPost("idAction"));
-    		if(is_file('./public/img/banners/'.$repo->getSrc()))
+    		if(is_file('./www/img/banners/'.$repo->getSrc()))
     		{
-    			unlink('./public/img/banners/'.$repo->getSrc());
+    			unlink('./www/img/banners/'.$repo->getSrc());
     			$service = $this->getServiceLocator()->get("Admin\Service\Banner");
     			$service->delete($this->getRequest()->getPost("idAction"));
     		}

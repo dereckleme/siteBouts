@@ -150,6 +150,10 @@ $(document).ready(function(){
 		if($(this).val() == "")
 			{
 			}
+		else if($(this).val() == "addCategoria")
+			{
+			alert('foi');
+			}
 		else
 			{
 				$.ajax({

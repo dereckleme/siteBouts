@@ -25,7 +25,7 @@ class TecnologiaAdmController extends AbstractActionController
     	if($this->getRequest()->isPost())
     	{
     		$requestPost = new httpUploadFile();
-    		$requestPost->setDestination('./public/img/tecnologia');
+    		$requestPost->setDestination('./www/img/tecnologia');
     		$produtoLast = null;
     		$erros = false;
     		$data = null;

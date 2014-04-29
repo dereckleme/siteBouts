@@ -25,7 +25,7 @@ class WallpaperController extends AbstractActionController
     	if($this->getRequest()->isPost())
     	{
     		$requestPost = new httpUploadFile();
-    		$requestPost->setDestination('./public/img/wallpapers');
+    		$requestPost->setDestination('./www/img/wallpapers');
     		foreach($requestPost->getFileInfo() as $file => $info)
     		{
     			$fname = $info['name'];
@@ -51,9 +51,9 @@ class WallpaperController extends AbstractActionController
     	{
     		$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
     		$repo = $doctrine->getRepository("Base\Entity\BaseImagens")->findOneByidbaseImagens($this->getRequest()->getPost("idAction"));
-    		if(is_file('./public/img/wallpapers/'.$repo->getSrc()))
+    		if(is_file('./www/img/wallpapers/'.$repo->getSrc()))
     		{
-    			unlink('./public/img/wallpapers/'.$repo->getSrc());
+    			unlink('./www/img/wallpapers/'.$repo->getSrc());
     			$service = $this->getServiceLocator()->get("Admin\Service\Wallpaper");
     			$service->delete($this->getRequest()->getPost("idAction"));
     		}
