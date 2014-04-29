@@ -68,11 +68,11 @@ span.g-categorias { width: 460px; max-height: 620px; overflow-x: hidden; display
 span.g-categorias h5 { color: #079AB1; font-weight: bold; font-size: 20px;}
 span.g-categorias ul.box-produto { margin-left: 15px;}
 span.g-categorias ul.box-produto li.tt-produto { color: #079AB1;}
-span.g-categorias ul.box-produto li.tt-produto a { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #D72523; margin-left: 40px;}
+span.g-categorias ul.box-produto li a.tt-produto { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #D72523; margin-left: 40px;}
 span.g-categorias ul.box-produto ul { border-left: solid 1px #14c6e2;; margin: 10px 0 10px 10px;}
 span.g-categorias ul.box-produto ul li { font-size: 13px; color: #333333; margin: 4px 0 4px 0;}
 span.g-categorias ul.box-produto ul li:before { content: '\2212'; color: #14c6e2;}
-span.g-categorias ul.box-produto ul li a { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #D72523; margin-left: 40px;}
+span.g-categorias ul.box-produto ul li a { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #e66700; margin-left: 40px;}
 .formProduto textarea { width: 250px; height: 150px;}
 .formProduto input.modelo { width: 250px;}
 
