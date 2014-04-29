@@ -286,7 +286,7 @@ $(document).ready(function(){
 			{
 				$(".categoriaSelect").fadeOut();
 				$(".subcategoriaSelect").fadeOut();
-				
+				$(".adicionaSubCategoria").fadeOut();
 				$(".adicionaCategoria").fadeIn();
 			}
 		else

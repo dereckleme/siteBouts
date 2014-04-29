@@ -20,7 +20,8 @@ class OndeComprarController extends AbstractActionController
 		if($this->getRequest()->isPost())
 		{
 			$service = $this->getServiceLocator()->get("Admin\Service\OndeComprar");
-			$service->insert(array("nome" => $this->getRequest()->getPost("titulo")));
+			
+			$service->insert(array("nome" => $this->getRequest()->getPost("titulo"),"url" => $this->getRequest()->getPost("url")));
 		}
 		$layout = new ViewModel(array("msg" => "Site adicionado com sucesso!"));
 		$layout->setTerminal(1);

@@ -33,7 +33,12 @@ class BaseSubmenu
      * @ORM\Column(name="nome", type="string", length=255, nullable=true)
      */
     private $nome;
-
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=255, nullable=true)
+     */
+    private $url;
     /**
      * @var string
      * @Gedmo\Slug(fields={"nome"}, unique=true)
@@ -118,6 +123,20 @@ class BaseSubmenu
 	public function setConteudo($conteudo) {
 		$this->conteudo = $conteudo;
 	}
+	/**
+	 * @return the $url
+	 */
+	public function getUrl() {
+		return $this->url;
+	}
+
+	/**
+	 * @param string $url
+	 */
+	public function setUrl($url) {
+		$this->url = $url;
+	}
+
 
 	
 

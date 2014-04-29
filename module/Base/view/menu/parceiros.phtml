@@ -8,7 +8,7 @@
  		foreach($this->data->getSubmenus() AS $data)
  		{
  	?>
- 		<li><a href="http://esportes.centauro.com.br/nav/marca/bouts/0?sli_jump=1" target="_blank" title="Centauros"><?=$data->getNome()?></a></li>
+ 		<li><a href="<?=$data->getUrl()?>" target="_blank" title="Centauros"><?=$data->getNome()?></a></li>
  		<?php 
  		}
  		?>
