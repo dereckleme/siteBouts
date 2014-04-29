@@ -74,7 +74,10 @@ span.g-categorias ul.box-produto ul li { font-size: 13px; color: #333333; margin
 span.g-categorias ul.box-produto ul li:before { content: '\2212'; color: #14c6e2;}
 span.g-categorias ul.box-produto ul li a { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #e66700; margin-left: 40px;}
 
-.salvarCategoriaProduto, .salvarSubCategoriaProduto { margin: -10px 0 0 10px; padding: 4px;}
+.salvarCategoriaProduto { margin: -10px 0 0 10px; border-radius: 5px; padding: 4px; border: none; color: #FFFFFF; background: #D72523;}
+.salvarSubCategoriaProduto { margin: -10px 0 0 10px; border-radius: 5px; padding: 4px; border: none; background: #e66700; color: #FFFFFF;}
+
+
 
 .formProduto textarea { width: 250px; height: 150px;}
 .formProduto input.modelo { width: 250px;}
