@@ -1,4 +1,34 @@
 $(document).ready(function(){
+	$(".conteudo").on("click",".excluirCategoria",function(){
+		if(confirm("Atenção, excluindo esta categoria todos os produtos do mesmo serão excluídos, tem certeza que deseja excluir?"))
+			{
+				$.ajax({
+	    	        url: basePatch+"/admin/crud/produtos/deleteCategoria",
+	    	        type: 'POST',
+	    	        success: function( data )  
+	                { 
+	    	        	location.reload();
+	                },
+	                data: {idCategoria:$(this).attr("rel")},
+	    	    });
+			}
+		return false;
+	})
+	$(".conteudo").on("click",".excluirSubcategoria",function(){
+		if(confirm("Atenção, excluindo esta sub-categoria todos os produtos do mesmo serão excluídos, tem certeza que deseja excluir?"))
+			{
+				$.ajax({
+	    	        url: basePatch+"/admin/crud/produtos/deleteSubCategoria",
+	    	        type: 'POST',
+	    	        success: function( data )  
+	                { 
+	    	        	location.reload();
+	                },
+	                data: {idSubcategoria:$(this).attr("rel")},
+	    	    });
+			}
+		return false;
+	})
 	$(".conteudo").on("click",".actionAdicionaWallpaper",function(){
 		var erros = "";
 		if($(".formWallpaper .titulo").val() == "") erros = erros+"- Qual o título do wallpaper?\n";
@@ -146,13 +176,118 @@ $(document).ready(function(){
 		}
 		return false;
 	})
+	$(".conteudo").on("click",".salvarCategoriaProduto",function(){
+		var erros = "";
+		if($('.formProduto .tituloCategoria').val() == "") erros = erros+"- Digite o titulo da categoria\n";
+		if(erros == "")
+		{
+			$.ajax({
+    	        url: basePatch+"/admin/crud/produtos/adicionaCategoria",
+    	        type: 'POST',
+    	        data: {titulo:$('.formProduto .tituloCategoria').val()},
+    	        success: function( data )  
+                { 
+    	        	$(".adicionaCategoria").fadeOut()
+    	        	$(".adicionaSubCategoria").fadeIn();
+    	        	$.ajax({
+    	    	        url: basePatch+"/admin/crud/produtos/populateCategoriaAjax",
+    	    	        type: 'POST',
+    	    	        data: {checked:data},
+    	    	        success: function( data )  
+    	                { 
+    	    	        	if(data != "")
+    	    	        		{
+    	    	        			$(".formProduto .categoria").removeAttr("disabled");
+    	    	        			$(".formProduto .categoria").html(data);
+    	    	        			$(".categoriaSelect").fadeIn();
+    	    	        		}
+    	    	        	$.ajax({
+    	    	    	        url: basePatch+"/admin/crud/produtos/populateCategoriaAndSubcategoriaAjax",
+    	    	    	        type: 'POST',
+    	    	    	        success: function( data )  
+    	    	                { 
+    	    	    	        	$(".box-produto").html(data);
+    	    	                }
+    	    	    	    });
+    	                }
+    	    	    });
+                }
+    	    });
+		}
+		else
+		{
+			alert("Existe alguns erros abaixo:\n\n"+erros);
+		}
+		return false;
+	})
+	$(".conteudo").on("click",".salvarSubCategoriaProduto",function(){
+    	        		var erros = "";
+    	        		if($('.formProduto .tituloSubCategoria').val() == "") erros = erros+"- Digite o titulo da sub-categoria\n";
+    	        		if(erros == "")
+    	        			{
+    	        				var idCategoria = $(".formProduto .categoria").val();
+		    	        		$.ajax({
+		    	        	        url: basePatch+"/admin/crud/produtos/adicionaSubCategoria",
+		    	        	        type: 'POST',
+		    	        	        data: {titulo:$('.formProduto .tituloSubCategoria').val(),categoria:idCategoria},
+		    	        	        success: function( data )  
+		    	                    { 
+		    	        	        	
+		    	        	        	$(".adicionaSubCategoria").fadeOut()
+		    	        	        	$.ajax({
+		    	        	    	        url: basePatch+"/admin/crud/produtos/populateSubcategoriaAjax",
+		    	        	    	        type: 'POST',
+		    	        	    	        data: {idCategoria:idCategoria,checked:data},
+		    	        	    	        success: function( data )  
+		    	        	                { 
+		    	        	    	        	
+		    	        	    	        	if(data != "")
+		    	        	    	        		{
+		    	        	    	        			$(".formProduto .subcategoria").removeAttr("disabled");
+		    	        	    	        			$(".formProduto .subcategoria").html(data);
+		    	        	    	        		}
+		    	        	    	        	else
+		    	        	    	        		{
+		    	        	    	        			$(".formProduto .subcategoria").prop('disabled', true);
+		    	        	    	        			$(".formProduto .subcategoria").html('<option value="">Selecione uma Subcategoria</option>');
+		    	        	    	        		}
+		    	        	    	        	$(".subcategoriaSelect").fadeIn();
+		    	        	    	        	$.ajax({
+		    	        	    	    	        url: basePatch+"/admin/crud/produtos/populateCategoriaAndSubcategoriaAjax",
+		    	        	    	    	        type: 'POST',
+		    	        	    	    	        success: function( data )  
+		    	        	    	                { 
+		    	        	    	    	        	$(".box-produto").html(data);
+		    	        	    	                }
+		    	        	    	    	    });
+		    	        	                }
+		    	        	    	    });
+		    	                    }
+		    	        	    });
+    	        			}
+	    	        		else
+	    	        		{
+	    	        			alert("Existe alguns erros abaixo:\n\n"+erros);
+	    	        		}
+    	        		return false;
+    })
+	$(".conteudo").on('change',".formProduto .subcategoria",function(){
+		if($(this).val() == "adicionaOutra")
+		{
+			$(".subcategoriaSelect").fadeOut();
+			$(".adicionaSubCategoria").fadeIn();
+		}
+	})
 	$(".conteudo").on('change',".formProduto .categoria",function(){
 		if($(this).val() == "")
 			{
 			}
 		else if($(this).val() == "addCategoria")
 			{
-			alert('foi');
+				$(".categoriaSelect").fadeOut();
+				$(".subcategoriaSelect").fadeOut();
+				
+				$(".adicionaCategoria").fadeIn();
 			}
 		else
 			{
@@ -165,13 +300,15 @@ $(document).ready(function(){
 	    	        	
 	    	        	if(data != "")
 	    	        		{
+	    	        			$(".subcategoriaSelect").fadeIn();
+	    	        			$(".adicionaSubCategoria").fadeOut();
 	    	        			$(".formProduto .subcategoria").removeAttr("disabled");
 	    	        			$(".formProduto .subcategoria").html(data);
 	    	        		}
 	    	        	else
 	    	        		{
-	    	        			$(".formProduto .subcategoria").prop('disabled', true);
-	    	        			$(".formProduto .subcategoria").html('<option value="">Selecione uma Subcategoria</option>');
+	    	        			$(".subcategoriaSelect").fadeOut();
+	    	        			$(".adicionaSubCategoria").fadeIn();
 	    	        		}
 	                }
 	    	    });
@@ -181,10 +318,9 @@ $(document).ready(function(){
 		
 		
 		var erros = "";
-		
 		if($('.formProduto .titulo').val() == "") erros = erros+"- Qual o titulo do produto?\n";
 		if($('.formProduto input[type=file]')[0].files[0] == null) erros = erros+"- Insira uma imagem do tenis\n";
-		if($('.formProduto .categoria').val() == "") erros = erros+"- Selecione uma categoria\n";
+		if($('.formProduto .categoria').val() == "" || $('.formProduto .categoria').val() == "addCategoria") erros = erros+"- Selecione uma categoria\n";
 		if($('.formProduto .statusDescricaoTenis').val() == "") erros = erros+"- Digite uma descrição minima do tenis\n";
 		if($('.formProduto .tecnologia').val() == "") erros = erros+"- Selecione a tecnologia de amortecimento\n";
 		if($('.formProduto .subcategoria').val() == "") erros = erros+"- Selecione uma sub-categoria\n";

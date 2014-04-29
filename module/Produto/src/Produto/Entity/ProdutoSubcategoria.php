@@ -3,7 +3,7 @@ namespace Produto\Entity;
 
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * ProdutoSubcategoria
  *
@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class ProdutoSubcategoria
 {
 	public function __construct() {
-		$this->produtos = new ArrayCollection();
+		//$this->produtos = new ArrayCollection();
 	}
 	/**
 	 * @ORM\OneToMany(targetEntity="Produto\Entity\ProdutoTenis", mappedBy="subcategoriaTenis")
@@ -46,8 +46,8 @@ class ProdutoSubcategoria
     private $categoria;
     /**
      * @var string
-     *
-     * @ORM\Column(name="slug", type="string", length=45, nullable=true)
+     * @Gedmo\Slug(fields={"nome"}, unique=true)
+     * @ORM\Column(name="slug", type="string", length=255, nullable=true)
      */
     private $slug;
 	/**

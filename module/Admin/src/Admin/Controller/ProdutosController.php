@@ -88,6 +88,21 @@ class ProdutosController extends AbstractActionController
     	$layout->setTerminal(1);
     	return $layout;
     }
+    public function populateCategoriaAjaxAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$doctrine = $this->getServiceLocator()->get("Doctrine\ORM\EntityManager");
+    		$repositoryCategoria = $doctrine->getRepository("Produto\Entity\ProdutoCategoria")->findAll();
+    
+    		$layout = new ViewModel(array(
+    				"listacategorias" => $repositoryCategoria,
+    				"checked" => $this->getRequest()->getPost("checked")
+    		));
+    	}
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
     public function populateSubcategoriaAjaxAction()
     {
     	if($this->getRequest()->isPost())
@@ -96,7 +111,8 @@ class ProdutosController extends AbstractActionController
     		$repositoryCategoria = $doctrine->getRepository("Produto\Entity\ProdutoCategoria")->findOneByidcategoria($this->getRequest()->getPost("idCategoria"));
     
     		$layout = new ViewModel(array(
-    				"listaSubcategorias" => $repositoryCategoria->getSubcategorias()
+    				"listaSubcategorias" => $repositoryCategoria->getSubcategorias(),
+    				"checked" => $this->getRequest()->getPost("checked")
     		));
     	}
     	$layout->setTerminal(1);
@@ -117,6 +133,72 @@ class ProdutosController extends AbstractActionController
     		$service->delete($this->getRequest()->getPost("idAction"));
     	}
     	$layout = new ViewModel(array("msg" => "Produto removido com sucesso!"));
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
+    public function adicionaCategoriaAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$service = $this->getServiceLocator()->get('Admin\Service\ProdutosCategoria');
+    		$retorno = $service->insert(array('nome' => $this->getRequest()->getPost("titulo")));
+    		$layout = new ViewModel(array("msg" => $retorno->getIdcategoria()));
+    	}
+    	else
+    	{
+    		$layout = new ViewModel();
+    	}
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
+    public function adicionaSubCategoriaAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$service = $this->getServiceLocator()->get('Admin\Service\ProdutosSubCategoria');
+    		$retorno = $service->insert(array('nome' => $this->getRequest()->getPost("titulo"), "idCategoria" => $this->getRequest()->getPost("categoria")));
+    		$layout = new ViewModel(array("msg" => $retorno->getIdsubcategoria()));
+    	}
+    	else
+    	{
+    		$layout = new ViewModel();
+    	}
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
+    public function populateCategoriaAndSubcategoriaAjaxAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$doctrine = $this->getServiceLocator()->get("Doctrine\ORM\EntityManager");
+    		$repositoryCategoria = $doctrine->getRepository("Produto\Entity\ProdutoCategoria")->findAll();
+    	
+    		$layout = new ViewModel(array(
+    				"categorias" => $repositoryCategoria
+    		));
+    	}
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
+    public function deleteCategoriaAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$service = $this->getServiceLocator()->get('Admin\Service\ProdutosCategoria');
+    		$service->delete($this->getRequest()->getPost("idCategoria"));
+    	}
+    	$layout = new ViewModel();
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
+    public function deleteSubCategoriaAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$service = $this->getServiceLocator()->get('Admin\Service\ProdutosSubCategoria');
+    		$service->delete($this->getRequest()->getPost("idSubcategoria"));
+    	}
+    	$layout = new ViewModel();
     	$layout->setTerminal(1);
     	return $layout;
     }

@@ -1,0 +1,19 @@
+<?php 
+         	foreach($this->categorias AS $categoria)
+         	{
+         		?>
+            <li class="tt-produto"><strong><?=$categoria->getNome()?></strong><a rel="<?=$categoria->getIdcategoria()?>" class="tt-produto excluirCategoria" href="" title="excluir">Excluir</a>
+                <ul>
+                <?php 
+                	foreach($categoria->getSubcategorias() AS $subcategoria)
+                	{
+                ?>
+                    <li><?=$subcategoria->getNome()?><a rel="<?=$subcategoria->getIdsubcategoria()?>" href="" title="excluir" class="excluirSubcategoria">Excluir</a></li>
+                    <?php 
+                	}
+                    ?>
+                </ul>
+            </li>
+            <?php 
+         	}
+            ?>

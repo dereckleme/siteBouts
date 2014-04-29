@@ -17,7 +17,8 @@
          	}
          ?>
 	</select><br/>
-	<select  class="form-control categoria" <?if(!$this->categorias) print 'disabled="disabled"'?>>
+	<div class="categoriaSelect">
+	<select  class="form-control categoria">
          <option value="">Selecione uma Categoria</option>
          <?php 
          	foreach($this->categorias AS $categoria)
@@ -29,9 +30,18 @@
          ?>
          <option value="addCategoria">Adicionar Categoria</option>
 	</select><br/>
+	</div>
+	<div style="display:none" class="adicionaCategoria">
+		<input type="text" class="tituloCategoria" placeholder="Titulo da categoria"/><input type="submit" class="salvarCategoriaProduto" value="Salvar Categoria" title="Salvar"> 
+	</div>
+	<div style="display:none" class="adicionaSubCategoria">
+		<input type="text" class="tituloSubCategoria" placeholder="Titulo da Sub-categoria"/><input type="submit" class="salvarSubCategoriaProduto" value="Salvar Sub-Categoria" title="Salvar"> 
+	</div>
+	<div class="subcategoriaSelect">
 	<select  class="form-control subcategoria" disabled="disabled">
       <option value="">Selecione uma Subcategoria</option>
 	</select><br/>
+	</div>
 	<input type="file" class="arquivo" /><br/><br/>
     <label class="add-vitrine" for="" style="cursor:default; color:#222; font-size:14px;"><strong>Adicionar produto na Vitrine</strong></label>
     <input class="vitrine" type="radio" name="gender" value="sim"> Sim
@@ -51,13 +61,13 @@
          	foreach($this->categorias AS $categoria)
          	{
          		?>
-            <li class="tt-produto"><strong><?=$categoria->getNome()?></strong><a class="tt-produto" href="" title="excluir">Excluir</a>
+            <li class="tt-produto"><strong><?=$categoria->getNome()?></strong><a rel="<?=$categoria->getIdcategoria()?>" class="tt-produto excluirCategoria" href="" title="excluir">Excluir</a>
                 <ul>
                 <?php 
                 	foreach($categoria->getSubcategorias() AS $subcategoria)
                 	{
                 ?>
-                    <li><?=$subcategoria->getNome()?><a href="" title="excluir">Excluir</a></li>
+                    <li><?=$subcategoria->getNome()?><a href="" rel="<?=$subcategoria->getIdsubcategoria()?>" title="excluir" class="excluirSubcategoria">Excluir</a></li>
                     <?php 
                 	}
                     ?>

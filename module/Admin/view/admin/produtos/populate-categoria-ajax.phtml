@@ -1,0 +1,9 @@
+<?php 
+		foreach($this->listacategorias AS $listacategorias)
+		{
+			?>
+			<option value="<?=$listacategorias->getIdcategoria()?>" <?if($this->checked == $listacategorias->getIdcategoria()) print 'selected';?>><?=$listacategorias->getNome()?></option>
+			<?php
+		}
+?>
+<option value="addCategoria">Adicionar Categoria</option>

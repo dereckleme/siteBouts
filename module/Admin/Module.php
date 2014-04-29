@@ -4,6 +4,8 @@ use Zend\Authentication\AuthenticationService,
 	Zend\Authentication\Storage\Session as SessionStorage;
 use Admin\Service\Banner,
 	Admin\Service\OndeComprar,
+	Admin\Service\ProdutosCategoria,
+	Admin\Service\ProdutosSubCategoria,
 	Admin\Service\Tecnologia,
 	Admin\Service\Wallpaper,
 	Admin\Service\Vitrine,
@@ -108,6 +110,14 @@ class Module
     					'Admin\Service\Tecnologia' => function($service) {
     						$Tecnologia = new Tecnologia($service->get('Doctrine\ORM\EntityManager'));
     						return $Tecnologia;
+    					},
+    					'Admin\Service\ProdutosCategoria' => function($service) {
+    						$ProdutosCategoria = new ProdutosCategoria($service->get('Doctrine\ORM\EntityManager'));
+    						return $ProdutosCategoria;
+    					},
+    					'Admin\Service\ProdutosSubCategoria' => function($service) {
+    						$ProdutosSubCategoria = new ProdutosSubCategoria($service->get('Doctrine\ORM\EntityManager'));
+    						return $ProdutosSubCategoria;
     					},
     					'Admin\Service\Wallpaper' => function($service) {
     						$Wallpaper = new Wallpaper($service->get('Doctrine\ORM\EntityManager'));
