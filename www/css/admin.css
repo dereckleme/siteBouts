@@ -73,6 +73,9 @@ span.g-categorias ul.box-produto ul { border-left: solid 1px #14c6e2;; margin: 1
 span.g-categorias ul.box-produto ul li { font-size: 13px; color: #333333; margin: 4px 0 4px 0;}
 span.g-categorias ul.box-produto ul li:before { content: '\2212'; color: #14c6e2;}
 span.g-categorias ul.box-produto ul li a { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #e66700; margin-left: 40px;}
+
+.salvarCategoriaProduto, .salvarSubCategoriaProduto { margin: -10px 0 0 10px; padding: 4px;}
+
 .formProduto textarea { width: 250px; height: 150px;}
 .formProduto input.modelo { width: 250px;}
 

@@ -7,10 +7,10 @@
 		<li>
 			<figure>
 				<p><?=$wallpaper->getTituloImagem()?></p>
-				<img width="200" src="<?=$this->basePath("img/wallpapers/".$wallpaper->getSrc())?>" title="Wallpaper" alt="Wallpaper">
+				<img src="<?=$this->basePath("img/wallpapers/".$wallpaper->getSrc())?>" title="Wallpaper" alt="Wallpaper">
 			</figure>
 			<span>
-				<a href="" title="Download">Download</a>
+				<a href="<?=$this->basePath("img/wallpapers/".$wallpaper->getSrc())?>" target="_blank" title="Download">Download</a>
 			</span>
 		</li>
 		<?php 

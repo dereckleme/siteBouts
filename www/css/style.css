@@ -126,18 +126,15 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 .tec-bouts h3 { width: 285px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
 .tec-bouts h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 30px;}
 .tec-bouts ul { width: 100%; float: left; margin-top: 10px;}
-
 .tec-bouts ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 .tec-bouts ul li { width: 315px; height: 180px; overflow: hidden; margin-left: 10.6px; float: left; border: solid 1px #999999; cursor: pointer; position: relative; background: #FFFFFF;}
 .tec-bouts ul li:first-child { margin: 0 0 0 0px;}
 .tec-bouts ul li img { width: 100%; height: 100%; position: absolute; z-index: 10;}
 .tec-bouts ul li a { position: absolute; z-index: 20; padding: 0px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
-
 .tec-bouts ul li:hover a { padding: 43.8px 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 .tec-bouts ul li:hover a p:nth-child(1) { margin: 10px 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 .tec-bouts ul li:hover a p:nth-child(3) { margin: 30px 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 .tec-bouts ul li:hover a span { top: 10px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
-
 .tec-bouts ul li a p { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; width: 313.5px; float: left; font-weight: bold; color: #FFF; text-align:center; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 .tec-bouts ul li a p:nth-child(1) { font-size: 3.4em; margin: -40px 0 0 0;}
 .tec-bouts ul li a p:nth-child(3) { font-size: 1.6em; margin: -50px 0 0 0;}
@@ -146,10 +143,7 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 .tendencias { width: 1300px; float: left; margin: 100px 0 90px 0;}
 .tendencias h3 { width: 285px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
 .tendencias h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 30px;}
-
 div.video iframe { width: 640px; height: 437px; border: solid 1px #222222; float: left; margin-top: 10px;}
-
-
 div.campanha { width: 640px; height: 437px; border: solid 1px #222222; float: right; margin-top: 10px;}
 
 /*Pagina Produtos*/
@@ -173,7 +167,6 @@ section.pg-produtos ul li:hover a { padding: 65.8px 0px; text-decoration: none; 
 section.pg-produtos ul li:hover a p:nth-child(1) { margin: 18px 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 section.pg-produtos ul li:hover a p:nth-child(3) { margin: 40px 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 section.pg-produtos ul li:hover a span { top: 20px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
-
 section.pg-produtos ul li a p { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; width: 398px; float: left; font-weight: bold; color: #FFF; text-align:center; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 section.pg-produtos ul li a p:nth-child(1) { font-size: 3.8em; margin: -50px 0 0 0;}
 section.pg-produtos ul li a p:nth-child(3) { font-size: 1.8em; margin: -40px 0 0 0;}
@@ -185,12 +178,8 @@ section.pg-midia div h3 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, s
 section.pg-midia div ul { width: 970px;}
 section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin: 0 auto;}
 section.pg-midia div ul li.video-principal iframe { width: 640px; height: 360px;}
-
 section.pg-midia div ul li.video-secundario { width: 317px; height: 180px; float: left; margin-right: 6px; margin-top: 60px;}
 section.pg-midia div ul li.video-secundario iframe { width: 317px; height: 180px;}
-
-
-
 section.pg-midia div ul li p { font-weight: bold; color: #222222; font-size: 1.5em;}
 
 section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
@@ -301,9 +290,9 @@ section.menu-bottom { width: 900px; padding-bottom: 30px; float: left; position:
 section.menu-bottom ul.mb-comprar { margin: 65px 0 0 65px; float: left;}
 section.menu-bottom ul li a.tt-menu-bottom { font-size: 1.5em; font-weight: bold; color: #333333; margin: 0 0 0 0;}
 section.menu-bottom ul li a.dt-tt { padding-bottom: 10px;}
-section.menu-bottom ul li a { text-decoration: none; display: list-item; margin: 15px 0 0 5px; font-size: 1.3em; color: #333333;}
-section.menu-bottom ul li a.sub-produto { margin: 5px 0 0 5px;}
-section.menu-bottom ul li a.txt-produto { margin: 2px 0 0 10px;}
+section.menu-bottom ul li a { text-decoration: none; display: list-item; margin: 10px 0 0 5px; font-size: 1.3em; color: #333333;}
+section.menu-bottom ul li a.sub-produto { margin: 3px 0 3px 0;}
+section.menu-bottom ul li a.txt-produto { margin: 2px 0 0 0px;}
 section.menu-bottom ul li a.txt-menu-bottom:hover { color: #079ab1;}
 section.menu-bottom ul.mb-produtos { margin: 65px 0 15px 100px; float: left;}
 section.menu-bottom ul.mb-tecnoligia { margin: 65px 0 0 110px; float: left;}

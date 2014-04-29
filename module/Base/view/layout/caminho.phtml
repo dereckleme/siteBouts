@@ -15,12 +15,12 @@
                 	if(is_array($this->dadosMatchedRouter['matchedRouteCaminho']['rota']))
                 	{
                 ?>
-                <li><a href="<?=$this->url($this->dadosMatchedRouter['matchedRouteCaminho']['rota']['MatchedRouteName'],$this->dadosMatchedRouter['matchedRouteCaminho']['rota'][0])?>" title="Produtos"><?=$this->dadosMatchedRouter['matchedRouteCaminho']['nome']?></a></li>
+                <li><a href="<?=$this->url($this->dadosMatchedRouter['matchedRouteCaminho']['rota']['MatchedRouteName'],$this->dadosMatchedRouter['matchedRouteCaminho']['rota'][0])?>"><?=$this->dadosMatchedRouter['matchedRouteCaminho']['nome']?></a></li>
                 <?php
                 	} 
                 	else {
                 	?>
-                <li><a href="<?=$this->url($this->dadosMatchedRouter['matchedRouteCaminho']['rota'])?>" title="Produtos"><?=$this->dadosMatchedRouter['matchedRouteCaminho']['nome']?></a></li>
+                <li><a href="<?=$this->url($this->dadosMatchedRouter['matchedRouteCaminho']['rota'])?>"><?=$this->dadosMatchedRouter['matchedRouteCaminho']['nome']?></a></li>
                		 <?php	
                 	}
                 }
@@ -29,7 +29,7 @@
                 	foreach($this->dadosMatchedRouter['matchedRouteCaminho']['lista'] as $lista)
                 	{
                 	?>
-                	 <li><a href="<?=$this->url($lista['rota']['MatchedRoute'],$lista['rota']['arrayDefines'])?>" title="Produtos"><?=ucwords($lista['nome'])?>&nbsp;&nbsp;-</a></li>
+                	 <li><a href="<?=$this->url($lista['rota']['MatchedRoute'],$lista['rota']['arrayDefines'])?>"><?=ucwords($lista['nome'])?>&nbsp;&nbsp;-</a></li>
                 	<?php
                 	}
                 }
@@ -49,20 +49,20 @@
                 	if(is_array($this->dadosMatchedRouter['matchedRouteCaminho']['rota']))
                 	{
                 ?>
-               			<li><a class="tt-produto" href="<?=$this->url($this->dadosMatchedRouter['matchedRouteCaminho']['rota']['MatchedRouteName'],$this->dadosMatchedRouter['matchedRouteCaminho']['rota'][0])?>" title="Calçados femininos"><?=$this->dadosMatchedRouter['matchedRouteCaminho']['subtitulo']?></a></li>
+               			<li><a class="tt-produto" href="<?=$this->url($this->dadosMatchedRouter['matchedRouteCaminho']['rota']['MatchedRouteName'],$this->dadosMatchedRouter['matchedRouteCaminho']['rota'][0])?>"><?=$this->dadosMatchedRouter['matchedRouteCaminho']['subtitulo']?></a></li>
                 <?php 
                 	}
                 	else
                 	{
                 		?>
-                		<li><a class="tt-produto" href="<?=$this->url($this->dadosMatchedRouter['matchedRouteCaminho']['rota'])?>" title="Calçados femininos"><?=$this->dadosMatchedRouter['matchedRouteCaminho']['subtitulo']?></a></li>
+                		<li><a class="tt-produto" href="<?=$this->url($this->dadosMatchedRouter['matchedRouteCaminho']['rota'])?>"><?=$this->dadosMatchedRouter['matchedRouteCaminho']['subtitulo']?></a></li>
                 		 <?php 
                 	}
                 }
                 else
                 {
                 	?>
-                	<li><a class="tt-produto" href="" title="Calçados femininos"><?=$this->dadosMatchedRouter['matchedRouteCaminho']['subtitulo']?></a></li>
+                	<li><a class="tt-produto" href=""><?=$this->dadosMatchedRouter['matchedRouteCaminho']['subtitulo']?></a></li>
                 	<?php
                 }
              }  
