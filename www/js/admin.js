@@ -116,8 +116,8 @@ $(document).ready(function(){
     	if(erros == "")
     		{
 	    		var formData = new FormData();
-				formData.append('titulo', $(".formBanner .titulo").val());
-				formData.append('url', $(".formBanner .url").val());
+				formData.append('titulo', $(".formMidia .titulo").val());
+				formData.append('url', $(".formMidia .url").val());
 				$.ajax({
 	    	        url: basePatch+"/admin/crud/midia/adiciona",
 	    	        type: 'POST',
