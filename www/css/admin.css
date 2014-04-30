@@ -76,9 +76,6 @@ span.g-categorias ul.box-produto ul li a { border-radius: 5px; font-size: 9px; p
 
 .salvarCategoriaProduto { margin: -10px 0 0 10px; border-radius: 5px; padding: 4px; border: none; color: #FFFFFF; background: #D72523;}
 .salvarSubCategoriaProduto { margin: -10px 0 0 10px; border-radius: 5px; padding: 4px; border: none; background: #e66700; color: #FFFFFF;}
-
-
-
 .formProduto textarea { width: 250px; height: 150px;}
 .formProduto input.modelo { width: 250px;}
 
