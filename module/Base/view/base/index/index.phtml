@@ -104,12 +104,12 @@
 	</div>
 
 	<div class="tendencias">
-
-		<h3>Pratique Bout's - Campanha 2014</h3>
-
-		<?php 
+<?php 
 		if($this->midia){
 		?>
+		<h3><?=$this->midia->getTitulo()?></h3>
+
+		
 		<div class="video">
 			<iframe src="<?=$this->midia->getUrlYoutube()?>"></iframe>
 		</div>
