@@ -287,10 +287,10 @@ div#form button { width: 124px; height: 41px; background: url(../img/enviarHover
 footer { width: 100%; float: left; background: #eeeeee; position: relative;}
 section.menu-bottom { width: 900px; padding-bottom: 30px; float: left; position: relative; left: 50%; margin-left: -450px;}
 section.menu-bottom ul.mb-comprar { margin: 65px 0 0 65px; float: left;}
-section.menu-bottom ul li a.tt-menu-bottom { font-size: 1.5em; font-weight: bold; color: #333333; margin: 0 0 0 0;}
-section.menu-bottom ul li a.dt-tt { padding-bottom: 10px;}
+section.menu-bottom ul li a.tt-menu-bottom { font-size: 1.5em; font-weight: bold; color: #333333; margin: 0;}
+section.menu-bottom ul li a.dt-tt { padding-bottom: 2px;}
 section.menu-bottom ul li a { text-decoration: none; display: list-item; margin: 10px 0 0 5px; font-size: 1.3em; color: #333333;}
-section.menu-bottom ul li a.sub-produto { margin: 3px 0 3px 0;}
+section.menu-bottom ul li a.sub-produto { margin: 10px 0 3px 0;}
 section.menu-bottom ul li a.txt-produto { margin: 2px 0 0 0px;}
 section.menu-bottom ul li a.txt-menu-bottom:hover { color: #079ab1;}
 section.menu-bottom ul.mb-produtos { margin: 65px 0 15px 100px; float: left;}
