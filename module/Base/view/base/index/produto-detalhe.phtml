@@ -4,7 +4,7 @@
 
 		<div class="viewport-imagem">
 
-		  <img width="650" title="teste" alt="teste" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>big.png">
+		  <img width="650" alt="Destaque" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>big.png">
 
 		</div>
 
@@ -14,7 +14,7 @@
 				<ul class="carouselPerspectiva">
 					<li>
 					 <a href="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>">
-					  <img title="teste" alt="teste" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>medio.png">
+					  <img alt="Produto" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>medio.png">
 					 </a>
 					</li>
 					<?php 
@@ -23,7 +23,7 @@
 					?>
 					<li>
 					 <a href="<?=$this->basePath()?>/img/produtos/<?=$perspectiva->getSrc()?>">
-					  <img title="teste" alt="teste" src="<?=$this->basePath()?>/img/produtos/<?=$perspectiva->getSrc()?>medio.png">
+					  <img alt="Produto" src="<?=$this->basePath()?>/img/produtos/<?=$perspectiva->getSrc()?>medio.png">
 					 </a>
 					</li>
 					<?php 
@@ -54,7 +54,7 @@
 			?>
 				<li>
 					<a href="#" rev="<?=$this->basePath()?>/img/produtos/<?=$produtoSugestao->getSrc()?>" rel="<?=$produtoSugestao->getNossoNumero()?>" class="eventOpenSugestao">
-					<img rel="" title="teste" alt="teste" src="<?=$this->basePath()?>/img/produtos/<?=$produtoSugestao->getSrc()?>medio.png">
+					<img rel="" alt="Produto" src="<?=$this->basePath()?>/img/produtos/<?=$produtoSugestao->getSrc()?>medio.png">
 					</a>
 				</li>
 <?php 
@@ -66,7 +66,7 @@
 						"subcategoria" =>  $this->produto->getSubcategoriaTenis()->getSlug(),
 						"slugProduto" => $this->produto->getSlug()	
 					));?>" rel="<?=$this->produto->getNossoNumero()?>">
-					<img title="teste" alt="teste" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>medio.png">
+					<img alt="Produto" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>medio.png">
 					</a>
 				</li>
 			</ul>
