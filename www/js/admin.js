@@ -1,4 +1,10 @@
 $(document).ready(function(){
+	$( document ).ajaxSend(function() {
+		  $("#popup-login").fadeIn();
+		});
+	$( document ).ajaxComplete(function() {
+		 $("#popup-login").fadeOut();
+		});
 	$(".conteudo").on("click",".excluirCategoria",function(){
 		if(confirm("Atenção, excluindo esta categoria todos os produtos do mesmo serão excluídos, tem certeza que deseja excluir?"))
 			{
