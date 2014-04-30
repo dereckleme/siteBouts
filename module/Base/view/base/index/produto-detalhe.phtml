@@ -1,3 +1,15 @@
+<?php 
+$this->headMeta()->setProperty('og:locale', 'pt_BR');
+$this->headMeta()->setProperty('og:url', $this->basePath());
+$this->headMeta()->setProperty('og:title', $this->produto->getTitulo());
+$this->headMeta()->setProperty('og:site_name', "Bout's sua vida em movimento");
+$this->headMeta()->setProperty('og:image:type', "image/png");
+$this->headMeta()->setProperty('og:image:width', 200);
+$this->headMeta()->setProperty('og:image:height', 150);
+$this->headMeta()->setProperty('og:description', $this->produto->getDescricao());
+$this->headMeta()->setProperty('og:image', $this->basePath()."/img/produtos/".$this->produto->getSrc()."big.png");
+?>
+
 <section class="produto-detalhe">
 
 	<div id="box-produtos">
@@ -82,7 +94,11 @@
 	          fjs.parentNode.insertBefore(js, fjs);
 	        }(document, 'script', 'facebook-jssdk'));</script>
 
-		    <div class="fb-share-button" data-href="http://mysql.bouts.web1015.kinghost.net/" data-width="208" data-type="button">
+		    <div class="fb-share-button" data-href="<?=$this->url("produto/produto-subcategoria/produto-detalhe",array(
+						"categoria" =>  $this->produto->getSubcategoriaTenis()->getCategoria()->getSlug(),
+						"subcategoria" =>  $this->produto->getSubcategoriaTenis()->getSlug(),
+						"slugProduto" => $this->produto->getSlug()	
+					));?>" data-width="208" data-type="button">
 		    </div>
 
 	</div>
