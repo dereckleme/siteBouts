@@ -202,7 +202,7 @@ section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-l
 #info-produtos h2 { width: 100%; font-size: 2.8em; margin: 0 0 0 0; color: #222222; font-weight: bold; float: left;}
 #info-produtos span { color: #0d9cb3;}
 #info-produtos span.dt-tec { text-transform: uppercase;}
-#info-produtos p.txt-info { width: 410px; margin: 10px 0 0 0; line-height: 20px; font-size: 1.6em; color: #222222; float: left;}
+#info-produtos p.txt-info { width: 410px; margin: 10px 0 0 0; line-height: 20px; font-size: 1.6em; color: #222222; float: left; text-align: justify;}
 #info-produtos p.txt-model { width: 410px; margin: 15px 0 0 0; float: left; font-size: 2.0em; font-weight: bold;}
 #info-produtos p.txt-tec { width: 410px; margin: 10px 0 0 -2px; float: left; font-size: 1.6em; font-weight: bold;}
 #info-produtos p.txt-number { width: 410px; margin: 10px 0 0 0; float: left; font-size: 1.4em; font-weight: bold;}
