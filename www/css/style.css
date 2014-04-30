@@ -72,30 +72,17 @@ ul.box-menu li.box-lista:hover > a.produtos:before { color: #222222; -webkit-tra
 ul.box-menu li a.tecnologia:before { content: '\2335'; position: absolute; z-index: 200; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;} 
 ul.box-menu li.box-lista:hover > a.tecnologia:before { color: #222222; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); top: 12px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 
-li.sub-menu ul { width: 225px; display: block; padding: 0 0 8px 0; position: absolute; top: 87px; float: left; z-index: 100; background: #FFFFFF;}
-li.sub-menu ul li { overflow: hidden; float: left; background: #CDC;}
-
-li.sub-menu ul li h6 a { margin-top: -15px; border: none; z-index: 15; width: 183px; background: #FFFFFF; padding: 3px 0 3px 42px; text-transform: uppercase; font-size: 1.8em; float: left; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-
+li.sub-menu ul { width: 225px; display: none; padding: 0 0 8px 0; position: absolute; top: 87px; float: left; z-index: 100; background: #FFFFFF;}
+li.sub-menu ul li { overflow: hidden; float: left;}
+li.sub-menu ul li h6 a { margin: -10px 0 0 0; border: none; z-index: 15; width: 183px; background: #FFFFFF; padding: 3px 0 3px 42px; text-transform: uppercase; font-size: 1.8em; float: left; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 li.sub-menu ul li h6 a:before { content: '\2335'; top: 4px; position: absolute; left: 23px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
 li.sub-menu ul li h6 a:hover { width: 177px; color: #FFFFFF; background: #96bd05; padding: 3px 0 3px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-
-li.sub-menu ul li p a { margin-top: 0px; z-index: 10; font-size: 1.1em; float: left; padding: 2px 0 2px 45px; font-weight: normal; color: #222222; clear: both; border: none; -webkit-transition: 0.4s ease-out; transition: 0.4s ease-out;}
-
+li.sub-menu ul li p a { margin-top: 0px; z-index: 10; font-size: 1.1em; float: left; padding: 2px 0 2px 45px; font-weight: normal; color: #96bd05; clear: both; border: none; -webkit-transition: 0.4s ease-out; transition: 0.4s ease-out;}
 li.sub-menu ul li:hover > p a { -webkit-transition: 0.4s ease-in; transition: 0.4s ease-in;}
-li.sub-menu ul li > p a:hover { color: #96bd05; padding: 2px 0 2px 51px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-
+li.sub-menu ul li > p a:hover { color: #718e04; padding: 2px 0 2px 51px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 ul.box-menu li.sub-menu:hover ul { display: block;}
-
-
-
-li.sub-menu-links ul { width: 225px; display: block; padding-bottom: 8px; float: left; position: absolute; top: 87px; background: #FFFFFF;}
-li.sub-menu-links ul li { background: #DED;}
+li.sub-menu-links ul { width: 225px; display: none; padding: 4px 0 8px 0; float: left; position: absolute; top: 87px; background: #FFFFFF;}
 li.sub-menu-links ul li a { font-size: 1.2em; padding: 5px 0 5px 42px; border: none; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
-
-li.sub-menu-links ul li:first-child a { }
-
-
 li.sub-menu-links ul li a:before { content: '\2335'; position: absolute; left: 23px; top: 5px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
 li.sub-menu-links ul li a:hover { color: #FFFFFF; background: #96bd05; padding: 5px 0 5px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 ul.box-menu li.sub-menu-links:hover ul { display: block;}
@@ -151,11 +138,14 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 .tec-bouts ul li a p:nth-child(3) { font-size: 1.6em; margin: -50px 0 0 0;}
 .tec-bouts ul li a span { width: 150px; float: left; border-top: solid 1px #000000; border-bottom: solid 1px #999999; display: block; position: relative; top: -10px; left: 25%; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 
-.tendencias { width: 1300px; float: left; margin: 100px 0 90px 0;}
-.tendencias h3 { width: 285px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
+.tendencias { width: 1300px; float: left; margin: 100px 0 90px 0; position: relative;}
+.tendencias h3 { width: 500px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
 .tendencias h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 30px;}
 div.video iframe { width: 640px; height: 437px; border: solid 1px #222222; float: left; margin-top: 10px;}
+
 div.campanha { width: 640px; height: 437px; border: solid 1px #222222; float: right; margin-top: 10px;}
+div.campanha h3 { width: 285px; height: 18px; top: 0px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px; position: absolute;}
+div.campanha h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 30px;}
 
 /*Pagina Produtos*/
 .h-produtos { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
