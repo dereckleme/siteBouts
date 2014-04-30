@@ -139,12 +139,12 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 .tec-bouts ul li a span { width: 150px; float: left; border-top: solid 1px #000000; border-bottom: solid 1px #999999; display: block; position: relative; top: -10px; left: 25%; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 
 .tendencias { width: 1300px; float: left; margin: 100px 0 90px 0; position: relative;}
-.tendencias h3 { width: 500px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
+.tendencias h3 { width: 630px; height: 18px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px;}
 .tendencias h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 30px;}
 div.video iframe { width: 640px; height: 437px; border: solid 1px #222222; float: left; margin-top: 10px;}
 
 div.campanha { width: 640px; height: 437px; border: solid 1px #222222; float: right; margin-top: 10px;}
-div.campanha h3 { width: 285px; height: 18px; top: 0px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px; position: absolute;}
+div.campanha h3 { width: 630px; height: 18px; top: 0px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px; position: absolute;}
 div.campanha h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 30px;}
 
 /*Pagina Produtos*/
