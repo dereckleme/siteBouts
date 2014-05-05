@@ -87,7 +87,7 @@ li.sub-menu-links ul li a:before { content: '\2335'; position: absolute; left: 2
 li.sub-menu-links ul li a:hover { color: #FFFFFF; background: #96bd05; padding: 5px 0 5px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 ul.box-menu li.sub-menu-links:hover ul { display: block;}
 
-.container { width: 100%; background: url(../img/bk-container.png) repeat; float: left; position: relative;}
+.container { width: 100%; min-width: 1300px; background: url(../img/bk-container.png) repeat; float: left; position: relative;}
 section.galeria { width: 100%; float: left; overflow: hidden;}
 .lancamentos { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-top: 80px;}
 .lancamentos h2 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; text-align: center; font-size: 8.0em; color: #222222; margin: 0; padding: 0;}
@@ -182,6 +182,19 @@ section.pg-midia div ul li.video-principal iframe { width: 640px; height: 360px;
 section.pg-midia div ul li.video-secundario { width: 317px; height: 180px; float: left; margin-right: 6px; margin-top: 60px;}
 section.pg-midia div ul li.video-secundario iframe { width: 317px; height: 180px;}
 section.pg-midia div ul li p { font-weight: bold; color: #222222; font-size: 1.5em;}
+
+/*#############NOVA PAGINA DE MÍDIA#################*/
+
+/*
+section.pg-midia div { width: 960px; float: left; position: relative; left: 50%; margin: 38px 0 0 -480px; padding-bottom: 90px; background: #DDD;}
+section.pg-midia div h3 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; color: #222222; font-size: 3.0em; font-weight: bold; text-align: center;}
+section.pg-midia div.video-principal { width: 960px; height: 450px; background: #999; float: left;}
+section.pg-midia div ul { width: 970px;}
+section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin: 0 auto;}
+section.pg-midia div ul li.video-principal iframe { width: 640px; height: 360px;}
+section.pg-midia div ul li.video-secundario { width: 317px; height: 180px; float: left; margin-right: 6px; margin-top: 60px;}
+section.pg-midia div ul li.video-secundario iframe { width: 317px; height: 180px;}
+section.pg-midia div ul li p { font-weight: bold; color: #222222; font-size: 1.5em;}*/
 
 section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 #box-produtos { width: 650px; float: left; margin-top: 70px;}
@@ -284,7 +297,7 @@ div#form label.statusMensagem { width: 455px; float: left; margin: 15px 0 10px -
 div#form button { width: 124px; height: 41px; background: url(../img/enviarHover.jpg) no-repeat; text-transform: uppercase; font-size: 1.5em; letter-spacing: 1px; cursor: pointer; position: relative; float: left; margin-top: 15px; border: none; font-weight: bold; color: #FFFFFF;}
 .loadAjax { width: 100%; height: 1000%; position: absolute; z-index: 9999999; background: rgba(0,0,0,0.8); display: none;}
 
-footer { width: 100%; float: left; background: #eeeeee; position: relative;}
+footer { width: 100%; min-width: 1300px; float: left; background: #eeeeee; position: relative;}
 section.menu-bottom { width: 900px; padding-bottom: 30px; float: left; position: relative; left: 50%; margin-left: -450px;}
 section.menu-bottom ul.mb-comprar { margin: 65px 0 0 65px; float: left;}
 section.menu-bottom ul li a.tt-menu-bottom { font-size: 1.5em; font-weight: bold; color: #333333; margin: 0;}
