@@ -60,13 +60,12 @@
 }
 
 #wowslider-container1  .ws_bullets {
-	width: 180px;
 	height: 58px;
 	left:50%;
 	font-size: 0px; 
 	float: left;
 	position:absolute;
-	margin-left: -90px;
+	margin-left: -120px;
 	bottom: 10px;
 	z-index:70;
 }
@@ -78,12 +77,11 @@
 	float: left; 
 	text-indent: -4000px; 
 	position:relative;
-	margin:18px 0 0 20px;
+	margin:18px 10px 0 10px;
 	color:transparent;
 }
 
 #wowslider-container1  .ws_bullets div {
-	width: 180px;
 	height: 56px;
 	background: rgba(255,255,255,0.4);
 	position:relative;
