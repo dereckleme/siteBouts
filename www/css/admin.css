@@ -101,6 +101,7 @@ ul.accordion-produto li p, ul.accordion-wallpaper li p { width: 185px; margin: 5
 ul.accordion-produto li { width: 200px; height: 270px; padding-bottom: 10px;}
 ul.accordion-produto li img { width: 180px; height: 150px; margin: 10px 0 0 8px; border: solid 1px #DDDDDD;}
 ul.accordion-produto li button { margin: 6px 0 0 10px;}
+ul.accordion-produto li button.AddCor { width: 90px; float: right; margin-right: 10px;}
 
 ul.accordion-banner { width: 875px; margin: 0; padding: 0 0 0 50px; float: left;}
 ul.accordion-banner li { width: 400px; height: 310px;}
