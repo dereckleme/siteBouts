@@ -28,7 +28,7 @@ $(document).ready(function(){
 		                    { 
 		        	        	if(data == "")
 		        	        		{
-		        	        		alert("Produto adicionado com sucesso!");
+		        	        		alert("Sugestão de cor adicionada com sucesso!");
 		        	        		location.reload();
 		        	        		}
 		        	        	else
