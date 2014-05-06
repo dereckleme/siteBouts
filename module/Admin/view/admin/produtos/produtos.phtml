@@ -1,3 +1,9 @@
+<div style="display: none;font-size:12px;" id="popupCor">
+	<form class="formpopupCor">
+    <input type="text" class="modelo" placeholder="Digite o modelo do tênis"/><br/>
+	<input type="file" class="arquivo" /><br/><br/>
+	</form>
+</div>
 <form class="formProduto">
     <input type="text" class="titulo" placeholder="Nome do Tênis"/><br/>
     <textarea name="mensagem" class="statusDescricaoTenis" placeholder="Uma breve descrição do tênis"></textarea><br/>
@@ -110,6 +116,22 @@
                     <button type="button" class="btn btn-info AddCor" title="Adicionar uma nova cor" rev="produtos" rel="<?=$produto->getIdtenis()?>">Nova Cor</button>
 
 		         </li>
+		         			<?php 
+		         			if($produto->getSugestaoCoresProdutos())
+		         			{
+		         				foreach($produto->getSugestaoCoresProdutos() AS $produtoSugestao)
+		         				{
+		         					?>
+		         					 <li style="border:solid red 1px">
+							            <img src="<?=$this->basePath()?>/img/produtos/<?=$produtoSugestao->getSrc()?>">
+							            <p><?=$produto->getTitulo()?></p>
+							            <p><strong>Modelo:</strong> <?=$produtoSugestao->getNossoNumero()?></p>
+							            <button type="button" class="btn btn-danger deletarSugestaoAction" title="excluir item " rev="produtos" rel="<?=$produtoSugestao->getIdSugestaoCores()?>">Excluir</button>
+							         </li>
+		         					<?php
+		         				}
+		         			}	
+		         			?>
 		         <?php 
 		        		}
 		        	}

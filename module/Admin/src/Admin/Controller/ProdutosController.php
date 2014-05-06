@@ -50,7 +50,7 @@ class ProdutosController extends AbstractActionController
 	    					'image/gif', 'image/jpg','image/png','image/jpeg',
 	    					'enableHeaderCheck' => true
 	    			));
-	    			//if(!$tamanho->isValid($info)) $erros = "- É necessário uma imagem com tamanho minimo de 650x400\n";
+	    			if(!$tamanho->isValid($info)) $erros = "- É necessário uma imagem com tamanho minimo de 650x400\n";
 	    			//if(!$mime->isValid($info)) $erros = "- O tipo de arquivo suportado é gif, jpg, png\n";
 	    			
 	    			if($requestPost->receive() && $erros == false)
@@ -74,6 +74,10 @@ class ProdutosController extends AbstractActionController
 	    						"nossoNumero" => $this->getRequest()->getPost("modelo"),
 	    						"descricao" => $this->getRequest()->getPost("descricao")
 	    				));
+	    			}
+	    			else
+	    			{
+	    				print $erros;
 	    			}
     			}	
     			else if($file == "imagemVitrine")
@@ -202,5 +206,67 @@ class ProdutosController extends AbstractActionController
     	$layout->setTerminal(1);
     	return $layout;
     }
+    public function adicionaCorAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$service = $this->getServiceLocator()->get('Admin\Service\ProdutosCor');
+    		$requestPost = new httpUploadFile();
+    		$requestPost->setDestination('./www/img/produtos');
+    		foreach($requestPost->getFileInfo() as $file => $info)
+    		{
+    			$erros = false;
+    			$fname = $info['name'];
+    			$ext = pathinfo($fname, PATHINFO_EXTENSION);
+    			
+    			$filtro = $requestPost->addFilters(array(new Rename(array(
+    					"target" => "load.".$ext,
+    					"randomize" => true
+    			))), null, $file);
+    			$tamanho = new ImageSize(array(
+    					'minWidth' => 650, 'minHeight' => 400,
+    			));
+    			$mime = new MimeType(array(
+    					'image/gif', 'image/jpg','image/png','image/jpeg',
+    					'enableHeaderCheck' => true
+    			));
+    			if(!$tamanho->isValid($info)) $erros = "- É necessário uma imagem com tamanho minimo de 650x400\n";
+    			//if(!$mime->isValid($info)) $erros = "- O tipo de arquivo suportado é gif, jpg, png\n";
+    			
+    			if($requestPost->receive() && $erros == false)
+    			{
+    				$im = new \Imagick();
+    				$im->readImage($filtro->getFileName("imagem"));
+    				$im->flattenImages();
+    				$im->setImageFormat('png');
+    				$im->thumbnailImage(650,400);
+    				$im->writeImage($filtro->getFileName("imagem")."big.png");
+    				$im->thumbnailImage(400,250);
+    				$im->writeImage($filtro->getFileName("imagem")."medio.png");
+    				$service->insert(array("tenis" => $this->getRequest()->getPost("idProduto"),"nossoNumero" => $this->getRequest()->getPost("modelo"), "src" => $filtro->getFileInfo("imagem")['imagem']['name']));
+    				
+    			}
+    			else
+    			{
+    				print $erros;
+    			}
+    		}
+    	}
+    	$layout = new ViewModel();
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
+    public function deleteSugestaoAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$service = $this->getServiceLocator()->get('Admin\Service\ProdutosCor');
+    		$service->delete($this->getRequest()->getPost("idAction"));
+    	}
+    	$layout = new ViewModel(array("msg" => "Sugestão removida com sucesso!"));
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
+    
 }
 

@@ -1,4 +1,59 @@
 $(document).ready(function(){
+	
+	$(".conteudo").on("click",".AddCor",function(){
+		var idProduto = $(this).attr("rel");
+		$( "#popupCor" ).dialog({
+		      resizable: false,
+		      width:400,
+		      height:210,
+		      title:"Adicionar uma nova cor",
+		      modal: true,
+		      buttons: {
+		        "Adicionar": function() {
+		    		var erros = "";
+		    		if($('.formpopupCor input[type=file]')[0].files[0] == null) erros = erros+"- Insira uma imagem para cor do tenis\n";
+		    		if($('.formpopupCor .modelo').val() == "") erros = erros+"- Qual o modelo do tenis?\n";
+		    		
+		    		if(erros == "")
+		    		{
+		    			var formData = new FormData();
+		    			formData.append('imagem', $('.formpopupCor input[type=file]')[0].files[0]);
+		    			formData.append('modelo', $(".formpopupCor .modelo").val());
+		    			formData.append('idProduto', idProduto);
+		    			$.ajax({
+		        	        url: basePatch+"/admin/crud/produtos/adicionaCor",
+		        	        type: 'POST',
+		        	        contentType: 'multipart/form-data',
+		        	        success: function( data )  
+		                    { 
+		        	        	if(data == "")
+		        	        		{
+		        	        		alert("Produto adicionado com sucesso!");
+		        	        		location.reload();
+		        	        		}
+		        	        	else
+		        	        		{
+		        	        		alert(data);
+		        	        		}
+		                    },
+		        	        data: formData,
+		        	        cache: false,
+		        	        contentType: false,
+		        	        processData: false
+		        	    });
+		    		}
+		        	else
+		    		{
+		    			alert("Existe alguns erros abaixo:\n\n"+erros);
+		    		}
+		        },
+		        "Cancelar": function() {
+		          $( this ).dialog( "Close" );
+		        }
+		      }
+		})
+		return false;
+	})
 	$( document ).ajaxSend(function() {
 		  $("#popup-login").fadeIn();
 		});
@@ -385,19 +440,41 @@ $(document).ready(function(){
 		$(".accordion").slideToggle();
 		return false;
 	})
+	$(".conteudo").on("click",".deletarSugestaoAction",function(){
+		var action = $(this).attr("rev");
+		var idAction = $(this).attr("rel");
+		alert(idAction);
+		if(confirm("Tem certeza que deseja excluir esta sugestão de cor?"))
+			{
+				$.ajax({	
+		        url: basePatch+"/admin/crud/"+action+"/deleteSugestao",
+		        type: 'POST',
+		        success: function( data )  
+	            { 
+		        	alert(data);
+		        	location.reload();
+	            },
+		        data: {idAction:idAction}
+		    		});
+			}
+		return false;
+	})
 	$(".conteudo").on("click",".deletarAction",function(){
 		var action = $(this).attr("rev");
 		var idAction = $(this).attr("rel");
-		$.ajax({
-	        url: basePatch+"/admin/crud/"+action+"/delete",
-	        type: 'POST',
-	        success: function( data )  
-            { 
-	        	alert(data);
-	        	location.reload();
-            },
-	        data: {idAction:idAction}
-	    });
+		if(confirm("Atenção excluindo este produto, todas as sugestões de cores serão automaticamente excluídas, tem certeza que deseja excluir?"))
+			{
+				$.ajax({
+			        url: basePatch+"/admin/crud/"+action+"/delete",
+			        type: 'POST',
+			        success: function( data )  
+		            { 
+			        	alert(data);
+			        	location.reload();
+		            },
+			        data: {idAction:idAction}
+			    });
+			}
 		return false;
 	})
 	

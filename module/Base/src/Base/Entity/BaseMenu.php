@@ -18,6 +18,7 @@ class BaseMenu
 	}
 	/**
 	 * @ORM\OneToMany(targetEntity="BaseSubmenu", mappedBy="Basemenu")
+	 * @ORM\OrderBy({"nome" = "ASC"})
 	 */
 	private $submenus;
 	/**

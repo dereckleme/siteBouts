@@ -21,6 +21,7 @@ class IndexController extends AbstractActionController
     	$repo = $doctrine->getRepository("Base\Entity\BaseBanner");
     	$vitrine = $doctrine->getRepository("Produto\Entity\ProdutoVitrine")->findAll();
     	$tecnologias = $doctrine->getRepository("Base\Entity\BaseMenu")->findOneByidmenu(3);
+    	
     	$midia = $doctrine->getRepository("Base\Entity\BaseVideos")->findOneBy(array(), array('idVideos' => 'DESC'));
         return new ViewModel(array(
         	"bannersDestaque" => $repo->findAll(),

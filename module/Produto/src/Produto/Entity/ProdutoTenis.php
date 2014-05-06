@@ -18,7 +18,7 @@ class ProdutoTenis
 		$this->perspectiva = new ArrayCollection();
 	}
 	/**
-	 * @ORM\OneToMany(targetEntity="Produto\Entity\ProdutoSugestaoCores", mappedBy="tenis")
+	 * @ORM\OneToMany(targetEntity="Produto\Entity\ProdutoSugestaoCores", mappedBy="tenisProduto")
 	 */
 	private $sugestaoCoresProdutos;
 	/**

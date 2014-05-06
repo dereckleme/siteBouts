@@ -43,7 +43,7 @@ class ProdutoSugestaoCores
      *   @ORM\JoinColumn(name="tenis", referencedColumnName="idtenis")
      * })
      */
-    private $tenis;
+    private $tenisProduto;
 	/**
 	 * @return the $idSugestaoCores
 	 */
@@ -65,12 +65,7 @@ class ProdutoSugestaoCores
 		return $this->nossoNumero;
 	}
 
-	/**
-	 * @return the $tenis
-	 */
-	public function getTenis() {
-		return $this->tenis;
-	}
+	
 
 	/**
 	 * @param number $idSugestaoCores
@@ -92,12 +87,18 @@ class ProdutoSugestaoCores
 	public function setNossoNumero($nossoNumero) {
 		$this->nossoNumero = $nossoNumero;
 	}
+	/**
+	 * @return the $tenisProduto
+	 */
+	public function getTenisProduto() {
+		return $this->tenisProduto;
+	}
 
 	/**
-	 * @param ProdutoTenis $tenis
+	 * @param ProdutoTenis $tenisProduto
 	 */
-	public function setTenis($tenis) {
-		$this->tenis = $tenis;
+	public function setTenisProduto($tenisProduto) {
+		$this->tenisProduto = $tenisProduto;
 	}
 
 

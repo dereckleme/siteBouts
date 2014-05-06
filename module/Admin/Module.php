@@ -10,6 +10,7 @@ use Admin\Service\Banner,
 	Admin\Service\Wallpaper,
 	Admin\Service\Vitrine,
 	Admin\Service\Midia,
+	Admin\Service\ProdutosCor,
 	Admin\Service\Produtos;
 class Module
 {
@@ -107,6 +108,10 @@ class Module
     public function getServiceConfig() {
     	return array(
     			'factories' => array(
+    					'Admin\Service\ProdutosCor' => function($service) {
+    						$ProdutosCor = new ProdutosCor($service->get('Doctrine\ORM\EntityManager'));
+    						return $ProdutosCor;
+    					},
     					'Admin\Service\Tecnologia' => function($service) {
     						$Tecnologia = new Tecnologia($service->get('Doctrine\ORM\EntityManager'));
     						return $Tecnologia;

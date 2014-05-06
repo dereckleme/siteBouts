@@ -88,8 +88,12 @@
 
 		<ul>
 		<?php 
+			$n = 0;
+			
 			foreach($this->tecnologias->getSubmenus() AS $tecnologia)
 			{
+				if($n <= 3)
+				{
 		?>
 			<li>
 				<img src="<?=$this->basePath("img/tecnologia/".$tecnologia->getConteudo()->getSrc())?>">
@@ -100,6 +104,8 @@
 			    </a>
 		    </li>
 		   <?php 
+		   			$n++;
+				}
 			}
 		   ?> 
 		</ul>
