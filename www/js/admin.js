@@ -443,7 +443,6 @@ $(document).ready(function(){
 	$(".conteudo").on("click",".deletarSugestaoAction",function(){
 		var action = $(this).attr("rev");
 		var idAction = $(this).attr("rel");
-		alert(idAction);
 		if(confirm("Tem certeza que deseja excluir esta sugestão de cor?"))
 			{
 				$.ajax({	
