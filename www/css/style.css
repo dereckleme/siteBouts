@@ -173,28 +173,15 @@ section.pg-produtos ul li a p:nth-child(1) { font-size: 3.8em; margin: -50px 0 0
 section.pg-produtos ul li a p:nth-child(3) { font-size: 1.8em; margin: -40px 0 0 0;}
 section.pg-produtos ul li a span { width: 200px; float: left; border-top: solid 1px #000000; border-bottom: solid 1px #999999; display: block; position: relative; top: -50px; left: 25%; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 
-section.pg-midia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
+section.pg-midia { width: 960px; position: relative; left: 50%; margin: 50px 0 0 -480px; float: left; padding-bottom: 40px;}
 section.pg-midia div { width: 970px; float: left; position: relative; left: 50%; margin: 38px 0 0 -485px; padding-bottom: 90px;}
 section.pg-midia div h3 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; color: #222222; font-size: 3.0em; font-weight: bold; text-align: center;}
 section.pg-midia div ul { width: 970px;}
-section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin: 0 auto;}
-section.pg-midia div ul li.video-principal iframe { width: 640px; height: 360px;}
+section.pg-midia div ul li.video-principal { width: 800px; height: 450px; margin: 0 auto;}
+section.pg-midia div ul li.video-principal iframe { width: 800px; height: 450px;}
 section.pg-midia div ul li.video-secundario { width: 317px; height: 180px; float: left; margin-right: 6px; margin-top: 60px;}
 section.pg-midia div ul li.video-secundario iframe { width: 317px; height: 180px;}
 section.pg-midia div ul li p { font-weight: bold; color: #222222; font-size: 1.5em;}
-
-/*#############NOVA PAGINA DE MÍDIA#################*/
-
-/*
-section.pg-midia div { width: 960px; float: left; position: relative; left: 50%; margin: 38px 0 0 -480px; padding-bottom: 90px; background: #DDD;}
-section.pg-midia div h3 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; color: #222222; font-size: 3.0em; font-weight: bold; text-align: center;}
-section.pg-midia div.video-principal { width: 960px; height: 450px; background: #999; float: left;}
-section.pg-midia div ul { width: 970px;}
-section.pg-midia div ul li.video-principal { width: 640px; height: 360px; margin: 0 auto;}
-section.pg-midia div ul li.video-principal iframe { width: 640px; height: 360px;}
-section.pg-midia div ul li.video-secundario { width: 317px; height: 180px; float: left; margin-right: 6px; margin-top: 60px;}
-section.pg-midia div ul li.video-secundario iframe { width: 317px; height: 180px;}
-section.pg-midia div ul li p { font-weight: bold; color: #222222; font-size: 1.5em;}*/
 
 section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 #box-produtos { width: 650px; float: left; margin-top: 70px;}

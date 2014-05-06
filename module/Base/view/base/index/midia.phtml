@@ -1,6 +1,3 @@
-<?php 
-	$this->headTitle("Assista as ultimas ações produzidas pela Bout’s");
-?>
 <section class="pg-midia">
 
 	<div>
@@ -34,46 +31,5 @@
 		</ul>
 
 	</div>
-
-	<!-------------------------------------------------######################################################################################################################################-------------------------------------------------------->
-
-	<!--<div>
-		<h3>Titulo Principal</h3>
-
-		<div class="video-principal">
-			<iframe src="//player.vimeo.com/video/91590180?byline=0&amp;portrait=0&amp;badge=0&amp;color=bcdae6"></iframe>
-		</div>
-
-		
-
-		<ul>
-			<?php 
-			$teste = 1;
-				foreach($this->midias AS $midia)
-				{
-					if($teste == 1)
-					{
-					?>
-	
-			<li class="video-principal">
-				<iframe src="<?=$midia->getUrlYoutube()?>" frameborder="0" allowfullscreen></iframe>
-			</li>
-				<?php 
-					}
-					else{
-				?>
-			<li class="video-secundario">
-				<iframe src="<?=$midia->getUrlYoutube()?>" frameborder="0" allowfullscreen></iframe>
-				 <p><?=$midia->getTitulo()?></p>
-			</li>
-			<?php
-					}
-					$teste++;
-}
-			?>
-			
-		</ul>
-
-	</div>-->
 
 </section>
