@@ -158,6 +158,12 @@ $(document).ready(function(){
 		block_detalhe = true;
 		return false;
 	})
+
+	$(".viewport-galery").on("click",function(){
+		var imagem = $(this).attr("href");
+		$(".pg-galeria img").attr("src",imagem);
+		return false;
+	})
 	
 	//********************carousel detalhe produto
 	var total_detalhe = $(".carouselPerspectiva li").size();

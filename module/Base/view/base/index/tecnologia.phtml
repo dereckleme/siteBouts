@@ -23,7 +23,7 @@
 			?>
 			<li>
 				<img class="tec-viewport" title="<?=$foto->getTituloImagem()?>" alt="<?=$foto->getTituloImagem()?>" src="<?=$this->basePath("img/tecnologia/".$foto->getSrc())?>">
-				<a href="">
+				<a href="<?=$this->basePath("img/tecnologia/".$foto->getSrc())?>" class="viewport-galery">
 				  <img title="<?=$foto->getTituloImagem()?>" alt="<?=$foto->getTituloImagem()?>" src="<?=$this->basePath()?>/img/lupa-tec.png">
 			    </a>
 		    </li>
