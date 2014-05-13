@@ -20,6 +20,7 @@ return array(
 						'Admin\Controller\Produtos' => 'Admin\Controller\ProdutosController',
 						'Admin\Controller\TecnologiaAdm' => 'Admin\Controller\TecnologiaAdmController',
 						'Admin\Controller\Wallpaper' => 'Admin\Controller\WallpaperController',
+						'Admin\Controller\Newslatter' => 'Admin\Controller\NewslatterController',
 				),
 	),
     'router' => array(
