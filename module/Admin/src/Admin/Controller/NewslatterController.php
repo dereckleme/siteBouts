@@ -31,5 +31,16 @@ class NewslatterController extends AbstractActionController
     	$layout->setTerminal(1);
     	return $layout;
     }
+    public function deleteAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$service = $this->getServiceLocator()->get('Admin\Service\Newslatter');
+    		$service->delete($this->getRequest()->getPost("id"));
+    	}
+    	$layout = new ViewModel();
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
 }
 
