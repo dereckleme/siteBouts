@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	
 	$(".conteudo").on("click",".AddCor",function(){
 		var idProduto = $(this).attr("rel");
 		$( "#popupCor" ).dialog({
