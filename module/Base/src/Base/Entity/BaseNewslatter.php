@@ -30,13 +30,6 @@ class BaseNewslatter
     private $email;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="base_newslattercol", type="string", length=45, nullable=true)
-     */
-    private $baseNewslattercol;
-
-    /**
      * @var \DateTime
      *
      * @ORM\Column(name="data", type="datetime", nullable=true)
