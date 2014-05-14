@@ -9,6 +9,7 @@ use Admin\Service\Banner,
 	Admin\Service\Tecnologia,
 	Admin\Service\Wallpaper,
 	Admin\Service\Vitrine,
+	Admin\Service\Newslatter,
 	Admin\Service\Midia,
 	Admin\Service\ProdutosCor,
 	Admin\Service\Produtos;
@@ -49,40 +50,6 @@ class Module
     		 * Permissão de usuário
     		*/
     		$matchedRoute = $controller->getEvent()->getRouteMatch()->getMatchedRouteName();
-    	
-    		/*
-    		 * Definição de Layout de todos modulos
-    		*/
-    		/*if($auth->hasIdentity())
-    		{
-    	
-    			if($auth->getIdentity()->getNivelUsuario() != 1)
-    			{
-    	
-    				if (isset($config['module_layouts'][$moduleNamespace])) {
-    					$controller->layout($config['module_layouts'][$moduleNamespace]."_logado");
-    					$controller->layout()->infoUser = $auth->getIdentity();
-    				}
-    			}
-    			else
-    			{
-    				if (isset($config['module_layouts'][$moduleNamespace])) {
-    					$controller->layout($config['module_layouts'][$moduleNamespace]."_logado_adm");
-    					$controller->layout()->infoUser = $auth->getIdentity();
-    				}
-    			}
-    		}
-    		else
-    		{
-    	
-    			if (isset($config['module_layouts'][$moduleNamespace])) {
-    				$controller->layout($config['module_layouts'][$moduleNamespace]);
-    			}
-    		}*/
-    	
-    		/*
-    		 * Definições para bloqueio total de usuários no admin
-    		*/
     		$adminRoute = explode("-",$matchedRoute);
     		if(!$auth->hasIdentity() && $adminRoute[0] == "admin")
     		{
@@ -91,17 +58,7 @@ class Module
     		else if($matchedRoute == "admin/logar" && $auth->hasIdentity())
     		{
     			return $controller->redirect()->toRoute("admin");
-    		}
-    		/*
-    		if(!$auth->hasIdentity() && $adminRoute[0] == "admin")
-    		{
-    			return $controller->redirect()->toRoute("admin/logar");
-    		}
-    		else if($auth->hasIdentity())
-    		{
-    				return $controller->redirect()->toRoute("admin");
-    		}    
-    		*/	    		
+    		}    		
     	
     	}, 100);
     }
@@ -111,6 +68,10 @@ class Module
     					'Admin\Service\ProdutosCor' => function($service) {
     						$ProdutosCor = new ProdutosCor($service->get('Doctrine\ORM\EntityManager'));
     						return $ProdutosCor;
+    					},
+    					'Admin\Service\Newslatter' => function($service) {
+    						$Newslatter = new Newslatter($service->get('Doctrine\ORM\EntityManager'));
+    						return $Newslatter;
     					},
     					'Admin\Service\Tecnologia' => function($service) {
     						$Tecnologia = new Tecnologia($service->get('Doctrine\ORM\EntityManager'));

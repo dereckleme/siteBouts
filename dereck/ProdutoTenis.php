@@ -64,6 +64,13 @@ class ProdutoTenis
     private $numeracaoFinal;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="descricao", type="text", nullable=true)
+     */
+    private $descricao;
+
+    /**
      * @var \BaseSubmenu
      *
      * @ORM\ManyToOne(targetEntity="BaseSubmenu")

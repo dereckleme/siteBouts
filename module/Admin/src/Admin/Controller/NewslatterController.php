@@ -18,5 +18,16 @@ class NewslatterController extends AbstractActionController
     	$layout->setTerminal(1);
     	return $layout;
     }
+    public function newslatterCrudAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$service = $this->getServiceLocator()->get('Admin\Service\Newslatter');
+    		$service->insert(array("email" => $this->getRequest()->getPost("email")));
+    	}
+    	$layout = new ViewModel();
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
 }
 
