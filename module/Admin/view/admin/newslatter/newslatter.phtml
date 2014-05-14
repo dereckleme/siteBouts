@@ -1,9 +1,16 @@
 <div id="adm-news">
 	<div>
 		<ul>
+		<?php 
+			foreach($this->listaEmails AS $email)
+			{
+		?>
 			<li>
-			   <p>paulobaronista@gmail.com<span><strong>Data: </strong>20/05/2000</span></p><a class="delete-email-news" rel="" href="" title="Excluir">Excluir</a>
+			   <p><?=$email->getEmail()?><span><strong>Data: </strong><?=$email->getData()->format("d/m/Y");?></span></p><a class="delete-email-news" rel="" href="" title="Excluir">Excluir</a>
        		</li>
+       		<?php 
+			}
+       		?>
        	</ul>
 	</div>
 	<button class="" type="button" title="Exportar Lista">Exportar Lista</button>

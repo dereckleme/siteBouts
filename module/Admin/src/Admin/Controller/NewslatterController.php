@@ -14,7 +14,9 @@ class NewslatterController extends AbstractActionController
 
 	public function newslatterAction()
     {
-    	$layout = new ViewModel();
+    	$entityManager = $this->getServiceLocator()->get("Doctrine\ORM\EntityManager");
+    	$repo = $entityManager->getRepository("Base\Entity\BaseNewslatter")->findAll();
+    	$layout = new ViewModel(array("listaEmails" => $repo));
     	$layout->setTerminal(1);
     	return $layout;
     }
