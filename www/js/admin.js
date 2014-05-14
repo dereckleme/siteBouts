@@ -1,17 +1,23 @@
 $(document).ready(function(){
 
 	$(".conteudo").on("click",".delete-email-news",function(){
-		alert("foi")
+		var DeletEmail = $(this).attr("rel");
+		var Email = $(this);
+		if(confirm("Tem certeza que deseja excluir esta email?"))
+			
+		{
+		        $.ajax({
+	    	        url: basePatch+"/admin/crud/newslatter/delete",
+	    	        type: 'POST',
+	    	        success: function( data )  
+	                { 
+	                	$(Email).closest("li").remove();
+	                },
+	                data: {id:DeletEmail},
+	    	    });
+		}		
 		return false;
 	})
-
-
-
-
-
-
-
-
 
 	$(".conteudo").on("click",".AddCor",function(){
 		var idProduto = $(this).attr("rel");

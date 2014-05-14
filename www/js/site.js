@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 	//   == se for igual
 	//   != se não for igual
@@ -15,7 +14,6 @@ $(document).ready(function(){
 	    	        type: 'POST',
 	    	        success: function( data )  
 	                { 
-	                	alert(data);
 	    	        	alert("O email "+CadastroNews+" foi cadastrado com sucesso.")
 	                },
 	                data: {email:CadastroNews},
@@ -27,10 +25,18 @@ $(document).ready(function(){
     $(".az").on("click",function() {
 		var CadastroNews = $(".news-bottom").val();
 		if (CadastroNews == "" ) {
-
 			alert("Este campo está vazio")
 		}else {
-			alert("O email não "+CadastroNews+" foi cadastrado com sucesso.")
+
+			$.ajax({
+	    	        url: basePatch+"/admin/crud/newslatter/newslatterCrud",
+	    	        type: 'POST',
+	    	        success: function( data )  
+	                { 
+	    	        	alert("O email "+CadastroNews+" foi cadastrado com sucesso.")
+	                },
+	                data: {email:CadastroNews},
+	    	    });
 		}
 	return false;
     });
