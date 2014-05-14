@@ -42,5 +42,14 @@ class NewslatterController extends AbstractActionController
     	$layout->setTerminal(1);
     	return $layout;
     }
+    public function exportarAction()
+    {
+    	$entityManager = $this->getServiceLocator()->get("Doctrine\ORM\EntityManager");
+    	$repo = $entityManager->getRepository("Base\Entity\BaseNewslatter")->findAll();
+    	
+    	$layout = new ViewModel(array("lista" => $repo));
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
 }
 
