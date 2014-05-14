@@ -13,6 +13,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class BaseNewslatter
 {
+	public function __construct() {
+		$this->data = new \DateTime("now");
+	}
     /**
      * @var integer
      *
@@ -34,7 +37,7 @@ class BaseNewslatter
      *
      * @ORM\Column(name="data", type="datetime", nullable=true)
      */
-    private $data = 'CURRENT_TIMESTAMP';
+    private $data;
 	/**
 	 * @return the $idnewslatter
 	 */
