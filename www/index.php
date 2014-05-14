@@ -1,5 +1,6 @@
 <?php
 ini_set('display_errors', 1);
+date_default_timezone_set('America/Sao_Paulo');
 /**
  * This makes our life easier when dealing with paths. Everything is relative
  * to the application root now.
