@@ -1,5 +1,40 @@
 
 $(document).ready(function(){
+	//   == se for igual
+	//   != se não for igual
+	//   && dupla condição igual
+
+	$(".vd").on("click",function() {
+		var CadastroNews = $(".news-top").val();
+		if (CadastroNews == "" ) {
+			alert("Este campo está vazio")	
+		}else {
+
+			$.ajax({
+	    	        url: basePatch+"/admin/crud/newslatter/newslatterCrud",
+	    	        type: 'POST',
+	    	        success: function( data )  
+	                { 
+	                	alert(data);
+	    	        	alert("O email "+CadastroNews+" foi cadastrado com sucesso.")
+	                },
+	                data: {email:CadastroNews},
+	    	    });
+		}
+	return false;
+    });
+
+    $(".az").on("click",function() {
+		var CadastroNews = $(".news-bottom").val();
+		if (CadastroNews == "" ) {
+
+			alert("Este campo está vazio")
+		}else {
+			alert("O email não "+CadastroNews+" foi cadastrado com sucesso.")
+		}
+	return false;
+    });
+
 	jQuery.fn.reverse = function(fn) {
 
 		   var i = this.length;

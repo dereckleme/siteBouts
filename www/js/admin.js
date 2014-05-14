@@ -1,4 +1,18 @@
 $(document).ready(function(){
+
+	$(".conteudo").on("click",".delete-email-news",function(){
+		alert("foi")
+		return false;
+	})
+
+
+
+
+
+
+
+
+
 	$(".conteudo").on("click",".AddCor",function(){
 		var idProduto = $(this).attr("rel");
 		$( "#popupCor" ).dialog({
@@ -539,4 +553,6 @@ $(document).ready(function(){
 		}
 		return false;
 	})
+
+
 })
