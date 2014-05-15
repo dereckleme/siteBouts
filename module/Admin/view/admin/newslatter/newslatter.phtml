@@ -6,7 +6,7 @@
 			{
 		?>
 			<li>
-			   <p><?=$email->getEmail()?><span><strong>Data: </strong><?=$email->getData()->format("d/m/Y");?></span></p><a class="delete-email-news" rel="<?=$email->getIdnewslatter()?>" href="" title="Excluir">Excluir</a>
+			   <p><span class="txt-email"><?=$email->getEmail()?></span><span class="data-email"><strong>Data: </strong><?=$email->getData()->format("d/m/Y");?></span></p><a class="delete-email-news" rel="<?=$email->getIdnewslatter()?>" href="" title="Excluir">Excluir</a>
        		</li>
        		<?php 
 			}

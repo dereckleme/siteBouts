@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$(".conteudo").on("click",".delete-email-news",function(){
 		var DeletEmail = $(this).attr("rel");
 		var Email = $(this);
-		if(confirm("Tem certeza que deseja excluir esta email?"))
+		if(confirm("Tem certeza que deseja excluir este email?"))
 			
 		{
 		        $.ajax({
