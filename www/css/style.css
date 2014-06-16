@@ -145,7 +145,7 @@ span.linha-home img { position: absolute; left: 50%; top: -1px;}
 div.video iframe { width: 640px; height: 437px; border: solid 1px #222222; float: left; margin-top: 10px;}
 
 div.campanha { width: 640px; height: 437px; border: solid 1px #222222; float: right; margin-top: 10px;}
-div.campanha h3 { width: 630px; height: 18px; top: 0px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px; position: absolute;}
+div.campanha h3 { width: 630px; height: 18px; overflow: hidden; top: 0px; background: url(../img/dt-box-home.jpg) no-repeat; margin: 0; padding: 5px; position: absolute;}
 div.campanha h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; text-indent: 30px;}
 
 /*Pagina Produtos*/
