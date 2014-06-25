@@ -8,7 +8,7 @@ class ProdutoTenisRepository extends EntityRepository
 {
 	public function localizaPelaCategoria($slugCategoria)
 	{
-		$qb =  $this->createQueryBuilder('produto')->setMaxResults(7);
+		$qb =  $this->createQueryBuilder('produto');
 		$qb->select('produto');
 		$qb->innerJoin("Produto\Entity\ProdutoSubcategoria", "s","WITH","produto.subcategoriaTenis = s.idsubcategoria");
 		$qb->innerJoin("Produto\Entity\ProdutoCategoria", "c","WITH","c.idcategoria = s.categoria");
@@ -19,7 +19,7 @@ class ProdutoTenisRepository extends EntityRepository
 	}
 	public function localizaPelaSubcategoria($slugCategoria, $slugSubcategoria)
 	{
-		$qb =  $this->createQueryBuilder('produto')->setMaxResults(7);
+		$qb =  $this->createQueryBuilder('produto');
 		$qb->select('produto');
 		$qb->innerJoin("Produto\Entity\ProdutoSubcategoria", "s","WITH","produto.subcategoriaTenis = s.idsubcategoria");
 		$qb->innerJoin("Produto\Entity\ProdutoCategoria", "c","WITH","c.idcategoria = s.categoria");
