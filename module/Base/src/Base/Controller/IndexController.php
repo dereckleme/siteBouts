@@ -91,19 +91,30 @@ class IndexController extends AbstractActionController
     	$request = $this->getRequest();
     	if($request->isPost())
     	{
+    		$email = array();
     		$dados = $request->getPost()->toArray();
+    		if(!empty($dados['sac'])) $email[] = "sac@bouts.com.br";
+    		if(!empty($dados['marketing'])) $email[] = "marketing@bouts.com.br";
+    		$email = implode(",", $email);
+    		
     		$view = new ViewModel(array(
     				'fullname' => $dados['Nome'],
+    				'Email' => $dados['Email'],
+    				'telefone' => $dados['telefone'],
+    				'Modelo' => $dados['Modelo'],
+    				'Mensagem' => $dados['Mensagem'],
     		));
     		$view->setTerminal(true);
     		$view->setTemplate('Base/view/emails/contato');
     		$this->mailerZF2()->send(array(
     				'to' => '',
     				'cc' => $dados['Email'],
-    				'bcc' => 'contato@bouts.com.br',
+    				'bcc' => $email,
     				'subject' => 'Contato Bouts'
     		), $view);
     	}
+
+    	//	'bcc' => 'contato@bouts.com.br',
     	$layout = new ViewModel();
     	$layout->setTerminal(1);
     	return $layout;

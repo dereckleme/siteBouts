@@ -279,6 +279,8 @@ $(document).ready(function(){
 		else
 			{
 				var formData = new FormData();
+				if($(".sac").is(":checked")) formData.append('sac', 1);
+				if($(".marketing").is(":checked")) formData.append('marketing', 1);
 	        	formData.append('Nome', $(".inputNome").val());
 	        	formData.append('Email', $(".InputEmail").val());
 	        	formData.append('telefone', $(".inputTelefoneDDD").val()+$(".inputTelefoneNumero").val());
@@ -290,8 +292,7 @@ $(document).ready(function(){
 	    	        contentType: 'multipart/form-data',
 	    	        success: function( data )  
 	                {  
-	    	        	alert(data);
-	    	        	//alert("Contato enviado com sucesso!");
+	    	        	alert("Contato enviado com sucesso!");
 	                },
 	    	        data: formData,
 	    	        cache: false,
