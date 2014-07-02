@@ -262,4 +262,43 @@ $(document).ready(function(){
 		$(".viewport-imagem img").attr("src",imagem+'big.png');
 		return false;
 	})
+	$(".loadAjax").on("click",".EnviarContato",function(){
+		var n = $(".loadAjax input:checked").length;
+		var erros = "";
+		if(n == 0) erros = erros+"- Selecione um departamento.\n";
+		if($(".inputNome").val() == "") erros = erros+"- Campo Nome está em branco.\n";
+		if($(".InputEmail").val() == "") erros = erros+"- Campo Email está em branco.\n";
+		if($(".inputTelefoneDDD").val() == "") erros = erros+"- Campo DDD está em branco.\n";
+		if($(".inputTelefoneNumero").val() == "") erros = erros+"- Campo Telefone está em branco.\n";
+		if($(".InputModelo").val() == "") erros = erros+"- Campo Modelo está em branco.\n";
+		if($(".inputMensagem").val() == "") erros = erros+"- Campo Mensagem está em branco.\n";
+		if(erros != "")
+		{
+			alert("Atenção existe alguns erros abaixo:\n\n"+erros);
+		}
+		else
+			{
+				var formData = new FormData();
+	        	formData.append('Nome', $(".inputNome").val());
+	        	formData.append('Email', $(".InputEmail").val());
+	        	formData.append('telefone', $(".inputTelefoneDDD").val()+$(".inputTelefoneNumero").val());
+	        	formData.append('Modelo', $(".InputModelo").val());
+	        	formData.append('Mensagem', $(".inputMensagem").val());
+	        	$.ajax({
+	    	        url: basePatch+"/contato/enviar",
+	    	        type: 'POST',
+	    	        contentType: 'multipart/form-data',
+	    	        success: function( data )  
+	                {  
+	    	        	alert(data);
+	    	        	//alert("Contato enviado com sucesso!");
+	                },
+	    	        data: formData,
+	    	        cache: false,
+	    	        contentType: false,
+	    	        processData: false
+	    	    });
+			}
+		return false;
+	})
 });

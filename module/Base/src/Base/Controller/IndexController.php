@@ -86,4 +86,26 @@ class IndexController extends AbstractActionController
     	$layout->setTerminal(1);
     	return $layout;
     }
+    public function enviarContatoAction()
+    {
+    	$request = $this->getRequest();
+    	if($request->isPost())
+    	{
+    		$dados = $request->getPost()->toArray();
+    		$view = new ViewModel(array(
+    				'fullname' => $dados['Nome'],
+    		));
+    		$view->setTerminal(true);
+    		$view->setTemplate('Base/view/emails/contato');
+    		$this->mailerZF2()->send(array(
+    				'to' => '',
+    				'cc' => $dados['Email'],
+    				'bcc' => 'contato@bouts.com.br',
+    				'subject' => 'Contato Bouts'
+    		), $view);
+    	}
+    	$layout = new ViewModel();
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
 }

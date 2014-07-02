@@ -18,6 +18,7 @@
         "doctrine/common": "dev-master",
         "gedmo/doctrine-extensions": "dev-master",
         "webino/webino-image-thumb": "1.*",
-        "zendframework/zftool": "dev-master"
+        "zendframework/zftool": "dev-master",
+        "email-zf2/emailzf2": "dev-master"
     }
 }

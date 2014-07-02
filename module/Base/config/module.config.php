@@ -118,6 +118,18 @@ return array(
         						),
         		
         				),
+        				'may_terminate' => true,
+        				'child_routes' => array(
+        						'contato-enviar' => array(
+        								'type' => 'Literal',
+        								'options' => array(
+        										'route'    => '/enviar',
+        										'defaults' => array(
+        												'action'     => 'enviarContato',
+        										),
+        								)
+        						),
+        				)
         		),
         ),
     ),
