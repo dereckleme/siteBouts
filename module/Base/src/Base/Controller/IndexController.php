@@ -103,6 +103,8 @@ class IndexController extends AbstractActionController
     				'telefone' => $dados['telefone'],
     				'Modelo' => $dados['Modelo'],
     				'Mensagem' => $dados['Mensagem'],
+    				'Cidade' => $dados['Cidade'],
+    				'UF' => $dados['UF'],
     		));
     		$view->setTerminal(true);
     		$view->setTemplate('Base/view/emails/contato');

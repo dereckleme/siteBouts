@@ -272,6 +272,8 @@ $(document).ready(function(){
 		if($(".inputTelefoneNumero").val() == "") erros = erros+"- Campo Telefone está em branco.\n";
 		if($(".InputModelo").val() == "") erros = erros+"- Campo Modelo está em branco.\n";
 		if($(".inputMensagem").val() == "") erros = erros+"- Campo Mensagem está em branco.\n";
+		if($(".InputCidade").val() == "") erros = erros+"- Campo Cidade está em branco.\n";
+		if($(".InputUF").val() == "") erros = erros+"- Campo UF está em branco.\n";
 		if(erros != "")
 		{
 			alert("Atenção existe alguns erros abaixo:\n\n"+erros);
@@ -286,6 +288,8 @@ $(document).ready(function(){
 	        	formData.append('telefone', $(".inputTelefoneDDD").val()+$(".inputTelefoneNumero").val());
 	        	formData.append('Modelo', $(".InputModelo").val());
 	        	formData.append('Mensagem', $(".inputMensagem").val());
+	        	formData.append('UF', $(".InputUF").val());
+	        	formData.append('Cidade', $(".InputCidade").val());
 	        	$.ajax({
 	    	        url: basePatch+"/contato/enviar",
 	    	        type: 'POST',
