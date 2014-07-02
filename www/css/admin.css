@@ -63,16 +63,40 @@ label.cor-predominante { margin-bottom: 5px;}
 input[type="radio"] { margin: -4px 0 0;}
 
 /*gerenciar tecnologia*/
-.formProduto { position: relative; float: left;}
-span.g-categorias { width: 460px; max-height: 620px; overflow-x: hidden; display: block; float: right; margin-top: -40px;} 
+.formProduto { position: relative; float: left; background: #CCC;}
+span.g-categorias { width: 520px; max-height: 620px; overflow-x: hidden; display: block; float: right; margin-top: -40px; background: #CCC;} 
 span.g-categorias h5 { color: #079AB1; font-weight: bold; font-size: 20px;}
-span.g-categorias ul.box-produto { margin-left: 15px;}
-span.g-categorias ul.box-produto li.tt-produto { color: #079AB1;}
-span.g-categorias ul.box-produto li a.tt-produto { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #D72523; margin-left: 40px;}
+
+
+span.g-categorias ul.box-produto { margin-left: 15px; background: #CDC;}
+
+
+
+
+span.g-categorias ul.box-produto li.tt-produto { color: #079AB1; position: relative; background: #CCC;}
+
+span.g-categorias ul.box-produto li a.tt-produto { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #D72523; margin-left: 10px;}
+
+span.g-categorias ul.box-produto li a.edit-categoria { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #079AB1; margin-left: 10px;}
+
+#box-editar { width: 260px; height: 25px; position: relative; float: right;}
+#box-editar input { width: 180px; height: 17px; float: left; margin-right: 5px; }
+#box-editar a.edit-confirma { border-radius: 5px; font-size: 9px; padding: 5px; color: #FFFFFF; background: #30AB00;}
+
+
+
+
+
 span.g-categorias ul.box-produto ul { border-left: solid 1px #14c6e2;; margin: 10px 0 10px 10px;}
 span.g-categorias ul.box-produto ul li { font-size: 13px; color: #333333; margin: 4px 0 4px 0;}
 span.g-categorias ul.box-produto ul li:before { content: '\2212'; color: #14c6e2;}
-span.g-categorias ul.box-produto ul li a { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #e66700; margin-left: 40px;}
+
+
+span.g-categorias ul.box-produto ul li a.ex-sub { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #e66700; margin-left: 40px;}
+span.g-categorias ul.box-produto li a.edit-subcategoria { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #37c1d7; margin-left: 10px;}
+
+
+
 
 .salvarCategoriaProduto { margin: -10px 0 0 10px; border-radius: 5px; padding: 4px; border: none; color: #FFFFFF; background: #D72523;}
 .salvarSubCategoriaProduto { margin: -10px 0 0 10px; border-radius: 5px; padding: 4px; border: none; background: #e66700; color: #FFFFFF;}
