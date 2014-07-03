@@ -541,7 +541,7 @@ $(document).ready(function(){
 	$(".conteudo").on("click",".deletarAction",function(){
 		var action = $(this).attr("rev");
 		var idAction = $(this).attr("rel");
-		if(confirm("Atenção excluindo este produto, todas as sugestões de cores serão automaticamente excluídas, tem certeza que deseja excluir?"))
+		if(confirm("Tem certeza que deseja excluir?"))
 			{
 				$.ajax({
 			        url: basePatch+"/admin/crud/"+action+"/delete",
