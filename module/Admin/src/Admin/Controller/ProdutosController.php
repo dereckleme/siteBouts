@@ -155,12 +155,42 @@ class ProdutosController extends AbstractActionController
     	$layout->setTerminal(1);
     	return $layout;
     }
+    public function editarCategoriaAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$service = $this->getServiceLocator()->get('Admin\Service\ProdutosCategoria');  		
+    		$retorno = $service->update(array("id" => $this->getRequest()->getPost("idCategoria"), "nome" =>  $this->getRequest()->getPost("valor")));
+    		$layout = new ViewModel(array("msg" => $retorno->getIdcategoria()));
+    	}
+    	else
+    	{
+    		$layout = new ViewModel();
+    	}
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
     public function adicionaSubCategoriaAction()
     {
     	if($this->getRequest()->isPost())
     	{
     		$service = $this->getServiceLocator()->get('Admin\Service\ProdutosSubCategoria');
     		$retorno = $service->insert(array('nome' => $this->getRequest()->getPost("titulo"), "idCategoria" => $this->getRequest()->getPost("categoria")));
+    		$layout = new ViewModel(array("msg" => $retorno->getIdsubcategoria()));
+    	}
+    	else
+    	{
+    		$layout = new ViewModel();
+    	}
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
+    public function editarSubCategoriaAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$service = $this->getServiceLocator()->get('Admin\Service\ProdutosSubCategoria');
+    		$retorno = $service->update(array("id" => $this->getRequest()->getPost("idCategoria"), "nome" =>  $this->getRequest()->getPost("valor")));
     		$layout = new ViewModel(array("msg" => $retorno->getIdsubcategoria()));
     	}
     	else

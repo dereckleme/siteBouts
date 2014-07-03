@@ -1,5 +1,66 @@
 $(document).ready(function(){
-
+	$(".conteudo").on("click",".edit-categoria",function(){
+		var idCategoria = $(this).attr("rel");
+		$(".boxCategoria"+idCategoria).fadeIn();
+		return false;
+	})
+	$(".conteudo").on("click",".edit-subcategoria",function(){
+		var idCategoriasub = $(this).attr("rel");
+		$(".boxCategoriaSubcategoria"+idCategoriasub).fadeIn();
+		return false;
+	})
+	$(".conteudo").on("click",".actionEditarCategoria",function(){
+		var idCategoria = $(this).attr("rel");
+		var valor = $(".boxCategoria"+idCategoria+" .valorSet").val();
+		if(valor == "")
+			{
+				alert("Atenção o campo de edição está em branco.");
+			}
+		else
+			{
+		
+				if(confirm("Tem certeza que deseja editar esta categoria?"))
+				{
+					$.ajax({
+		    	        url: basePatch+"/admin/crud/produtos/editarCategoria",
+		    	        type: 'POST',
+		    	        success: function( data )  
+		                { 
+		    	        	alert("Categoria atualizada com sucesso!");
+		    	        	location.reload();
+		                },
+		                data: {idCategoria:$(this).attr("rel"), valor:valor},
+		    	    });
+				}
+			
+			}
+			return false;
+		})
+	$(".conteudo").on("click",".actionEditarCategoriaSub",function(){
+		var idCategoriasub = $(this).attr("rel");
+		var valor = $(".boxCategoriaSubcategoria"+idCategoriasub+" .valorSet").val();
+		if(valor == "")
+		{
+			alert("Atenção o campo de edição está em branco.");
+		}
+		else
+			{
+			if(confirm("Tem certeza que deseja editar esta sub-categoria?"))
+				{
+					$.ajax({
+		    	        url: basePatch+"/admin/crud/produtos/editarSubCategoria",
+		    	        type: 'POST',
+		    	        success: function( data )  
+		                { 
+		    	        	alert("Sub-Categoria atualizada com sucesso!");
+		    	        	location.reload();
+		                },
+		                data: {idCategoria:$(this).attr("rel"), valor:valor},
+		    	    });
+				}
+			}
+			return false;
+		})	
 	$(".conteudo").on("click",".delete-email-news",function(){
 		var DeletEmail = $(this).attr("rel");
 		var Email = $(this);

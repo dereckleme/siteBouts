@@ -68,10 +68,10 @@
          	{
          		?>
             <li class="tt-produto"><strong><?=$categoria->getNome()?></strong><a rel="<?=$categoria->getIdcategoria()?>" class="tt-produto excluirCategoria" href="" title="excluir">Excluir</a>
-                <a rel="<?=$categoria->getIdcategoria()?>" class="edit-categoria" href="" title="editar categoria">editar</a>
-                <div id="box-editar">
-                    <input type="text"placeholder="editar categoria"/>
-                    <a rel="<?=$categoria->getIdcategoria()?>" class="edit-confirma" href="" title="confirmar edição">Confirmar</a>
+                <a rel="<?=$categoria->getIdcategoria()?>" class="edit-categoria" href="" title="editar categoria" rel="<?=$categoria->getIdcategoria()?>">editar</a>
+                <div id="box-editar" class="boxCategoria<?=$categoria->getIdcategoria()?>" style="display:none">
+                    <input type="text" placeholder="<?=$categoria->getNome()?>" class="valorSet"/>
+                    <a rel="<?=$categoria->getIdcategoria()?>" class="edit-confirma actionEditarCategoria" href="" title="confirmar edição">Confirmar</a>
                 </div>
 
                 <ul>
@@ -80,10 +80,10 @@
                 	{
                 ?>
                     <li><?=$subcategoria->getNome()?><a href="" rel="<?=$subcategoria->getIdsubcategoria()?>" title="excluir" class="ex-sub excluirSubcategoria">Excluir</a>
-                        <a rel="<?=$categoria->getIdcategoria()?>" class="edit-subcategoria" href="" title="editar sub-categoria">editar</a>
-                        <div id="box-editar">
-                            <input type="text"placeholder="editar sub-categoria"/>
-                            <a rel="<?=$categoria->getIdcategoria()?>" class="edit-confirma" href="" title="confirmar edição">Confirmar</a>
+                        <a class="edit-subcategoria"  rel="<?=$subcategoria->getIdsubcategoria()?>" href="" title="editar sub-categoria">editar</a>
+                        <div id="box-editar" style="display:none" class="boxCategoriaSubcategoria<?=$subcategoria->getIdsubcategoria()?>">
+                            <input type="text"placeholder="<?=$subcategoria->getNome()?>" class="valorSet"/>
+                            <a rel="<?=$subcategoria->getIdsubcategoria()?>" class="edit-confirma actionEditarCategoriaSub" href="" title="confirmar edição">Confirmar</a>
                         </div>
                     </li>
                     <?php 
