@@ -160,7 +160,7 @@ div.campanha h3 { font-size: 2.0em; color: #222222; text-transform: uppercase; t
 .h-produtos div ul.box-produto li a { font-size: 3.0em; font-weight: bold; font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;}
 
 section.pg-produtos { width: 1300px; position: relative; left: 50%; margin: 20px 0 95px -650px; float: left;}
-section.pg-produtos ul { width: 100%; float: left; margin: 25px 0 0 0; background: #CCC;}
+section.pg-produtos ul { width: 100%; float: left; margin: 25px 0 0 0;}
 section.pg-produtos ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 section.pg-produtos ul li { width: 400px; height: 250px; margin: 0 0 25px 25px; float: left; border: solid 1px #999999; cursor: pointer; position: relative; background: #FFFFFF; overflow: hidden;}
 section.pg-produtos ul li img { position: absolute; z-index: 10;}
