@@ -9,16 +9,25 @@
 	?>
 		<li>
 			<figure>
+				<a href=""><img src="<?=$this->basePath("img/wallpapers/".$wallpaper->getSrc())?>" title="clique para ampliar" alt="Clipping"></a>
 				<p><?=$wallpaper->getTituloImagem()?></p>
-				<img src="<?=$this->basePath("img/wallpapers/".$wallpaper->getSrc())?>" title="Wallpaper" alt="Wallpaper">
 			</figure>
-			<span>
+			<!--<span>
 				<a href="<?=$this->basePath("img/wallpapers/".$wallpaper->getSrc())?>" target="_blank" title="Download">Download</a>
-			</span>
+			</span>-->
 		</li>
 		<?php 
 		}
 		?>
 	</ul>
 </section>
+
+	<div id="popup-clipping">
+
+		<div id="all-clipping">
+			<img src="<?=$this->basePath("img/wallpapers/".$wallpaper->getSrc())?>" title="Clipping" alt="Clipping">
+			<a class="fx-clipping" href="" title="fechar" alt="fechar"></a>
+		</div>
+
+	</div>
 

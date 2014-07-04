@@ -58,7 +58,7 @@ class WallpaperController extends AbstractActionController
     			$service->delete($this->getRequest()->getPost("idAction"));
     		}
     	}
-    	$layout = new ViewModel(array("msg" => "Wallpaper removido com sucesso!"));
+    	$layout = new ViewModel(array("msg" => "Clipping removido com sucesso!"));
     	$layout->setTerminal(1);
     	return $layout;
     }

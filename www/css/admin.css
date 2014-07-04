@@ -115,9 +115,12 @@ ul.accordion-banner li img { width: 350px; height: 200px; margin: 23px 0 0 23px;
 ul.accordion-banner li p { width: 350px; margin: 5px 0 5px 23px;}
 ul.accordion-banner li button { margin: 6px 0 0 23px;}
 
-ul.accordion-wallpaper li { width: 200px; height: 250px; padding-bottom: 10px;}
+ul.accordion-wallpaper li { width: 200px; padding-bottom: 10px;}
 ul.accordion-wallpaper li img { width: 180px; height: 150px; margin: 10px 0 0 8px;}
+ul.accordion-wallpaper li p { width: 180px; text-align: center;}
 ul.accordion-wallpaper li button { margin: 6px 0 0 10px;}
+
+
 
 ul.accordion-midia li span { background: url(.././img/youtube-adm.png) no-repeat scroll 0 5px; padding: 5px 0 10px 0;}
 ul.accordion-comprar li span { background: url(.././img/comprar-adm.png) no-repeat scroll 0 5px; padding: 8px 0 10px 0;}
