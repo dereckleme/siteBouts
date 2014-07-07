@@ -25,7 +25,7 @@ class MatchedRotaCaminho implements EventManagerAwareInterface
    {
    		if($this->match->getParams()['action'] == "wallpaper")
    		{
-   			return array("rota" => $this->match->getMatchedRouteName(), "nome" => "Wallpaper", "subtitulo" => "Papéis de Parede - Wallpapers");
+   			return array("rota" => $this->match->getMatchedRouteName(), "nome" => "Clipping", "subtitulo" => "Fique por dentro das novidades da Bout´s");
    		}
    		else if($this->match->getParams()['action'] == "midia")
    		{

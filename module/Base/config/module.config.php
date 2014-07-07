@@ -100,7 +100,7 @@ return array(
         		'wallpaper' => array(
         				'type' => 'Literal',
         				'options' => array(
-        						'route'    => '/wallpaper',
+        						'route'    => '/clipping',
         						'defaults' => array(
         								'controller' => 'Base\Controller\Index',
         								'action'     => 'wallpaper'

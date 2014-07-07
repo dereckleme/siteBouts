@@ -2,7 +2,17 @@ $(document).ready(function(){
 	//   == se for igual
 	//   != se não for igual
 	//   && dupla condição igual
-
+	$(".pg-wallpaper figure a").on("click",function() {
+		var src = $("img",this).attr("src");
+		$('#popup-clipping img').attr("src",src);
+		$('#popup-clipping').fadeIn();
+		return false;
+	});
+	$(".fx-clipping").on("click",function() {
+		$('#popup-clipping').fadeOut();
+		return false;
+	})
+	
 	$(".vd").on("click",function() {
 		var CadastroNews = $(".news-top").val();
 		if (CadastroNews == "" ) {
