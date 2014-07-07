@@ -172,8 +172,8 @@ $(document).ready(function(){
 	})
 	$(".conteudo").on("click",".actionAdicionaWallpaper",function(){
 		var erros = "";
-		if($(".formWallpaper .titulo").val() == "") erros = erros+"- Qual o título do wallpaper?\n";
-    	if($('.formWallpaper input[type=file]')[0].files[0] == null) erros = erros+"- Insira uma imagem do wallpaper\n";
+		if($(".formWallpaper .titulo").val() == "") erros = erros+"- Qual o título do clipping?\n";
+    	if($('.formWallpaper input[type=file]')[0].files[0] == null) erros = erros+"- Insira uma imagem do clipping\n";
     	if(erros == "")
     		{
     			var formData = new FormData();
@@ -187,7 +187,7 @@ $(document).ready(function(){
                     { 
         	        	if(data == "")
         	        		{
-        	        			alert("Wallpaper Adicionado com sucesso");
+        	        			alert("Clipping Adicionado com sucesso");
         	        			location.reload();
         	        		}
                     },
