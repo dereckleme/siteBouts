@@ -250,7 +250,7 @@ section.pg-wallpaper ul li img { width: 400px; height: 450px; border: solid 1px 
 section.pg-wallpaper ul li p { font-size: 1.4em; color: #333333; font-weight: bold; text-align: center;}
 
 #popup-clipping { width: 100%; height: 100%; z-index: 9999; top: 0; left: 0; position: fixed; background: rgba(0,0,0,0.9); display: none; float: left;}
-#all-clipping { width: 500px; height: 620px; position: relative; background: #FFC; left: 50%; margin: 10px 0 0 -250px;}
+#all-clipping { width: 500px; height: 620px; position: relative; left: 50%; margin: 4px 0 0 -253px; border: solid 3px #FFF;}
 #all-clipping img { width: 500px; height: 620px;}
 #all-clipping a.fx-clipping { width: 36px; height: 36px; background: url(../img/fechar.jpg) no-repeat scroll left center; display: block; position: absolute;  right: 0; top: 0; transition: all 0.2s ease-out;}
 #all-clipping a.fx-clipping:hover { background-position: right center; -webkit-transform: rotate(90deg); transform: rotate(90deg);}
