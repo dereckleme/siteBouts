@@ -34,10 +34,10 @@
         	{
         ?>
     		 <li><span><?=$tec->getSubmenu()->getNome()?></span>
-          <button type="button" class="btn btn-info" title="editar item" rev="tecnologiaAdm" rel="<?=$tec->getSubmenu()->getIdbaseSubmenu()?>">Editar</button>
+          <button type="button" class="btn btn-info editarTecnologiaAction" title="editar item" rev="tecnologiaAdm" rel="<?=$tec->getSubmenu()->getIdbaseSubmenu()?>">Editar</button>
           <button type="button" class="btn btn-danger deletarAction" title="excluir item" rev="tecnologiaAdm" rel="<?=$tec->getSubmenu()->getIdbaseSubmenu()?>">Excluir</button>
 
-          <section class="editar-tec">
+          <section class="editar-tec editar<?=$tec->getSubmenu()->getIdbaseSubmenu()?>" style="display:none">
             <label style="cursor:default; color:#222; font-size:14px;">Título:</label>
             <input type="text" class="titulo" placeholder="<?=$tec->getSubmenu()->getNome()?>"/>
             <br/>
@@ -54,19 +54,22 @@
               <input type="file" class="arquivo"/>
             </li>
 			<?php 
+			$i = 1;
 				foreach($tec->getFotos() AS $foto)
 				{
+					
 			?>
 		    <li class="list-tec">
-              <img src="<?=$this->basePath("img/tecnologia/".$foto->getSrc())?>">
+              <img rel="<?=$foto->getIdbaseImagens()?>" class="imagemId<?=$i?>" src="<?=$this->basePath("img/tecnologia/".$foto->getSrc())?>">
               <input type="file" class="arquivo"/>
             </li>
 			<?php 
+			$i++;
 				}
 			?>
 
            </ul>
-           <button type="button" class="btn-salvar btn btn-success" title="salvar alterações" rev="tecnologiaAdm" rel="<?=$tec->getSubmenu()->getIdbaseSubmenu()?>">Salvar</button>   
+           <button type="button" class="btn-salvar btn btn-success salvarEdicaoTecnologiaAction" title="salvar alterações" rev="tecnologiaAdm" rel="<?=$tec->getSubmenu()->getIdbaseSubmenu()?>">Salvar</button>   
           </section>
 
         </li>

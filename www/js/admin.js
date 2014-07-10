@@ -1,4 +1,49 @@
 $(document).ready(function(){
+	$(".conteudo").on("click",".editarTecnologiaAction",function(){
+		var idTecnologia = $(this).attr("rel");
+		$(".editar"+idTecnologia).slideDown();
+		return false;
+	});
+	$(".conteudo").on("click",".salvarEdicaoTecnologiaAction",function(){
+		var idTecnologia = $(this).attr("rel");
+		var formData = new FormData();
+		formData.append('idTecnologia',idTecnologia);
+		if($(".editar"+idTecnologia+" .titulo").val() != "") formData.append('titulo', $(".editar"+idTecnologia+" .titulo").val());
+		if($(".editar"+idTecnologia+" .statusMensagem").val() != "") formData.append('descricao', $(".editar"+idTecnologia+" .statusMensagem").val());
+		if($(".editar"+idTecnologia+' input[type=file]')[0].files[0] != null) formData.append('imagem_destaque', $(".editar"+idTecnologia+' input[type=file]')[0].files[0]);
+		if($(".editar"+idTecnologia+' input[type=file]')[1].files[0] != null) formData.append('logo', $(".editar"+idTecnologia+' input[type=file]')[1].files[0]);
+		if($(".editar"+idTecnologia+' input[type=file]')[2].files[0] != null) formData.append('imagem_perspectiva_primeira', $(".editar"+idTecnologia+' input[type=file]')[2].files[0]);
+		if($(".editar"+idTecnologia+' input[type=file]')[3].files[0] != null) formData.append('imagem_perspectiva_segunda', $(".editar"+idTecnologia+' input[type=file]')[3].files[0]);
+		if($(".editar"+idTecnologia+' input[type=file]')[4].files[0] != null) formData.append('imagem_perspectiva_terceira', $(".editar"+idTecnologia+' input[type=file]')[4].files[0]);
+		if($(".editar"+idTecnologia+' input[type=file]')[5].files[0] != null) formData.append('imagem_perspectiva_quarta', $(".editar"+idTecnologia+' input[type=file]')[5].files[0]);
+		formData.append('imagem_perspectiva_primeiraID', $(".editar"+idTecnologia+" .imagemId1").attr("rel"));
+		formData.append('imagem_perspectiva_segundaID', $(".editar"+idTecnologia+" .imagemId2").attr("rel"));
+		formData.append('imagem_perspectiva_terceiraID', $(".editar"+idTecnologia+" .imagemId3").attr("rel"));
+		formData.append('imagem_perspectiva_quartaID', $(".editar"+idTecnologia+" .imagemId4").attr("rel"));
+		$.ajax({
+	        url: basePatch+"/admin/crud/TecnologiaAdm/editar",
+	        type: 'POST',
+	        contentType: 'multipart/form-data',
+	        success: function( data )  
+            { 
+	        	if(data == "")
+	        		{
+	        		alert("Tecnologia editada com sucesso!");
+	        		location.reload();
+	        		}
+	        	else
+	        		{
+	        		alert(data);
+	        		}
+            },
+	        data: formData,
+	        cache: false,
+	        contentType: false,
+	        processData: false
+	    });
+		return false;
+	});
+	
 	$(".conteudo").on("click",".edit-categoria",function(){
 		var idCategoria = $(this).attr("rel");
 		$(".boxCategoria"+idCategoria).fadeIn();
