@@ -37,17 +37,12 @@
           <button type="button" class="btn btn-info" title="editar item" rev="tecnologiaAdm" rel="<?=$tec->getSubmenu()->getIdbaseSubmenu()?>">Editar</button>
           <button type="button" class="btn btn-danger deletarAction" title="excluir item" rev="tecnologiaAdm" rel="<?=$tec->getSubmenu()->getIdbaseSubmenu()?>">Excluir</button>
 
-          <section id="editar-tec">
-
+          <section class="editar-tec">
             <label style="cursor:default; color:#222; font-size:14px;">Título:</label>
             <input type="text" class="titulo" placeholder="Titulo da Tecnologia"/>
-            <a class="ed-tc" href="" title="editar sub-categoria" style="top:-5px">alterar</a>
             <br/>
-
             <label style="cursor:default; color:#222; font-size:14px;">Descrição:</label>
             <textarea name="mensagem" class="statusMensagem" placeholder="Descrição da Tecnologia"></textarea><br/>
-            <a class="ed-tc" href="" title="editar sub-categoria">alterar</a>
-            
            <ul>
              <li class="list-tec">
               <img src="<?=$this->basePath()?>/img/tecnologia/load_535acbb648cac.png">
@@ -79,7 +74,8 @@
               <input type="file" class="arquivo"/>
             </li>
 
-           </ul>   
+           </ul>
+           <button type="button" class="btn-salvar btn btn-success" title="salvar alterações" rev="tecnologiaAdm" rel="<?=$tec->getSubmenu()->getIdbaseSubmenu()?>">Salvar</button>   
           </section>
 
         </li>

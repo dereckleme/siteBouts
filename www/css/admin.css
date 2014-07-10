@@ -125,17 +125,13 @@ ul.accordion-comprar li span { background: url(.././img/comprar-adm.png) no-repe
 ul.accordion-tec li span { background: url(.././img/tecnologia-adm.png) no-repeat scroll 0 1px; padding: 5px 0 10px 0;}
 .accordion { display:none;}
 
-section#editar-tec { width: 885px; padding: 10px 0 0 15px; position: relative; float: left; background: #f3f3f3; margin: 10px 0 15px 12px; border: solid 1px #14c6e2;}
-section#editar-tec textarea { width: 700px; height: 250px;}
-
-
-section#editar-tec a.ed-tc { border-radius: 5px; font-size: 13px; padding: 6px; color: #FFFFFF; background: #37c1d7; position: relative;}
-
-
-section#editar-tec ul { margin: 15px 0 15px 0; float: left;}
-section#editar-tec ul li.list-tec { width: 430px; height: 200px; float: left; border: none; margin: 0 10px 10px 0; border: solid 1px #CCC;}
-section#editar-tec ul li.list-tec img { width: 410px; height: 140px; padding: 10px;}
-section#editar-tec ul li.list-tec input { margin-left: 10px;}
+section.editar-tec { width: 885px; padding: 10px 0 0 15px; position: relative; float: left; background: #f3f3f3; margin: 10px 0 15px 12px; border: solid 1px #14c6e2;}
+section.editar-tec textarea { width: 700px; height: 250px;}
+section.editar-tec ul { margin: 15px 0 15px 0; float: left; padding-bottom: 30px;}
+section.editar-tec ul li.list-tec { width: 430px; height: 200px; float: left; border: none; margin: 0 10px 10px 0; border: solid 1px #CCC;}
+section.editar-tec ul li.list-tec img { width: 410px; height: 140px; padding: 10px;}
+section.editar-tec ul li.list-tec input { margin-left: 10px;}
+button.btn-salvar { position: absolute; bottom: 10px; right: 10px;}
 
 div#popup-login { width: 100%; height: 100%; z-index: 9999; top: 0; left: 0; position: fixed; background: rgba(0,0,0,0.9); display: none; float: left;}
 div#popup-login span { width: 200px; height: 50px; position: relative; left: 50%; margin: 20% 0 0 -100px; text-align: center; float: left;}
