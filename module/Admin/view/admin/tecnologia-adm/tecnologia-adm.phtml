@@ -39,40 +39,31 @@
 
           <section class="editar-tec">
             <label style="cursor:default; color:#222; font-size:14px;">Título:</label>
-            <input type="text" class="titulo" placeholder="Titulo da Tecnologia"/>
+            <input type="text" class="titulo" placeholder="<?=$tec->getSubmenu()->getNome()?>"/>
             <br/>
             <label style="cursor:default; color:#222; font-size:14px;">Descrição:</label>
-            <textarea name="mensagem" class="statusMensagem" placeholder="Descrição da Tecnologia"></textarea><br/>
+            <textarea name="mensagem" class="statusMensagem" placeholder="<?=$tec->getDescricao();?>"></textarea><br/>
            <ul>
              <li class="list-tec">
-              <img src="<?=$this->basePath()?>/img/tecnologia/load_535acbb648cac.png">
+              <img src="<?=$this->basePath("img/tecnologia/".$tec->getSrc())?>">
               <input type="file" class="arquivo"/>
              </li>
 
              <li class="list-tec">
-              <img src="<?=$this->basePath()?>/img/tecnologia/load_535acbb648fc3.png">
+              <img src="<?=$this->basePath("img/tecnologia/".$tec->getLogo())?>">
               <input type="file" class="arquivo"/>
             </li>
-
-             <li class="list-tec">
-              <img src="<?=$this->basePath()?>/img/tecnologia/load_535acbb6488e9.png">
+			<?php 
+				foreach($tec->getFotos() AS $foto)
+				{
+			?>
+		    <li class="list-tec">
+              <img src="<?=$this->basePath("img/tecnologia/".$foto->getSrc())?>">
               <input type="file" class="arquivo"/>
             </li>
-
-             <li class="list-tec">
-              <img src="<?=$this->basePath()?>/img/tecnologia/load_535acbb64962b.png">
-              <input type="file" class="arquivo"/>
-            </li>
-
-             <li class="list-tec">
-              <img src="<?=$this->basePath()?>/img/tecnologia/load_535acbb649315.png">
-              <input type="file" class="arquivo"/>
-            </li>
-
-             <li class="list-tec">
-              <img src="<?=$this->basePath()?>/img/tecnologia/load_535acbb6485a5.png">
-              <input type="file" class="arquivo"/>
-            </li>
+			<?php 
+				}
+			?>
 
            </ul>
            <button type="button" class="btn-salvar btn btn-success" title="salvar alterações" rev="tecnologiaAdm" rel="<?=$tec->getSubmenu()->getIdbaseSubmenu()?>">Salvar</button>   
