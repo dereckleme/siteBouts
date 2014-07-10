@@ -56,8 +56,6 @@ class Tecnologia extends AbstractService
     	if(isset($data['arquivos']['imagem_perspectiva_segunda'])) parent::update(array("id" => $data['assets']['imagem_perspectiva_segundaID'], "src" => $data['arquivos']['imagem_perspectiva_segunda']));
     	if(isset($data['arquivos']['imagem_perspectiva_terceira'])) parent::update(array("id" => $data['assets']['imagem_perspectiva_terceiraID'], "src" => $data['arquivos']['imagem_perspectiva_terceira']));
     	if(isset($data['arquivos']['imagem_perspectiva_quarta'])) parent::update(array("id" => $data['assets']['imagem_perspectiva_quartaID'], "src" => $data['arquivos']['imagem_perspectiva_quarta']));
-    	print_r($data);
-    	die();
     }
 }
 
