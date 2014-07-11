@@ -15,10 +15,41 @@ class BannerController extends AbstractActionController
     {
     	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
     	$repo = $doctrine->getRepository("Base\Entity\BaseBanner");
-    	$layout = new ViewModel(array("bannersDestaque" => $repo->findAll()));
+    	$layout = new ViewModel(array("bannersDestaque" => $repo->findByNao(),"campanhaHome" => $repo->findOneBy(array("tipo" => 2))));
     	$layout->setTerminal(1);
         return $layout;
     }
+    public function atualizaCampanhaAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$requestPost = new httpUploadFile();
+    		$requestPost->setDestination('./www/img/banners');
+    		$service = $this->getServiceLocator()->get('Admin\Service\Banner');
+    		foreach($requestPost->getFileInfo() as $file => $info)
+    		{
+    			$fname = $info['name'];
+    			$filtro = $requestPost->addFilter(new Rename(array(
+    					"target" => $fname,
+    					"randomize" => true
+    			)), null, $file);
+    			if($requestPost->receive())
+    			{
+    				$service->update(array("id" => 5,"src" => $filtro->getFileInfo()['imagemCampanha']['name']));
+    			}
+    		
+    		}
+    		if($this->getRequest()->getPost("titulo")){
+    			$service->update(array("id" => 5,"titulo" => $this->getRequest()->getPost("titulo")));
+    		}
+    		if($this->getRequest()->getPost("url")){
+    			$service->update(array("id" => 5,"url" => $this->getRequest()->getPost("url")));
+    		}
+    	}
+    	$layout = new ViewModel();
+    	$layout->setTerminal(1);
+    	return $layout;
+    }	
     public function bannerCrudAction()
     {
     	if($this->getRequest()->isPost())

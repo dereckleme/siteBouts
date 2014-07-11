@@ -42,6 +42,27 @@ class BaseBanner
      * @ORM\Column(name="url", type="string", length=255, nullable=true)
      */
     private $url;
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=true)
+     */
+    private $tipo = '1';
+    
+	/**
+	 * @return the $tipo
+	 */
+	public function getTipo() {
+		return $this->tipo;
+	}
+
+	/**
+	 * @param number $tipo
+	 */
+	public function setTipo($tipo) {
+		$this->tipo = $tipo;
+	}
+
 	/**
 	 * @return the $idBanner
 	 */

@@ -42,5 +42,12 @@ class BaseBanner
      */
     private $url;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=true)
+     */
+    private $tipo = '1';
+
 
 }

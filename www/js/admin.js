@@ -1,4 +1,26 @@
 $(document).ready(function(){
+	$(".conteudo").on("click",".atualizaCampanhaAction",function(){
+		var formData = new FormData();
+		if($(".bannerDireto .titulo").val() != "") formData.append('titulo', $(".bannerDireto .titulo").val());
+		if($(".bannerDireto .url").val() != "") formData.append('url', $(".bannerDireto .url").val());
+		if($(".bannerDireto input[type=file]")[0].files[0] != null) formData.append('imagemCampanha', $(".bannerDireto input[type=file]")[0].files[0]);
+		$.ajax({
+	        url: basePatch+"/admin/crud/banner/atualizaCampanha",
+	        type: 'POST',
+	        contentType: 'multipart/form-data',
+	        success: function( data )  
+            { 
+	        	alert(data);
+	        	//alert("Campanha atualizada com sucesso!");
+        		//location.reload();
+            },
+	        data: formData,
+	        cache: false,
+	        contentType: false,
+	        processData: false
+	    });
+		return false;
+	});
 	$(".conteudo").on("click",".editarTecnologiaAction",function(){
 		var idTecnologia = $(this).attr("rel");
 		$(".editar"+idTecnologia).slideDown();
