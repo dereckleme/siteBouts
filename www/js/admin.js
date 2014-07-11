@@ -10,9 +10,8 @@ $(document).ready(function(){
 	        contentType: 'multipart/form-data',
 	        success: function( data )  
             { 
-	        	alert(data);
-	        	//alert("Campanha atualizada com sucesso!");
-        		//location.reload();
+	        	alert("Campanha atualizada com sucesso!");
+        		location.reload();
             },
 	        data: formData,
 	        cache: false,
