@@ -61,7 +61,17 @@
 					<img alt="Destaques Home" src="<?=$this->basePath("img/produtos/".$vitrine->getSrc())?>">
 					<h4><?=$vitrine->getTenis()->getTitulo()?></h4>
 					<hr/>
-					<p>Amortecimento: <span><?=$vitrine->getTenis()->getBaseTecnologia()->getNome()?></span></p>
+					<p>Amortecimento: <span>
+					<?php
+					foreach($vitrine->getTenis()->getTecnologias() AS $tecnologia)
+					{
+						$tecs[] = $tecnologia->getParenttecnologia()->getNome();
+					}
+					if(isset($tecs))
+					{
+						print implode(" + ", $tecs);
+					}
+					?></span></p>
 				</a>
 			</li>
 <?php 
