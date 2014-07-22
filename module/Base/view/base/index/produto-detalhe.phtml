@@ -54,7 +54,17 @@ $this->headMeta()->setProperty('og:image', $this->basePath()."/img/produtos/".$t
 
 		<p class="txt-info"><?=$this->produto->getDescricao()?></p>
 		<p class="txt-model">Modelo: <span class="valModel"><?=$this->produto->getNossoNumero()?></span></p>
-		<p class="txt-tec">Tecnologia de amortecimento: <span class="dt-tec"><?=$this->produto->getBaseTecnologia()->getNome()?></span>
+		<p class="txt-tec">Tecnologia de amortecimento: <span class="dt-tec"><?
+		
+			foreach($this->produto->getTecnologias() AS $tecnologia)
+			{
+				$tecs[] = $tecnologia->getParenttecnologia()->getNome();
+			}
+			if(isset($tecs))
+			{
+			print implode(" + ", $tecs);	
+			}
+			?></span>
 		</p>
 		<p class="txt-number">Numeração: <span><?=$this->produto->getNumeracaoInicial()?> à <?=$this->produto->getNumeracaoFinal()?></span></p>
 

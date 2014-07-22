@@ -14,14 +14,26 @@ class Produtos extends AbstractService
     public function insert(array $data)
     {
     		$this->setTargetEntity(array(
-    				array("setTargetEntity" => "Base\Entity\BaseSubmenu",
-    						"setCampo" => "setBaseTecnologia",
-    						"setActionReference" => $data['tecnologia']),
     				array("setTargetEntity" => "Produto\Entity\ProdutoSubcategoria",
     						"setCampo" => "setSubcategoriaTenis",
     						"setActionReference" => $data['subcategoria']),
     		));
-    	return parent::insert($data);
+    	$tenis = parent::insert($data);
+    	$listaTecnologia = explode(",",$data['tecnologia']);
+    	
+    	$this->entity = "Base\Entity\BaseTecnologia";
+    	foreach($listaTecnologia AS $tecnologia)
+    	{
+	    	$this->setTargetEntity(array(
+	    			array("setTargetEntity" => "Produto\Entity\ProdutoTenis",
+	    					"setCampo" => "setParenttenis",
+	    					"setActionReference" => $tenis->getIdtenis()),
+	    			array("setTargetEntity" => "Base\Entity\BaseSubmenu",
+	    					"setCampo" => "setParenttecnologia",
+	    					"setActionReference" => $tecnologia),
+	    	));
+	    	parent::insert($data);
+    	}	
     }
 }
 

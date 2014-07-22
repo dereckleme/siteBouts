@@ -12,17 +12,16 @@
     <input type="text" class="style-tamanho tamanhoMin" placeholder="Minímo"/> 
     <input type="text" class="style-tamanho tamanhoMax" placeholder="Máximo"/>
     <br/>
-    <select  class="form-control tecnologia" style="width:300px;" <?if(!$this->tecnologia) print 'disabled="disabled"'?>>
-         <option value="">Selecione Tecnologia de Amortecimento</option>
-         <?php 
+    <label class="numeracao" for="" style="cursor:default; color:#222; font-size:14px;"><strong>Selecione Tecnologia de Amortecimento</strong></label>
+    <?php 
          	foreach($this->tecnologia->getSubmenus() AS $tecnologia)
          	{
          		?>
-         		<option value="<?=$tecnologia->getIdbaseSubmenu()?>"><?=$tecnologia->getNome()?></option>
-         		<?php 
+    <input class="tecnologia" type="checkbox" value="<?=$tecnologia->getIdbaseSubmenu()?>"><?=$tecnologia->getNome()?><br>
+    <?php 
          	}
-         ?>
-	</select><br/>
+    ?>
+    <br/>
 	<div class="categoriaSelect">
 	<select  class="form-control categoria">
          <option value="">Selecione uma Categoria</option>

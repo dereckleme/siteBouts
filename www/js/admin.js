@@ -523,17 +523,17 @@ $(document).ready(function(){
 	})
 	$(".conteudo").on("click",".actionAdicionaProduto",function(){
 		
-		
 		var erros = "";
+		var n = $( ".tecnologia:checked" ).length;
 		if($('.formProduto .titulo').val() == "") erros = erros+"- Qual o titulo do produto?\n";
 		if($('.formProduto input[type=file]')[0].files[0] == null) erros = erros+"- Insira uma imagem do tenis\n";
 		if($('.formProduto .categoria').val() == "" || $('.formProduto .categoria').val() == "addCategoria") erros = erros+"- Selecione uma categoria\n";
 		if($('.formProduto .statusDescricaoTenis').val() == "") erros = erros+"- Digite uma descrição minima do tenis\n";
-		if($('.formProduto .tecnologia').val() == "") erros = erros+"- Selecione a tecnologia de amortecimento\n";
 		if($('.formProduto .subcategoria').val() == "") erros = erros+"- Selecione uma sub-categoria\n";
 		if($('.formProduto .tamanhoMin').val() == "") erros = erros+"- Digite um tamanho minimo\n";
 		if($('.formProduto .tamanhoMax').val() == "") erros = erros+"- Digite um tamanho maximo\n";
 		if($('.formProduto .modelo').val() == "") erros = erros+"- Qual o modelo do tenis?\n";
+		if(n == 0) erros = erros+"- Selecione no minímo uma tecnologia\n";
 		if($('.formProduto .vitrine:checked').val() == "sim")
 		{
 			if($('.formProduto input[type=file]')[1].files[0] == null) erros = erros+"- Insira uma imagem para a vitrine\n";
@@ -541,11 +541,15 @@ $(document).ready(function(){
 		if(erros == "")
 		{
 			var formData = new FormData();
+			var ids = [];
+			$(".tecnologia:checked").each(function(i, e) {
+			    ids.push($(this).val());
+			});
 			formData.append('imagem', $('.formProduto input[type=file]')[0].files[0]);
 			formData.append('categoria', $(".formProduto .categoria").val());
+			formData.append('tecnologia', ids );
 			formData.append('descricao', $(".formProduto .statusDescricaoTenis").val());
 			formData.append('subcategoria', $(".formProduto .subcategoria").val());
-			formData.append('tecnologia', $(".formProduto .tecnologia").val());
 			formData.append('titulo', $(".formProduto .titulo").val());
 			formData.append('tamanhoMin', $(".formProduto .tamanhoMin").val());
 			formData.append('tamanhoMax', $(".formProduto .tamanhoMax").val());

@@ -16,6 +16,7 @@ class ProdutoTenis
 	public function __construct() {
 		$this->sugestaoCoresProdutos = new ArrayCollection();
 		$this->perspectiva = new ArrayCollection();
+		$this->tecnologias = new ArrayCollection();
 	}
 	/**
 	 * @ORM\OneToMany(targetEntity="Produto\Entity\ProdutoSugestaoCores", mappedBy="tenisProduto")
@@ -25,6 +26,10 @@ class ProdutoTenis
 	 * @ORM\OneToMany(targetEntity="Produto\Entity\ProdutoPerspectivas", mappedBy="produtoTenis")
 	 */
 	private $perspectiva;
+	/**
+	 * @ORM\OneToMany(targetEntity="Base\Entity\BaseTecnologia", mappedBy="parenttenis")
+	 */
+	private $tecnologias;
     /**
      * @var integer
      *
@@ -86,15 +91,6 @@ class ProdutoTenis
     private $subcategoriaTenis;
     
     
-    /**
-     * @var \BaseSubmenu
-     *
-     * @ORM\ManyToOne(targetEntity="base\Entity\BaseSubmenu")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="base_tecnologia", referencedColumnName="idbase_submenu")
-     * })
-     */
-    private $baseTecnologia;
     
     /**
      * @var string
@@ -266,6 +262,20 @@ class ProdutoTenis
 	public function setDescricao($descricao) {
 		$this->descricao = $descricao;
 	}
+	/**
+	 * @return the $tecnologias
+	 */
+	public function getTecnologias() {
+		return $this->tecnologias;
+	}
+
+	/**
+	 * @param \Doctrine\Common\Collections\ArrayCollection $tecnologias
+	 */
+	public function setTecnologias($tecnologias) {
+		$this->tecnologias = $tecnologias;
+	}
+
 
 
 
