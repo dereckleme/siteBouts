@@ -96,15 +96,18 @@ section.galeria { width: 100%; float: left; overflow: hidden;}
 
 div.g-produtos { width: 1156px; margin: 60px 0 60px 72px; position: relative; float: left; overflow:hidden;}
 div.g-produtos ul { width: 200000px; float: left; margin: 0; padding: 0; position: relative;}
+
 div.g-produtos ul li a { width: 338px; height: 468px; text-decoration: none; display: inline; position: relative; float: left; border: solid 1px transparent; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-div.g-produtos ul li:hover a { border: solid 1px #047da2; background: #FFF; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+div.g-produtos ul li/*hover*/ a { border: solid 1px #047da2; background: #FFF; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 div.g-produtos ul li { float: left; margin: 0 23.5px 0 23.5px; position: relative; -webkit-transition: 0.5s; transition: 0.5s; left:385px;}
 div.g-produtos ul li img { max-width: 100%; float: left; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 div.g-produtos ul li:hover img { -webkit-transform: scale(1.0)rotate(-3deg); transform: scale(1.0)rotate(-3deg);}
-div.g-produtos ul li a h4 { font-size: 2.0em; color: #333333; float: left; position: absolute; z-index: 100; left: 25px; top: 350px; display: none;}
-div.g-produtos ul li a h4 ~ p { width: 310px; font-size: 1.6em; text-indent: 20px; color: #079ab1; float: left; position: absolute; z-index: 100; left: 25px; top: 400px; display: none; background: url(../img/icon-tecnologia.png) no-repeat; background-position: 0 1px;}
+div.g-produtos ul li a h4 { font-size: 2.0em; color: #333333; float: left; position: absolute; z-index: 100; left: 25px; top: 350px; display: block;}
+div.g-produtos ul li a h4 ~ p { width: 280px; font-size: 1.6em; text-indent: 20px; line-height: 20px; color: #079ab1; float: left; position: absolute; z-index: 100; left: 25px; top: 400px; display: block; background: url(../img/icon-tecnologia.png) no-repeat; background-position: 0 3px;}
 div.g-produtos ul li a h4 ~ p span { font-weight: bold; color: #333333;}
-div.g-produtos ul li a hr { width: 290px; height: 0px; font-weight: bold; position: absolute; z-index: 100; left: 25px; top: 400px; color: #222222; display: none;}
+div.g-produtos ul li a hr { width: 280px; height: 0px; font-weight: bold; position: absolute; z-index: 100; left: 25px; top: 400px; color: #222222; display: block;}
+
 div.g-produtos ul li a:hover h4 ~ p { display: block;}
 div.g-produtos ul li a:hover h4 { display: block;}
 div.g-produtos ul li a:hover hr { display: block;}
@@ -205,7 +208,7 @@ section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-l
 #info-produtos span.dt-tec { text-transform: uppercase;}
 #info-produtos p.txt-info { width: 410px; margin: 10px 0 0 0; line-height: 20px; font-size: 1.6em; color: #222222; float: left; text-align: justify;}
 #info-produtos p.txt-model { width: 410px; margin: 15px 0 0 0; float: left; font-size: 2.0em; font-weight: bold;}
-#info-produtos p.txt-tec { width: 410px; margin: 10px 0 0 -2px; float: left; font-size: 1.6em; font-weight: bold;}
+#info-produtos p.txt-tec { width: 460px; margin: 10px 0 0 -2px; line-height: 20px; float: left; font-size: 1.6em; font-weight: bold; display: block;}
 #info-produtos p.txt-number { width: 410px; margin: 10px 0 0 0; float: left; font-size: 1.4em; font-weight: bold;}
 #info-produtos ul { width: 410px; float: left; margin: 15px 0 0 0;}
 #info-produtos ul li { width: 120px; height: 80px; margin: 0 15px 15px 0; background: #FFFFFF; display: block; float: left; border: solid 1px #a3a5a5; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}

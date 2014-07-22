@@ -104,7 +104,7 @@ ul.accordion-midia li, ul.accordion-comprar li, ul.accordion-tec li { width: 926
 ul.accordion-tec li button, ul.accordion-comprar li button, ul.accordion-midia li button { margin: 1px 0 0 25px;}
 ul.accordion-produto li p, ul.accordion-wallpaper li p { width: 185px; margin: 5px 0 5px 10px;}
 
-ul.accordion-produto li { width: 200px; height: 270px; padding-bottom: 10px;}
+ul.accordion-produto li { width: 200px; padding-bottom: 10px;}
 ul.accordion-produto li img { width: 180px; height: 150px; margin: 10px 0 0 8px; border: solid 1px #DDDDDD;}
 ul.accordion-produto li button { margin: 6px 0 0 10px;}
 ul.accordion-produto li button.AddCor { width: 90px; float: right; margin-right: 10px;}
@@ -150,6 +150,10 @@ div#adm-news button { width: 150px; height: 40px; position: absolute; right: 30p
 span.bannerEsquerdo { float: left;}
 span.bannerDireto { float: right; display: block; position: relative; top: -40px; border-left: 1px solid rgba(0, 0, 0, 0.2); padding-left: 60px; margin-right: 60px;}
 span.bannerDireto img { width: 340px; height: 200px;}
+
+input.tecnologia { margin: 5px;}
+span.tecnologia { font-size: 15px;}
+div.accordion button.EdTec { width: 150px !important;}
 
 /* Hack ie10 */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 

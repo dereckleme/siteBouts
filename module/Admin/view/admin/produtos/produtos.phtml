@@ -17,7 +17,7 @@
          	foreach($this->tecnologia->getSubmenus() AS $tecnologia)
          	{
          		?>
-    <input class="tecnologia" type="checkbox" value="<?=$tecnologia->getIdbaseSubmenu()?>"><?=$tecnologia->getNome()?><br>
+    <input class="tecnologia" type="checkbox" value="<?=$tecnologia->getIdbaseSubmenu()?>"><span class="tecnologia"><?=$tecnologia->getNome()?></span><br>
     <?php 
          	}
     ?>
@@ -125,6 +125,7 @@
 		            <p><strong>Modelo:</strong> <?=$produto->getNossoNumero()?></p>
 		            <button type="button" class="btn btn-danger deletarAction" title="excluir item " rev="produtos" rel="<?=$produto->getIdtenis()?>">Excluir</button>
                     <button type="button" class="btn btn-info AddCor" title="Adicionar uma nova cor" rev="produtos" rel="<?=$produto->getIdtenis()?>">Nova Cor</button>
+                    <button type="button" class="btn btn-success EdTec" title="Adicionar uma tecnologia" rev="produtos" rel="<?=$produto->getIdtenis()?>">Editar Tecnologia</button>
 
 		         </li>
 		         			<?php 
