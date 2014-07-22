@@ -32,8 +32,9 @@ class Produtos extends AbstractService
 	    					"setCampo" => "setParenttecnologia",
 	    					"setActionReference" => $tecnologia),
 	    	));
-	    	parent::insert($data);
+	    	$retorno = parent::insert($data);
     	}	
+    	return $retorno->getParenttenis();
     }
 }
 
