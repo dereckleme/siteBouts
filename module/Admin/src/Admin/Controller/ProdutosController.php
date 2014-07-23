@@ -236,6 +236,40 @@ class ProdutosController extends AbstractActionController
     	$layout->setTerminal(1);
     	return $layout;
     }
+    public function salvarTecnologiaAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$sets = explode(",", $this->getRequest()->getPost("tecnologia"));
+    		$service = $this->getServiceLocator()->get("Admin\Service\Tecnologia");
+    		$service->atualizaProdutoSets(array("listaSets" => $sets, "idProduto" => $this->getRequest()->getPost("idProduto")));
+    	}
+    	$layout = new ViewModel();
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
+    public function editarTecnologiaAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$tecSet = array();
+    	$doctrine = $this->getServiceLocator()->get("Doctrine\ORM\EntityManager");
+    	$repositoryTecnologias = $doctrine->getRepository("Base\Entity\BaseMenu")->findOneByidmenu(3);
+    	$repositoryTecnologiasSets =  $doctrine->getRepository("Base\Entity\BaseTecnologia")->findByparenttenis($this->getRequest()->getPost("idProduto"));
+    		foreach($repositoryTecnologiasSets AS $set)
+    		{
+    			$tecSet[] = $set->getParenttecnologia()->getIdbaseSubmenu();
+    		}
+    		
+    	$layout = new ViewModel(array("tecnologias" => $repositoryTecnologias,"Sets" => $tecSet));
+    	}
+    	else
+    	{
+    	$layout = new ViewModel();
+    	}
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
     public function adicionaCorAction()
     {
     	if($this->getRequest()->isPost())

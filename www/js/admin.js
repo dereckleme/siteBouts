@@ -145,7 +145,62 @@ $(document).ready(function(){
 		}		
 		return false;
 	})
-
+	$(".conteudo").on("click",".EdTec",function(){
+		var idProduto = $(this).attr("rel");
+		$.ajax({
+	        url: basePatch+"/admin/crud/produtos/editarTecnologia",
+	        type: 'POST',
+	        success: function( data )  
+            { 
+	        	$( "#popupTecnologia" ).html(data).dialog({
+	  		      resizable: false,
+	  		      width:400,
+	  		      height:210,
+	  		      title:"Alterar tecnologia do produto",
+	  		      modal: true,
+	  		      buttons: {
+	  		    	  	"Salvar alterações": function() {
+	  		        	var erros = "";
+	  		        	var n = $( ".setsEditarTecnologia:checked" ).length;
+	  		        	if(n == 0) erros = erros+"- Selecione no minímo uma tecnologia\n";
+	  		        	if(erros == "")
+	  		        	{
+	  		        		var formData = new FormData();
+		  		  			var ids = [];
+		  		  			$(".setsEditarTecnologia:checked").each(function(i, e) {
+		  		  			    ids.push($(this).val());
+		  		  			});
+		  		  			formData.append('tecnologia', ids );
+		  		  			formData.append('idProduto', idProduto );
+			  		  		$.ajax({
+			  	    	        url: basePatch+"/admin/crud/produtos/salvarTecnologia",
+			  	    	        type: 'POST',
+			  	    	        contentType: 'multipart/form-data',
+			  	    	        success: function( data )  
+			  	                { 
+			  	    	        	alert("Tecnologia atualizada com sucesso.");
+			  	    	        	$( "#popupTecnologia" ).dialog("close");
+			  	                },
+			  	    	        data: formData,
+			  	    	        cache: false,
+			  	    	        contentType: false,
+			  	    	        processData: false
+			  	    	    });
+	  		        	}
+	  		        	else
+		  		  		{
+		  		  			alert("Existe alguns erros abaixo:\n\n"+erros);
+		  		  		}
+	  		        	
+	  		        },
+	  		      }
+	        	})
+            },
+            data: {idProduto:idProduto},
+	    });
+		
+		return false;
+	})
 	$(".conteudo").on("click",".AddCor",function(){
 		var idProduto = $(this).attr("rel");
 		$( "#popupCor" ).dialog({
@@ -193,9 +248,6 @@ $(document).ready(function(){
 		    			alert("Existe alguns erros abaixo:\n\n"+erros);
 		    		}
 		        },
-		        "Cancelar": function() {
-		          $( this ).dialog( "Close" );
-		        }
 		      }
 		})
 		return false;

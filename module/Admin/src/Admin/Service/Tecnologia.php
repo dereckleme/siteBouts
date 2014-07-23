@@ -57,6 +57,27 @@ class Tecnologia extends AbstractService
     	if(isset($data['arquivos']['imagem_perspectiva_terceira'])) parent::update(array("id" => $data['assets']['imagem_perspectiva_terceiraID'], "src" => $data['arquivos']['imagem_perspectiva_terceira']));
     	if(isset($data['arquivos']['imagem_perspectiva_quarta'])) parent::update(array("id" => $data['assets']['imagem_perspectiva_quartaID'], "src" => $data['arquivos']['imagem_perspectiva_quarta']));
     }
+    public function atualizaProdutoSets(array $data)
+    {
+    	$this->entity = "Base\Entity\BaseTecnologia";
+    	$repositoryTecnologiasSets =  $this->em->getRepository("Base\Entity\BaseTecnologia")->findByparenttenis($data['idProduto']);
+		foreach($repositoryTecnologiasSets AS $tecnologia)
+		{
+			parent::delete($tecnologia->getIdTecnologia());
+		}
+		foreach($data['listaSets'] AS $set)
+		{
+			$this->setTargetEntity(array(
+					array("setTargetEntity" => "Produto\Entity\ProdutoTenis",
+							"setCampo" => "setParenttenis",
+							"setActionReference" => $data['idProduto']),
+					array("setTargetEntity" => "Base\Entity\BaseSubmenu",
+							"setCampo" => "setParenttecnologia",
+							"setActionReference" => $set),
+					));
+			parent::insert(array());
+		}
+    }
 }
 
 ?>
