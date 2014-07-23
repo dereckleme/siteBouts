@@ -104,10 +104,16 @@ ul.accordion-midia li, ul.accordion-comprar li, ul.accordion-tec li { width: 926
 ul.accordion-tec li button, ul.accordion-comprar li button, ul.accordion-midia li button { margin: 1px 0 0 25px;}
 ul.accordion-produto li p, ul.accordion-wallpaper li p { width: 185px; margin: 5px 0 5px 10px;}
 
-ul.accordion-produto li { width: 200px; padding-bottom: 10px;}
+ul.accordion-produto li { width: 200px; height: 350px; padding-bottom: 10px;}
 ul.accordion-produto li img { width: 180px; height: 150px; margin: 10px 0 0 8px; border: solid 1px #DDDDDD;}
 ul.accordion-produto li button { margin: 6px 0 0 10px;}
-ul.accordion-produto li button.AddCor { width: 90px; float: right; margin-right: 10px;}
+ul.accordion-produto li button.AddCor { width: 90px; float: left; margin-right: 10px;}
+ul.accordion-produto button.EdTec { width: 180px !important;}
+ul.accordion-produto button.EdPP { width: 180px !important;}
+
+
+
+
 
 ul.accordion-banner { width: 875px; margin: 0; padding: 0 0 0 50px; float: left;}
 ul.accordion-banner li { width: 400px; height: 310px;}
@@ -153,7 +159,7 @@ span.bannerDireto img { width: 340px; height: 200px;}
 
 input.tecnologia { margin: 5px;}
 span.tecnologia { font-size: 15px;}
-div.accordion button.EdTec { width: 150px !important;}
+
 
 /* Hack ie10 */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 

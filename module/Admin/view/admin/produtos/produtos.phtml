@@ -126,9 +126,11 @@
 		            <img src="<?=$this->basePath()?>/img/produtos/<?=$produto->getSrc()?>">
 		            <p><?=$produto->getTitulo()?></p>
 		            <p><strong>Modelo:</strong> <?=$produto->getNossoNumero()?></p>
-		            <button type="button" class="btn btn-danger deletarAction" title="excluir item " rev="produtos" rel="<?=$produto->getIdtenis()?>">Excluir</button>
-                    <button type="button" class="btn btn-info AddCor" title="Adicionar uma nova cor" rev="produtos" rel="<?=$produto->getIdtenis()?>">Nova Cor</button>
+                    <button type="button" class="btn btn-primary EdPP" title="Adicionar Perspectiva" rev="produtos" rel="<?=$produto->getIdtenis()?>">Adicionar Perspectiva</button>
                     <button type="button" class="btn btn-success EdTec" title="Adicionar uma tecnologia" rev="produtos" rel="<?=$produto->getIdtenis()?>">Editar Tecnologia</button>
+                    <button type="button" class="btn btn-info AddCor" title="Adicionar uma nova cor" rev="produtos" rel="<?=$produto->getIdtenis()?>">Nova Cor</button>
+                    <button type="button" class="btn btn-danger deletarAction" title="excluir item " rev="produtos" rel="<?=$produto->getIdtenis()?>">Excluir</button>
+                    
 
 		         </li>
 		         			<?php 
