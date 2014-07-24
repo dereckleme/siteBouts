@@ -54,7 +54,7 @@ $this->headMeta()->setProperty('og:image', $this->basePath()."/img/produtos/".$t
 
 		<p class="txt-info"><?=$this->produto->getDescricao()?></p>
 		<p class="txt-model">Modelo: <span class="valModel"><?=$this->produto->getNossoNumero()?></span></p>
-		<p class="txt-tec">Tecnologia de amortecimento: <span class="dt-tec"><?
+		<p class="txt-tec">Tecnologia de amortecimento: <span class="dt-tec" style="font-size: 0.9em"><?
 		
 			foreach($this->produto->getTecnologias() AS $tecnologia)
 			{

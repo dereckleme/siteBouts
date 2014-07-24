@@ -205,10 +205,10 @@ section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-l
 #info-produtos { width: 460px; min-height: 570px; margin-right: 75px; padding: 70px 0 10px 50px; float: right; background: rgba(255,255,255,0.5);}
 #info-produtos h2 { width: 100%; font-size: 2.8em; margin: 0 0 0 0; color: #222222; font-weight: bold; float: left;}
 #info-produtos span { color: #0d9cb3;}
-#info-produtos span.dt-tec { text-transform: uppercase;}
+#info-produtos span.dt-tec { text-transform: uppercase; font-weight: bold;}
 #info-produtos p.txt-info { width: 410px; margin: 10px 0 0 0; line-height: 20px; font-size: 1.6em; color: #222222; float: left; text-align: justify;}
 #info-produtos p.txt-model { width: 410px; margin: 15px 0 0 0; float: left; font-size: 2.0em; font-weight: bold;}
-#info-produtos p.txt-tec { width: 460px; margin: 10px 0 0 -2px; line-height: 20px; float: left; font-size: 1.6em; font-weight: bold; display: block;}
+#info-produtos p.txt-tec { width: 460px; margin: 10px 0 0 -2px; line-height: 20px; float: left; font-size: 1.5em; font-weight: bold; display: block;}
 #info-produtos p.txt-number { width: 410px; margin: 10px 0 0 0; float: left; font-size: 1.4em; font-weight: bold;}
 #info-produtos ul { width: 410px; float: left; margin: 15px 0 0 0;}
 #info-produtos ul li { width: 120px; height: 80px; margin: 0 15px 15px 0; background: #FFFFFF; display: block; float: left; border: solid 1px #a3a5a5; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}

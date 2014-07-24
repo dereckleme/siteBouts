@@ -100,7 +100,7 @@
     </span>
 
 <div class="accordion" id="accordion2">
-    <p>Gerenciar Categorias</p>
+    <p>Gerenciar Produtos</p>
 <?php 
          	foreach($this->categorias AS $categoria)
          	{
@@ -143,6 +143,9 @@
 							            <img src="<?=$this->basePath()?>/img/produtos/<?=$produtoSugestao->getSrc()?>">
 							            <p><?=$produto->getTitulo()?></p>
 							            <p><strong>Modelo:</strong> <?=$produtoSugestao->getNossoNumero()?></p>
+                                        <button type="button" class="btn btn-default EdPP" title="" disabled="disabled">Adicionar Perspectiva</button>
+                                        <button type="button" class="btn btn-default EdTec" title="" disabled="disabled">Editar Tecnologia</button>
+                                        <button type="button" class="btn btn-default AddCor" title="" disabled="disabled">Nova Cor</button>
 							            <button type="button" class="btn btn-danger deletarSugestaoAction" title="excluir item " rev="produtos" rel="<?=$produtoSugestao->getIdSugestaoCores()?>">Excluir</button>
 							         </li>
 		         					<?php
