@@ -122,6 +122,12 @@ class ProdutosController extends AbstractActionController
     	$layout->setTerminal(1);
     	return $layout;
     }
+    public function gerenciarPerspectivasAction()
+    {
+    	$layout = new ViewModel();
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
     public function deleteAction()
     {
     	if($this->getRequest()->isPost())

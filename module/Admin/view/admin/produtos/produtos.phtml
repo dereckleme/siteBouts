@@ -5,7 +5,10 @@
 	</form>
 </div>
 <div style="display: none;font-size:12px;" id="popupTecnologia">
-	zzz
+	
+</div>
+<div style="display: none;font-size:12px;" id="popupPerspectivas">
+	
 </div>
 <form class="formProduto">
     <input type="text" class="titulo" placeholder="Nome do Tênis"/><br/>
@@ -50,7 +53,7 @@
       <option value="">Selecione uma Subcategoria</option>
 	</select><br/>
 	</div>
-	<input type="file" class="arquivo" /><br/><br/>
+	<input type="file" class="arquivo"  /><br/><br/>
     <label class="add-vitrine" for="" style="cursor:default; color:#222; font-size:14px;"><strong>Adicionar produto na Vitrine</strong></label>
     <input class="vitrine" type="radio" name="gender" value="sim"> Sim
     <input class="vitrine" type="radio" name="gender" value="nao" checked="checked"> Não<br/>
@@ -126,7 +129,7 @@
 		            <img src="<?=$this->basePath()?>/img/produtos/<?=$produto->getSrc()?>">
 		            <p><?=$produto->getTitulo()?></p>
 		            <p><strong>Modelo:</strong> <?=$produto->getNossoNumero()?></p>
-                    <button type="button" class="btn btn-primary EdPP" title="Adicionar Perspectiva" rev="produtos" rel="<?=$produto->getIdtenis()?>">Adicionar Perspectiva</button>
+                    <button type="button" class="btn btn-primary EdPP" title="Gerenciar Perspectivas" rev="produtos" rel="<?=$produto->getIdtenis()?>">Gerenciar Perspectivas</button>
                     <button type="button" class="btn btn-success EdTec" title="Adicionar uma tecnologia" rev="produtos" rel="<?=$produto->getIdtenis()?>">Editar Tecnologia</button>
                     <button type="button" class="btn btn-info AddCor" title="Adicionar uma nova cor" rev="produtos" rel="<?=$produto->getIdtenis()?>">Nova Cor</button>
                     <button type="button" class="btn btn-danger deletarAction" title="excluir item " rev="produtos" rel="<?=$produto->getIdtenis()?>">Excluir</button>
@@ -143,7 +146,7 @@
 							            <img src="<?=$this->basePath()?>/img/produtos/<?=$produtoSugestao->getSrc()?>">
 							            <p><?=$produto->getTitulo()?></p>
 							            <p><strong>Modelo:</strong> <?=$produtoSugestao->getNossoNumero()?></p>
-                                        <button type="button" class="btn btn-default EdPP" title="" disabled="disabled">Adicionar Perspectiva</button>
+                                        <button type="button" class="btn btn-default EdPP" title="" disabled="disabled">Gerenciar Perspectivas</button>
                                         <button type="button" class="btn btn-default EdTec" title="" disabled="disabled">Editar Tecnologia</button>
                                         <button type="button" class="btn btn-default AddCor" title="" disabled="disabled">Nova Cor</button>
 							            <button type="button" class="btn btn-danger deletarSugestaoAction" title="excluir item " rev="produtos" rel="<?=$produtoSugestao->getIdSugestaoCores()?>">Excluir</button>

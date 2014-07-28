@@ -145,6 +145,32 @@ $(document).ready(function(){
 		}		
 		return false;
 	})
+	$(".conteudo").on("click",".EdPP",function(){
+		var idProduto = $(this).attr("rel");
+		$.ajax({
+	        url: basePatch+"/admin/crud/produtos/gerenciarPerspectivas",
+	        type: 'POST',
+	        success: function( data )  
+            { 
+	        	$( "#popupPerspectivas" ).html(data).dialog({
+	  		      resizable: false,
+	  		      width:500,
+	  		      height:210,
+	  		      title:"Gerenciar Perspectivas",
+	  		      modal: true,
+	  		      buttons: {
+	  		    	  	"Fechar": function() {
+	  		    	  	$(this).dialog('close');
+	  		        },
+	  		      }
+	        	})
+	        	$( "div[aria-describedby='popupPerspectivas'] .ui-dialog-buttonset" ).prepend('<input type="file">');
+            },
+            data: {idProduto:idProduto},
+	    });
+		
+		return false;
+	})
 	$(".conteudo").on("click",".EdTec",function(){
 		var idProduto = $(this).attr("rel");
 		$.ajax({
