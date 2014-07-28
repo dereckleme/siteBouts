@@ -155,7 +155,7 @@ $(document).ready(function(){
 	        	$( "#popupPerspectivas" ).html(data).dialog({
 	  		      resizable: false,
 	  		      width:500,
-	  		      height:210,
+	  		      height:400,
 	  		      title:"Gerenciar Perspectivas",
 	  		      modal: true,
 	  		      buttons: {
