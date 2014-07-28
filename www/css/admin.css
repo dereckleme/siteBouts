@@ -156,6 +156,13 @@ span.bannerDireto img { width: 340px; height: 200px;}
 input.tecnologia { margin: 5px;}
 span.tecnologia { font-size: 15px;}
 
+#gerenciar-persp { width: 460px; float: left;}
+#gerenciar-persp ul { width: 460px; float: left;}
+#gerenciar-persp ul li { width: 140px; float: left; border: solid 1px red; margin: 5px;}
+#gerenciar-persp ul li figure img { width: 130px; height: 120px; border: solid 1px #ddd; margin: 4px 0 0 4px;}
+#gerenciar-persp ul li button { float: right; margin: 0 5px 5px 0;}
+
+
 
 /* Hack ie10 */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 

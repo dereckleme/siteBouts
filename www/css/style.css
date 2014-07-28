@@ -99,14 +99,14 @@ div.g-produtos ul { width: 200000px; float: left; margin: 0; padding: 0; positio
 
 div.g-produtos ul li a { width: 338px; height: 468px; text-decoration: none; display: inline; position: relative; float: left; border: solid 1px transparent; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 
-div.g-produtos ul li/*hover*/ a { border: solid 1px #047da2; background: #FFF; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+div.g-produtos ul li:hover a { border: solid 1px #047da2; background: #FFF; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 div.g-produtos ul li { float: left; margin: 0 23.5px 0 23.5px; position: relative; -webkit-transition: 0.5s; transition: 0.5s; left:385px;}
 div.g-produtos ul li img { max-width: 100%; float: left; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 div.g-produtos ul li:hover img { -webkit-transform: scale(1.0)rotate(-3deg); transform: scale(1.0)rotate(-3deg);}
-div.g-produtos ul li a h4 { font-size: 2.0em; color: #333333; float: left; position: absolute; z-index: 100; left: 25px; top: 350px; display: block;}
-div.g-produtos ul li a h4 ~ p { width: 280px; font-size: 1.6em; text-indent: 20px; line-height: 20px; color: #079ab1; float: left; position: absolute; z-index: 100; left: 25px; top: 400px; display: block; background: url(../img/icon-tecnologia.png) no-repeat; background-position: 0 3px;}
+div.g-produtos ul li a h4 { font-size: 2.0em; color: #333333; float: left; position: absolute; z-index: 100; left: 25px; top: 350px; display: none;}
+div.g-produtos ul li a h4 ~ p { width: 280px; font-size: 1.6em; text-indent: 20px; line-height: 20px; color: #079ab1; float: left; position: absolute; z-index: 100; left: 25px; top: 400px; display: none; background: url(../img/icon-tecnologia.png) no-repeat; background-position: 0 3px;}
 div.g-produtos ul li a h4 ~ p span { font-weight: bold; color: #333333;}
-div.g-produtos ul li a hr { width: 280px; height: 0px; font-weight: bold; position: absolute; z-index: 100; left: 25px; top: 400px; color: #222222; display: block;}
+div.g-produtos ul li a hr { width: 280px; height: 0px; font-weight: bold; position: absolute; z-index: 100; left: 25px; top: 400px; color: #222222; display: none;}
 
 div.g-produtos ul li a:hover h4 ~ p { display: block;}
 div.g-produtos ul li a:hover h4 { display: block;}
