@@ -159,9 +159,18 @@ $(document).ready(function(){
 	  		      title:"Gerenciar Perspectivas",
 	  		      modal: true,
 	  		      buttons: {
-	  		    	  	"Fechar": function() {
-	  		    	  	$(this).dialog('close');
-	  		        },
+	  		    	  	"Salvar Imagem": function() {
+	  		    	  	var erros = "";
+	  		    		if($("div[aria-describedby='popupPerspectivas'] input[type=file]")[0].files[0] == null) erros = erros+"- Insira uma imagem\n";
+	  		    	  	if(erros == "")
+			    		{
+	  		    	  
+			    		}
+			        	else
+			    		{
+			    			alert("Existe alguns erros abaixo:\n\n"+erros);
+			    		}
+	  		    	  },
 	  		      }
 	        	})
 	        	$( "div[aria-describedby='popupPerspectivas'] .ui-dialog-buttonset" ).prepend('<input type="file">');
