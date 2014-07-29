@@ -126,7 +126,74 @@ class ProdutosController extends AbstractActionController
     {
     	if($this->getRequest()->isPost())
     	{
-    		
+    		$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    		$pers = $doctrine->getRepository("Produto\Entity\ProdutoPerspectivas")->findByprodutoTenis($this->getRequest()->getPost("idProduto"));
+
+    		$layout = new ViewModel(array("lista" => $pers));
+    	}
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
+    public function removerPerspectivaAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{
+    		$service = $this->getServiceLocator()->get("Admin\Service\Perspectivas");
+    		$service->delete($this->getRequest()->getPost('idPerspectiva'));
+    	}
+    	$layout = new ViewModel();
+    	$layout->setTerminal(1);
+    	return $layout;
+    }
+    public function adicionaPerspectivaAction()
+    {
+    	if($this->getRequest()->isPost())
+    	{    		
+    		$requestPost = new httpUploadFile();
+    		$requestPost->setDestination('./www/img/produtos');
+    		$produtoLast = null;
+    		foreach($requestPost->getFileInfo() as $file => $info)
+    		{
+    			$erros = false;
+    			$fname = $info['name'];
+    			$ext = pathinfo($fname, PATHINFO_EXTENSION);
+    			
+    			$filtro = $requestPost->addFilters(array(new Rename(array(
+    					"target" => "load.".$ext,
+    					"randomize" => true
+    			))), null, $file);
+    			$tamanho = new ImageSize(array(
+    					'minWidth' => 650, 'minHeight' => 400,
+    			));
+    			$mime = new MimeType(array(
+    					'image/gif', 'image/jpg','image/png','image/jpeg',
+    					'enableHeaderCheck' => true
+    			));
+    			if(!$tamanho->isValid($info)) $erros = "- É necessário uma imagem com tamanho minimo de 650x400\n";
+    			//if(!$mime->isValid($info)) $erros = "- O tipo de arquivo suportado é gif, jpg, png\n";
+    			
+    			if($requestPost->receive() && $erros == false)
+    			{
+    				$im = new \Imagick();
+    				$im->readImage($filtro->getFileName("imagem"));
+    				$im->flattenImages();
+    				$im->setImageFormat('png');
+    				$im->thumbnailImage(650,400);
+    				$im->writeImage($filtro->getFileName("imagem")."big.png");
+    				$im->thumbnailImage(400,250);
+    				$im->writeImage($filtro->getFileName("imagem")."medio.png");
+    				$service = $this->getServiceLocator()->get('Admin\Service\Produtos');
+    				
+    				$service = $this->getServiceLocator()->get("Admin\Service\Perspectivas");
+    				$service->insert(array("idProduto" => $this->getRequest()->getPost("idProduto"), "src" => $filtro->getFileInfo("imagem")['imagem']['name']));
+    				
+    				
+    			}
+    			else
+    			{
+    				print $erros;
+    			}
+    		}
     	}
     	$layout = new ViewModel();
     	$layout->setTerminal(1);

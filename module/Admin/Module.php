@@ -12,6 +12,7 @@ use Admin\Service\Banner,
 	Admin\Service\Newslatter,
 	Admin\Service\Midia,
 	Admin\Service\ProdutosCor,
+	Admin\Service\Perspectivas,
 	Admin\Service\Produtos;
 class Module
 {
@@ -108,6 +109,10 @@ class Module
     					'Admin\Service\Produtos' => function($service) {
     						$produtos = new Produtos($service->get('Doctrine\ORM\EntityManager'));
     						return $produtos;
+    					},
+    					'Admin\Service\Perspectivas' => function($service) {
+    						$Perspectivas = new Perspectivas($service->get('Doctrine\ORM\EntityManager'));
+    						return $Perspectivas;
     					},
     			)
     	);

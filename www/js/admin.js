@@ -64,7 +64,6 @@ $(document).ready(function(){
 	    });
 		return false;
 	});
-	
 	$(".conteudo").on("click",".edit-categoria",function(){
 		var idCategoria = $(this).attr("rel");
 		$(".boxCategoria"+idCategoria).fadeIn();
@@ -164,7 +163,38 @@ $(document).ready(function(){
 	  		    		if($("div[aria-describedby='popupPerspectivas'] input[type=file]")[0].files[0] == null) erros = erros+"- Insira uma imagem\n";
 	  		    	  	if(erros == "")
 			    		{
-	  		    	  
+		  		    	  	var formData = new FormData();
+			    			formData.append('imagem', $("div[aria-describedby='popupPerspectivas'] input[type=file]")[0].files[0]);
+			    			formData.append('idProduto', idProduto);
+			    			$.ajax({
+			        	        url: basePatch+"/admin/crud/produtos/adicionaPerspectiva",
+			        	        type: 'POST',
+			        	        contentType: 'multipart/form-data',
+			        	        success: function( data )  
+			                    { 
+			        	        	if(data != "")
+			        	        		{
+			        	        		alert("Existe alguns erros abaixo:\n\n"+data);
+			        	        		}
+			        	        	else
+			        	        		{
+			        	        		$.ajax({
+			        	        	        url: basePatch+"/admin/crud/produtos/gerenciarPerspectivas",
+			        	        	        type: 'POST',
+			        	        	        success: function( data )  
+			        	                    {
+			        	        	        	$( "#popupPerspectivas" ).html(data);
+			        	                    },
+			        	                    data: {idProduto:idProduto},
+			        	        			});
+			        	        		}
+			                    },
+			        	        data: formData,
+			        	        cache: false,
+			        	        contentType: false,
+			        	        processData: false
+			        	    });
+
 			    		}
 			        	else
 			    		{
