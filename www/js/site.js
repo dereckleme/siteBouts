@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//   == se for igual
+	//   == se for igualx
 	//   != se não for igual
 	//   && dupla condição igual
 	$(".pg-wallpaper figure a").on("click",function() {
