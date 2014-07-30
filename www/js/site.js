@@ -4,8 +4,8 @@ $(document).ready(function(){
 		zoomWindowFadeOut: 500, 
 		lensFadeIn: 500, 
 		lensFadeOut: 500,
-		zoomWindowWidth: 100,
-		zoomWindowHeight: 100
+		zoomWindowWidth: 390,
+		zoomWindowHeight: 392
 	});
 	//   == se for igualx
 	//   != se não for igual
