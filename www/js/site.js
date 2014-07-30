@@ -3,7 +3,9 @@ $(document).ready(function(){
 		zoomWindowFadeIn: 500, 
 		zoomWindowFadeOut: 500, 
 		lensFadeIn: 500, 
-		lensFadeOut: 500
+		lensFadeOut: 500,
+		zoomWindowWidth: 100,
+		zoomWindowHeight: 100
 	});
 	//   == se for igualx
 	//   != se não for igual
