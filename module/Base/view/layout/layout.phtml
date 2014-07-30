@@ -19,6 +19,7 @@
         <!-- Scripts -->
         <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
                                       ->prependFile($this->basePath() . '/js/site.js')
+                                      ->prependFile($this->basePath() . '/js/jquery.elevateZoom-3.0.8.min.js')
                                       ->prependFile($this->basePath() . '/js/bootstrap.min.js') 
                                       ->prependFile($this->basePath() . '/js/html5shiv.js')                                   
                                       ->prependFile($this->basePath() . '/js/jquery-1.10.2.js') ?>

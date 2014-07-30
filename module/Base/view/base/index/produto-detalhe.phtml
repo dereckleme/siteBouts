@@ -16,7 +16,7 @@ $this->headMeta()->setProperty('og:image', $this->basePath()."/img/produtos/".$t
 
 		<div class="viewport-imagem">
 
-		  <img width="650" alt="Destaque" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>big.png">
+		  <img width="650" class="zoomProduto" data-zoom-image="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>" alt="Destaque" src="<?=$this->basePath()?>/img/produtos/<?=$this->produto->getSrc()?>big.png">
 
 		</div>
 

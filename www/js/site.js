@@ -1,4 +1,10 @@
 $(document).ready(function(){
+	$(".zoomProduto").elevateZoom({
+		zoomWindowFadeIn: 500, 
+		zoomWindowFadeOut: 500, 
+		lensFadeIn: 500, 
+		lensFadeOut: 500
+	});
 	//   == se for igualx
 	//   != se não for igual
 	//   && dupla condição igual
@@ -270,6 +276,7 @@ $(document).ready(function(){
 	$(".carouselPerspectiva").on("click","a",function(){
 		var imagem = $(this).attr("href");
 		$(".viewport-imagem img").attr("src",imagem+'big.png');
+		$(".zoomWindowContainer div").css("background-image", "url("+imagem+")"); 
 		return false;
 	})
 	$(".loadAjax").on("click",".EnviarContato",function(){
