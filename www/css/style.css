@@ -177,15 +177,15 @@ section.pg-produtos ul li a p:nth-child(1) { font-size: 3.8em; margin: -50px 0 0
 section.pg-produtos ul li a p:nth-child(3) { font-size: 1.8em; margin: -40px 0 0 0;}
 section.pg-produtos ul li a span { width: 200px; float: left; border-top: solid 1px #000000; border-bottom: solid 1px #999999; display: block; position: relative; top: -50px; left: 25%; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 
-section.pg-midia { width: 960px; position: relative; left: 50%; margin: 50px 0 0 -480px; float: left; padding-bottom: 40px;}
+section.pg-midia { width: 970px; position: relative; left: 50%; margin: 50px 0 0 -485px; float: left; padding-bottom: 40px;}
 section.pg-midia div { width: 970px; float: left; position: relative; left: 50%; margin: 38px 0 0 -485px; padding-bottom: 90px;}
-section.pg-midia div h3 { font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; color: #222222; font-size: 3.0em; font-weight: bold; text-align: center;}
+section.pg-midia div h3 { width: 970px; font-family: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif; overflow: hidden; color: #222222; font-size: 3.0em; font-weight: bold; text-align: center;}
 section.pg-midia div ul { width: 970px;}
 section.pg-midia div ul li.video-principal { width: 800px; height: 450px; margin: 0 auto;}
 section.pg-midia div ul li.video-principal iframe { width: 800px; height: 450px;}
 section.pg-midia div ul li.video-secundario { width: 317px; height: 180px; float: left; margin-right: 6px; margin-top: 60px;}
 section.pg-midia div ul li.video-secundario iframe { width: 317px; height: 180px;}
-section.pg-midia div ul li p { font-weight: bold; color: #222222; font-size: 1.5em;}
+section.pg-midia div ul li p { width: 317px; overflow: hidden; font-weight: bold; color: #222222; font-size: 1.5em; text-align: center;}
 
 section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left;}
 #box-produtos { width: 650px; float: left; margin-top: 70px;}
@@ -215,7 +215,7 @@ section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-l
 #info-produtos ul li img { width: 120px; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 #info-produtos ul li:hover img { -webkit-transform: scale(1.0); transform: scale(1.0);}
 #info-produtos ul li:hover { border: solid 1px #0e9db3;}
-
+div.zoomWindow { width: 502px !important; height: 450px !important; left: 715px !important;}
 section.pg-tecnologia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-bottom: 60px;}
 div.pg-galeria { width: 650px; height: 450px; float: left; position: relative; margin-top: 50px;}
 div.pg-textos { width: 590px; min-height: 550px; background: rgba(255,255,255,0.5); float: left; right: 35px; position: absolute; z-index: 10;}
