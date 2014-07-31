@@ -15,14 +15,15 @@
 		   		foreach($this->contatos as $contato)
 		   		{
 		   			?>
-						<input class="statusDepartamento" type="radio" name="departamento" value="<?=$contato->getIdContato()?>"><?=$contato->getFuncao()?>		   			
+						<input class="statusDepartamento" type="radio" name="departamento" value="<?=$contato->getIdContato()?>">
+						<label class="statusRadio" for="nome"><?=$contato->getFuncao()?></label>	   			
 		   			<?php 
 		   		}
 		   	?>
-		<!--	<input class="sac" type="checkbox"  name="opcao1" value="sac">
+		<!--<input class="sac" type="checkbox"  name="opcao1" value="sac">
 			<label class="sac" for="nome">SAC</label>
 			
-		<input class="marketing" type="checkbox" name="opcao2" value="Marketing">
+		    <input class="marketing" type="checkbox" name="opcao2" value="Marketing">
 			<label class="marketing" for="nome">Marketing</label>-->
 		   </span>
 

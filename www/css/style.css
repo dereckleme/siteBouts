@@ -216,6 +216,8 @@ section.produto-detalhe { width: 1300px; position: relative; left: 50%; margin-l
 #info-produtos ul li:hover img { -webkit-transform: scale(1.0); transform: scale(1.0);}
 #info-produtos ul li:hover { border: solid 1px #0e9db3;}
 div.zoomWindow { width: 502px !important; height: 450px !important; left: 715px !important;}
+p.av-mouse { font-size: 1.1em; color: #6d6d6d; position: relative;}
+
 section.pg-tecnologia { width: 1300px; position: relative; left: 50%; margin-left: -650px; float: left; padding-bottom: 60px;}
 div.pg-galeria { width: 650px; height: 450px; float: left; position: relative; margin-top: 50px;}
 div.pg-textos { width: 590px; min-height: 550px; background: rgba(255,255,255,0.5); float: left; right: 35px; position: absolute; z-index: 10;}
@@ -295,7 +297,7 @@ div#form textarea.statusMensagem { width: 455px; max-width: 455px; height: 80px;
 div#form label.statusMensagem { width: 455px; float: left; margin: 15px 0 10px -3px;}
 div#form button { width: 124px; height: 41px; background: url(../img/enviarHover.jpg) no-repeat; text-transform: uppercase; font-size: 1.5em; letter-spacing: 1px; cursor: pointer; position: relative; float: left; margin-top: 15px; border: none; font-weight: bold; color: #FFFFFF;}
 .loadAjax { width: 100%; height: 1000%; position: absolute; z-index: 9999999; background: rgba(0,0,0,0.8); display: none;}
-
+label.statusRadio { text-transform: uppercase; margin-left: -3px;}
 footer { width: 100%; min-width: 1300px; float: left; background: #eeeeee; position: relative;}
 section.menu-bottom { width: 900px; padding-bottom: 30px; float: left; position: relative; left: 50%; margin-left: -450px;}
 section.menu-bottom ul.mb-comprar { margin: 65px 0 0 65px; float: left;}

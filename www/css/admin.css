@@ -162,6 +162,7 @@ span.tecnologia { font-size: 15px;}
 #gerenciar-persp ul li figure img { width: 130px; height: 120px; border: solid 1px #ddd; margin: 4px 0 0 4px;}
 #gerenciar-persp ul li button { float: right; margin: 0 5px 5px 0;}
 
+button.eventActionExcluirContato { width: 55px; height: 30px; margin: 4px 0 4px 0;}
 
 
 /* Hack ie10 */
