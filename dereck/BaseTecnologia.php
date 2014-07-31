@@ -22,16 +22,6 @@ class BaseTecnologia
     private $idTecnologia;
 
     /**
-     * @var \ProdutoTenis
-     *
-     * @ORM\ManyToOne(targetEntity="ProdutoTenis")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="tenis", referencedColumnName="idtenis")
-     * })
-     */
-    private $tenis;
-
-    /**
      * @var \BaseSubmenu
      *
      * @ORM\ManyToOne(targetEntity="BaseSubmenu")
@@ -40,6 +30,16 @@ class BaseTecnologia
      * })
      */
     private $tecnologia;
+
+    /**
+     * @var \ProdutoTenis
+     *
+     * @ORM\ManyToOne(targetEntity="ProdutoTenis")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="tenis", referencedColumnName="idtenis")
+     * })
+     */
+    private $tenis;
 
 
 }

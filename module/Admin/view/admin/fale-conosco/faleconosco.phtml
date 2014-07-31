@@ -1,0 +1,37 @@
+<table style="width:100%">
+	<tr>
+		<td style="width:10%"><B>Id</B></td>
+		<td style="width:40%"><B>Função</B></td>
+		<td style="width:40%"><B>Email</B></td>
+		<td style="width:10%"></td>
+	</tr>
+	<?php 
+		foreach($this->listaEmails AS $contato)
+		{
+			?>
+			<tr>
+		<td style="width:10%"><?=$contato->getIdContato()?></td>
+		<td style="width:40%"><?=$contato->getEmail()?></td>
+		<td style="width:40%"><?=$contato->getFuncao()?></td>
+		<td style="width:10%"><input type="submit" class="eventActionExcluirContato" rel="<?=$contato->getIdContato()?>" value="Excluir"/></td>
+	</tr>
+			<?php
+		}
+	?>
+</table>
+	<?php 
+		if(!$this->listaEmails)
+		{
+			?>
+				<center>Não existe email's cadastrados.</center>
+			<?php
+		}
+	?>
+<br/><br/>
+<div class="faleConoscoShowAdicionar">
+<input type="submit" class="eventActionShowAdicionar" value="Adicionar Email"/>
+</div>
+<div class="faleConoscoAdicionar" style="display:none">
+	<input class="email" type="text" placeholder="Digite o Email do usuário"><br/>
+	<input class="funcao" type="text" placeholder="Digite a função do usuário"><br/><input type="submit" value="Salvar" class="salvarEmail"/>
+</div>

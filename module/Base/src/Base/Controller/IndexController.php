@@ -83,21 +83,31 @@ class IndexController extends AbstractActionController
     }
     public function contatoAction()
     {
-    	$layout = new ViewModel();
+    	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    	$repo = $doctrine->getRepository("Base\Entity\BaseContato")->findAll();
+    	
+    	$layout = new ViewModel(array("contatos" => $repo));
     	$layout->setTerminal(1);
     	return $layout;
     }
     public function enviarContatoAction()
     {
     	$request = $this->getRequest();
+    	$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
+    	
     	if($request->isPost())
     	{
     		$email = array();
     		$dados = $request->getPost()->toArray();
+    		$repo = $doctrine->getRepository("Base\Entity\BaseContato")->findOneByidContato($dados['EmailEnvio']);
+    		$email[] = $repo->getEmail();
+    		
+    		/*
     		if(!empty($dados['sac'])) $email[] = "sac@bouts.com.br";
     		if(!empty($dados['marketing'])) $email[] = "marketing@bouts.com.br";
-    		$email = implode(",", $email);
     		
+    		*/
+    		$email = implode(",", $email);
     		$view = new ViewModel(array(
     				'fullname' => $dados['Nome'],
     				'Email' => $dados['Email'],

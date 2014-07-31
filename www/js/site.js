@@ -88,7 +88,7 @@ $(document).ready(function(){
 				 }).css("left",'-=385px');
 				 setTimeout(function(){
 						 	block = false;
-					 },1000);
+					 },1500);
 				}
 				return false;
 			})
@@ -105,7 +105,7 @@ $(document).ready(function(){
 				$(".testeSlice li").css("left",'+=385px');
 				 setTimeout(function(){
 					 	block = false;
-				 },1000);
+				 },1500);
 					}
 				return false;
 			})
@@ -214,6 +214,8 @@ $(document).ready(function(){
 		$(".viewport-imagem img").attr("src",imagem+'big.png');
 		$(".carouselPerspectiva li").remove();
 		$(".carouselPerspectiva").html('<li><a href="'+imagem+'"><img title="teste" alt="teste" src="'+imagem+'medio.png"/></a></li>');
+
+		$(".zoomWindowContainer div").css("background-image", "url("+imagem+")");
 		block_detalhe = true;
 		return false;
 	})
@@ -282,7 +284,8 @@ $(document).ready(function(){
 		return false;
 	})
 	$(".loadAjax").on("click",".EnviarContato",function(){
-		var n = $(".loadAjax input:checked").length;
+		var n = $(".statusDepartamento:checked").length;
+		
 		var erros = "";
 		if(n == 0) erros = erros+"- Selecione um departamento.\n";
 		if($(".inputNome").val() == "") erros = erros+"- Campo Nome está em branco.\n";
@@ -300,8 +303,8 @@ $(document).ready(function(){
 		else
 			{
 				var formData = new FormData();
-				if($(".sac").is(":checked")) formData.append('sac', 1);
-				if($(".marketing").is(":checked")) formData.append('marketing', 1);
+
+	        	formData.append('EmailEnvio', $(".statusDepartamento:checked").val());
 	        	formData.append('Nome', $(".inputNome").val());
 	        	formData.append('Email', $(".InputEmail").val());
 	        	formData.append('telefone', $(".inputTelefoneDDD").val()+$(".inputTelefoneNumero").val());
@@ -315,6 +318,7 @@ $(document).ready(function(){
 	    	        contentType: 'multipart/form-data',
 	    	        success: function( data )  
 	                {  
+	    	        	alert(data);
 	    	        	alert("Contato enviado com sucesso!");
 	                },
 	    	        data: formData,

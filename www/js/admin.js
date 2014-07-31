@@ -20,6 +20,78 @@ $(document).ready(function(){
 	    });
 		return false;
 	});
+
+	$(".conteudo").on("click",".eventActionShowAdicionar",function(){
+		$(".faleConoscoShowAdicionar").slideUp(function(){
+			$(".faleConoscoAdicionar").slideDown();
+		});
+		return false;
+	});
+	
+	$(".conteudo").on("click",".eventActionExcluirContato",function(){
+		var idEmail = $(this).attr("rel");
+		var formData = new FormData();
+		if(confirm("Tem certeza que vocês deseja remover esse contato?"))
+			{
+			formData.append('idEmail', idEmail);
+  		$.ajax({
+	        url: basePatch+"/admin/crud/faleconosco/remover",
+	        type: 'POST',
+	        contentType: 'multipart/form-data',
+	        success: function( data )  
+            { 
+	        	$.ajax({
+	    			url: basePatch+"/admin/crud/faleconosco/faleconosco",
+	    			success: function(data) {
+	    						$(".conteudo").html(data);
+	    						$("#adm-popup").slideDown();
+	    					}
+	    				});	
+            },
+	        data: formData,
+	        cache: false,
+	        contentType: false,
+	        processData: false
+	    });
+			}
+		return false;
+	})
+	$(".conteudo").on("click",".salvarEmail",function(){
+		var erros = "";
+      	if($(".faleConoscoAdicionar .email").val() == "") erros = erros+"- Digite um email para contato\n";
+      	if($(".faleConoscoAdicionar .funcao").val() == "") erros = erros+"- Qual a função do contato\n";
+      	if(erros == "")
+      	{
+      		var formData = new FormData();
+	  			
+	  			formData.append('email', $(".faleConoscoAdicionar .email").val());
+	  			formData.append('funcao', $(".faleConoscoAdicionar .funcao").val());
+		  		$.ajax({
+	    	        url: basePatch+"/admin/crud/faleconosco/inserir",
+	    	        type: 'POST',
+	    	        contentType: 'multipart/form-data',
+	    	        success: function( data )  
+	                { 
+	    	        	$.ajax({
+	    	    			url: basePatch+"/admin/crud/faleconosco/faleconosco",
+	    	    			success: function(data) {
+	    	    						$(".conteudo").html(data);
+	    	    						$("#adm-popup").slideDown();
+	    	    					}
+	    	    				});	
+	                },
+	    	        data: formData,
+	    	        cache: false,
+	    	        contentType: false,
+	    	        processData: false
+	    	    });
+      	}
+      	else
+	  		{
+	  			alert("Existe alguns erros abaixo:\n\n"+erros);
+	  		}
+		return false;
+	});
 	$(".conteudo").on("click",".editarTecnologiaAction",function(){
 		var idTecnologia = $(this).attr("rel");
 		$(".editar"+idTecnologia).slideDown();

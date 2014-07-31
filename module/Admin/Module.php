@@ -13,6 +13,7 @@ use Admin\Service\Banner,
 	Admin\Service\Midia,
 	Admin\Service\ProdutosCor,
 	Admin\Service\Perspectivas,
+	Admin\Service\Contato,
 	Admin\Service\Produtos;
 class Module
 {
@@ -93,6 +94,10 @@ class Module
     					'Admin\Service\Vitrine' => function($service) {
     						$Vitrine = new Vitrine($service->get('Doctrine\ORM\EntityManager'));
     						return $Vitrine;
+    					},
+    					'Admin\Service\Contato' => function($service) {
+    						$Contato = new Contato($service->get('Doctrine\ORM\EntityManager'));
+    						return $Contato;
     					},
     					'Admin\Service\OndeComprar' => function($service) {
     						$OndeComprar = new OndeComprar($service->get('Doctrine\ORM\EntityManager'));

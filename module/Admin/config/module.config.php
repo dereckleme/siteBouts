@@ -21,6 +21,7 @@ return array(
 						'Admin\Controller\TecnologiaAdm' => 'Admin\Controller\TecnologiaAdmController',
 						'Admin\Controller\Wallpaper' => 'Admin\Controller\WallpaperController',
 						'Admin\Controller\Newslatter' => 'Admin\Controller\NewslatterController',
+						'Admin\Controller\FaleConosco' => 'Admin\Controller\FaleConoscoController',
 				),
 	),
     'router' => array(
