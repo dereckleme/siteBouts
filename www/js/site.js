@@ -318,7 +318,6 @@ $(document).ready(function(){
 	    	        contentType: 'multipart/form-data',
 	    	        success: function( data )  
 	                {  
-	    	        	alert(data);
 	    	        	alert("Contato enviado com sucesso!");
 	                },
 	    	        data: formData,
