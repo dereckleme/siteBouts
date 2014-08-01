@@ -57,7 +57,7 @@ $this->headMeta()->setProperty('og:image', $this->basePath()."/img/produtos/".$t
 		
 			foreach($this->produto->getTecnologias() AS $tecnologia)
 			{
-				$tecs[] = $tecnologia->getParenttecnologia()->getNome();
+				$tecs[] = '<a href="'.$this->url('tecnologia/tecnologia-detalhe',array("slug" => $tecnologia->getParenttecnologia()->getSlug())).'">'.$tecnologia->getParenttecnologia()->getNome()."</a>";
 			}
 			if(isset($tecs))
 			{
