@@ -73,7 +73,7 @@ $(document).ready(function(){
 	var block = false;
 	var slideAtual = 3;
 
-	$(".testeSlice").css("left","-385px");
+	$(".testeSlice").css("left","-361.5px");
 	if(total > 3)
 		{
 			$(".s-direita").on("click",function(){
@@ -85,7 +85,7 @@ $(document).ready(function(){
 				 $(".testeSlice li").each(function( index, element ) {
 					 $(this).css('transition-delay', sec+'s');
 					 sec = sec+0.1;
-				 }).css("left",'-=385px');
+				 }).css("left",'-=361.5px');
 				 setTimeout(function(){
 						 	block = false;
 					 },1500);
@@ -102,7 +102,7 @@ $(document).ready(function(){
 					 $(this).css('transition-delay', sec+'s');
 					 sec = sec+0.1;
 				 })
-				$(".testeSlice li").css("left",'+=385px');
+				$(".testeSlice li").css("left",'+=361.5px');
 				 setTimeout(function(){
 					 	block = false;
 				 },1500);
