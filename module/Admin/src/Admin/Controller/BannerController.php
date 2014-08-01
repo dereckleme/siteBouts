@@ -81,12 +81,10 @@ class BannerController extends AbstractActionController
     	{
     		$doctrine = $this->getServiceLocator()->get("Doctrine\Orm\EntityManager");
     		$repo = $doctrine->getRepository("Base\Entity\BaseBanner")->findOneByidBanner($this->getRequest()->getPost("idAction"));
-    		if(is_file('./www/img/banners/'.$repo->getSrc()))
-    		{
-    			unlink('./www/img/banners/'.$repo->getSrc());
+    		
+    			@unlink('./www/img/banners/'.$repo->getSrc());
     			$service = $this->getServiceLocator()->get("Admin\Service\Banner");
     			$service->delete($this->getRequest()->getPost("idAction"));
-    		}
     	}
     	$layout = new ViewModel(array("msg" => "Banner removido com sucesso!"));
     	$layout->setTerminal(1);
