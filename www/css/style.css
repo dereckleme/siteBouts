@@ -66,19 +66,24 @@ ul.box-menu li a.produtos:before { content: '\2335'; position: absolute; z-index
 ul.box-menu li.box-lista:hover > a.produtos:before { color: #222222; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); top: 12px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 ul.box-menu li a.tecnologia:before { content: '\2335'; position: absolute; z-index: 200; right: 20px; top: 8px; -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;} 
 ul.box-menu li.box-lista:hover > a.tecnologia:before { color: #222222; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); top: 12px; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
+
 li.sub-menu ul { width: 245px; display: none; padding: 0 0 8px 0; position: absolute; top: 87px; float: left; z-index: 100; background: #FFFFFF;}
 li.sub-menu ul li { overflow: hidden; float: left;}
 li.sub-menu ul li h6 a { width: 203px; margin: -10px 0 0 0; border: none; z-index: 15; background: #FFFFFF; padding: 3px 0 3px 42px; text-transform: uppercase; font-size: 1.8em; float: left; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 li.sub-menu ul li h6 a:before { content: '\2335'; top: 4px; position: absolute; left: 23px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
-li.sub-menu ul li h6 a:hover { width: 197px; color: #FFFFFF; background: #96bd05; padding: 3px 0 3px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
-li.sub-menu ul li p a { margin-top: 0px; z-index: 10; font-size: 1.1em; float: left; padding: 2px 0 2px 45px; font-weight: normal; color: #96bd05; clear: both; border: none; -webkit-transition: 0.4s ease-out; transition: 0.4s ease-out;}
+li.sub-menu ul li h6 a:hover { width: 197px; color: #FFFFFF; background: #014B60; /*background: #96bd05;*/ padding: 3px 0 3px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+li.sub-menu ul li p a { margin: 3px 0 3px 0; z-index: 10; font-size: 1.1em; float: left; padding: 2px 0 2px 45px; font-weight: normal; color: #0174AD; /*color: #96bd05;*/ clear: both; border: none; -webkit-transition: 0.4s ease-out; transition: 0.4s ease-out;}
+
 li.sub-menu ul li:hover > p a { -webkit-transition: 0.4s ease-in; transition: 0.4s ease-in;}
-li.sub-menu ul li > p a:hover { color: #718e04; padding: 2px 0 2px 51px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+li.sub-menu ul li > p a:hover { color: #014D64; /*color: #718e04;*/ padding: 2px 0 2px 51px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 ul.box-menu li.sub-menu:hover ul { display: block;}
+
+
+
 li.sub-menu-links ul { width: 225px; display: none; padding: 4px 0 8px 0; float: left; position: absolute; top: 87px; background: #FFFFFF;}
 li.sub-menu-links ul li a { font-size: 1.2em; padding: 5px 0 5px 42px; border: none; color: #222222; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out;}
 li.sub-menu-links ul li a:before { content: '\2335'; position: absolute; left: 23px; top: 5px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
-li.sub-menu-links ul li a:hover { color: #FFFFFF; background: #96bd05; padding: 5px 0 5px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
+li.sub-menu-links ul li a:hover { color: #FFFFFF; background: #014B60; /*background: #96bd05;*/ padding: 5px 0 5px 48px; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in;}
 ul.box-menu li.sub-menu-links:hover ul { display: block;}
 
 .container { width: 100%; min-width: 1200px; background: url(../img/bk-container.png) repeat; float: left; position: relative;}
@@ -153,7 +158,7 @@ section.pg-produtos ul { width: 100%; float: left; margin: 8px 0 0 0;}
 section.pg-produtos ul li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 
 section.pg-produtos ul li { width: 390px; height: 250px; margin: 0 0 8px 8px; float: left; border: solid 1px #999999; cursor: pointer; position: relative; background: #FFFFFF; overflow: hidden;}
-section.pg-produtos ul li img { position: absolute; z-index: 10;}
+section.pg-produtos ul li img { width: 385px; position: absolute; z-index: 10;}
 section.pg-produtos ul li a { position: absolute; z-index: 20; padding: 0px 0px; text-decoration: none; float: left; background: rgba(255,255,255,0); -webkit-transition: 0.2s ease-out; transition: 0.2s ease-out;}
 section.pg-produtos ul li:hover a { padding: 65.8px 0px; text-decoration: none; float: left; background: rgba(0,0,0,0.8); -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
 section.pg-produtos ul li:hover a p:nth-child(1) { margin: 18px 0 0 0; -webkit-transition: 0.2s ease-in; transition: 0.2s ease-in;}
@@ -295,10 +300,10 @@ section.menu-bottom { width: 900px; padding-bottom: 30px; float: left; position:
 section.menu-bottom ul.mb-comprar { margin: 65px 0 0 65px; float: left;}
 section.menu-bottom ul li a.tt-menu-bottom { font-size: 1.5em; font-weight: bold; color: #333333; margin: 0;}
 section.menu-bottom ul li a.dt-tt { padding-bottom: 2px;}
-section.menu-bottom ul li a { text-decoration: none; display: list-item; margin: 10px 0 0 5px; font-size: 1.3em; color: #333333;}
+section.menu-bottom ul li a { text-decoration: none; display: list-item; margin: 10px 0 0 5px; font-size: 1.3em; color: #0174AD;}
 section.menu-bottom ul li a.sub-produto { margin: 10px 0 3px 0;}
-section.menu-bottom ul li a.txt-produto { margin: 2px 0 0 0px;}
-section.menu-bottom ul li a.txt-menu-bottom:hover { color: #079ab1;}
+section.menu-bottom ul li a.txt-produto { margin: 8px 0 8px 0px;}
+section.menu-bottom ul li a.txt-menu-bottom:hover { text-decoration: underline; /*color: #079ab1;*/}
 section.menu-bottom ul.mb-produtos { margin: 65px 0 15px 100px; float: left;}
 section.menu-bottom ul.mb-tecnoligia { margin: 65px 0 0 110px; float: left;}
 section.menu-bottom ul.info { margin: 65px 0 0 102px; float: left;}
